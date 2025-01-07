@@ -41,6 +41,14 @@ Tem uma dica para compartilhar? Clique [aqui](../../issues/new?assignees=&labels
 
 Se você encontrou algum erro ou informação incorreta, por favor, nos avise! Clique [aqui](../../issues/new?assignees=&labels=erro&template=reportar-erro.md&title=%5BERRO%5D) para reportar um erro.
 
+## 📚 Indique um Livro!
+
+Conhece algum livro incrível que deveria estar na nossa lista de recomendações? Sua contribuição é muito bem-vinda!
+
+[🔗 Clique aqui para indicar um livro](../../issues/new?assignees=&labels=livro%2Crecomenda%C3%A7%C3%A3o&template=indicar-livro.md&title=%5BLIVRO%5D+)
+
+Ao indicar um livro, você ajuda a enriquecer nossa biblioteca de conhecimento e auxilia outros desenvolvedores em sua jornada de aprendizado. Não hesite em compartilhar aquele recurso que fez a diferença no seu desenvolvimento profissional!
+
 ## 📬 Vamos Conectar!
 
 - [LinkedIn](https://www.linkedin.com/in/auyber-genesini-moura-58b258144/)
