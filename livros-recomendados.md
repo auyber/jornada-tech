@@ -62,7 +62,24 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 
 ## JavaScript
 
-(Adicione livros de JavaScript aqui quando disponíveis)
+
+#### <img src="https://m.media-amazon.com/images/I/71X7hMhMEUL._SY342_.jpg" width="100" align="right"> [Lógica de Programação e Algoritmos com JavaScript]
+
+**Autor:** Edécio Fernando Iepsen  
+
+**Nível:** Iniciante
+
+**Por que ler:** Este livro é uma excelente introdução à programação usando JavaScript como linguagem base. Edécio Fernando Iepsen apresenta conceitos fundamentais de lógica de programação e algoritmos de forma clara e acessível, tornando-o ideal para iniciantes ou para aqueles que desejam solidificar seus conhecimentos básicos.
+
+---
+
+#### <img src="https://m.media-amazon.com/images/I/71KGa1y8eaL._SY342_.jpg" width="100" align="right"> [Estruturas de Dados e Algoritmos com JavaScript]
+
+**Autor:** Loiane Groner 
+
+**Nível:** Iniciante a Intermediário
+
+**Por que ler:** Este livro é uma excelente fonte para desenvolvedores que desejam aprofundar seus conhecimentos em JavaScript, focando em estruturas de dados e algoritmos. Loiane Groner, uma renomada desenvolvedora e instrutora, apresenta conceitos complexos de forma clara e prática, tornando o aprendizado acessível e aplicável.
 
 ---
 
