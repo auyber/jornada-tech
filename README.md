@@ -18,13 +18,16 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ## 🗺️ Mapa do Conhecimento
 
 ### 🌐 HTML
-- [Fundamentos HTML](./html/revisao.md)
+- [Revisão HTML](./html/revisao.md)
+- [Dicas e Anotações HTML](./html/dicas.md)
 
 ### 🎨 CSS
-- [Estilização com CSS](./css/revisao.md)
+- [Revisão CSS](./css/revisao.md)
+- [Dicas CSS](./css/dicas.md)
 
 ### ☕ JavaScript
-- [Introdução ao JavaScript](./revisao/intro.md)
+- [Revisão JavaScript](./javascript/revisao.md)
+- [Dicas JavaScript](./javascript/dicas.md)
 
 
 ## 💡 Compartilhe Suas Dicas
