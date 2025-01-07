@@ -6,31 +6,36 @@ Os elementos de parágrafo e título são fundamentais para estruturar o conteú
 
 ## **Parágrafos**
 
-O elemento de parágrafo é representado pela tag <p>. Ele é usado para agrupar conteúdo textual em blocos coesos. Os navegadores automaticamente adicionam espaço antes e depois de cada parágrafo, criando uma separação visual entre eles.Exemplo:
-
-`xml<p>Este é um parágrafo de exemplo. Ele contém várias frases que formam um bloco de texto coeso.</p>
-<p>Este é outro parágrafo. Observe como ele é automaticamente separado do parágrafo anterior.</p>`
-
+O elemento de parágrafo é representado pela tag ```<p>```. Ele é usado para agrupar conteúdo textual em blocos coesos. Os navegadores automaticamente adicionam espaço antes e depois de cada parágrafo, criando uma separação visual entre eles.Exemplo:
+```
+<p>Este é um parágrafo de exemplo. Ele contém várias frases que formam um bloco de texto coeso.</p>
+<p>Este é outro parágrafo. Observe como ele é automaticamente separado do parágrafo anterior.</p>
+```
 ## **Títulos**
 
-HTML oferece seis níveis de títulos, de <h1> a <h6>. Eles são usados para criar uma estrutura hierárquica no documento.
+HTML oferece seis níveis de títulos, de ```<h1>``` a ```<h6>```. Eles são usados para criar uma estrutura hierárquica no documento.
 
-- **`<h1>`**: Título principal da página
-- **`<h2>`**: Subtítulos principais
-- **`<h3>`**: Subtítulos secundários
-- **`<h4>`**: Subtítulos terciários
-- **`<h5>`**: Subtítulos quaternários
-- **`<h6>`**: Subtítulos quinários
+```<h1> : Título principal da página```
+
+```<h2> : Subtítulos principais```
+
+```<h3> : Subtítulos secundários```
+
+```<h4> : Subtítulos terciários```
+
+```<h5> : Subtítulos quaternários```
+
+```<h6> : Subtítulos quinários```
 
 Exemplo:
-
-`xml<h1>Título Principal da Página</h1>
+```
+<h1>Título Principal da Página</h1>
 <h2>Seção Importante</h2>
 <h3>Subseção</h3>
 <h4>Tópico Específico</h4>
 <h5>Subtópico</h5>
-<h6>Detalhe Menor</h6>`
-
+<h6>Detalhe Menor</h6>
+```
 É importante manter uma estrutura lógica e não pular níveis de título, pois isso ajuda na acessibilidade e SEO da página.
 
 ## **Elementos de formatação**
@@ -38,214 +43,214 @@ Exemplo:
 Os elementos de formatação HTML permitem alterar a aparência do texto sem necessariamente mudar sua estrutura semântica. Aqui estão os elementos de formatação mais comuns, listados em ordem de uso mais frequente:
 
 1. **Negrito**: **`<strong>`** ou **`<b>`**
-    
-    `xml<strong>Texto em negrito semântico</strong>
-    <b>Texto em negrito estilístico</b>`
-    
+    ```
+    <strong>Texto em negrito semântico</strong>
+    <b>Texto em negrito estilístico</b>
+    ```
 2. **Itálico**: **`<em>`** ou **`<i>`**
-    
-    `xml<em>Texto em itálico com ênfase</em>
-    <i>Texto em itálico estilístico</i>`
-    
+    ```
+    <em>Texto em itálico com ênfase</em>
+    <i>Texto em itálico estilístico</i>
+    ```
 3. **Sublinhado**: **`<u>`**
-    
-    `xml<u>Texto sublinhado</u>`
-    
+    ```
+    <u>Texto sublinhado</u>
+    ```
 4. **Tachado**: **`<s>`** ou **`<del>`**
-    
-    `xml<s>Texto tachado</s>
-    <del>Texto deletado</del>`
-    
+    ```
+    <s>Texto tachado</s>
+    <del>Texto deletado</del>
+    ```
 5. **Sobrescrito**: **`<sup>`**
-    
-    `xmlx<sup>2</sup> (x ao quadrado)`
-    
+    ```
+    x<sup>2</sup> (x ao quadrado)
+    ```
 6. **Subscrito**: **`<sub>`**
-    
-    `xmlH<sub>2</sub>O (fórmula da água)`
-    
+    ```
+   H<sub>2</sub>O (fórmula da água)
+    ```
 7. **Texto pequeno**: **`<small>`**
-    
-    `xml<small>Texto em tamanho reduzido</small>`
-    
+    ```
+    <small>Texto em tamanho reduzido</small>
+    ```
 8. **Marcação**: **`<mark>`**
-    
-    `xml<mark>Texto destacado</mark>`
-    
+    ```
+    <mark>Texto destacado</mark>
+    ```
 9. **Citação inline**: **`<q>`**
-    
-    `xml<q>Citação curta inline</q>`
-    
+    ```
+    <q>Citação curta inline</q>
+    ```
 10. **Abreviação**: **`<abbr>`**
-    
-    `xml<abbr title="HyperText Markup Language">HTML</abbr>`
-    
+    ```
+    <abbr title="HyperText Markup Language">HTML</abbr>
+    ```
 11. **Definição**: **`<dfn>`**
-    
-    `xml<dfn>HTML</dfn> é uma linguagem de marcação.`
-    
+    ```
+    <dfn>HTML</dfn> é uma linguagem de marcação.
+    ```
 12. **Código**: **`<code>`**
-    
-    `xml<code>console.log("Hello, World!");</code>`
-    
+    ```
+    <code>console.log("Hello, World!");</code>`
+    ```
 13. **Teclado**: **`<kbd>`**
-    
-    `xmlPressione <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.`
-    
+    ```
+    Pressione<kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.
+    ```
 14. **Variável**: **`<var>`**
-    
-    `xml<var>x</var> = <var>y</var> + 2`
-    
+    ```
+    <var>x</var> = <var>y</var> + 2
+    ```
 15. **Saída**: **`<samp>`**
-    
-    `xml<samp>Error 404: Page not found</samp>`
-    
+    ```
+    <samp>Error 404: Page not found</samp>
+    ```
 16. **Endereço**: **`<address>`**
-    
-    `xml<address>
+    ```
+    <address>
       John Doe<br>
       123 Main St<br>
       Anytown, USA
-    </address>`
-    
-17. **Bidirecional**: **`<bdi>`** e **`<bdo>`**
-    
-    `xml<bdi>텍스트</bdi> (isola texto bidirecional)
-    <bdo dir="rtl">Texto da direita para a esquerda</bdo>`
-    
-18. **Inserção**: **`<ins>`**
-    
-    `xml<ins>Texto inserido</ins>`
-    
-19. **Citação em bloco**: **`<blockquote>`**
-    
-    `xml<blockquote>
+    </address>
+    ```
+18. **Bidirecional**: **`<bdi>`** e **`<bdo>`**
+    ```
+    <bdi>텍스트</bdi> (isola texto bidirecional)
+    <bdo dir="rtl">Texto da direita para a esquerda</bdo>
+    ```
+19. **Inserção**: **`<ins>`**
+    ```
+    <ins>Texto inserido</ins>
+    ```
+20. **Citação em bloco**: **`<blockquote>`**
+    ```
+    <blockquote>
       Uma longa citação que ocupa vários parágrafos.
-    </blockquote>`
-    
-20. **Pré-formatado**: **`<pre>`**
-    
-    `xml<pre>
+    </blockquote>
+    ```
+21. **Pré-formatado**: **`<pre>`**
+    ```
+    <pre>
       Texto    com    espaçamento
         e quebras de linha
           preservados
-    </pre>`
-    
+    </pre>
+    ```
 
 ## **Comentários**
 
 Comentários em HTML são usados para incluir notas no código-fonte que não são exibidas no navegador. Eles são úteis para documentação, organização e depuração do código.Sintaxe:
-
-`xml*<!-- Este é um comentário HTML -->*`
-
+```
+<!-- Este é um comentário HTML -->
+```
 Exemplos de uso:
 
 1. Comentário de uma linha:
-    
-    `xml*<!-- Início da seção de navegação -->*
+    ```
+    <!-- Início da seção de navegação -->
     <nav>
-      *<!-- Conteúdo da navegação aqui -->*
-    </nav>`
-    
+      <!-- Conteúdo da navegação aqui -->
+    </nav>
+    ```
 2. Comentário de múltiplas linhas:
-    
-    `xml*<!--
+    ```
+    <!--
       Este é um comentário
       que abrange várias
       linhas de código
-    -->*`
-    
+    -->
+    ```
 3. Comentário para marcar seções do código:
-    
-    `xml*<!-- Cabeçalho da página -->*
+    ```
+    <!-- Cabeçalho da página -->
     <header>
-      *<!-- Conteúdo do cabeçalho -->*
+        <!-- Conteúdo do cabeçalho -->
     </header>
-    
-    *<!-- Conteúdo principal -->*
+
+        <!-- Conteúdo principal -->
     <main>
-      *<!-- Conteúdo principal aqui -->*
+        <!-- Conteúdo principal aqui -->
     </main>
     
-    *<!-- Rodapé da página -->*
+    <!-- Rodapé da página -->*
     <footer>
-      *<!-- Conteúdo do rodapé -->*
-    </footer>`
-    
+        <!-- Conteúdo do rodapé -->
+    </footer>
+    ```
 4. Comentário para desabilitar temporariamente código:
-    
-    `xml*<!--
+    ```
+    <!--
     <div>
       Este conteúdo está temporariamente desabilitado
     </div>
-    -->*`
-    
+    -->
+    ```
 5. Comentário para incluir informações de versão ou autor:
-    
-    `xml*<!--
+    ```
+    <!--
       Autor: John Doe
       Versão: 1.2
       Última atualização: 2025-01-06
-    -->*`
-    
+    -->
+    ```
 
 ## **Elementos de imagem e atributos**
 
-O elemento <img> é usado para incorporar imagens em documentos HTML. É um elemento vazio, o que significa que não tem conteúdo nem tag de fechamento.Sintaxe básica:
-
-`xml<img src="caminho/para/imagem.jpg" alt="Descrição da imagem">`
-
+O elemento ```<img>``` é usado para incorporar imagens em documentos HTML. É um elemento vazio, o que significa que não tem conteúdo nem tag de fechamento.Sintaxe básica:
+```
+<img src="caminho/para/imagem.jpg" alt="Descrição da imagem">
+```
 Atributos principais:
 
 1. **`src`** (obrigatório): Especifica o caminho para a imagem.
-    
-    `xml<img src="imagens/foto.jpg">`
-    
+    ```
+    <img src="imagens/foto.jpg">
+    ```
 2. **`alt`** (altamente recomendado): Fornece uma descrição textual da imagem para acessibilidade e SEO.
-    
-    `xml<img src="logo.png" alt="Logo da empresa XYZ">`
-    
+    ```
+    <img src="logo.png" alt="Logo da empresa XYZ">
+    ```
 3. **`width`** e **`height`**: Definem as dimensões da imagem em pixels.
-    
-    `xml<img src="icone.png" width="32" height="32" alt="Ícone de usuário">`
-    
+    ```
+    <img src="icone.png" width="32" height="32" alt="Ícone de usuário">
+    ```
 4. **`title`**: Adiciona um texto de dica que aparece quando o mouse passa sobre a imagem.
-    
-    `xml<img src="grafico.jpg" alt="Gráfico de vendas" title="Vendas do primeiro trimestre">`
-    
+    ```
+    <img src="grafico.jpg" alt="Gráfico de vendas" title="Vendas do primeiro trimestre">
+    ```
 5. **`loading`**: Controla como a imagem é carregada.
-    
-    `xml<img src="banner.jpg" alt="Banner promocional" loading="lazy">`
-    
+    ```
+    <img src="banner.jpg" alt="Banner promocional" loading="lazy">
+    ```
 6. **`srcset`**: Permite especificar múltiplas fontes de imagem para diferentes resoluções de tela.
-    
-    `xml<img src="imagem-padrao.jpg" 
+    ```
+    <img src="imagem-padrao.jpg" 
          srcset="imagem-pequena.jpg 300w,
                  imagem-media.jpg 600w,
                  imagem-grande.jpg 1200w"
          sizes="(max-width: 300px) 300px,
                 (max-width: 600px) 600px,
                 1200px"
-         alt="Imagem responsiva">`
-    
+         alt="Imagem responsiva">
+    ```
 7. **`usemap`**: Associa a imagem a um mapa de imagem.
-    
-    `xml<img src="mapa.jpg" alt="Mapa clicável" usemap="#mapname">`
-    
+    ```
+    <img src="mapa.jpg" alt="Mapa clicável" usemap="#mapname">
+    ```
 8. **`crossorigin`**: Especifica se a imagem deve ser carregada com CORS habilitado.
-    
-    `xml<img src="https://exemplo.com/imagem.jpg" alt="Imagem externa" crossorigin="anonymous">`
-    
+    ```
+    <img src="https://exemplo.com/imagem.jpg" alt="Imagem externa" crossorigin="anonymous">
+    ```
 9. **`ismap`**: Indica que a imagem é parte de um mapa de imagem do lado do servidor.
-    
-    `xml<a href="pagina.php">
+    ```
+    <a href="pagina.php">
       <img src="botao.jpg" alt="Botão clicável" ismap>
-    </a>`
-    
+    </a>
+    ```
 10. **`decoding`**: Sugere como o navegador deve decodificar a imagem.
-    
-    `xml<img src="foto.jpg" alt="Fotografia" decoding="async">`
-    
+    ```
+    <img src="foto.jpg" alt="Fotografia" decoding="async">
+    ```
 
 ## **Formatos e otimização de imagens**
 
@@ -257,66 +262,66 @@ A escolha do formato de imagem correto e a otimização adequada são cruciais p
     - Melhor para: Fotografias e imagens com muitas cores
     - Características: Compressão com perda, tamanho de arquivo menor
     - Exemplo de uso:
-        
-        `xml<img src="fotografia.jpg" alt="Paisagem natural">`
-        
+        ```
+        <img src="fotografia.jpg" alt="Paisagem natural">
+        ```
 2. **PNG (Portable Network Graphics)**
     - Melhor para: Imagens com transparência, logos, ícones
     - Características: Compressão sem perda, suporta transparência
     - Exemplo de uso:
-        
-        `xml<img src="logo.png" alt="Logo da empresa com fundo transparente">`
-        
+        ```
+        <img src="logo.png" alt="Logo da empresa com fundo transparente">
+        ```
 3. **GIF (Graphics Interchange Format)**
     - Melhor para: Animações simples, imagens com poucas cores
     - Características: Limitado a 256 cores, suporta animações
     - Exemplo de uso:
-        
-        `xml<img src="animacao.gif" alt="Ícone animado">`
-        
+        ```
+        <img src="animacao.gif" alt="Ícone animado">
+        ```
 4. **WebP**
     - Melhor para: Substituir JPEG e PNG com melhor compressão
     - Características: Suporta tanto compressão com perda quanto sem perda
     - Exemplo de uso:
-        
-        `xml<picture>
+        ```
+        <picture>
           <source srcset="imagem.webp" type="image/webp">
           <img src="imagem.jpg" alt="Imagem otimizada">
-        </picture>`
-        
+        </picture>
+        ```
 5. **SVG (Scalable Vector Graphics)**
     - Melhor para: Ícones, logos, ilustrações simples
     - Características: Baseado em vetores, escalável sem perda de qualidade
     - Exemplo de uso:
-        
-        `xml<img src="icone.svg" alt="Ícone vetorial">`
-        
+        ```
+        <img src="icone.svg" alt="Ícone vetorial">
+        ```
 
 ## **Técnicas de otimização**
 
 1. **Redimensionamento**: Ajuste o tamanho da imagem para as dimensões exatas necessárias.
-    
-    `xml<img src="imagem-otimizada.jpg" width="800" height="600" alt="Imagem redimensionada">`
-    
+    ```
+    <img src="imagem-otimizada.jpg" width="800" height="600" alt="Imagem redimensionada">
+    ```
 2. **Compressão**: Use ferramentas de compressão para reduzir o tamanho do arquivo sem perda significativa de qualidade.
 3. **Lazy Loading**: Carregue imagens apenas quando necessário.
-    
-    `xml<img src="imagem-grande.jpg" loading="lazy" alt="Imagem carregada sob demanda">`
-    
+    ```
+    <img src="imagem-grande.jpg" loading="lazy" alt="Imagem carregada sob demanda">
+    ```
 4. **Imagens responsivas**: Use **`srcset`** e **`sizes`** para fornecer diferentes versões da imagem para diferentes tamanhos de tela.
-    
-    `xml<img src="imagem-padrao.jpg" 
+    ```
+    <img src="imagem-padrao.jpg" 
          srcset="imagem-pequena.jpg 300w, imagem-grande.jpg 1000w"
          sizes="(max-width: 600px) 300px, 1000px"
-         alt="Imagem responsiva">`
-    
+         alt="Imagem responsiva">
+    ```
 5. **CDN (Content Delivery Network)**: Use um CDN para distribuir suas imagens globalmente e reduzir o tempo de carregamento.
 6. **Formato apropriado**: Escolha o formato mais adequado para cada tipo de imagem.
 7. **Otimização de metadados**: Remova metadados desnecessários das imagens.
 8. **Cache do navegador**: Configure o cache adequadamente para imagens que não mudam frequentemente.
-    
-    `xml<img src="logo.png" alt="Logo da empresa" cache-control="max-age=31536000">`
-    
+    ```
+    <img src="logo.png" alt="Logo da empresa" cache-control="max-age=31536000">
+    ```
 9. **Sprites de imagem**: Combine várias imagens pequenas em uma única imagem para reduzir requisições HTTP.
 10. **Minificação de SVG**: Para arquivos SVG, remova dados desnecessários e otimize o código.
 
@@ -329,77 +334,77 @@ Quebras de linha e réguas horizontais são elementos simples, mas úteis para c
 A quebra de linha é representada pela tag <br>. É um elemento vazio que força uma quebra de linha no ponto onde é inserido.Exemplos de uso:
 
 1. Quebra simples em um texto:
-    
-    `xml<p>Esta é a primeira linha.<br>Esta é a segunda linha.</p>`
-    
+    ```
+    <p>Esta é a primeira linha.<br>Esta é a segunda linha.</p>
+    ```
 2. Em endereços:
-    
-    `xml<address>
+    ```
+    <address>
       John Doe<br>
       123 Main St<br>
       Anytown, USA 12345
-    </address>`
-    
+    </address>
+    ```
 3. Em poesia ou letras de música:
-    
-    `xml<p>
+    ```
+    <p>
       Roses are red,<br>
       Violets are blue,<br>
       Sugar is sweet,<br>
       And so are you.
-    </p>`
-    
+    </p>
+    ```
 4. Para separar elementos inline:
-    
-    `xml<span>Elemento 1</span><br>
+    ```
+    <span>Elemento 1</span><br>
     <span>Elemento 2</span><br>
-    <span>Elemento 3</span>`
-    
+    <span>Elemento 3</span>
+    ```
 5. Em formulários:
-    
-    `xml<form>
+    ```
+    <form>
       <label for="nome">Nome:</label><br>
       <input type="text" id="nome" name="nome"><br>
       <label for="email">Email:</label><br>
       <input type="email" id="email" name="email">
-    </form>`
-    
+    </form>
+    ```
 
 ## **Régua horizontal**
 
-A régua horizontal é representada pela tag <hr>. É um elemento vazio que cria uma linha horizontal, útil para separar seções de conteúdo.Exemplos de uso:
+A régua horizontal é representada pela tag ```<hr>```. É um elemento vazio que cria uma linha horizontal, útil para separar seções de conteúdo.Exemplos de uso:
 
 1. Separação básica entre seções:
-    
-    `xml<h2>Seção 1</h2>
+    ```
+    <h2>Seção 1</h2>
     <p>Conteúdo da seção 1.</p>
     <hr>
     <h2>Seção 2</h2>
-    <p>Conteúdo da seção 2.</p>`
-    
+    <p>Conteúdo da seção 2.</p>
+    ```
 2. Em formulários longos:
-    
-    `xml<form>
+    ```
+    <form>
       <h3>Informações Pessoais</h3>
-      *<!-- campos de informações pessoais -->*
+      <!-- campos de informações pessoais -->
       <hr>
       <h3>Endereço</h3>
-      *<!-- campos de endereço -->*
-    </form>`
-    
+      <!-- campos de endereço -->
+    </form>
+    ```
 3. Para separar o rodapé:
-    
-    `xml<main>
-      *<!-- Conteúdo principal -->*
+    ```
+    <main>
+      <!-- Conteúdo principal -->
     </main>
     <hr>
     <footer>
-      *<!-- Conteúdo do rodapé -->*
-    </footer>`
-    
+      <!-- Conteúdo do rodapé -->
+    </footer>
+    ```
 4. Em artigos longos:
-    
-    `xml<article>
+    ```
+    <article>
       <h1>Título do Artigo</h1>
       <p>Introdução...</p>
       <hr>
@@ -408,60 +413,60 @@ A régua horizontal é representada pela tag <hr>. É um elemento vazio que cria
       <hr>
       <h2>Segunda Parte</h2>
       <p>Mais conteúdo...</p>
-    </article>`
-    
+    </article>
+    ```
 5. Para criar uma separação visual em listas:
-    
-    `xml<ul>
+    ```
+    <ul>
       <li>Item 1</li>
       <li>Item 2</li>
       <hr>
       <li>Item 3</li>
       <li>Item 4</li>
-    </ul>`
-    
+    </ul>
+    ```
 
 ## **Organização de código com div e span**
 
-As tags <div> e <span> são elementos de contêiner genéricos usados para organizar e agrupar outros elementos HTML. Eles não têm significado semântico próprio, mas são essenciais para estruturação e estilização.
+As tags ```<div>``` e ```<span>``` são elementos de contêiner genéricos usados para organizar e agrupar outros elementos HTML. Eles não têm significado semântico próprio, mas são essenciais para estruturação e estilização.
 
 ## **Div**
 
-A tag <div> é um elemento de nível de bloco usado para criar seções ou agrupar conteúdos.Exemplos de uso:
+A tag ```<div>``` é um elemento de nível de bloco usado para criar seções ou agrupar conteúdos.Exemplos de uso:
 
 1. Criando seções de layout:
-    
-    `xml<div id="cabecalho">
+    ```
+    <div id="cabecalho">
       <h1>Meu Site</h1>
-      <nav>*<!-- Menu de navegação -->*</nav>
+      <nav><!-- Menu de navegação --></nav>
     </div>
     <div id="conteudo-principal">
-      <article>*<!-- Conteúdo do artigo -->*</article>
-      <aside>*<!-- Barra lateral -->*</aside>
+      <article><!-- Conteúdo do artigo --></article>
+      <aside><!-- Barra lateral --></aside>
     </div>
     <div id="rodape">
-      *<!-- Conteúdo do rodapé -->*
-    </div>`
-    
+      <!-- Conteúdo do rodapé -->
+    </div>
+    ```
 2. Agrupando elementos relacionados:
-    
-    `xml<div class="produto">
+    ```
+    <div class="produto">
       <img src="produto.jpg" alt="Produto">
       <h3>Nome do Produto</h3>
       <p>Descrição do produto</p>
       <button>Comprar</button>
-    </div>`
-    
+    </div>
+    ```
 3. Criando contêineres para estilização:
-    
-    `xml<div class="caixa-destaque">
+    ```
+    <div class="caixa-destaque">
       <h2>Oferta Especial</h2>
       <p>Aproveite nossos descontos!</p>
-    </div>`
-    
+    </div>
+    ```
 4. Organizando formulários:
-    
-    `xml<form>
+    ```
+    <form>
       <div class="campo-formulario">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome">
@@ -470,118 +475,118 @@ A tag <div> é um elemento de nível de bloco usado para criar seções ou agrup
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
       </div>
-    </form>`
-    
+    </form>
+    ```
 5. Criando grids ou layouts flexíveis:
-    
-    `xml<div class="grid-container">
+    ```
+    <div class="grid-container">
       <div class="grid-item">Item 1</div>
       <div class="grid-item">Item 2</div>
       <div class="grid-item">Item 3</div>
-    </div>`
-    
+    </div>
+    ```
 
 ## **Span**
 
-A tag <span> é um elemento inline usado para marcar partes menores de texto ou elementos dentro de um bloco maior.Exemplos de uso:
+A tag ```<span>``` é um elemento inline usado para marcar partes menores de texto ou elementos dentro de um bloco maior.Exemplos de uso:
 
 1. Estilizando partes específicas de texto:
-    
-    `xml<p>Este é um <span class="destaque">texto importante</span> que precisa de atenção.</p>`
-    
+    ```
+    <p>Este é um <span class="destaque">texto importante</span> que precisa de atenção.</p>
+    ```
 2. Adicionando ícones inline:
-    
-    `xml<button>
+    ```
+    <button>
       <span class="icone-carrinho"></span>
       Adicionar ao Carrinho
-    </button>`
-    
+    </button>
+    ```
 3. Criando elementos interativos inline:
-    
-    `xml<p>Clique <span class="link-tooltip" title="Mais informações">aqui</span> para saber mais.</p>`
-    
+    ```
+    <p>Clique <span class="link-tooltip" title="Mais informações">aqui</span> para saber mais.</p>
+    ```
 4. Aplicando estilos a números ou datas:
-    
-    `xml<p>O evento acontecerá em <span class="data">15 de março de 2025</span>.</p>`
-    
+    ```
+    <p>O evento acontecerá em <span class="data">15 de março de 2025</span>.</p>
+    ```
 5. Marcando termos técnicos ou palavras-chave:
-    
-    `xml<p>HTML significa <span class="termo-tecnico">HyperText Markup Language</span>.</p>`
-    
+    ```
+    <p>HTML significa <span class="termo-tecnico">HyperText Markup Language</span>.</p>
+    ```
 
 ## **Trabalhando com links**
 
-Links são fundamentais para a navegação na web. Em HTML, eles são criados usando a tag <a> (âncora).Sintaxe básica:
-
-`xml<a href="URL">Texto do link</a>`
-
+Links são fundamentais para a navegação na web. Em HTML, eles são criados usando a tag ```<a>``` (âncora).Sintaxe básica:
+```
+<a href="URL">Texto do link</a>
+```
 Exemplos e tipos de links:
 
 1. Link para uma página externa:
-    
-    `xml<a href="https://www.exemplo.com">Visite nosso site parceiro</a>`
-    
+    ```
+    <a href="https://www.exemplo.com">Visite nosso site parceiro</a>
+    ```
 2. Link para uma página interna:
-    
-    `xml<a href="sobre.html">Sobre nós</a>`
-    
+    ```
+    <a href="sobre.html">Sobre nós</a>
+    ```
 3. Link para um email:
-    
-    `xml<a href="mailto:contato@exemplo.com">Envie-nos um email</a>`
-    
+    ```
+    <a href="mailto:contato@exemplo.com">Envie-nos um email</a>
+    ```
 4. Link para um número de telefone:
-    
-    `xml<a href="tel:+551234567890">Ligue para nós</a>`
-    
+    ```
+    <a href="tel:+551234567890">Ligue para nós</a>
+    ```
 5. Link para download de arquivo:
-    
-    `xml<a href="documento.pdf" download>Baixe nosso catálogo</a>`
-    
+    ```
+    <a href="documento.pdf" download>Baixe nosso catálogo</a>
+    ```
 6. Link para uma seção específica da página (âncora):
+    ```
+    <a href="#secao-2">Ir para Seção 2</a>
     
-    `xml<a href="#secao-2">Ir para Seção 2</a>
-    
-    *<!-- Em algum lugar da página -->*
-    <h2 id="secao-2">Seção 2</h2>`
-    
+    <!-- Em algum lugar da página -->
+    <h2 id="secao-2">Seção 2</h2>
+    ```
 7. Link que abre em uma nova aba:
-    
-    `xml<a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Abrir em nova aba</a>`
-    
+    ```
+    <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Abrir em nova aba</a>
+    ```
 8. Link com atributo title (tooltip):
-    
-    `xml<a href="politica-privacidade.html" title="Leia nossa política de privacidade">Política de Privacidade</a>`
-    
+    ```
+    <a href="politica-privacidade.html" title="Leia nossa política de privacidade">Política de Privacidade</a>
+    ```
 9. Link com imagem:
-    
-    `xml<a href="https://www.exemplo.com">
+    ```
+    <a href="https://www.exemplo.com">
       <img src="logo.png" alt="Logo da Empresa">
-    </a>`
-    
+    </a>
+    ```
 10. Link para um elemento específico em outra página:
-    
-    `xml<a href="pagina.html#secao-especifica">Ir para seção específica em outra página</a>`
-    
+    ```
+    <a href="pagina.html#secao-especifica">Ir para seção específica em outra página</a>
+    ```
 11. Link relativo ao diretório atual:
-    
-    `xml<a href="./imagens/foto.jpg">Ver foto</a>`
-    
+    ```
+    <a href="./imagens/foto.jpg">Ver foto</a>
+    ```
 12. Link para o diretório pai:
-    
-    `xml<a href="../index.html">Voltar à página inicial</a>`
-    
+    ```
+    <a href="../index.html">Voltar à página inicial</a>
+    ```
 13. Link com atributo rel para SEO:
-    
-    `xml<a href="https://www.parceiro.com" rel="nofollow">Site Parceiro</a>`
-    
+    ```
+    <a href="https://www.parceiro.com" rel="nofollow">Site Parceiro</a>
+    ```
 14. Link para um arquivo de script:
-    
-    `xml<a href="javascript:void(0);" onclick="minhaFuncao()">Executar função</a>`
-    
+    ```
+    <a href="javascript:void(0);" onclick="minhaFuncao()">Executar função</a>
+    ```
 15. Link com prefixo de protocolo:
-    
-    `xml<a href="//exemplo.com">Link com protocolo relativo</a>`
-    
+    ```
+    <a href="//exemplo.com">Link com protocolo relativo</a>
+    ```
 
 Ao trabalhar com links, é importante considerar a acessibilidade, usabilidade e SEO. Use textos descritivos para os links, evite abrir muitos links em novas abas sem necessidade, e certifique-se de que todos os links funcionem corretamente.
 
@@ -599,9 +604,9 @@ Uma URL absoluta contém todas as informações necessárias para localizar um r
 - Parâmetros de consulta (opcionais)
 
 Exemplo de URL absoluta:
-
-`texthttps://www.exemplo.com/blog/artigo.html?id=123`
-
+```
+texthttps://www.exemplo.com/blog/artigo.html?id=123
+```
 Vantagens das URLs absolutas:
 
 - Garantem acesso consistente ao recurso de qualquer lugar
@@ -611,9 +616,9 @@ Vantagens das URLs absolutas:
 ## **URLs Relativas**
 
 Uma URL relativa especifica a localização de um recurso em relação à página atual ou ao domínio base. Ela geralmente inclui apenas o caminho e, opcionalmente, o recurso.Exemplo de URL relativa:
-
-`text/blog/artigo.html`
-
+```
+text/blog/artigo.html
+```
 Vantagens das URLs relativas:
 
 - Mais fáceis de gerenciar em sites grandes
@@ -625,13 +630,13 @@ Vantagens das URLs relativas:
 Links dentro da mesma página, também conhecidos como âncoras, permitem a navegação entre diferentes seções de um documento HTML. Eles são úteis para melhorar a usabilidade em páginas longas.Para criar um link âncora:
 
 1. Defina um identificador no elemento de destino:
-    
-    `xml<h2 id="secao2">Seção 2</h2>`
-    
+    ```
+    <h2 id="secao2">Seção 2</h2>
+    ```
 2. Crie o link para a âncora:
-    
-    `xml<a href="#secao2">Ir para Seção 2</a>`
-    
+    ```
+    <a href="#secao2">Ir para Seção 2</a>
+    ```
 
 Exemplos de uso:
 
@@ -643,14 +648,14 @@ Exemplos de uso:
 
 Links externos são hiperlinks que apontam para páginas em domínios diferentes do site atual. Eles são importantes para SEO e para fornecer recursos adicionais aos visitantes.Ao criar links externos:
 
-1. Use URLs absolutas para garantir que o link funcione corretamente[10](https://www.seo.com/pt-br/blog/absolute-vs-relative-urls-for-seo/).
-2. Considere abrir o link em uma nova aba usando o atributo **`target="_blank"`**.
-3. Adicione o atributo **`rel="noopener noreferrer"`** para segurança.
+1. Use URLs absolutas para garantir que o link funcione corretamente(https://www.seo.com/pt-br/blog/absolute-vs-relative-urls-for-seo/).
+2. Considere abrir o link em uma nova aba usando o atributo ```target="_blank"```.
+3. Adicione o atributo ```rel="noopener noreferrer"``` para segurança.
 
 Exemplo de link externo:
-
-`xml<a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Site Exemplo</a>`
-
+```
+<a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Site Exemplo</a>
+```
 Benefícios dos links externos:
 
 - Aumentam a credibilidade do seu conteúdo
@@ -661,7 +666,7 @@ Cuidados ao usar links externos:
 
 - Verifique regularmente se os links ainda estão ativos
 - Evite linkar para sites de baixa qualidade ou não confiáveis
-- Use o atributo **`rel="nofollow"`** para links pagos ou não endossados
+- Use o atributo ```rel="nofollow"``` para links pagos ou não endossados
 
 Ao implementar links em seu site, considere o contexto e o objetivo de cada link para escolher entre URLs absolutas ou relativas, e entre links internos ou externos. Uma estratégia de linking bem planejada pode melhorar significativamente a experiência do usuário e o desempenho do SEO.
 
@@ -669,19 +674,19 @@ Ao implementar links em seu site, considere o contexto e o objetivo de cada link
 
 As listas em HTML são elementos fundamentais para organizar e estruturar informações em uma página web. Existem três tipos principais de listas: não-ordenadas, ordenadas e de definição.
 
-## **Listas Não-Ordenadas (`<ul>`)**
+## **Listas Não-Ordenadas (```<ul>```)**
 
-As listas não-ordenadas são criadas usando a tag <ul> (unordered list) e são usadas quando a ordem dos itens não é importante. Cada item da lista é definido pela tag <li>
+As listas não-ordenadas são criadas usando a tag ```<ul>``` (unordered list) e são usadas quando a ordem dos itens não é importante. Cada item da lista é definido pela tag ```<li>```
 
 (list item).Exemplo básico:
-
-`xml<ul>
+```
+<ul>
   <li>Maçã</li>
   <li>Banana</li>
   <li>Laranja</li>
-</ul>`
-
-Estilos de marcadores para <ul>:
+</ul>
+```
+Estilos de marcadores para ```<ul>```:
 
 - **`disc`**: Círculo preenchido (padrão)
 - **`circle`**: Círculo vazio
@@ -690,23 +695,23 @@ Estilos de marcadores para <ul>:
 - 
 
 Exemplo com estilo personalizado:
-
-`xml<ul style="list-style-type: square;">
+```
+<ul style="list-style-type: square;">
   <li>Item com marcador quadrado</li>
   <li>Outro item</li>
-</ul>`
+</ul>
+```
+## **Listas Ordenadas (```<ol>```)**
 
-## **Listas Ordenadas (`<ol>`)**
-
-As listas ordenadas são criadas usando a tag <ol> (ordered list) e são usadas quando a sequência dos itens é importante. Cada item também é definido pela tag <li>.Exemplo básico:
-
-`xml<ol>
+As listas ordenadas são criadas usando a tag ```<ol>``` (ordered list) e são usadas quando a sequência dos itens é importante. Cada item também é definido pela tag ```<li>```.Exemplo básico:
+```
+<ol>
   <li>Primeiro passo</li>
   <li>Segundo passo</li>
   <li>Terceiro passo</li>
-</ol>`
-
-Estilos de numeração para <ol>:
+</ol>
+```
+Estilos de numeração para ```<ol>```:
 
 - **`1`**: Números (padrão)
 - **`a`**: Letras minúsculas
@@ -715,13 +720,13 @@ Estilos de numeração para <ol>:
 - **`I`**: Algarismos romanos maiúsculos
 
 Exemplo com estilo personalizado:
-
-`xml<ol type="i" start="4">
+```
+<ol type="i" start="4">
   <li>Item com numeração romana minúscula começando do 4</li>
   <li>Próximo item</li>
-</ol>`
-
-## **Listas de Definição (`<dl>`)**
+</ol>
+```
+## **Listas de Definição (```<dl>```)**
 
 As listas de definição são usadas para termos e suas definições. Elas usam três tags:
 
@@ -730,19 +735,19 @@ As listas de definição são usadas para termos e suas definições. Elas usam 
 - **`<dd>`**: Definition Description (descrição do termo)
 
 Exemplo:
-
-`xml<dl>
+```
+<dl>
   <dt>HTML</dt>
   <dd>HyperText Markup Language, a linguagem de marcação para criar páginas web.</dd>
   <dt>CSS</dt>
   <dd>Cascading Style Sheets, usado para estilizar elementos HTML.</dd>
-</dl>`
-
+</dl>
+```
 ## **Listas Aninhadas**
 
 É possível aninhar listas dentro de outras listas, criando sublistas:
-
-`xml<ul>
+```
+<ul>
   <li>Frutas
     <ul>
       <li>Maçã</li>
@@ -755,8 +760,8 @@ Exemplo:
       <li>Brócolis</li>
     </ol>
   </li>
-</ul>`
-
+</ul>
+```
 ## **Criação de tabelas**
 
 As tabelas em HTML são usadas para organizar dados em linhas e colunas. A estrutura de uma tabela inclui várias tags importantes:
@@ -770,8 +775,8 @@ As tabelas em HTML são usadas para organizar dados em linhas e colunas. A estru
 - **`<td>`**: Define uma célula de dados
 
 Exemplo de uma tabela completa:
-
-`xml<table border="1">
+```
+<table border="1">
   <thead>
     <tr>
       <th>Cabeçalho 1</th>
@@ -793,8 +798,8 @@ Exemplo de uma tabela completa:
       <td colspan="2">Rodapé da tabela</td>
     </tr>
   </tfoot>
-</table>`
-
+</table>
+```
 Atributos importantes para tabelas:
 
 - **`border`**: Define a largura da borda da tabela
@@ -805,9 +810,9 @@ Atributos importantes para tabelas:
 
 ## **O que são formulários**
 
-Formulários HTML são elementos usados para coletar informações dos usuários. Eles são criados usando a tag <form> e podem conter vários tipos de campos de entrada, botões e outros elementos interativos.Estrutura básica de um formulário:
-
-`xml<form action="/submit-form" method="post">
+Formulários HTML são elementos usados para coletar informações dos usuários. Eles são criados usando a tag ```<form>``` e podem conter vários tipos de campos de entrada, botões e outros elementos interativos.Estrutura básica de um formulário:
+```
+<form action="/submit-form" method="post">
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome" required>
   
@@ -815,9 +820,9 @@ Formulários HTML são elementos usados para coletar informações dos usuários
   <input type="email" id="email" name="email" required>
   
   <input type="submit" value="Enviar">
-</form>`
-
-Atributos importantes do <form>: 
+</form>
+```
+Atributos importantes do ```<form>```: 
 
 - **`action`**: Especifica para onde os dados do formulário serão enviados
 - **`method`**: Define o método HTTP a ser usado (geralmente "get" ou "post")
@@ -825,101 +830,101 @@ Atributos importantes do <form>:
 
 ## **Conhecendo os tipos de input**
 
-O elemento <input> é o mais versátil e comum em formulários HTML. Aqui está uma lista detalhada dos tipos de <input>, ordenados do mais utilizado para o menos:
+O elemento ```<input>``` é o mais versátil e comum em formulários HTML. Aqui está uma lista detalhada dos tipos de ```<input>```, ordenados do mais utilizado para o menos:
 
 1. **`text`**: Para entrada de texto de linha única
-    
-    `xml<input type="text" name="nome" placeholder="Seu nome">`
-    
+    ```
+    <input type="text" name="nome" placeholder="Seu nome">
+    ```
 2. **`password`**: Para senhas (oculta os caracteres digitados)
-    
-    `xml<input type="password" name="senha" minlength="8">`
-    
+    ```
+    <input type="password" name="senha" minlength="8">
+    ```
 3. **`submit`**: Para botões de envio de formulário
-    
-    `xml<input type="submit" value="Enviar formulário">`
-    
+    ```
+    <input type="submit" value="Enviar formulário">
+    ```
 4. **`checkbox`**: Para caixas de seleção
-    
-    `xml<input type="checkbox" name="termos" value="aceito"> Aceito os termos`
-    
+    ```
+    <input type="checkbox" name="termos" value="aceito"> Aceito os termos
+    ```
 5. **`radio`**: Para botões de opção
-    
-    `xml<input type="radio" name="genero" value="masculino"> Masculino
-    <input type="radio" name="genero" value="feminino"> Feminino`
-    
+    ```
+    <input type="radio" name="genero" value="masculino"> Masculino
+    <input type="radio" name="genero" value="feminino"> Feminino
+    ```
 6. **`email`**: Para endereços de e-mail
-    
-    `xml<input type="email" name="email" required>`
-    
+    ```
+    <input type="email" name="email" required>
+    ```
 7. **`number`**: Para entrada numérica
-    
-    `xml<input type="number" name="idade" min="0" max="120">`
-    
+    ```
+    <input type="number" name="idade" min="0" max="120">
+    ```
 8. **`date`**: Para seleção de data
-    
-    `xml<input type="date" name="data_nascimento">`
-    
+    ```
+    <input type="date" name="data_nascimento">
+    ```
 9. **`file`**: Para upload de arquivos
-    
-    `xml<input type="file" name="documento" accept=".pdf,.doc,.docx">`
-    
+    ```
+    <input type="file" name="documento" accept=".pdf,.doc,.docx">
+    ```
 10. **`hidden`**: Para campos ocultos
-    
-    `xml<input type="hidden" name="id_usuario" value="123456">`
-    
+    ```
+    <input type="hidden" name="id_usuario" value="123456">
+    ```
 11. **`tel`**: Para números de telefone
-    
-    `xml<input type="tel" name="telefone" pattern="[0-9]{10,11}">`
-    
+    ```
+    <input type="tel" name="telefone" pattern="[0-9]{10,11}">
+    ```
 12. **`url`**: Para URLs
-    
-    `xml<input type="url" name="website">`
-    
+    ```
+    <input type="url" name="website">
+    ```
 13. **`search`**: Para campos de busca
-    
-    `xml<input type="search" name="busca" placeholder="Pesquisar...">`
-    
+    ```
+    <input type="search" name="busca" placeholder="Pesquisar...">
+    ```
 14. **`time`**: Para entrada de hora
-    
-    `xml<input type="time" name="horario">`
-    
+    ```
+    <input type="time" name="horario">
+    ```
 15. **`color`**: Para seleção de cor
-    
-    `xml<input type="color" name="cor_favorita">`
-    
+    ```
+    <input type="color" name="cor_favorita">
+    ```
 16. **`range`**: Para seleção de um valor dentro de um intervalo
-    
-    `xml<input type="range" name="volume" min="0" max="100" step="1">`
-    
+    ```
+    <input type="range" name="volume" min="0" max="100" step="1">
+    ```
 17. **`datetime-local`**: Para data e hora (sem fuso horário)
-    
-    `xml<input type="datetime-local" name="evento">`
-    
+    ```
+    <input type="datetime-local" name="evento">
+    ```
 18. **`month`**: Para seleção de mês e ano
-    
-    `xml<input type="month" name="mes_ano">`
-    
+    ```
+    <input type="month" name="mes_ano">
+    ```
 19. **`week`**: Para seleção de semana e ano
-    
-    `xml<input type="week" name="semana">`
-    
+    ```
+    <input type="week" name="semana">
+    ```
 20. **`image`**: Para criar um botão de imagem
-    
-    `xml<input type="image" src="botao.png" alt="Enviar" width="50" height="50">`
-    
+    ```
+    <input type="image" src="botao.png" alt="Enviar" width="50" height="50">
+    ```
 21. **`reset`**: Para resetar o formulário aos valores padrão
-    
-    `xml<input type="reset" value="Limpar formulário">`
-    
+    ```
+    <input type="reset" value="Limpar formulário">
+    ```
 
 ## **Elementos select e textarea**
 
 ## **Select**
 
-O elemento <select> cria uma lista suspensa de opções. É usado em conjunto com a tag <option> para definir as opções disponíveis.Exemplo detalhado:
-
-`xml<label for="plataforma">Escolha uma plataforma:</label>
+O elemento ```<select>``` cria uma lista suspensa de opções. É usado em conjunto com a tag ```<option>``` para definir as opções disponíveis.Exemplo detalhado:
+```
+<label for="plataforma">Escolha uma plataforma:</label>
 <select name="plataforma" id="plataforma">
   <option value="">Selecione uma opção</option>
   <option value="xbox">Xbox Series</option>
@@ -929,9 +934,9 @@ O elemento <select> cria uma lista suspensa de opções. É usado em conjunto co
     <option value="steam">Steam</option>
     <option value="epic">Epic Games Store</option>
   </optgroup>
-</select>`
-
-Atributos importantes do <select>:
+</select>
+```
+Atributos importantes do ```<select>```:
 
 - **`name`**: Define o nome do campo para envio de dados
 - **`id`**: Identificador único para o elemento
@@ -941,11 +946,11 @@ Atributos importantes do <select>:
 
 ## **Textarea**
 
-O elemento <textarea> cria uma área de texto multilinha. É útil para entradas de texto mais longas, como comentários ou descrições.Exemplo detalhado:
-
-`xml<label for="comentario">Deixe seu comentário:</label>
-<textarea name="comentario" id="comentario" rows="4" cols="50" maxlength="500" placeholder="Digite seu comentário aqui (máximo 500 caracteres)"></textarea>`
-
+O elemento ```<textarea>``` cria uma área de texto multilinha. É útil para entradas de texto mais longas, como comentários ou descrições.Exemplo detalhado:
+```
+<label for="comentario">Deixe seu comentário:</label>
+<textarea name="comentario" id="comentario" rows="4" cols="50" maxlength="500" placeholder="Digite seu comentário aqui (máximo 500 caracteres)"></textarea>
+```
 Atributos importantes do <textarea>:
 
 - **`name`**: Nome do campo para envio de dados
@@ -964,41 +969,41 @@ Estes elementos são essenciais para criar formulários interativos e coletar di
 O HTML5 trouxe uma série de recursos modernos que revolucionaram o desenvolvimento web:
 
 1. Suporte nativo a áudio e vídeo
-    
-    `xml<video src="video.mp4" controls></video>
-    <audio src="audio.mp3" controls></audio>`
-    
+    ```
+    <video src="video.mp4" controls></video>
+    <audio src="audio.mp3" controls></audio>
+    ```
 2. Canvas para gráficos 2D e 3D
-    
-    `xml<canvas id="myCanvas" width="200" height="100"></canvas>`
-    
+    ```
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    ```
 3. SVG para gráficos vetoriais
-    
-    `xml<svg width="100" height="100">
+    ```
+    <svg width="100" height="100">
       <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-    </svg>`
-    
+    </svg>
+    ```
 4. Geolocalização
-    
-    `javascriptnavigator.geolocation.getCurrentPosition(successCallback, errorCallback);`
-    
+    ```
+    javascriptnavigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    ```
 5. Web Storage para armazenamento local
-    
-    `javascriptlocalStorage.setItem("chave", "valor");
-    sessionStorage.setItem("chave", "valor");`
-    
+    ```
+    javascriptlocalStorage.setItem("chave", "valor");
+    sessionStorage.setItem("chave", "valor");
+    ```
 6. Web Workers para processamento em segundo plano
-    
-    `javascriptconst worker = new Worker("worker.js");`
-    
+    ```
+    javascriptconst worker = new Worker("worker.js");
+    ```
 7. WebSockets para comunicação bidirecional em tempo real
-    
-    `javascriptconst socket = new WebSocket("ws://exemplo.com/socket");`
-    
+    ```
+    javascriptconst socket = new WebSocket("ws://exemplo.com/socket");
+    ```
 8. Drag and Drop nativo
-    
-    `xml<div draggable="true" ondragstart="drag(event)">Arraste-me</div>`
-    
+    ```
+    <div draggable="true" ondragstart="drag(event)">Arraste-me</div>
+    ```
 
 ## **Elementos semânticos**
 
@@ -1023,48 +1028,46 @@ Os elementos semânticos do HTML5 fornecem significado estrutural ao conteúdo. 
 WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) fornece atributos adicionais para melhorar a acessibilidade de conteúdo web dinâmico. Aqui estão os principais atributos ARIA, listados do mais utilizado para o menos:
 
 1. **`role`**: Define a função de um elemento
-    
-    `xml<div role="button">Clique aqui</div>`
-    
+    ```
+    <div role="button">Clique aqui</div>
+    ```
 2. **`aria-label`**: Fornece um rótulo para elementos sem texto visível
-    
-    `xml<button aria-label="Fechar">X</button>`
-    
+    ```
+    <button aria-label="Fechar">X</button>
+    ```
 3. **`aria-labelledby`**: Associa um elemento a outro que serve como seu rótulo
-    
-    `xml<h2 id="titulo">Seção importante</h2>
-    <div aria-labelledby="titulo">Conteúdo da seção</div>`
-    
+    ```
+    <h2 id="titulo">Seção importante</h2>
+    <div aria-labelledby="titulo">Conteúdo da seção</div>
+    ```
 4. **`aria-hidden`**: Oculta elementos de tecnologias assistivas
-    
-    `xml<div aria-hidden="true">Conteúdo decorativo</div>`
-    
+    ```
+    <div aria-hidden="true">Conteúdo decorativo</div>
+    ```
 5. **`aria-expanded`**: Indica se um elemento expansível está expandido ou recolhido
-    
-    `xml<button aria-expanded="false">Mostrar mais</button>`
-    
+    ```
+    <button aria-expanded="false">Mostrar mais</button>
+    ```
 6. **`aria-controls`**: Indica que um elemento controla outro
-    
-    `xml<button aria-controls="painel">Abrir painel</button>
-    <div id="painel">Conteúdo do painel</div>`
-    
+    ```
+    <button aria-controls="painel">Abrir painel</button>
+    <div id="painel">Conteúdo do painel</div>
+    ```
 7. **`aria-live`**: Define uma região que será atualizada dinamicamente
-    
-    `xml<div aria-live="polite">Conteúdo atualizado</div>`
-    
+    ```
+    <div aria-live="polite">Conteúdo atualizado</div>
+    ```
 8. **`aria-required`**: Indica que um campo de formulário é obrigatório
-    
-    `xml<input type="text" aria-required="true">`
-    
+    ```
+    <input type="text" aria-required="true">
+    ```
 9. **`aria-selected`**: Indica o estado de seleção de um elemento
-    
-    `xml<li role="option" aria-selected="true">Opção selecionada</li>`
-    
+    ```
+    <li role="option" aria-selected="true">Opção selecionada</li>
+    ```
 10. **`aria-disabled`**: Indica que um elemento está desabilitado
-    
-    `xml<button aria-disabled="true">Botão desabilitado</button>`
-    
+    ```
+    <button aria-disabled="true">Botão desabilitado</button>
+    ```
 
 Estes recursos, elementos semânticos e atributos ARIA trabalham em conjunto para criar páginas web mais acessíveis, significativas e interativas, melhorando a experiência do usuário e a compatibilidade com diferentes dispositivos e tecnologias assistivas
-
-[Anotações](https://www.notion.so/Anota-es-174244b01b60804d8ca2ed134b28f5aa?pvs=21)
