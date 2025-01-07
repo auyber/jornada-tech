@@ -23,11 +23,11 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 
 ### 🎨 CSS
 - [Revisão CSS](./css/revisao.md)
-- [Dicas CSS](./css/dicas.md)
+- [Dicas e Anotações CSS](./css/dicas.md)
 
 ### ☕ JavaScript
 - [Revisão JavaScript](./javascript/revisao.md)
-- [Dicas JavaScript](./javascript/dicas.md)
+- [Dicas e Anotações JavaScript](./javascript/dicas.md)
 
 
 ## 💡 Compartilhe Suas Dicas
