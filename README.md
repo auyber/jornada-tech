@@ -46,4 +46,4 @@ Se você encontrou algum erro ou informação incorreta, por favor, nos avise! C
 
 ⭐ Se este repositório te ajudou, considere dar uma estrela!
 
-Última atualização: [Data]
+Última atualização: [07/01/2025]
