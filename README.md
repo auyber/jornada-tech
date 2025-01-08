@@ -29,6 +29,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Revisão JavaScript](./javascript/revisao.md)
 - [Dicas e Anotações JavaScript](./javascript/dicas.md)
 
+### 💻 Desenvolvimento de Software
+- [Revisão Desenvolvimento de Software](./desenvolvimento-de-software/revisao.md)
+
 ## 📚 Livros Recomendados
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
