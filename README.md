@@ -72,7 +72,8 @@ Ao indicar um livro, você ajuda a enriquecer nossa biblioteca de conhecimento e
 
 ## 📬 Vamos Conectar!
 
-- [LinkedIn](https://www.linkedin.com/in/auyber-genesini-moura-58b258144/)
+<a href="https://www.linkedin.com/in/auyber-genesini-moura-58b258144/" target="_blank">LinkedIn</a>
+
 
 ---
 
