@@ -1,4 +1,4 @@
-# Fundamentos de Desenvolvimento de Softwares
+# Desenvolvimento de Softwares
 
 ## Introdução
 Os softwares fazem parte do nosso cotidiano, presentes em dispositivos como computadores, Smart TVs e celulares. Abaixo são apresentados conceitos fundamentais para distinguir software, programas e sistemas, além de explorar metodologias de desenvolvimento.
