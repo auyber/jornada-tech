@@ -37,8 +37,8 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ### 💻 Desenvolvimento de Software
 - [Revisão Desenvolvimento de Software](./desenvolvimento-de-software/revisao.md)
 
-### 📐 Design de Software
-- [Revisão Design de Software](./design-de-software/revisao.md)
+### 📐 Design de Sistemas
+- [Revisão Design de Sistemas](./design-de-sistemas/revisao.md)
 
 ## 📚 Livros Recomendados
 
