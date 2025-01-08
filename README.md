@@ -11,6 +11,7 @@ O objetivo é compartilhar conhecimento, documentar minha evolução e criar um 
 - 📚 Revisão de estudos
 - 📝 Anotações e dicas
 - 📖 Sugestões de livros
+- 💭 Dicas de Estudo
 
 ## 🔮 Melhorias Futuras
 
@@ -44,6 +45,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
 
+## 💭 Dicas de Estudos
+
+Aprimore sua jornada de aprendizado com estas estratégias eficazes: [Dicas de estudos](./dicas-de-estudos.md)
 
 
 ## 💡 Compartilhe Suas Dicas
