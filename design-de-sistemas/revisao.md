@@ -35,7 +35,15 @@ Além disso, abordaremos o **Git**, uma das ferramentas mais populares para cont
 17. [Estilo Arquitetural](#17-estilo-arquitetural)  
 18. [Documentação da Arquitetura de Software](#18-documentação-da-arquitetura-de-software)   
 19. [Modelos Arquiteturais](#19-modelos-arquiteturais)    
-20. [O Futuro da Arquitetura de Software](#20-o-futuro-da-arquitetura-de-software)  
+20. [O Futuro da Arquitetura de Software](#20-o-futuro-da-arquitetura-de-software)
+#### Design de Sistemas
+21. [Fundamentos de Design de Sistemas](#21-fundamentos-de-design-de-sistemas)  
+22. [Experiência do Usuário (UX)](#22-experiência-do-usuário-ux)    
+23. [Interface do Usuário (UI)](#23-interface-do-usuário-ui)   
+24. [Pesquisa com Usuários](#24-pesquisa-com-usuários)  
+25. [Ideação e Brainstorming](#25-ideação-e-brainstorming)    
+26. [Prototipação](#26-prototipação)  
+
 
 
 ---
@@ -420,5 +428,94 @@ Automatiza tarefas complexas, analisa grandes volumes de dados e melhora a efici
 ###  Microserviços  
 Divide um aplicativo em pequenos serviços independentes que podem ser desenvolvidos, implantados e escalados individualmente.  
 
+---
+
+## 21. Fundamentos de Design de Sistemas  
+
+O design de sistemas é uma abordagem multidisciplinar que visa criar soluções eficazes e satisfatórias para os usuários.  
+Ele envolve:  
+- Compreensão das necessidades dos clientes.  
+- Geração de ideias inovadoras.  
+- Criação de protótipos para testar e refinar soluções.  
+
+---
+
+## 22. Experiência do Usuário (UX)  
+
+###  O que é UX?  
+A **UX** refere-se à experiência geral que um usuário tem ao interagir com um produto ou serviço, abrangendo:  
+- Descoberta inicial.  
+- Uso cotidiano.  
+- Suporte pós-venda.  
+
+###  Criação da UX  
+- **Origem**: Termo cunhado por Don Norman na década de 1990.  
+- **Evolução**: Exemplificada pela jornada da Apple na criação de dispositivos intuitivos e centrados no usuário.  
+
+###  Importância da UX  
+Uma boa UX pode ser a diferença entre o sucesso e o fracasso de um produto, como demonstrado pelo sucesso do Netflix.  
+
+---
+
+## 23. Interface do Usuário (UI)  
+
+###  Diferenças entre UX e UI  
+- **UX**: Foca na experiência geral do usuário.  
+- **UI**: Concentra-se especificamente na interface com a qual o usuário interage.  
+
+###  Equilíbrio entre UX e UI  
+É crucial encontrar um equilíbrio entre:  
+- **Necessidades do usuário (UX)**.  
+- **Demandas do negócio, oferecendo uma interface agradável e prática (UI)**.  
+
+---
+
+## 24. Pesquisa com Usuários  
+
+###  Entrevistas com Usuários  
+**Importância**: Entender as necessidades reais dos usuários.  
+
+#### Processo:  
+1. **Preparação**: Definir público-alvo e criar roteiro de perguntas.  
+2. **Condução**: Criar um ambiente acolhedor e evitar vieses.  
+
+###  Análise de Dados  
+Utilizar os insights obtidos para informar decisões de design e desenvolvimento.  
+
+---
+
+## 25. Ideação e Brainstorming  
+
+###  Técnicas de Ideação  
+- **Brainstorming**: Geração livre de ideias em grupo.  
+- **Crazy 8's**: Método rápido para gerar múltiplas soluções.  
+- **MESCRAI**: Técnica para diversificar e desenvolver ideias existentes.  
+
+###  Processo de Brainstorming  
+1. Definir o problema.  
+2. Montar um grupo multidisciplinar.  
+3. Estabelecer regras.  
+4. Gerar ideias.  
+5. Analisar e selecionar as melhores soluções.  
+
+---
+
+## 26. Prototipação  
+
+###  Importância da Prototipação  
+Permite visualizar e testar ideias antes da implementação final, reduzindo custos e riscos.  
+
+###  Tipos de Protótipos  
+- **Baixa Fidelidade**: Esboços simples para demonstrar funcionalidade básica.  
+- **Média Fidelidade**: Mais detalhes e interações simples.  
+- **Alta Fidelidade**: Representação próxima ao produto final, com elementos visuais refinados.  
+
+###  Processo de Prototipação  
+1. Criar protótipos baseados nas ideias geradas.  
+2. Testar com usuários.  
+3. Coletar feedback.  
+4. Iterar e refinar o design.  
+
+---
 
 
