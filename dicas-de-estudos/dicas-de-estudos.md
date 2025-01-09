@@ -44,7 +44,7 @@ Experimente o ANKI e veja como ele pode revolucionar sua forma de estudar! 🚀
 
 ## Como Instalar, Configurar e Estudar com o ANKI de Forma Eficiente!
 
-![Imagem explicativa sobre instalação e configuração do ANKI](imagens/instalar_configurar_anki.jpg)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/banner-config-anki.png)
 
 📚 Quer aprender a instalar e configurar o ANKI para estudar de forma mais eficiente? Siga o passo a passo que preparei abaixo:
 
@@ -58,32 +58,33 @@ Experimente o ANKI e veja como ele pode revolucionar sua forma de estudar! 🚀
    - No ANKI, vá ao menu superior, clique em "Arquivo" e selecione "Mudar Perfil".
    - Renomeie o perfil atual com seu nome ou crie um novo perfil. Essa etapa é importante para organizar seus estudos e personalizar a experiência.
 
-(Imagem explicativa do menu "Mudar Perfil")
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-1.png)
 
 4. **Sincronização:**
    - No menu superior, clique em "Sincronizar" e faça login com o e-mail e senha da sua conta ANKIWeb.
    - Se for sua primeira vez usando o ANKIWeb, aparecerá uma mensagem perguntando se deseja "Baixar do AnkiWeb" ou "Enviar para o AnkiWeb". Se não houver cartas em sua conta online, clique em "Baixar". Caso já tenha decks criados, clique em "Enviar" para sincronizar e salvar todos os seus flashcards.
 
-(Imagem explicativa de como sincronizar)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-2.png)
 
 ### Criando e Configurando Seus Decks
 
 1. **Crie seu Deck de Estudo:**
    - No ANKI, crie um novo deck e renomeie de acordo com o tema ou área de estudo, por exemplo, "HTML/CSS". Essa personalização facilita a organização dos conteúdos.
 
-(Imagem de criação de deck)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-3.png)
 
 2. **Configuração Avançada do Deck:**
    - Clique no ícone de engrenagem ao lado do deck recém-criado e selecione "Opções".
    - Na janela de opções, verá a configuração "Padrão" ou "Default". Clique ao lado dela, selecione "Adicionar Predefinição" e escolha um nome que identifique esse ajuste.
 
-(Imagem de configurações avançadas do deck)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-4.png)
 
 3. **Ajustando as configurações da Predefinição:**
    - Na seção "Limites Diários", altere os valores de "Novos cartões/dia" e "Revisões máximas/dia" para 9999. Esse ajuste garante que não haverá limites no número de cartas que pode revisar ou adicionar diariamente.
    - Role até a parte "Avançado" e ajuste o "Novo Intervalo" para 0,50. Isso ajuda a espaçar os intervalos de revisão conforme seu desempenho. Clique em "Salvar" para concluir.
 
-(Imagem de configurações avançadas do deck)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-5.png)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-6.png)
 
 4. **Aplicando a Predefinição em Outros Decks:**
    - Quando criar novos decks, basta clicar na engrenagem ao lado do deck, ir em "Opções" e selecionar a predefinição que você configurou para manter as mesmas configurações.
@@ -95,7 +96,7 @@ Experimente o ANKI e veja como ele pode revolucionar sua forma de estudar! 🚀
    - Na Frente (front), insira a pergunta ou termo que deseja memorizar. No Verso (back), coloque a resposta ou explicação detalhada.
    - Para o estudo de inglês, por exemplo, insira a frase em inglês na frente e a tradução no verso. Também é possível arrastar áudios para reforçar a memorização auditiva.
 
-(Imagem de tela de adição de cartões)
+![Imagem explicativa sobre instalação e configuração do ANKI](img/config-anki-7.png)
 
 ### Como Estudar com o ANKI
 
@@ -126,7 +127,7 @@ Espero que essas dicas ajudem a transformar seu aprendizado!
 
 ## Como Criar Baralhos para o ANKI com Ajuda da OpenAI🚀
 
-![Imagem explicativa sobre a criação de flashcards com OpenAI](imagens/flashcards_openai.jpg)
+![Imagem explicativa sobre a criação de flashcards com OpenAI](img/banner-deck.png)
 
 Quer aprender a criar flashcards para o ANKI de forma rápida e eficiente? Com o auxílio da OpenAI, você pode gerar conteúdo de estudo com facilidade, especialmente útil para temas complexos ou para quando você está sem tempo para montar os cartões manualmente. Veja a seguir o passo a passo para criar baralhos personalizados e, no final, um exemplo prático!
 
@@ -154,9 +155,15 @@ Para facilitar o entendimento, aqui está um exemplo prático usando o tema HTML
 
 1. **Envie o primeiro prompt:** "Sou estudante de programação e estudo com flashcards no ANKI. Você pode me ajudar criando flashcards curtos e objetivos sobre um tema específico que estou estudando?"
 
+![Imagem explicativa sobre criação de deck](img/deck-1.png)
+
 2. **Use o segundo prompt com o conteúdo:** "Crie para mim alguns flashcards objetivos com base no textou ou assunto a seguir: HTML"
 
+![Imagem explicativa sobre criação de deck](img/deck-2.png)
+
 3. **Solicite o arquivo CSV:** "Preciso que você insira esses flashcards em formato CSV sendo a pergunta a primeira coluna e a resposta a segunda coluna, use ponto e vírgula para separar uma coluna da outra."
+
+![Imagem explicativa sobre criação de deck](img/deck-3.png)
 
 Com isso, a OpenAI retornará perguntas e respostas sobre HTML que podem ser importadas para o ANKI de forma organizada e pronta para estudo.
 
@@ -168,7 +175,12 @@ Após o ANKI gerar a lista com os códigos separados por ponto e vírgula (";"),
 
 2. **Insira a lista gerada no OpenAI:** Copie os flashcards gerados e cole no documento de texto.
 
+![Imagem explicativa sobre criação de deck](img/deck-4.png)
+
 3. **Salve o arquivo como CSV:** Vá em "Salvar Como" e insira o nome do arquivo seguido de ".csv" (por exemplo, "flashcards.csv").
+
+![Imagem explicativa sobre criação de deck](img/deck-5.png)
+![Imagem explicativa sobre criação de deck](img/deck-6.png)
 
 4. **Importando no ANKI:**
 
@@ -176,9 +188,13 @@ Após o ANKI gerar a lista com os códigos separados por ponto e vírgula (";"),
 
 - Selecione "Importar" e escolha o arquivo CSV que você criou.
 
+![Imagem explicativa sobre criação de deck](img/deck-7.png)
+
 - Escolha o baralho para o qual deseja importar os flashcards.
 
 - Confirme se o separador de campo está configurado como ponto e vírgula.
+
+![Imagem explicativa sobre criação de deck](img/deck-8.png)
 
 - Clique em "Importar" para concluir o processo.
 
@@ -187,6 +203,8 @@ Após isso, você estará pronto para começar a revisar os flashcards gerados d
 ### Exemplo Pessoal de Estudo
 
 Conforme vou avançando na trilha de estudo, eu utilizo o Notion, e nele vou fazendo anotações, como dicas, atalhos e tópicos. Depois, crio os flashcards com base nesses tópicos. Essa abordagem me ajuda a revisar e consolidar o que aprendo de maneira eficiente.
+
+![Imagem explicativa sobre criação de deck](img/deck-9.png)
 
 Conclusão
 
@@ -197,7 +215,7 @@ Usar a OpenAI como suporte para criar flashcards no ANKI pode transformar sua fo
 
 ## Usando IA como Ferramenta de Aprendizado na Programação
 
-![Imagem de IA como aliada no aprendizado de programação](imagens/ia_aprendizado_programacao.jpg)
+![Imagem de IA como aliada no aprendizado de programação](img/IA.png)
 
 Enquanto resolvia um exercício de uma das trilhas de estudos que estava fazendo, me deparei com um desafio interessante. O exercício pedia para criar um programa que calculasse a área de diferentes formas geométricas. Escrevi o código principal usando do, switch e while, e também criei minha primeira função para calcular a área de um triângulo.
 
