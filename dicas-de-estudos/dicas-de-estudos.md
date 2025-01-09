@@ -1,5 +1,3 @@
-# OBS: As imagens serão carregadas amanhã 09/01/2025
-
 # Dicas de Estudo
 
 ## Índice
