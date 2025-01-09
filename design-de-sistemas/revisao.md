@@ -1,13 +1,19 @@
 # Fundamentos de Design de Sistemas
 
 ## Introdução
-Aqui temos os princípios básicos sobre sistemas operacionais baseados em Linux, explorando seu histórico, distribuições, serviços e ferramentas essenciais. Também veremos sobre a estrutura de diretórios linux e comando essenciais do temrinal.
-O objetivo é capacitar o estudante a se sentir confortável e confiante ao trabalhar com esse sistema operacional poderoso.
+# Introdução  
+
+Aqui temos os princípios básicos sobre sistemas operacionais baseados em **Linux**, explorando seu histórico, distribuições, serviços e ferramentas essenciais. Também veremos a estrutura de diretórios do Linux e comandos essenciais do terminal, com o objetivo de capacitar o estudante a se sentir confortável e confiante ao trabalhar com esse sistema operacional poderoso.  
+
+Além disso, abordaremos o **Git**, uma das ferramentas mais populares para controle de versão de software. Veremos conceitos fundamentais como repositórios, terminologia e comandos básicos, ajudando o estudante a dominar essa tecnologia indispensável para trabalho em equipe e gerenciamento de projetos.   
+
 
 
 ---
 
 ### Estrutura
+
+#### Linux
 1. [Linux: Histórico, Filosofia e Aplicações](#1-linux)
 2. [Licenças de Software](#2-licenças-de-software)
 3. [Distribuições Linux](#3-distribuições-linux)
@@ -17,6 +23,14 @@ O objetivo é capacitar o estudante a se sentir confortável e confiante ao trab
 7. [Comandos Essenciais do Terminal](#7-comandos-essenciais-do-terminal)
 8. [Gerenciamento de Pacotes](#8-gerenciamento-de-pacotes)
 9. [Permissões de Acesso](#9-permissões-de-acesso)
+#### GIT
+10. [O que é Git e Controle de Versionamento](#10-o-que-é-git-e-controle-de-versionamento)
+11. [Repositório Git](#11-repositório-git)
+12. [Comandos Básicos do Git](#12-comandos-básicos-do-git)  
+13. [Terminologia do Git](#13-terminologia-do-git)    
+14. [Outros Comandos Essenciais](#14-outros-comandos-essenciais)   
+15. [Trabalhando com Branches](#15-trabalhando-com-branches)  
+
 
 ---
 
@@ -200,4 +214,117 @@ O Linux utiliza uma estrutura de diretórios hierárquica baseada em uma raiz ú
 ### Comando chmod
 - Altera permissões de acesso de arquivos e diretórios.  
   - **Sintaxe**: `chmod [OPÇÕES] MODO ARQUIVO/DIRETÓRIO`.  
+
+---
+
+## 10: O que é Git e Controle de Versionamento  
+
+O Git é uma das ferramentas mais populares para controle de versões, essencial para o desenvolvimento de software.  
+Ele permite:  
+- **Rastreabilidade**: Acompanhe e reverta alterações no código.  
+- **Colaboração**: Trabalhe com múltiplos desenvolvedores sem conflitos.  
+- **Backup**: Armazene todas as versões do código para evitar perdas.  
+- **Integração contínua**: Automatize processos como testes e deploy.  
+
+Links úteis:  
+- [Download do Git SCM](https://git-scm.com/)  
+- [Guia prático](https://rogerdudler.github.io/git-guide/index.pt_BR.html)  
+
+---
+
+## 11: Repositório Git  
+
+Um **repositório Git** é onde todos os arquivos e suas versões são armazenados e gerenciados.  
+Ele permite:  
+- Reverter alterações.  
+- Comparar versões.  
+- Analisar a evolução do projeto ao longo do tempo.  
+
+---
+
+## 12: Comandos Básicos do Git  
+
+### Configuração com `git config`  
+O comando `git config` configura informações essenciais do usuário.  
+
+Exemplos:  
+
+### Configurar o nome do usuário
+```
+git config --global user.name "Seu Nome"
+```
+### Configurar o e-mail do usuário
+```
+git config --global user.email "seu.email@exemplo.com"
+```
+### Exibir configurações do Git
+```
+git config --list
+```
+### Inicialização com git init
+Use o comando git init para transformar um diretório em repositório Git.
+
+Exemplo:
+```
+mkdir meu-projeto
+cd meu-projeto
+git init
+```
+## 13: Terminologia do Git
+
+### Branches e Fluxo de Trabalho
+- Branches: Permitem trabalhar em linhas separadas de desenvolvimento sem afetar o código principal.
+- Fluxo de Trabalho:
+ -- Add (git add): Prepara as alterações para um commit.
+ -- Commit (git commit): Registra as alterações no repositório local.
+ -- Push (git push): Envia alterações para o repositório remoto.
+  
+## 14: Outros Comandos Essenciais
+```git log```Exibe o histórico de commits.
+```
+# Exibir o histórico completo
+git log
+
+# Histórico de commits de um arquivo específico
+git log <file>
+```
+
+```git status```Mostra o estado atual do repositório.
+```
+git status
+```
+```git reset```Desfaz alterações no repositório.
+```
+# Desfazer o último commit
+git reset --soft HEAD^
+
+# Remover arquivo do índice
+git reset <nome-do-arquivo>
+```
+```git diff```Compara diferenças entre versões.
+```
+# Diferença entre dois commits
+git diff <commit1> <commit2>
+```
+
+## 15: Trabalhando com Branches
+Comando ```git branch```Gerencia ramificações do projeto.
+
+```
+# Listar branches existentes
+git branch
+
+# Criar nova branch
+git branch nova-branch
+```
+Comando ```git checkout```Altera o contexto do repositório.
+
+```
+# Trocar de branch
+git checkout nome-da-branch
+
+# Criar e mudar para uma nova branch
+git checkout -b nova-branch
+```
+
 
