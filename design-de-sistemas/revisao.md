@@ -36,13 +36,18 @@ Além disso, abordaremos o **Git**, uma das ferramentas mais populares para cont
 18. [Documentação da Arquitetura de Software](#18-documentação-da-arquitetura-de-software)   
 19. [Modelos Arquiteturais](#19-modelos-arquiteturais)    
 20. [O Futuro da Arquitetura de Software](#20-o-futuro-da-arquitetura-de-software)
-#### Design de Sistemas
+#### Design Digital
 21. [Fundamentos de Design de Sistemas](#21-fundamentos-de-design-de-sistemas)  
 22. [Experiência do Usuário (UX)](#22-experiência-do-usuário-ux)    
 23. [Interface do Usuário (UI)](#23-interface-do-usuário-ui)   
 24. [Pesquisa com Usuários](#24-pesquisa-com-usuários)  
 25. [Ideação e Brainstorming](#25-ideação-e-brainstorming)    
-26. [Prototipação](#26-prototipação)  
+26. [Prototipação](#26-prototipação)
+27. [Arquitetura da Informação](#27-arquitetura-da-informação)  
+28. [Wireframes](#28-wireframes)  
+29. [Service Blueprints](#29-service-blueprints)  
+30. [Modelo Atômico](#30-modelo-atômico)  
+31. [Design Sprint](#31-design-sprint)  
 
 
 
@@ -515,6 +520,116 @@ Permite visualizar e testar ideias antes da implementação final, reduzindo cus
 2. Testar com usuários.  
 3. Coletar feedback.  
 4. Iterar e refinar o design.  
+
+---
+
+## 27. Arquitetura da Informação  
+
+A Arquitetura da Informação (AI) trata de organizar e estruturar as informações de forma compreensível e intuitiva para os usuários. Segundo o *Information Architecture Institute*, é a prática de decidir como organizar as partes de algo para torná-lo compreensível.  
+
+### Pilares da Arquitetura de Informação  
+- **Navegação**: Facilita o deslocamento dos usuários pelo site ou sistema.  
+- **Busca**: Permite encontrar informações específicas dentro do sistema.  
+- **Organização**: Estrutura as informações de maneira lógica e acessível.  
+- **Rotulação**: Usa nomes e categorias intuitivas, alinhadas à linguagem dos usuários.  
+
+### Documentando a Arquitetura de Informação  
+A documentação da AI pode incluir:  
+- **Mapas do site**: Estrutura geral do conteúdo.  
+- **Wireframes**: Esboços da disposição de elementos em páginas.  
+- **Diagramas de fluxo do usuário**: Caminhos percorridos pelos usuários.  
+- **Blueprints**: Detalhes sobre interações e funcionalidades de páginas.  
+- **Modelos de conteúdo**: Relacionam tipos de conteúdo e suas conexões.  
+- **Taxonomias e etiquetagem**: Classificação e representação de informações.  
+- **Protótipos**: Versões interativas que ajudam a testar usabilidade.  
+
+---
+
+## 28. Wireframes  
+
+Os **wireframes** são representações visuais simplificadas de um site ou aplicativo, com foco em estrutura e funcionalidade, sem incluir detalhes gráficos.  
+
+### Construindo o Wireframe  
+- Estruture blocos de conteúdo principais, como cabeçalhos, menus e áreas de conteúdo.  
+- Defina a hierarquia e organização dos elementos, priorizando usabilidade.  
+- Garanta que o wireframe seja compreensível para equipes e stakeholders.  
+
+### O que incluir em um Wireframe  
+- **Conteúdo**: Localização de textos, botões e imagens.  
+- **Estrutura**: Disposição dos elementos na página.  
+- **Hierarquia**: Destaque para os elementos mais relevantes.  
+- **Funcionalidade**: Explicações sobre ações e interações.  
+- **Comportamento**: Reações a interações, como cliques e expansões.  
+
+### O que não incluir em um Wireframe  
+- Cores, fontes específicas e elementos gráficos detalhados.  
+- Detalhes visuais ou conteúdo final.  
+- Especificações técnicas.  
+
+---
+
+## 29. Service Blueprints  
+
+Os **service blueprints** mapeiam as interações entre os usuários e os processos internos de um serviço, oferecendo uma visão completa da jornada do cliente.  
+
+### Para que serve um Service Blueprint  
+- Identifica falhas no atendimento às expectativas dos clientes.  
+- Alinha padrões de serviço com as necessidades dos usuários.  
+- Permite reestruturação de processos e treinamento de funcionários.  
+
+### Vantagens  
+- Visão geral do serviço.  
+- Melhoria da experiência do cliente e dos colaboradores.  
+- Identificação de gargalos e redução de custos.  
+- Garantia de conformidade com regulamentos.  
+
+### Elementos essenciais  
+- **Ações do cliente**: Interações diretas do usuário.  
+- **Ações de frontstage**: Visíveis ao cliente (ex.: interação com atendente).  
+- **Atividades de backstage**: Não visíveis ao cliente (ex.: gestão de estoque).  
+- **Processos de suporte**: Sustentam as operações de frontstage.  
+- Linhas de separação: Diferenciam níveis de interação e visibilidade.  
+
+---
+
+## 30. Modelo Atômico  
+
+O **design atômico**, proposto por Brad Frost, organiza o design em componentes reutilizáveis, desde elementos básicos até estruturas complexas.  
+
+### Estrutura do Modelo Atômico  
+- **Átomos**: Elementos básicos como botões e ícones.  
+- **Moléculas**: Combinações de átomos (ex.: barra de navegação).  
+- **Organismos**: Conjuntos de moléculas com funções específicas (ex.: tela de perfil).  
+- **Modelos**: Esqueleto de páginas, delineando a estrutura sem conteúdo final.  
+- **Páginas**: Modelos preenchidos com conteúdo real.  
+
+### Vantagens  
+- Promove consistência e eficiência no design.  
+- Facilita colaboração entre equipes.  
+- Simplifica ajustes e iterações.  
+
+### Desvantagens  
+- Dificuldade inicial em classificar elementos.  
+- Exige alinhamento e comunicação claros entre equipes.  
+- Pode ser inviável para projetos pequenos ou com prazos apertados.  
+
+---
+
+## 31. Design Sprint  
+
+Criado por Jake Knapp, o **design sprint** é uma metodologia ágil de cinco dias para resolver problemas, prototipar e testar ideias.  
+
+### Etapas do Design Sprint  
+1. **Entendimento**: Compreensão do problema e definição de objetivos.  
+2. **Ideação**: Geração de soluções usando brainstorming e técnicas como *Crazy 8s*.  
+3. **Decisão**: Seleção da melhor solução e criação de um storyboard.  
+4. **Prototipação**: Desenvolvimento de um protótipo funcional.  
+5. **Teste de Usabilidade**: Validação do protótipo com usuários reais.  
+
+### Resultados  
+- Validação rápida de ideias com feedback dos usuários.  
+- Alinhamento entre equipes multidisciplinares.  
+- Redução de riscos e custos de desenvolvimento.  
 
 ---
 
