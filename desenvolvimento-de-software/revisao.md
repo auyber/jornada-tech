@@ -6,7 +6,7 @@ Os softwares fazem parte do nosso cotidiano, presentes em dispositivos como comp
 ### Estrutura
 1. [Software, programas e sistemas](#01-software-programas-e-sistemas)
 2. [Sistemas operacionais](#02-sistema-operacional)
-3. [Algoritmos e linguagens](#03-algoritimos-e-linguagens-de-programacao)
+3. [Algoritmos e linguagens](#03-algoritmos-e-linguagens-de-programacao)
 4. [Glossário na área de TI](#04-glossario-do-desenvolvedor-de-software)
 5. [Ciclo de vida do desenvolvimento de software](#05-ciclo-de-vida-do-desenvolvimento-de-software)
 6. Como nasce um software? Trabalho em equipe e boas práticas em reuniões.
