@@ -79,4 +79,4 @@ Ao indicar um livro, você ajuda a enriquecer nossa biblioteca de conhecimento e
 
 ⭐ Se este repositório te ajudou, considere dar uma estrela!
 
-Última atualização: [08/01/2025]
+Última atualização: [09/01/2025]
