@@ -47,7 +47,7 @@ Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
 
 ## 💭 Dicas de Estudos
 
-Aprimore sua jornada de aprendizado com estas estratégias eficazes: [Dicas de estudos](./dicas-de-estudos.md)
+Aprimore sua jornada de aprendizado com estas estratégias eficazes: [Dicas de estudos](.dicas-de-estudos/dicas-de-estudos.md)
 
 
 ## 💡 Compartilhe Suas Dicas
