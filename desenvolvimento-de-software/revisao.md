@@ -4,11 +4,11 @@
 Os softwares fazem parte do nosso cotidiano, presentes em dispositivos como computadores, Smart TVs e celulares. Abaixo são apresentados conceitos fundamentais para distinguir software, programas e sistemas, além de explorar metodologias de desenvolvimento. Abordaremos também o **desenvolvimento colaborativo**, abrangendo desde o nascimento de um software até o deploy, incluindo ferramentas colaborativas, versionamento, reúso e testes de software.
 
 ### Estrutura
-1. [Software, programas e sistemas.](#01:-Software-Programas-e-Sistemas)
-2. Sistemas operacionais.
-3. Algoritmos e linguagens.
-4. Glossário na área de TI.
-5. Ciclo de vida do desenvolvimento de software.
+1. [Software, programas e sistemas](#01-software-programas-e-sistemas)
+2. [Sistemas operacionais](#02-sistema-operacional)
+3. [Algoritmos e linguagens](#03-algororitimos-e-linguagens-de-programacao)
+4. [Glossário na área de TI](#04-glossario-do-desenvolvedor-de-software)
+5. [Ciclo de vida do desenvolvimento de software](#05-ciclo-de-vida-do-desenvolvimento-de-software)
 6. Como nasce um software? Trabalho em equipe e boas práticas em reuniões.
 7. Ferramentas colaborativas de trabalho em equipe.
 8. Versionamento e reúso.
