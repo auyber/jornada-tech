@@ -42,7 +42,7 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Revisão Design de Sistemas](./design-de-sistemas/revisao.md)
 
 ### 📊 Sistemas de Informação
-- [Revisão Sistemas de Informação](./sistemsa-de-informacao/revisao.md)
+- [Revisão Sistemas de Informação](./sistemas-de-informacao/revisao.md)
 
 ## 📚 Livros Recomendados
 
