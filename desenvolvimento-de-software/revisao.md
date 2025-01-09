@@ -7,13 +7,13 @@ Os softwares fazem parte do nosso cotidiano, presentes em dispositivos como comp
 1. [Software, programas e sistemas](#01-software-programas-e-sistemas)
 2. [Sistemas operacionais](#02-sistema-operacional)
 3. [Algoritmos e linguagens](#03-algoritmos-e-linguagens-de-programacao)
-4. [Glossário na área de TI](#04-glossario-do-desenvolvedor-de-software)
+4. [Glossário na área de TI](#04-glossário-do-desenvolvedor-de-software)
 5. [Ciclo de vida do desenvolvimento de software](#05-ciclo-de-vida-do-desenvolvimento-de-software)
-6. Como nasce um software? Trabalho em equipe e boas práticas em reuniões.
-7. Ferramentas colaborativas de trabalho em equipe.
-8. Versionamento e reúso.
-9. Repositórios de códigos.
-10. Testes de software, controle de qualidade e deploy.
+6. [Como nasce um software? Trabalho em equipe e boas práticas em reuniões](#06-como-nasce-um-software)
+7. [Ferramentas colaborativas de trabalho em equipe](#07-ferramentas-colaborativas-de-trabalho-em-equipe)
+8. [Versionamento e reúso](#08-versionamento-e-reúso)
+9. [Repositórios de códigos](#09-repositórios-de-códigos)
+10. [Testes de software, controle de qualidade e deploy](#10-testes-de-software-controle-de-qualidade-e-deploy)
 
 ---
 
