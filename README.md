@@ -35,6 +35,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Revisão JavaScript](./javascript/revisao.md)
 - [Dicas e Anotações JavaScript](./javascript/dicas.md)
 
+### ⏱️ Scrum: Planejamento e Desenvolvimento Ágeis
+- [Revisão Scrum](./scrum/revisao.md)
+
 ### 💻 Desenvolvimento de Software
 - [Revisão Desenvolvimento de Software](./desenvolvimento-de-software/revisao.md)
 
