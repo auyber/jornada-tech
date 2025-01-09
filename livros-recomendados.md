@@ -1,4 +1,4 @@
-# 📚 Livros Recomendados pela Comunidade
+# 📚 Livros Recomendados
 
 Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comunidade! Aqui você encontrará recursos valiosos para aprimorar seus conhecimentos em desenvolvimento fullstack e áreas relacionadas.
 
@@ -6,6 +6,8 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 - [HTML](#html)
 - [CSS](#css)
 - [JavaScript](#javascript)
+- [Sistemas de Informações](#sistemas-de-informações)
+- [Algoritmos e Estruturas de Dados](#algoritmos-e-estruturas-de-dados)
 
 ## Como usar esta lista
 
@@ -80,6 +82,32 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 **Nível:** Iniciante a Intermediário
 
 **Por que ler:** Este livro é uma excelente fonte para desenvolvedores que desejam aprofundar seus conhecimentos em JavaScript, focando em estruturas de dados e algoritmos. Loiane Groner, uma renomada desenvolvedora e instrutora, apresenta conceitos complexos de forma clara e prática, tornando o aprendizado acessível e aplicável.
+
+---
+
+## Sistemas de Informações
+
+
+#### <img src="https://m.media-amazon.com/images/I/71Qlpgfe50L._SY342_.jpg" width="100" align="right"> [Sistemas de informações gerenciais na atualidade]
+
+**Autor:** Marco Antonio Masoller Eleuterio 
+
+**Nível:**  Iniciante a Avançado
+
+**Por que ler:** Este livro é essencial para quem deseja entender profundamente a aplicação dos sistemas de informação no ambiente gerencial moderno. Ele explora como as tecnologias podem transformar a gestão das organizações, oferecendo uma visão detalhada das ferramentas e estratégias necessárias para otimizar a coleta e análise de dados para tomada de decisões. Ideal para profissionais e acadêmicos da área de tecnologia da informação e gestão, este livro proporciona uma base sólida para compreender a importância dos sistemas de informações gerenciais no mundo corporativo atual.
+
+---
+
+## Algoritmos e Estruturas de Dados
+
+
+#### <img src="https://m.media-amazon.com/images/I/517I6z9QK4L._SY445_SX342_PQ1_.jpg" width="100" align="right"> [Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos]
+
+**Autor:**  Aditya Y. Bhargava
+
+**Nível:** Iniciante a intermediário
+
+**Por que ler:** "Entendendo Algoritmos" é uma introdução acessível e visual aos conceitos fundamentais de algoritmos, essencial para programadores iniciantes e curiosos sobre como os algoritmos funcionam. O livro utiliza ilustrações e explicações claras para quebrar conceitos complexos, como busca, ordenação e recursão, tornando-os mais fáceis de entender. Ele também oferece uma visão prática de como escolher e aplicar algoritmos no dia a dia da programação, sendo uma leitura indispensável para quem deseja melhorar suas habilidades de resolução de problemas e entender a base por trás das soluções de software.
 
 ---
 
