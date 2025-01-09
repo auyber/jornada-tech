@@ -29,7 +29,13 @@ Além disso, abordaremos o **Git**, uma das ferramentas mais populares para cont
 12. [Comandos Básicos do Git](#12-comandos-básicos-do-git)  
 13. [Terminologia do Git](#13-terminologia-do-git)    
 14. [Outros Comandos Essenciais](#14-outros-comandos-essenciais)   
-15. [Trabalhando com Branches](#15-trabalhando-com-branches)  
+15. [Trabalhando com Branches](#15-trabalhando-com-branches)
+#### Arquitetura de Software  
+16. [Fundamentos de Arquitetura de Software](#16-fundamentos-de-arquitetura-de-software)   
+17. [Estilo Arquitetural](#17-estilo-arquitetural)  
+18. [Documentação da Arquitetura de Software](#18-documentação-da-arquitetura-de-software)   
+19. [Modelos Arquiteturais](#19-modelos-arquiteturais)    
+20. [O Futuro da Arquitetura de Software](#20-o-futuro-da-arquitetura-de-software)  
 
 
 ---
@@ -326,5 +332,93 @@ git checkout nome-da-branch
 # Criar e mudar para uma nova branch
 git checkout -b nova-branch
 ```
+
+---
+
+## 16. Fundamentos de Arquitetura de Software  
+
+A arquitetura de software é uma estrutura fundamental que orienta decisões sobre tecnologias, desempenho, escalabilidade, interoperabilidade, compatibilidade e desempenho de um sistema ou aplicativo. Ela define a organização do sistema e sua evolução ao longo do tempo.  
+
+###  O que é um padrão na Arquitetura de Software?  
+Um padrão arquitetural orienta uma visão alinhada aos negócios, servindo como uma bússola para decisões relacionadas ao projeto de software.  
+
+###  O Surgimento da Arquitetura de Software  
+- **Início das discussões**: Final dos anos 1960.  
+- **Formalização**: Década de 1990, com o livro *Software Architecture: Perspectives on an Emerging Discipline* por Mary Shaw e David Garlan.  
+- **Evolução**: Influenciada pela transição para a computação em nuvem e tecnologias emergentes.  
+
+###  O Profissional em Arquitetura de Software  
+O arquiteto de software vai além da programação, sendo responsável por:  
+- Oferecer soluções para corporações.  
+- Compreender os negócios da organização.  
+- Dominar tecnologias, serviços, normas, legislações e cloud computing.  
+
+---
+
+## 17. Estilo Arquitetural  
+
+###  Importância do Estilo Arquitetural  
+- Proporciona níveis mais altos de abstração.  
+- Ajuda a entender a estrutura geral do sistema.  
+- Facilita a comunicação efetiva sobre o sistema.  
+
+###  Vantagens do Estilo Arquitetural  
+- Suporte a atributos de qualidade.  
+- Reuso de arquitetura e conhecimento em novos projetos.  
+- Planejamento e gerência da manutenção.  
+- Diferenciação entre arquiteturas, simplificando o entendimento do projeto.  
+
+---
+
+## 18. Documentação da Arquitetura de Software  
+
+A documentação da arquitetura de software é essencial para o desenvolvimento de sistemas, servindo como registro duradouro das decisões e estruturas que moldam um sistema de software.  
+
+###  Princípios de uma boa documentação de software  
+- Documentar do ponto de vista do usuário.  
+- Evitar ambiguidades e repetições desnecessárias.  
+- Usar modelos ou templates.  
+- Manter a documentação atualizada e revisada.  
+- Tornar acessível a todos os participantes do projeto.  
+
+###  ISO/IEC/IEEE 42010:2011  
+- Estabelece um padrão para a descrição da arquitetura de sistemas e softwares.  
+- Proporciona um modelo conceitual para descrever e comunicar a arquitetura de forma eficaz.  
+
+###  As Views da ISO/IEC/IEEE 42010:2011  
+- **Visão Lógica**: Funcionalidade do sistema.  
+- **Visão de Desenvolvimento**: Estrutura do software.  
+- **Visão do Processo**: Aspecto dinâmico do sistema.  
+- **Visão Física**: Infraestrutura necessária para o sistema.  
+
+---
+
+## 19. Modelos Arquiteturais  
+
+###  Arquitetura em camadas (Layered pattern)  
+Organiza o sistema em camadas, onde cada camada fornece serviços para a camada acima dela.  
+
+###  Arquitetura cliente-servidor (Client-server pattern)  
+Um modelo em que o servidor fornece serviços, e um ou mais clientes consomem esses serviços.  
+
+###  Arquitetura MVC (Model-View-Controller pattern)  
+Divide a aplicação em três partes interconectadas: Modelo, Visão e Controlador.  
+
+###  Arquitetura de microserviços (Microservices pattern)  
+Estrutura a aplicação como uma coleção de serviços independentes, altamente manuteníveis e testáveis.  
+
+---
+
+## 20. O Futuro da Arquitetura de Software  
+
+###  Computação em Nuvem  
+Permite que as empresas movam suas operações para servidores virtuais hospedados na Internet.  
+
+###  Inteligência Artificial  
+Automatiza tarefas complexas, analisa grandes volumes de dados e melhora a eficiência operacional.  
+
+###  Microserviços  
+Divide um aplicativo em pequenos serviços independentes que podem ser desenvolvidos, implantados e escalados individualmente.  
+
 
 
