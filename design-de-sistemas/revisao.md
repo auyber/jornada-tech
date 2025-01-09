@@ -1,7 +1,6 @@
 # Fundamentos de Design de Sistemas
 
-## Introdução
-# Introdução  
+## Introdução 
 
 Aqui temos os princípios básicos sobre sistemas operacionais baseados em **Linux**, explorando seu histórico, distribuições, serviços e ferramentas essenciais. Também veremos a estrutura de diretórios do Linux e comandos essenciais do terminal, com o objetivo de capacitar o estudante a se sentir confortável e confiante ao trabalhar com esse sistema operacional poderoso.  
 
