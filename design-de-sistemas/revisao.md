@@ -8,15 +8,15 @@ O objetivo é capacitar o estudante a se sentir confortável e confiante ao trab
 ---
 
 ### Estrutura
-1. Linux: Histórico, Filosofia e Aplicações.  
-2. Licenças de Software.  
-3. Distribuições Linux.  
-4. Terminologia Linux.  
-5. Serviços, Jogos e Certificações no Linux.
-6. Estrutura de Diretórios do Linux
-7. Comandos Essenciais do Terminal
-8. Gerenciamento de Pacotes
-9. Permissões de Acesso
+1. [Linux: Histórico, Filosofia e Aplicações](#1-linux)
+2. [Licenças de Software](#2-licenças-de-software)
+3. [Distribuições Linux](#3-distribuições-linux)
+4. [Terminologia Linux](#4-terminologia-linux)
+5. [Serviços, Jogos e Certificações no Linux](#5-serviços-jogos-e-certificações-no-linux)
+6. [Estrutura de Diretórios do Linux](#6-estrutura-de-diretórios-do-linux)
+7. [Comandos Essenciais do Terminal](#7-comandos-essenciais-do-terminal)
+8. [Gerenciamento de Pacotes](#8-gerenciamento-de-pacotes)
+9. [Permissões de Acesso](#9-permissões-de-acesso)
 
 ---
 
