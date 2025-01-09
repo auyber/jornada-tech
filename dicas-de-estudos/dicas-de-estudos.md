@@ -115,7 +115,7 @@ Experimente o ANKI e veja como ele pode revolucionar sua forma de estudar! 🚀
 4. **Estudo Diário:**
    -Todos os dias, abra o ANKI para ver se há novas cartas a serem revisadas. Em alguns dias, pode não haver revisões, então aproveite esse tempo para continuar com outros conteúdos.
 
-###Estudo pelo Celular (APK ANKI)
+### Estudo pelo Celular (APK ANKI)
 
 Para estudar pelo celular, baixe o aplicativo ANKI, faça login com a mesma conta do ANKIWeb e sincronize seus decks. Lembre-se de que a configuração e a adição de novas cartas são mais fáceis pelo computador, então utilize o app apenas para revisar em momentos em que não estiver perto do PC.
 
