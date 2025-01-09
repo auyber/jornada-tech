@@ -13,7 +13,7 @@
 
 ## Potencialize Seus Estudos com ANKI e o Método da Curva de Esquecimento!
 
-![Banner sobre ANKI e Curva de Esquecimento](imagens/banner_anki_curva_esquecimento.jpg)
+![Banner sobre ANKI e Curva de Esquecimento](img/anki.png)
 
 Você já se pegou estudando um conteúdo e, dias depois, não consegue lembrar de quase nada? Isso acontece com todos nós e é onde entra o conceito da Curva de Esquecimento. Esse fenômeno, proposto pelo psicólogo Hermann Ebbinghaus, mostra que esquecemos informações rapidamente após aprendê-las, a menos que revisemos de forma eficaz.
 
