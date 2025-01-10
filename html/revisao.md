@@ -1,17 +1,41 @@
-# 1. HTML
+#  HTML
 
-## **Elementos de parágrafo e título**
+## Índice  
+1. [Elementos de parágrafo e título](#1-elementos-de-parágrafo-e-título)  
+2. [Elementos de formatação](#2-elementos-de-formatação)  
+3. [Comentários](#3-comentários)  
+4. [Elementos de imagem e atributos](#4-elementos-de-imagem-e-atributos)  
+5. [Formatos e otimização de imagens](#5-formatos-e-otimização-de-imagens)  
+6. [Quebras de linha e régua horizontal](#6-quebras-de-linha-e-régua-horizontal)  
+7. [Organização de código com div e span](#7-organização-de-código-com-div-e-span)  
+8. [Trabalhando com links](#8-trabalhando-com-links)  
+9. [Entendendo URLs absolutas e relativas](#9-entendendo-urls-absolutas-e-relativas)  
+10. [Links dentro de uma mesma página](#10-links-dentro-de-uma-mesma-página)  
+11. [Links externos](#11-links-externos)  
+12. [Listas no HTML: ordenadas e não-ordenadas](#12-listas-no-html-ordenadas-e-não-ordenadas)  
+13. [Listas de Definição (```<dl>```)](#13-listas-de-definição-dl)  
+14. [Listas Aninhadas](#14-listas-aninhadas)  
+15. [Criação de tabelas](#15-criação-de-tabelas)  
+16. [O que são formulários](#16-o-que-são-formulários)  
+17. [Conhecendo os tipos de input](#17-conhecendo-os-tipos-de-input)  
+18. [Elementos select e textarea](#18-elementos-select-e-textarea)  
+19. [Recursos modernos do HTML5](#19-recursos-modernos-do-html5)  
+20. [Elementos semânticos](#20-elementos-semânticos)  
+21. [WAI-ARIA e atributos de acessibilidade](#21-wai-aria-e-atributos-de-acessibilidade)
+
+
+## 1. Elementos de parágrafo e título
 
 Os elementos de parágrafo e título são fundamentais para estruturar o conteúdo de uma página web, fornecendo hierarquia e organização ao texto.
 
-## **Parágrafos**
+### **Parágrafos**
 
 O elemento de parágrafo é representado pela tag ```<p>```. Ele é usado para agrupar conteúdo textual em blocos coesos. Os navegadores automaticamente adicionam espaço antes e depois de cada parágrafo, criando uma separação visual entre eles.Exemplo:
 ```
 <p>Este é um parágrafo de exemplo. Ele contém várias frases que formam um bloco de texto coeso.</p>
 <p>Este é outro parágrafo. Observe como ele é automaticamente separado do parágrafo anterior.</p>
 ```
-## **Títulos**
+### **Títulos**
 
 HTML oferece seis níveis de títulos, de ```<h1>``` a ```<h6>```. Eles são usados para criar uma estrutura hierárquica no documento.
 
@@ -37,8 +61,8 @@ Exemplo:
 <h6>Detalhe Menor</h6>
 ```
 É importante manter uma estrutura lógica e não pular níveis de título, pois isso ajuda na acessibilidade e SEO da página.
-
-## **Elementos de formatação**
+---
+## 2. Elementos de formatação
 
 Os elementos de formatação HTML permitem alterar a aparência do texto sem necessariamente mudar sua estrutura semântica. Aqui estão os elementos de formatação mais comuns, listados em ordem de uso mais frequente:
 
@@ -136,8 +160,8 @@ Os elementos de formatação HTML permitem alterar a aparência do texto sem nec
           preservados
     </pre>
     ```
-
-## **Comentários**
+---
+## 3. Comentários
 
 Comentários em HTML são usados para incluir notas no código-fonte que não são exibidas no navegador. Eles são úteis para documentação, organização e depuração do código.Sintaxe:
 ```
@@ -193,8 +217,8 @@ Exemplos de uso:
       Última atualização: 2025-01-06
     -->
     ```
-
-## **Elementos de imagem e atributos**
+---
+## 4. Elementos de imagem e atributos
 
 O elemento ```<img>``` é usado para incorporar imagens em documentos HTML. É um elemento vazio, o que significa que não tem conteúdo nem tag de fechamento.Sintaxe básica:
 ```
@@ -251,12 +275,12 @@ Atributos principais:
     ```
     <img src="foto.jpg" alt="Fotografia" decoding="async">
     ```
-
-## **Formatos e otimização de imagens**
+---
+## 5. Formatos e otimização de imagens
 
 A escolha do formato de imagem correto e a otimização adequada são cruciais para o desempenho e a qualidade visual de um site. Aqui estão os formatos mais comuns e técnicas de otimização:
 
-## **Formatos de imagem**
+### **Formatos de imagem**
 
 1. **JPEG (Joint Photographic Experts Group)**
     - Melhor para: Fotografias e imagens com muitas cores
@@ -297,7 +321,7 @@ A escolha do formato de imagem correto e a otimização adequada são cruciais p
         <img src="icone.svg" alt="Ícone vetorial">
         ```
 
-## **Técnicas de otimização**
+### **Técnicas de otimização**
 
 1. **Redimensionamento**: Ajuste o tamanho da imagem para as dimensões exatas necessárias.
     ```
@@ -324,12 +348,12 @@ A escolha do formato de imagem correto e a otimização adequada são cruciais p
     ```
 9. **Sprites de imagem**: Combine várias imagens pequenas em uma única imagem para reduzir requisições HTTP.
 10. **Minificação de SVG**: Para arquivos SVG, remova dados desnecessários e otimize o código.
-
-## **Quebras de linha e régua horizontal**
+---
+## 6. Quebras de linha e régua horizontal
 
 Quebras de linha e réguas horizontais são elementos simples, mas úteis para controlar o layout e a separação visual do conteúdo em HTML.
 
-## **Quebra de linha**
+### **Quebra de linha**
 
 A quebra de linha é representada pela tag <br>. É um elemento vazio que força uma quebra de linha no ponto onde é inserido.Exemplos de uso:
 
@@ -369,8 +393,8 @@ A quebra de linha é representada pela tag <br>. É um elemento vazio que força
       <input type="email" id="email" name="email">
     </form>
     ```
-
-## **Régua horizontal**
+---
+### **Régua horizontal**
 
 A régua horizontal é representada pela tag ```<hr>```. É um elemento vazio que cria uma linha horizontal, útil para separar seções de conteúdo.Exemplos de uso:
 
@@ -425,12 +449,12 @@ A régua horizontal é representada pela tag ```<hr>```. É um elemento vazio qu
       <li>Item 4</li>
     </ul>
     ```
-
-## **Organização de código com div e span**
+---
+## 7. Organização de código com div e span
 
 As tags ```<div>``` e ```<span>``` são elementos de contêiner genéricos usados para organizar e agrupar outros elementos HTML. Eles não têm significado semântico próprio, mas são essenciais para estruturação e estilização.
 
-## **Div**
+### **Div**
 
 A tag ```<div>``` é um elemento de nível de bloco usado para criar seções ou agrupar conteúdos.Exemplos de uso:
 
@@ -485,8 +509,8 @@ A tag ```<div>``` é um elemento de nível de bloco usado para criar seções ou
       <div class="grid-item">Item 3</div>
     </div>
     ```
-
-## **Span**
+---
+### **Span**
 
 A tag ```<span>``` é um elemento inline usado para marcar partes menores de texto ou elementos dentro de um bloco maior.Exemplos de uso:
 
@@ -513,8 +537,8 @@ A tag ```<span>``` é um elemento inline usado para marcar partes menores de tex
     ```
     <p>HTML significa <span class="termo-tecnico">HyperText Markup Language</span>.</p>
     ```
-
-## **Trabalhando com links**
+---
+## 8. Trabalhando com links
 
 Links são fundamentais para a navegação na web. Em HTML, eles são criados usando a tag ```<a>``` (âncora).Sintaxe básica:
 ```
@@ -589,12 +613,12 @@ Exemplos e tipos de links:
     ```
 
 Ao trabalhar com links, é importante considerar a acessibilidade, usabilidade e SEO. Use textos descritivos para os links, evite abrir muitos links em novas abas sem necessidade, e certifique-se de que todos os links funcionem corretamente.
-
-## **Entendendo URLs absolutas e relativas**
+---
+## 9. Entendendo URLs absolutas e relativas
 
 URLs (Uniform Resource Locators) são endereços que especificam a localização de recursos na internet. Existem dois tipos principais de URLs: absolutas e relativas.
 
-## **URLs Absolutas**
+### **URLs Absolutas**
 
 Uma URL absoluta contém todas as informações necessárias para localizar um recurso, independentemente do contexto. Ela inclui:
 
@@ -613,7 +637,7 @@ Vantagens das URLs absolutas:
 - Evitam problemas de indexação em sites com múltiplas versões (HTTP/HTTPS)
 - Facilitam a compreensão do destino do link
 
-## **URLs Relativas**
+### **URLs Relativas**
 
 Uma URL relativa especifica a localização de um recurso em relação à página atual ou ao domínio base. Ela geralmente inclui apenas o caminho e, opcionalmente, o recurso.Exemplo de URL relativa:
 ```
@@ -624,8 +648,8 @@ Vantagens das URLs relativas:
 - Mais fáceis de gerenciar em sites grandes
 - Permitem mover conteúdo ou mudar domínios sem quebrar links internos
 - Reduzem a redundância no código
-
-## **Links dentro de uma mesma página**
+---
+## 10. Links dentro de uma mesma página
 
 Links dentro da mesma página, também conhecidos como âncoras, permitem a navegação entre diferentes seções de um documento HTML. Eles são úteis para melhorar a usabilidade em páginas longas.Para criar um link âncora:
 
@@ -643,8 +667,8 @@ Exemplos de uso:
 - Sumários no início de artigos longos
 - Botões "Voltar ao topo" em páginas extensas
 - Navegação entre seções em páginas de conteúdo único (one-page websites)
-
-## **Links externos**
+---
+## 11. Links externos
 
 Links externos são hiperlinks que apontam para páginas em domínios diferentes do site atual. Eles são importantes para SEO e para fornecer recursos adicionais aos visitantes.Ao criar links externos:
 
@@ -669,12 +693,12 @@ Cuidados ao usar links externos:
 - Use o atributo ```rel="nofollow"``` para links pagos ou não endossados
 
 Ao implementar links em seu site, considere o contexto e o objetivo de cada link para escolher entre URLs absolutas ou relativas, e entre links internos ou externos. Uma estratégia de linking bem planejada pode melhorar significativamente a experiência do usuário e o desempenho do SEO.
-
-## **Listas no HTML: ordenadas e não-ordenadas**
+---
+## 12. Listas no HTML: ordenadas e não-ordenadas
 
 As listas em HTML são elementos fundamentais para organizar e estruturar informações em uma página web. Existem três tipos principais de listas: não-ordenadas, ordenadas e de definição.
 
-## **Listas Não-Ordenadas (```<ul>```)**
+### **Listas Não-Ordenadas (```<ul>```)**
 
 As listas não-ordenadas são criadas usando a tag ```<ul>``` (unordered list) e são usadas quando a ordem dos itens não é importante. Cada item da lista é definido pela tag ```<li>```
 
@@ -701,7 +725,8 @@ Exemplo com estilo personalizado:
   <li>Outro item</li>
 </ul>
 ```
-## **Listas Ordenadas (```<ol>```)**
+---
+### **Listas Ordenadas (```<ol>```)**
 
 As listas ordenadas são criadas usando a tag ```<ol>``` (ordered list) e são usadas quando a sequência dos itens é importante. Cada item também é definido pela tag ```<li>```.Exemplo básico:
 ```
@@ -726,7 +751,8 @@ Exemplo com estilo personalizado:
   <li>Próximo item</li>
 </ol>
 ```
-## **Listas de Definição (```<dl>```)**
+---
+## 13. Listas de Definição (```<dl>```)
 
 As listas de definição são usadas para termos e suas definições. Elas usam três tags:
 
@@ -743,7 +769,8 @@ Exemplo:
   <dd>Cascading Style Sheets, usado para estilizar elementos HTML.</dd>
 </dl>
 ```
-## **Listas Aninhadas**
+---
+## 14. Listas Aninhadas
 
 É possível aninhar listas dentro de outras listas, criando sublistas:
 ```
@@ -762,7 +789,8 @@ Exemplo:
   </li>
 </ul>
 ```
-## **Criação de tabelas**
+---
+## 15. Criação de tabelas
 
 As tabelas em HTML são usadas para organizar dados em linhas e colunas. A estrutura de uma tabela inclui várias tags importantes:
 
@@ -807,8 +835,8 @@ Atributos importantes para tabelas:
 - **`cellspacing`**: Define o espaçamento entre as células
 - **`colspan`**: Permite que uma célula se estenda por várias colunas
 - **`rowspan`**: Permite que uma célula se estenda por várias linhas
-
-## **O que são formulários**
+---
+## 16. O que são formulários
 
 Formulários HTML são elementos usados para coletar informações dos usuários. Eles são criados usando a tag ```<form>``` e podem conter vários tipos de campos de entrada, botões e outros elementos interativos.Estrutura básica de um formulário:
 ```
@@ -827,8 +855,8 @@ Atributos importantes do ```<form>```:
 - **`action`**: Especifica para onde os dados do formulário serão enviados
 - **`method`**: Define o método HTTP a ser usado (geralmente "get" ou "post")
 - **`enctype`**: Especifica como os dados do formulário devem ser codificados ao enviar ao servidor (importante para upload de arquivos)
-
-## **Conhecendo os tipos de input**
+---
+## 17. Conhecendo os tipos de input
 
 O elemento ```<input>``` é o mais versátil e comum em formulários HTML. Aqui está uma lista detalhada dos tipos de ```<input>```, ordenados do mais utilizado para o menos:
 
@@ -917,10 +945,10 @@ O elemento ```<input>``` é o mais versátil e comum em formulários HTML. Aqui 
     ```
     <input type="reset" value="Limpar formulário">
     ```
+---
+## 18. Elementos select e textarea
 
-## **Elementos select e textarea**
-
-## **Select**
+### **Select**
 
 O elemento ```<select>``` cria uma lista suspensa de opções. É usado em conjunto com a tag ```<option>``` para definir as opções disponíveis.Exemplo detalhado:
 ```
@@ -944,7 +972,7 @@ Atributos importantes do ```<select>```:
 - **`size`**: Define o número de opções visíveis sem rolar
 - **`required`**: Torna o campo obrigatório
 
-## **Textarea**
+### **Textarea**
 
 O elemento ```<textarea>``` cria uma área de texto multilinha. É útil para entradas de texto mais longas, como comentários ou descrições.Exemplo detalhado:
 ```
@@ -963,8 +991,8 @@ Atributos importantes do <textarea>:
 - **`wrap`**: Controla como o texto é quebrado (soft, hard, off)
 
 Estes elementos são essenciais para criar formulários interativos e coletar diversos tipos de informações dos usuários em páginas web. A escolha correta do tipo de input e a configuração adequada dos atributos podem melhorar significativamente a usabilidade e a acessibilidade do seu formulário.
-
-## **Recursos modernos do HTML5**
+---
+## 19. Recursos modernos do HTML5
 
 O HTML5 trouxe uma série de recursos modernos que revolucionaram o desenvolvimento web:
 
@@ -1004,8 +1032,8 @@ O HTML5 trouxe uma série de recursos modernos que revolucionaram o desenvolvime
     ```
     <div draggable="true" ondragstart="drag(event)">Arraste-me</div>
     ```
-
-## **Elementos semânticos**
+---
+## 20. Elementos semânticos
 
 Os elementos semânticos do HTML5 fornecem significado estrutural ao conteúdo. Aqui estão os principais, listados do mais utilizado para o menos:
 
@@ -1022,8 +1050,8 @@ Os elementos semânticos do HTML5 fornecem significado estrutural ao conteúdo. 
 11. **`<mark>`**: Texto destacado ou marcado
 12. **`<details>`**: Detalhes adicionais que podem ser expandidos
 13. **`<summary>`**: Resumo ou cabeçalho visível para um elemento **`<details>`**
-
-## **WAI-ARIA e atributos de acessibilidade**
+---
+## 21. WAI-ARIA e atributos de acessibilidade
 
 WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) fornece atributos adicionais para melhorar a acessibilidade de conteúdo web dinâmico. Aqui estão os principais atributos ARIA, listados do mais utilizado para o menos:
 
