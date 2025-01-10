@@ -81,9 +81,8 @@ Ao indicar um livro, você ajuda a enriquecer nossa biblioteca de conhecimento e
 Este repositório foi inspirado e baseado em conhecimentos adquiridos por meio de cursos, materiais acadêmicos e recursos adicionais. Abaixo estão algumas das principais fontes que contribuíram para a criação dos conteúdos:  
 
 - **[CS50 de Harvard](https://cs50.harvard.edu/)**: Fundamentos de ciência da computação e programação.  
-- **OneBitCode**: Trilha Fullstack JavaScript e revisão de fundamentos do desenvolvimento web.  
-- **Santander Tech+ (Ada Tech)**: Formação em back-end utilizando Node.js e Express.  
-- **Faculdade Uninter**: Cursos e materiais relacionados a Análise e Desenvolvimento de Sistemas.  
+- **[OneBitCode](https://comunidade.onebitcode.com/feed)**: Trilha Fullstack JavaScript e revisão de fundamentos do desenvolvimento web.    
+- **[Faculdade Uninter](https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas-2/?gad_source=1&gclid=CjwKCAiAp4O8BhAkEiwAqv2UqHr-mwaAgTiokfDVtsOmlYh3WYcM4Dnr6oY0JIAiM6qb10uti022QBoC2KkQAvD_BwE&gclsrc=aw.ds)**: Cursos e materiais relacionados a Análise e Desenvolvimento de Sistemas.  
 - **Livros e recursos adicionais**: Incluídos na seção de livros recomendados.  
 
 Se você quer se aprofundar nos tópicos abordados, recomendo explorar essas fontes e cursos! 🌟
