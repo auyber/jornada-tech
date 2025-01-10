@@ -47,6 +47,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ### 📊 Sistemas de Informação
 - [Revisão Sistemas de Informação](./sistemas-de-informacao/revisao.md)
 
+### 🧠💻 Lógica de programação e Algoritmos
+- [Revisão Lógica de Programação](./logica-de-programacao/revisao.md)
+
 ## 📚 Livros Recomendados
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
