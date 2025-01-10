@@ -19,7 +19,24 @@
 12. [Comparando Desempenho](#12-comparando-desempenho)  
 13. [Expressões Lógicas e Álgebra Booleana](#13-expressões-lógicas-e-álgebra-booleana)  
 14. [Condicionais Aninhadas](#14-condicionais-aninhadas)  
-15. [Condicionais de Múltipla Escolha (elif)](#15-condicionais-de-múltipla-escolha-elif)
+15. [Condicionais de Múltipla Escolha (elif)](#15-condicionais-de-múltipla-escolha-elif)  
+16. [Estruturação de Repetição](#16-estruturação-de-repetição)  
+17. [Estruturação de Repetição WHILE (ENQUANTO)](#17-estruturação-de-repetição-while-enquanto)  
+18. [Contadores](#18-contadores)  
+19. [Acumuladores](#19-acumuladores)  
+20. [Validando Dados de Entrada com um Loop](#20-validando-dados-de-entrada-com-um-loop)  
+21. [Estrutura de Repetição for](#21-estrutura-de-repetição-for)  
+22. [Estruturas de Repetição Aninhadas](#22-estruturas-de-repetição-aninhadas)  
+23. [Funções](#23-funções)  
+24. [Escopo de Variáveis](#24-escopo-de-variáveis)  
+25. [Retorno de Valores em Funções](#25-retorno-de-valores-em-funções)  
+26. [Recursos Avançados com Funções](#26-recursos-avançados-com-funções)  
+27. [Tuplas](#27-tuplas)  
+28. [Listas](#28-listas)  
+29. [Strings e Listas Dentro de Listas](#29-strings-e-listas-dentro-de-listas)  
+30. [Dicionários](#30-dicionários)  
+31. [Trabalhando com Métodos e Strings](#31-trabalhando-com-métodos-e-strings)
+
 
 
 
@@ -885,4 +902,1789 @@ elif (op == 4):
 else:
     print('Opção de pagamento inválida!')
 ```
+---
+
+## 16. Estruturação de Repetição
+
+No contexto do algoritmo, vamos imaginar que o Lenhadorzinho precisa se mover até uma tora de madeira. Ele pode se mover de um quadradinho por vez, e para atingir a tora, ele precisa se mover por 5 quadradinhos. No algoritmo simples, isso seria escrito repetidamente como:
+
+Início
+
+Mover
+Mover
+Mover
+Mover
+Mover Fim
+
+Esse processo pode ser repetido para um número maior de quadradinhos, como 100 ou até 1000, mas escrever cada instrução seria ineficiente e confuso. Por isso, utilizamos estruturas de repetição, que permitem automatizar a execução de uma ação múltiplas vezes, sem a necessidade de escrever cada comando individualmente.
+
+Por exemplo, para imprimir números de 1 a 5, sem usar repetição, seria necessário escrever os valores manualmente ou incrementar a variável a cada print. No entanto, a melhor maneira de abordar isso é com o uso de estruturas de repetição, como o `while`, que permite que um bloco de código seja executado enquanto uma condição for verdadeira.
+
+---
+
+## 17. Estruturação de Repetição WHILE (ENQUANTO)
+
+A estrutura `while` (enquanto) é usada para repetir um bloco de instruções enquanto uma condição especificada for verdadeira. Em Python, a sintaxe é:
+
+```
+while (condição):
+    # Instrução(ões)
+```
+No pseudocódigo, isso seria representado como enquanto (condição), sendo intuitivo de entender. O Python não exige um finalizador para o bloco, apenas usa a indentação para definir o escopo.
+
+Por exemplo, para imprimir os números de 1 a 5, podemos usar:
+```
+x = 1
+while (x <= 5):
+    print(x)
+    x = x + 1
+```
+Este código imprime os números de 1 a 5. A variável x é controlada dentro do laço, e a repetição ocorre até que a condição x <= 5 seja falsa.
+
+### Fluxograma do while
+
+No fluxograma da estrutura while, o programa verifica a condição antes de executar as instruções do bloco. Se a condição for verdadeira, o bloco é executado; caso contrário, o fluxo do programa sai do laço.
+
+### Problema do Loop Infinito
+
+Se o incremento (x = x + 1) for removido do código, a variável x não será atualizada e o laço continuará executando indefinidamente, o que resultará em um loop infinito.
+
+### Exemplo de Contagem até 99
+
+Para imprimir os números de 0 a 99, podemos usar:
+```
+x = 0
+while (x <= 99):
+    print(x)
+    x = x + 1
+```
+Alternativamente, podemos usar a condição x < 100, que dará o mesmo resultado, pois tanto x <= 99 quanto x < 100 interrompem o laço quando x chega a 100.
+
+### Desafios para Praticar
+- Modifique o código anterior para exibir os números de 10 a 1000.
+- Crie um programa que exiba uma contagem regressiva do lançamento de um foguete, de 10 até 0, e exiba a palavra "Fogo!" após o 0.
+
+---
+
+## 18. Contadores
+
+Os **contadores** são amplamente usados em estruturas de repetição para criar loops que realizam ações com base em intervalos definidos. Em Python, eles permitem imprimir sequências, realizar cálculos iterativos, e muito mais.
+
+### Exemplo 1: Imprimir uma sequência definida pelo usuário
+```
+inicial = int(input('Qual valor deseja iniciar a contagem? '))
+final = int(input('Qual valor deseja encerrar a contagem? '))
+x = inicial
+while (x <= final):
+    print(x)
+    x = x + 1
+```
+Explicação:
+O valor inicial é armazenado em inicial e o final em final.
+x é o contador inicializado com o valor de inicial.
+A condição do while (x <= final) garante que o loop ocorre enquanto x for menor ou igual ao valor final.
+x é incrementado a cada iteração com x = x + 1.
+
+Saída:
+Qual valor deseja iniciar a contagem? 5
+Qual valor deseja encerrar a contagem? 10
+5
+6
+7
+8
+9
+10
+
+### Exemplo 2: Imprimir números pares dentro de um intervalo
+```
+inicial = int(input('Qual valor deseja iniciar a contagem? '))
+final = int(input('Qual valor deseja encerrar a contagem? '))
+x = inicial
+while (x <= final):
+    if (x % 2 == 0):  # Verifica se o número é par
+        print(x)
+    x = x + 1
+```
+Explicação:
+Teste condicional: Verifica se x é par (x % 2 == 0).
+Indentação: O print(x) é executado apenas quando a condição for verdadeira.
+Incremento: A variável x é incrementada fora do bloco if para garantir que o loop avance corretamente.
+
+Saída:
+Qual valor deseja iniciar a contagem? 5
+Qual valor deseja encerrar a contagem? 10
+6
+8
+10
+
+### Desafio: Incremento alternativo para números pares
+
+Para otimizar o algoritmo, remova o if e incremente x em 2 unidades por vez.
+Atenção: O valor inicial deve ser um número par.
+
+### Exercícios de Fixação
+
+- Reescrever para múltiplos de 3: Modifique o programa para imprimir os 10 primeiros múltiplos de 3.
+- Tabuada: Crie um programa que receba um número e imprima sua tabuada no formato 1xN=....
+
+## 19. Acumuladores
+
+Os acumuladores são usados para somar ou agregar valores ao longo de um loop. Eles diferem dos contadores porque acumulam valores variáveis, enquanto contadores trabalham com incrementos constantes.
+
+###Exemplo 1: Somatório de 5 números
+```
+soma = 0
+cont = 1
+while (cont <= 5):
+    x = float(input(f'Digite a {cont}ª nota: '))
+    soma = soma + x
+    cont = cont + 1
+print(f'Somatório: {soma}')
+```
+Explicação:
+Acumulador (soma): Inicia com 0 e agrega o valor digitado.
+Contador (cont): Controla o número de iterações, garantindo que o loop ocorra 5 vezes.
+
+Saída:
+Digite a 1ª nota: 4
+Digite a 2ª nota: 5
+Digite a 3ª nota: 6
+Digite a 4ª nota: 7
+Digite a 5ª nota: 8
+Somatório: 30.0
+
+### Exemplo 2: Cálculo da média
+Modificando o programa acima para calcular a média:
+```
+soma = 0
+cont = 1
+while (cont <= 5):
+    x = float(input(f'Digite a {cont}ª nota: '))
+    soma = soma + x
+    cont = cont + 1
+media = soma / 5
+print(f'Média final: {media}')
+```
+
+### Exercícios de Fixação
+
+### Exercício 1: Multiplicação com somas sucessivas
+Implemente a multiplicação sem usar o operador *:
+```
+x = int(input('Digite um valor: '))
+y = int(input('Digite outro valor: '))
+cont = 1
+multi = 0
+while (cont <= x):
+    multi = multi + y
+    cont = cont + 1
+print(f'Resultado da multiplicação: {x}x{y}={multi}')
+```
+### Exercício 2: Intervalos com estatísticas
+Calcule estatísticas de números em um intervalo:
+```
+inicial = int(input('Digite um valor inicial: '))
+final = int(input('Digite um valor final: '))
+qtd_positivo = qtd_par = qtd_impar = soma_positivo = soma_par = soma_impar = 0
+i = inicial
+
+if (inicial < final):
+    while (i <= final):
+        if (i > 0):
+            qtd_positivo += 1
+            soma_positivo += i
+        if (i % 2 == 0):
+            qtd_par += 1
+            soma_par += i
+        else:
+            qtd_impar += 1
+            soma_impar += i
+        i += 1
+    media_positivo = soma_positivo / qtd_positivo
+    media_par = soma_par / qtd_par
+    media_impar = soma_impar / qtd_impar
+    print(f'Quantidade de positivos: {qtd_positivo}, Média: {media_positivo}')
+    print(f'Quantidade de pares: {qtd_par}, Média: {media_par}')
+    print(f'Quantidade de ímpares: {qtd_impar}, Média: {media_impar}')
+else:
+    print('Valor inicial maior ou igual ao final. Programa encerrado.')
+```
+---
+## 20. Validando Dados de Entrada com um Loop**
+
+É comum validar os dados fornecidos pelo usuário utilizando laços de repetição. Por exemplo, se for necessário garantir que o usuário insira um número inteiro positivo, o programa deve rejeitar números negativos ou zero. 
+
+A validação ocorre por meio de um loop, que exige a entrada de um dado válido antes de prosseguir. Caso o dado não atenda aos critérios, o programa continuará solicitando uma nova entrada.
+
+### Exemplo de Código
+```
+x = int(input('Digite um valor maior do que zero: '))
+while x <= 0:
+    x = int(input('Digite um valor maior do que zero: '))
+print(f'Você digitou {x}. Encerrando o programa...')
+```
+Saída
+Digite um valor maior do que zero: -6
+Digite um valor maior do que zero: -99
+Digite um valor maior do que zero: 12
+Você digitou 12. Encerrando o programa...
+
+Explicação
+A variável ```x``` é inicialmente atribuída com a entrada do usuário.
+O ```while``` verifica se a entrada não atende ao requisito ```(x <= 0)```.
+Enquanto a entrada for inválida, o loop solicita uma nova entrada.
+Quando um valor válido é digitado, o programa avança e é encerrado.
+
+### Interrompendo um Loop com ```break```
+
+A instrução ```break``` permite encerrar um laço de repetição abruptamente, independentemente da condição do loop.
+```
+print('Digite uma mensagem que irei repetir para você!')
+print('Para encerrar escreva "sair".')
+while True:
+    texto = input('')
+    print(texto)
+    if texto == 'sair':
+        break
+print('Encerrando o programa...')
+```
+Saída
+Digite uma mensagem que irei repetir para você!
+teste
+teste
+sair
+Encerrando o programa...
+
+Explicação
+O loop é definido como infinito (```while True```).
+A execução do loop é interrompida somente quando a palavra "sair" é digitada.
+O ```break``` evita que o programa fique preso no loop indefinidamente.
+Nota: Utilize loops infinitos com cautela, pois erros de lógica podem levar a travamentos.
+
+### Retornando ao Início do Loop com ```continue```
+
+A instrução c```ontinue``` retorna ao início do laço sem executar o restante do código na iteração atual.
+```
+while True:
+    nome = input('Qual o seu nome? ')
+    if nome != 'Lenhadorzinho':
+        continue  # Retorna ao início do loop
+    senha = input('Qual a sua senha? ')
+    if senha == 'Instituicao':
+        break  # Encerra o loop
+print('Acesso concedido.')
+```
+Saída
+Qual o seu nome? Vinicius
+Qual o seu nome? Lenhadorzinho
+Qual a sua senha? Instituicao
+Acesso concedido.
+
+Explicação
+O ```continue``` faz com que o loop reinicie se o nome digitado for incorreto.
+Quando o nome está correto, o programa avança para verificar a senha.
+O ```break``` finaliza o loop após o fornecimento das credenciais corretas.
+
+### Valores Truthy e Falsey
+
+Em Python, além de ```True``` e ```False```, certos valores são interpretados como verdadeiros (Truthy) ou falsos (Falsey):
+
+- Falsey: 0, 0.0, '' (string vazia), None
+- Truthy: Todos os outros valores.
+- 
+Exemplo de Código
+```
+nome = ''
+while not nome:
+    nome = input('Digite seu nome: ')
+valor = int(input('Digite um número qualquer: '))
+if valor:
+    print('Você digitou um valor diferente de zero.')
+else:
+    print('Você digitou zero.')
+```
+Explicação
+O laço ```while not nome``` verifica se o nome é uma string vazia (Falsey).
+Após sair do laço, é lido um número inteiro.
+O ```if valor``` verifica se o número é Truthy (diferente de zero).
+
+### Exercício Prático
+
+Crie um programa que:
+Aceite apenas números inteiros positivos.
+Calcule a média dos números digitados.
+Utilize as instruções break, continue, e valores Truthy/Falsey.
+
+Solução
+```
+soma = 0
+qtd_num = 0
+while True:
+    x = int(input('Digite um valor inteiro: '))
+    if x < 0:
+        continue  # Ignora valores negativos
+    if not x:
+        break  # Encerra o programa ao digitar zero
+    soma += x
+    qtd_num += 1
+media = soma / qtd_num
+print(f'A média dos valores digitados é: {media}')
+```
+---
+
+## 21. Estrutura de Repetição for
+
+A estrutura ```for``` é utilizada quando o número de iterações é conhecido previamente. Seu funcionamento envolve uma variável de controle e o uso da função ```range()```.
+```
+for i in range(6):
+    print(i)
+```
+Saída
+0
+1
+2
+3
+4
+5
+
+Explicação
+A variável i percorre os valores de 0 a 5.
+O número 6 não é incluído, pois o intervalo do ```range()``` é exclusivo no limite superior.
+
+Variações:
+
+Alterar o valor inicial e o incremento:
+```
+for i in range(1, 10, 2):
+    print(i)
+```
+Saída
+1
+3
+5
+7
+9
+
+---
+
+### Varredura de String com `for`
+
+O fatiamento de strings permite manipular cada caractere individualmente por meio de seu índice. Esse processo pode ser realizado dinamicamente usando um laço de repetição, conhecido como **varredura de string**.
+
+### Exemplo de Varredura
+```
+frase = "Lógica de Programação e Algoritmos"
+for i in range(len(frase)):
+    print(frase[i])
+```
+Descrição do processo:
+- A variável de controle inicia no índice zero, correspondente ao primeiro caractere da string.
+- A condição de parada é o comprimento total da string.
+- O incremento padrão é de uma unidade.
+- 
+O comando print imprime cada caractere em uma linha separada por padrão. Para imprimir os caracteres na mesma linha, podemos modificar o comportamento do print:
+```
+frase = "Lógica de Programação e Algoritmos"
+for i in range(len(frase)):
+    print(frase[i], end="")
+```
+Essa técnica é útil para manipular ou verificar caracteres de forma isolada.
+
+### Comparativo: while vs for
+
+Ambos os laços podem resolver problemas semelhantes, mas possuem diferenças de implementação. Vamos comparar imprimindo números de 1 a 5:
+
+Com ```while```
+```
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+```
+Com ```for```
+```
+for i in range(1, 6):
+    print(i)
+```
+
+Equivalências marcadas:
+- Valor inicial (i = 1 no while, primeiro valor do range no for).
+- Condição de parada (i <= 5 no while, segundo valor do range no for).
+- Incremento (i += 1 no while, implícito no for).
+- 
+Conclusão: O for é mais compacto e indicado para iterações com número fixo de repetições. Ambas as estruturas têm desempenho equivalente.
+
+### Exercícios com for
+
+Exercício 1: Média de Números Pares
+Calcule a média dos números pares de 1 a 100:
+```
+soma = 0
+qtd = 0
+for i in range(1, 101):
+    if i % 2 == 0:
+        soma += i
+        qtd += 1
+media = soma / qtd
+print(f"A média dos pares de 0 até 100 é: {media}")
+Saída:
+A média dos pares de 0 até 100 é: 51.0
+```
+
+Exercício 2: Tabuada Personalizada
+Exiba a tabuada de um número escolhido pelo usuário:
+```
+
+num = int(input("Digite um número para calcular a tabuada: "))
+print(f"TABUADA DO {num}:")
+for i in range(1, 11):
+    print(f"{i} x {num} = {i * num}")
+```
+Exemplo de entrada/saída:
+Entrada: 5
+Saída:
+```
+TABUADA DO 5:
+1 x 5 = 5
+2 x 5 = 10
+...
+10 x 5 = 50
+```
+
+## 22. Estruturas de Repetição Aninhadas
+
+Assim como nas estruturas condicionais, é possível combinar diferentes laços de repetição para resolver problemas mais complexos. Esses laços podem ser do mesmo tipo ou misturados, como `while` e `for`, sem qualquer restrição. Isso é conhecido como **aninhamento de laços de repetição**.
+
+### Exemplo: Tabuada Aninhada 
+
+Vamos calcular a tabuada de todos os números de 1 a 10, multiplicando cada número por um intervalo de 1 a 10.
+
+com `while`
+```
+tabuada = 1
+while tabuada <= 10:
+    print(f'TABUADA DO {tabuada}:')
+    i = 1
+    while i <= 10:
+        print(f'{tabuada} x {i} = {tabuada * i}')
+        i += 1
+    tabuada += 1
+```
+Com ```for```
+```
+for tabuada in range(1, 11):
+    print(f"TABUADA DO {tabuada}:")
+    for i in range(1, 11):
+        print(f"{tabuada} x {i} = {tabuada * i}")
+```
+Misturando ```while``` e ```for```
+```
+tabuada = 1
+while tabuada <= 10:
+    print(f"TABUADA DO {tabuada}:")
+    for i in range(1, 11):
+        print(f"{tabuada} x {i} = {tabuada * i}")
+    tabuada += 1
+```
+
+### Exercícios
+
+Exercício 1: Saudações Baseadas em Gênero
+Peça ao usuário sua idade e sexo repetidamente. O programa encerra ao receber uma idade negativa:
+```
+idade = int(input("Qual sua idade? "))
+while idade >= 0:
+    sexo = input("Qual seu sexo? (M ou F): ").upper()
+    if sexo == "M":
+        print(f"Boa noite, Senhor. Sua idade é {idade}.")
+    elif sexo == "F":
+        print(f"Boa noite, Senhora. Sua idade é {idade}.")
+    else:
+        print("Opção de sexo inválida.")
+    idade = int(input("Qual sua idade? "))
+print("Encerrando...")
+```
+Exercício 2: Números Primos de 2 a 99
+Identifique e exiba todos os números primos entre 2 e 99:
+```
+print("Primos de 2 até 99:")
+for numero in range(2, 100):
+    primo = True
+    for i in range(2, numero):
+        if numero % i == 0:
+            primo = False
+            break
+    if primo:
+        print(numero)
+```
+Exercício 3: Relógio Personalizado
+Exiba horas no formato H:M:S dentro de um intervalo definido pelo usuário:
+```
+h_inicial = int(input("Iniciar em qual hora? "))
+h_final = int(input("Terminar em qual hora? "))
+while h_inicial > h_final or h_inicial < 0 or h_final > 23:
+    h_inicial = int(input("Início inválido. Tente novamente: "))
+    h_final = int(input("Término inválido. Tente novamente: "))
+for h in range(h_inicial, h_final + 1):
+    for m in range(60):
+        for s in range(60):
+            print(f"{h:02}:{m:02}:{s:02}")
+```
+Exercício 4: Manipulação de Frases
+Valide o tamanho de uma frase (entre 10 e 30 caracteres), remova espaços e exiba os resultados:
+```
+frase = input("Digite uma frase (10 a 30 caracteres): ")
+while len(frase) < 10 or len(frase) > 30:
+    frase = input("Frase inválida. Tente novamente: ")
+print(f"Com espaços: {frase}")
+print("Sem espaços:", end=" ")
+for char in frase:
+    if char != " ":
+        print(char, end="")
+```
+
+## 23. Funções
+
+###O que são Funções?
+
+Funções são blocos de código projetados para executar tarefas específicas quando chamados. Desde o início do aprendizado em Python, você já utilizou funções como `input`, `print`, `int`, `float` e `range`. Estas são funções **predefinidas** pela linguagem, que abstraem tarefas complexas em comandos simples.  
+
+Por exemplo, a função `print` é usada para exibir informações na tela. O código que define essa função, embora em Python pareça simples, foi implementado em C para manipular diretamente os recursos do sistema, como drivers de vídeo. Assim, ao invés de escrever dezenas de linhas para cada exibição, basta invocar `print`.  
+
+Essa abstração facilita o desenvolvimento, tornando o código mais claro, reutilizável e acessível, especialmente para iniciantes.
+
+---
+
+### Criando suas próprias Funções
+Embora o Python ofereça muitas funções prontas, nem todas as necessidades são atendidas por elas. Para isso, você pode criar suas próprias funções, um processo chamado **modularização de código**.
+
+### Estrutura básica de uma função
+Para definir uma função em Python:
+1. Use a palavra-chave `def`.
+2. Dê um nome significativo à função.
+3. Abra e feche parênteses (obrigatórios).
+4. Finalize a declaração com dois pontos `:`.
+5. Indente o corpo da função (as instruções que ela executará).
+
+**Exemplo:**
+```
+def realce():
+    print('|', '__' * 10, '|')
+    print('|', '__' * 10, '|')
+```
+
+### Chamando a função
+
+Para executar o código dentro da função, basta chamá-la pelo nome:
+```
+# Programa principal
+realce()
+print(' MENU ')
+realce()
+```
+Observação
+Definir uma função apenas declara sua existência. Ela só será executada quando chamada. Além disso, a definição da função deve vir antes de sua chamada no programa.
+---
+### Fluxo de Execução
+Um programa segue a ordem sequencial, mas ao encontrar uma chamada de função, ele:
+
+- Pausa a execução do programa principal.
+- Executa o código dentro da função.
+- Retorna ao ponto onde a função foi chamada e continua a execução.
+Exemplo com passos:
+```
+def realce():
+    print('|', '__' * 10, '|')
+
+# Programa principal
+realce()  # Passo 1: executa a função
+print(' MENU ')  # Passo 2: retorna ao programa principal
+realce()  # Passo 3: executa a função novamente
+```
+---
+### Parâmetros em Funções
+
+Funções podem receber valores, chamados parâmetros, para personalizar seu comportamento. Esses valores são passados no momento da chamada e utilizados dentro da função.
+
+Exemplo:
+```
+def realce(texto):
+    print('|', '__' * 10, '|')
+    print(texto)
+    print('|', '__' * 10, '|')
+
+# Programa principal
+realce(' MENU ')
+```
+---
+### Ordem dos parâmetros
+
+A ordem em que os parâmetros são passados importa. Por exemplo:
+```
+def subtrai(x, y):
+    print(x - y)
+
+subtrai(5, 7)  # Saída: -2
+subtrai(7, 5)  # Saída: 2
+Você também pode especificar os parâmetros de forma explícita:
+
+python
+Copiar código
+subtrai(y=7, x=5)  # Saída: -2
+```
+---
+### Parâmetros Opcionais
+
+É possível definir valores padrão para parâmetros, tornando-os opcionais. Caso um valor não seja fornecido, o padrão será usado.
+
+Exemplo:
+```
+def soma(x, y=0, z=0):
+    print(x + y + z)
+
+soma(5)       # Saída: 5
+soma(5, 2)    # Saída: 7
+soma(5, 2, 1) # Saída: 8
+```
+---
+### Exercícios
+Vamos aplicar os conceitos de funções com passagem de parâmetros resolvendo alguns exercícios.
+
+Exercício 1
+Crie uma função que desenhe uma borda ao redor de uma palavra, transformando-a em um título. O tamanho da borda deve ser ajustado automaticamente ao comprimento da palavra.
+
+**Exemplo de saída:**
++-----------+ +-----+ | Auyber | | Olá | +-----------+ +-----+
+
+```
+def borda(palavra):
+    tam = len(palavra)
+    if tam:  # Verifica se a palavra não está vazia
+        print('+', '-' * tam, '+')
+        print('|', palavra, '|')
+        print('+', '-' * tam, '+')
+
+# Programa Principal
+borda('Olá, Mundo!')
+borda('Lógica de Programação e Algoritmos')
+```
+Exercício 2
+Implemente uma função que realiza uma contagem e imprime os números em uma única linha. A função deve receber os valores inicial, final e o passo da contagem, sendo os dois últimos opcionais.
+
+Dica: Use o parâmetro ```end=''``` no ```print``` para evitar quebras de linha.
+```
+def contador(fim, inicio=0, passo=1):
+    for i in range(inicio, fim + 1, passo):
+        print(f'{i}', end=' ')
+    print()  # Quebra de linha após o loop
+
+# Chamadas da função
+contador(20, 10, 2)
+contador(12)
+```
+Exercício 3
+Crie uma função que receba três números como parâmetros e os organize em ordem crescente. Exiba o resultado na tela.
+```
+def ordenar_crescente(a, b, c):
+    numeros = [a, b, c]
+    numeros.sort()
+    print(f'Ordem crescente: {numeros[0]}, {numeros[1]}, {numeros[2]}')
+
+# Programa Principal
+x = int(input('Digite o valor 1: '))
+y = int(input('Digite o valor 2: '))
+z = int(input('Digite o valor 3: '))
+ordenar_crescente(x, y, z)
+```
+---
+## 24. Escopo de Variáveis
+
+O escopo de uma variável determina onde ela pode ser utilizada dentro do programa. Existem dois tipos principais de escopos:
+
+###Escopo Local
+- Variáveis declaradas dentro de funções ou como parâmetros pertencem ao escopo local e só existem enquanto a função é executada.
+- Após a execução, essas variáveis são destruídas.
+- 
+###Escopo Global
+- Variáveis declaradas no programa principal são globais e podem ser acessadas em qualquer parte do programa, inclusive dentro de funções.
+- 
+Exemplo de Erro ao Acessar Escopo Local:
+```
+def omelete():
+    ovos = 12  # Variável local
+
+# Programa Principal
+omelete()
+print(ovos)  # Erro: "ovos" não existe no escopo global
+```
+Exemplo de Uso Correto:
+```
+def omelete():
+    print(ovos)  # Acessando variável global
+
+# Programa Principal
+ovos = 12  # Variável global
+omelete()
+```
+---
+### A Instrução global
+
+Quando necessário, podemos usar a palavra-chave ```global``` dentro de uma função para manipular variáveis globais, evitando a criação de variáveis locais de mesmo nome.
+
+Exemplo:
+```
+def omelete():
+    global ovos
+    ovos = 6
+
+# Programa Principal
+ovos = 12
+omelete()
+print(ovos)  # Resultado: 6
+```
+---
+### Exemplo com Escopos Distintos
+
+O exemplo a seguir ilustra como variáveis de mesmo nome podem coexistir em diferentes escopos:
+```
+def omelete():
+    ovos = 12  # Variável local de omelete
+    print('Ovos =', ovos)
+
+def bacon():
+    ovos = 6  # Variável local de bacon
+    print('Ovos =', ovos)
+
+# Programa Principal
+ovos = 2  # Variável global
+bacon()
+omelete()
+print('Ovos =', ovos)
+```
+Saída:
+
+Ovos = 6
+Ovos = 12
+Ovos = 2
+
+---
+## 25. Retorno de Valores em Funções
+
+Até agora, aprendemos a criar rotinas que são executadas, mas que não retornam um resultado ao programa principal ou a outra função. Rotinas de código que podem ou não conter parâmetros, mas que nunca retornam valores, são chamadas de **procedimentos** (*procedures*). 
+
+Por outro lado, uma **função** é definida como uma rotina que retorna valores associados ao seu nome, permitindo que seja utilizada em atribuições ou expressões lógicas (Puga; Risseti, 2016, p. 108). Apesar dessa distinção, é comum referirmo-nos a ambas como "funções", independentemente de retornarem valores ou não.
+
+### Funções com Retorno em Python
+
+### Exemplo Básico
+
+Abaixo, uma função simples criada anteriormente que soma até três valores numéricos:
+```
+def soma3(x, y, z):
+    res = x + y + z
+    print(res)
+```
+Agora, para que o resultado da soma seja devolvido ao programa principal, utilizamos a palavra-chave ```return```:
+```
+def soma3(x=0, y=0, z=0):
+    res = x + y + z
+    return res
+```
+---
+### No Programa Principal
+
+A variável ```res``` é local à função e não existe fora dela. Portanto, é necessário armazenar o valor retornado em uma variável no programa principal:
+```
+# Programa principal
+retornado = soma3(1, 2, 3)
+print(retornado)
+
+# Alternativa simplificada
+print(soma3(2, 2))
+```
+Saída:
+
+6
+4
+---
+### Vários Resultados em um Único Print
+
+Podemos armazenar múltiplos resultados e exibi-los ao final:
+```
+# Programa principal
+retornado1 = soma3(1, 2, 3)
+retornado2 = soma3(1, 2)
+retornado3 = soma3()
+print(f'Somatórios: {retornado1}, {retornado2} e {retornado3}.')
+```
+---
+### Retorno Condicional
+
+Funções também podem retornar valores diferentes, dependendo de condições. Por exemplo:
+
+### Par ou Ímpar com Função
+```
+def par_impar(x):
+    if x % 2 == 0:
+        return 'par'
+    else:
+        return 'impar'
+
+# Programa principal
+print(par_impar(int(input('Digite um valor inteiro: '))))
+```
+Saída:
+Digite um valor inteiro: 7
+impar
+
+A função retorna somente um valor por chamada, executando o return correspondente à condição atendida.
+
+### Validando Dados de Entrada com Funções
+
+Códigos de validação podem ser longos e repetitivos. Criar funções para essa tarefa melhora a legibilidade e reutilização. Exemplo:
+```
+def valida_int(pergunta, min, max):
+    x = int(input(pergunta))
+    while x < min or x > max:
+        x = int(input(pergunta))
+    return x
+
+# Programa principal
+x = valida_int('Digite um valor inteiro: ', 0, 100)
+print(f'Você digitou {x}. Encerrando o programa...')
+```
+Saída:
+
+Digite um valor inteiro: 190
+Digite um valor inteiro: 101
+Digite um valor inteiro: 66
+Você digitou 66. Encerrando o programa...
+---
+### Exercícios
+
+Exercício 1: Validação de String
+Escreva uma função que valide o tamanho de uma string com base em limites definidos:
+```
+def valida_string(pergunta, min, max):
+    s1 = input(pergunta)
+    tam = len(s1)
+    while tam < min or tam > max:
+        s1 = input(pergunta)
+        tam = len(s1)
+    return s1
+
+# Programa principal
+x = valida_string('Digite uma string: ', 10, 30)
+print(f'Você digitou a string: {x}. \nDado válido. Encerrando o programa...')
+```
+Exercício 2: Fatorial
+Implemente uma função para calcular o fatorial de um número positivo:
+```
+def valida_int(pergunta, min, max):
+    x = int(input(pergunta))
+    while x < min or x > max:
+        x = int(input(pergunta))
+    return x
+
+def fatorial(num):
+    fat = 1
+    for i in range(1, num + 1):
+        fat *= i
+    return fat
+
+# Programa principal
+x = valida_int('Digite um valor para calcular o fatorial: ', 0, 99999)
+print(f'{x}! = {fatorial(x)}.')
+```
+Exercício 3: Soma de Intervalo
+Crie uma função que calcula a soma de todos os valores inteiros entre dois números, inclusive eles mesmos:
+```
+def valida_int(pergunta, min, max):
+    x = int(input(pergunta))
+    while x < min or x > max:
+        x = int(input(pergunta))
+    return x
+
+def soma_intervalo(inicio, fim):
+    soma = 0
+    for i in range(inicio, fim + 1):
+        soma += i
+    return soma
+
+# Programa principal
+x = valida_int('Digite um valor inteiro e positivo: ', 1, 99999)
+y = valida_int('Digite um segundo valor inteiro e positivo: ', 1, 99999)
+print(f'Somatório entre {x} e {y} é {soma_intervalo(x, y)}.')
+```
+---
+## 26. Recursos Avançados com Funções
+    
+Exploremos agora recursos avançados para aprimorar sua habilidade com Python.
+
+### Exceções e Erros
+
+Erros podem ser de dois tipos principais:
+
+- Erros de Sintaxe: Ocorrem devido a erros de digitação, indentação ou ausência de caracteres obrigatórios. Exemplo:
+```
+# Erro de sintaxe
+while True
+    print('Olá, mundo!')
+```
+Saída:
+
+SyntaxError: expected ':'
+
+- Exceções: A sintaxe está correta, mas erros ocorrem durante a execução. Por exemplo:
+```
+print(100 * (2/0))
+```
+Saída:
+
+ZeroDivisionError: division by zero
+
+### Saiba Mais
+Consulte a lista completa de exceções embutidas no Python:  
+[Documentação Oficial - Exceções](https://docs.python.org/3/library/exceptions.html).
+---
+### Função Lambda
+
+No Python, é possível criar funções simples e sem nome, conhecidas como funções *lambda*. Elas são geralmente escritas em uma única linha de código e podem ser utilizadas diretamente no código principal. Uma função *lambda* é ideal para situações em que a funcionalidade da função é muito simples ou quando será utilizada poucas vezes. Essa abordagem também é comum em outras linguagens de programação. Vamos a um exemplo:
+```
+res = lambda x: x * x
+print(res(3))
+```
+SAÍDA:
+
+9
+
+No exemplo acima, criamos uma função que recebe um número e retorna seu quadrado. A sintaxe de uma função lambda é diferente da forma tradicional de declaração de funções. Na primeira linha, a variável res recebe o valor da função lambda. A função em si possui o parâmetro x, que é colocado antes dos dois pontos, e a operação (neste caso, a multiplicação) é realizada após os dois pontos. Para usar a função no código, basta invocar o nome da variável, passando o valor desejado como parâmetro, como res(3), res(5), res(7), etc.
+
+É possível também passar múltiplos parâmetros para uma função lambda. Veja um exemplo abaixo, onde realizamos um somatório de dois valores x e y. Embora já tenhamos resolvido este exercício de forma tradicional com funções, o uso de uma função lambda pode ser mais interessante e simplificado para operações simples como essa:
+```
+soma = lambda x, y: x + y
+print(soma(3, 5))
+```
+SAÍDA:
+8
+
+### Exercício 
+Crie uma função lambda que receba dois valores numéricos como parâmetros. Ao primeiro valor, sempre some 5. Em seguida, multiplique os dois valores e retorne o resultado.
+```
+calc = lambda a, b: (a + 5) * b
+print(calc(5, 10))
+```
+---
+## 27. Tuplas
+
+Vamos iniciar esta discussão revisitanto um conceito já abordado anteriormente, onde comparávamos variáveis a gavetas em uma estante. Cada gaveta possui um nome, e dentro dela, armazenamos um único dado.
+
+Agora, imagine que queremos armazenar vários itens na mesma gaveta. Para isso, seria interessante que todas as gavetas fossem referenciadas pelo mesmo nome (o nome da variável). Para distinguir as gavetas, usamos um índice numérico. Assim, podemos nos referir a elas como “abra a gaveta 3” ou “abra a gaveta 5”.
+
+A seguir, vamos usar outra analogia: nosso mascote, Lenhadorzinho, enfrentava dificuldades para transportar seus itens, já que só conseguia carregar um de cada vez. Para resolver isso, ele comprou uma mochila, ampliando seu espaço. Agora, dentro de seu inventário, ele pode carregar vários itens, como seu machado, camisa, bacon e abacate. Veja na Figura 1 como os itens estão organizados na mochila.
+---
+### Exemplificando a Diferenciação entre Variáveis Simples e Compostas
+
+Antes da mochila, ele só podia carregar um item por vez, o que é equivalente a uma variável simples (que armazena apenas um dado). A mochila, por outro lado, é uma variável composta, que armazena diversos itens sob o mesmo nome. Para acessar o machado, basta escrever `mochila[0]`, e para o bacon, usamos `mochila[2]`.
+
+Em programação, estruturas de dados são maneiras específicas de organizar e armazenar dados na memória. Diferentes estruturas de dados são diferenciadas pela forma como os dados são organizados, acessados e manipulados.
+
+Em Python, temos três tipos principais de variáveis compostas: tuplas, listas e dicionários. Cada uma delas tem características próprias, e veremos mais sobre isso ao longo deste conteúdo.
+---
+
+### Construindo e Manipulando Tuplas
+
+A tupla é uma estrutura composta em Python simples, com a característica primária de ser **imutável**. Ou seja, uma vez criada, uma tupla não pode ser alterada durante a execução do programa.
+
+As tuplas são estáticas, o que significa que seus endereços de memória não podem ser modificados. Embora sejam imutáveis, elas têm certa semelhança com vetores/arrays encontrados em outras linguagens como C/C++ e Java.
+
+### Representação de uma Tupla
+
+A definição de uma tupla em Python é feita utilizando parênteses e separando os valores por vírgula. Ao imprimir a tupla, os valores aparecerão dentro dos parênteses.
+
+```
+mochila = ('Machado', 'Camisa', 'Bacon', 'Abacate')
+print(mochila)
+```
+Saída:
+('Machado', 'Camisa', 'Bacon', 'Abacate')
+---
+### Manipulação de Tuplas
+
+Assim como as strings, as tuplas podem ser fatiadas e manipuladas por meio de índices. A seguir, vemos alguns exemplos de manipulação de tuplas:
+```
+print(mochila[0])  # Exibe o primeiro elemento
+print(mochila[2])  # Exibe o terceiro elemento
+print(mochila[0:2])  # Exibe o primeiro e o segundo elementos
+print(mochila[2:])  # Exibe os elementos a partir do índice 2
+print(mochila[-1])  # Exibe o último elemento
+```
+Saída:
+Machado
+Bacon
+('Machado', 'Camisa')
+('Bacon', 'Abacate')
+Abacate
+---
+### Limitações das Tuplas
+
+Como as tuplas são imutáveis, não podemos alterar seus valores diretamente. Tentando substituir o bacon por ovos, o Python retornaria um erro:
+```
+mochila[2] = 'Ovos'
+```
+Saída (Erro):
+
+TypeError: 'tuple' object does not support item assignment
+---
+### Iterando sobre Tuplas
+
+Podemos iterar sobre os elementos de uma tupla utilizando um laço ```for```:
+```
+for item in mochila:
+    print(f'Na minha mochila tem: {item}')
+```
+Saída:
+Na minha mochila tem: Machado
+Na minha mochila tem: Camisa
+Na minha mochila tem: Bacon
+Na minha mochila tem: Abacate
+
+Também podemos iterar sobre os índices da tupla utilizando a função ```len```:
+```
+tam = len(mochila)
+for i in range(tam):
+    print(f'Na minha mochila tem: {mochila[i]}')
+```
+Saída:
+Na minha mochila tem: Machado
+Na minha mochila tem: Camisa
+Na minha mochila tem: Bacon
+Na minha mochila tem: Abacate
+---
+### Concatenando Tuplas
+Uma tupla tem um tamanho fixo, mas podemos criar uma nova tupla concatenando outras. Veja o exemplo:
+```
+mochila = ('Machado', 'Camisa', 'Bacon', 'Abacate')
+upgrade = ('Queijo', 'Canivete')
+mochila_grande = mochila + upgrade
+print(mochila_grande)
+```
+Saída:
+('Machado', 'Camisa', 'Bacon', 'Abacate', 'Queijo', 'Canivete')
+
+Note que a ordem de concatenação importa:
+```
+mochila_grande_invertida = upgrade + mochila
+print(mochila_grande_invertida)
+```
+Saída:
+
+('Queijo', 'Canivete', 'Machado', 'Camisa', 'Bacon', 'Abacate')
+---
+### Desempacotamento de Parâmetros em Funções
+
+Tuplas podem ser usadas para desempacotar parâmetros em funções, permitindo que um número variável de argumentos seja passado para a função. Veja um exemplo:
+```
+def soma(*num):
+    acumulador = 0
+    for i in num:
+        acumulador += i
+    return acumulador
+
+# Chamando a função
+print(soma(1, 2))  # Saída: 3
+print(soma(1, 2, 3, 4, 5, 6, 7, 8, 9))  # Saída: 45
+```
+No código acima, o asterisco (*) antes do parâmetro indica que a função pode receber um número variável de argumentos, que serão empacotados em uma tupla.
+---
+### Exercícios
+
+Agora, vamos praticar com tuplas e desempacotamento de funções:
+
+Exercício 1
+Crie uma tupla com o nome de 10 linguagens de programação e mostre em qual posição está a linguagem "Python".
+```
+linguagens = ('Javascript', 'Rust', 'Swift', 'Python', 'Kotlin', 'Go', 'C#', 'Dart', 'Julia', 'Typescript')
+i = 0
+while linguagens[i] != 'Python':
+    i += 1
+print(f'Encontramos Python na {i + 1} posição!')
+```
+### Exercício 2
+Escreva uma função que recebe uma string com uma mensagem e um número arbitrário de valores. A função deve exibir a mensagem e o maior valor entre os números passados.
+```
+def func_maior(msg, *num):
+    maior = max(num)
+    print(msg, maior)
+
+# Chamando a função
+func_maior('Maior valor: ', 8, 6, 4, 78, 56, 12, 9)
+```
+## 28. Listas
+
+Ao contrário das tuplas, que são imutáveis, as listas permitem a modificação de seus elementos. Agora, vamos ver como a lista pode ser usada de maneira semelhante à mochila do Lenhadorzinho. Se ele quiser substituir o bacon por uma laranja, isso seria possível com uma lista.
+
+### Definindo uma Lista
+
+A diferença entre tuplas e listas em Python é simples: as tuplas são definidas com parênteses e as listas com colchetes.
+```
+mochila = ('Machado', 'Camisa', 'Bacon', 'Abacate')
+print('Tupla: ', mochila)
+
+mochila = ['Machado', 'Camisa', 'Bacon', 'Abacate']
+print('Lista: ', mochila)
+```
+Saída:
+Tupla: ('Machado', 'Camisa', 'Bacon', 'Abacate')
+Lista: ['Machado', 'Camisa', 'Bacon', 'Abacate']
+
+Agora, vamos alterar o conteúdo da lista:
+```
+mochila[2] = 'Laranja'
+print('Lista: ', mochila)
+```
+Saída:
+Copiar código
+Lista: ['Machado', 'Camisa', 'Laranja', 'Abacate']
+---
+### Manipulação de Listas em Python
+
+A manipulação de listas em Python oferece diversas possibilidades, que vão além do que já vimos com as tuplas. Vamos explorar algumas dessas operações.
+
+### Adicionando Elementos à Lista
+
+Para adicionar elementos a uma lista, o método `append()` é utilizado, pois ele permite inserir um item no final da lista. Por exemplo, se tivermos uma lista chamada `mochila` com 4 itens (índices de 0 a 3), podemos adicionar um novo item ao final, assim:
+```
+mochila.append('Ovos')  # Adiciona 'Ovos' ao final da lista
+print('Lista:', mochila)
+```
+Saída:
+
+Lista: ['Machado', 'Camisa', 'Laranja', 'Abacate', 'Ovos']
+
+O método ```append()``` adiciona o item ao final da lista, mas caso precisemos inserir um item em uma posição específica, podemos usar o método ```insert()```. Este método exige que informemos o índice onde o item será inserido, deslocando os elementos seguintes para a direita. Veja o exemplo:
+```
+mochila.insert(1, 'Canivete')  # Insere 'Canivete' no índice 1
+print('Lista:', mochila)
+```
+Saída:
+
+Lista: ['Machado', 'Canivete', 'Camisa', 'Laranja', 'Abacate', 'Ovos']
+---
+### Removendo Elementos
+
+Existem diferentes maneiras de remover um item de uma lista. Uma delas é utilizando o ```del```, que remove o item baseado no seu índice. Outra opção é o método ```remove()```, que exclui o item a partir do seu valor. Veja as duas abordagens:
+```
+del mochila[1]  # Remove o item no índice 1
+print('Lista:', mochila)
+
+mochila.remove('Ovos')  # Remove o item com valor 'Ovos'
+print('Lista:', mochila)
+```
+Saída:
+Lista: ['Machado', 'Camisa', 'Laranja', 'Abacate', 'Ovos']
+Lista: ['Machado', 'Camisa', 'Laranja', 'Abacate']
+
+### Métodos ou Funções?
+
+Nos exemplos acima, vimos métodos como ```append```, ```insert```, e ```remove```. Eles são chamados de "métodos" porque pertencem a objetos de uma classe específica, no caso, a classe ```list``` em Python. A programação orientada a objetos (POO) utiliza classes e objetos, em vez de funções isoladas, e os métodos são invocados com a sintaxe ```objeto.metodo()```. Embora para nós seja apenas uma questão de terminologia, é importante entender que a lista é um objeto e os métodos agem sobre ela.
+
+Os métodos da classe ```list``` são extensivos, e você pode explorar todos eles na documentação oficial de Python: Python List Documentation.
+
+### Cópia de Listas
+
+Uma característica interessante de Python é como as listas são copiadas. Quando fazemos uma simples atribuição de uma lista a outra, ambas as variáveis apontam para o mesmo objeto. Isso significa que qualquer alteração em uma das listas também afetará a outra. Veja o exemplo:
+```
+lista_original = [5, 7, 9, 11]
+lista_referenciada = lista_original
+print(lista_original)
+print(lista_referenciada)
+
+lista_referenciada[0] = 2
+print(lista_original)
+print(lista_referenciada)
+```
+Saída:
+[5, 7, 9, 11]
+[5, 7, 9, 11]
+[2, 7, 9, 11]
+[2, 7, 9, 11]
+
+Neste caso, a alteração feita em ```lista_referenciada``` impacta também ```lista_original``` porque ambas estão referenciando o mesmo objeto.
+
+Se quisermos realmente criar uma cópia independente de uma lista, podemos usar o fatiamento (slicing) para criar uma cópia completa da lista:
+```
+lista_referenciada = lista_original[:]
+print(lista_original)
+print(lista_referenciada)
+
+lista_referenciada[0] = 2
+print(lista_original)
+print(lista_referenciada)
+```
+Saída:
+[5, 7, 9, 11]
+[5, 7, 9, 11]
+[5, 7, 9, 11]
+[2, 7, 9, 11]
+
+Agora, como podemos ver, as listas são independentes e a alteração de uma não afeta a outra.
+---
+## 29. Strings e Listas Dentro de Listas
+
+Além de acessar itens individuais dentro de uma lista, podemos também trabalhar com strings dentro dessas listas. A indexação dupla é uma técnica útil quando queremos acessar caracteres específicos dentro de uma string, que por sua vez está dentro de uma lista. Veja o exemplo abaixo:
+```
+mochila = ['Machado', 'Camisa', 'Bacon', 'Abacate']
+print(mochila[0])  # Acessando o primeiro item da lista
+```
+Saída:
+Machado
+
+Como já vimos, podemos acessar cada caractere dentro de uma string, utilizando uma indexação adicional. Isso nos permite acessar um caractere específico de um item de uma lista que seja uma string.
+```
+print(mochila[0][0])  # Primeiro caractere de 'Machado'
+print(mochila[2][1])  # Segundo caractere de 'Bacon'
+```
+Saída:
+M
+A
+---
+### Laços de Repetição Dupla
+
+Quando queremos percorrer todos os caracteres de cada string dentro de uma lista, podemos usar laços de repetição aninhados. O primeiro laço percorre os itens da lista, e o segundo percorre os caracteres de cada string. Exemplo:
+```
+for item in mochila:
+    for letra in item:
+        print(letra, end='')
+    print()
+```
+Saída:
+Machado
+Camisa
+Bacon
+Abacate
+
+Essa abordagem é útil quando precisamos acessar cada caractere das strings dentro de uma lista.
+
+### Alternativa com ```range```
+
+Outra forma de realizar a iteração é usando ```range```, como mostrado abaixo. Aqui, percorremos os índices de cada item e, dentro de cada item, percorremos os caracteres individuais.
+```
+for i in range(0, len(mochila), 1):
+    for j in range(0, len(mochila[i]), 1):
+        print(mochila[i][j], end='')
+    print()
+```
+Machado
+Camisa
+Bacon
+Abacate
+
+Esta abordagem é útil em alguns cenários específicos, como quando precisamos acessar o índice de um elemento ou aplicar alguma condição específica baseada na posição.
+---
+A impressão da lista com dois laços de repetição resulta, neste caso, no mesmo comportamento observado com um único laço, que aprendemos ao trabalhar com tuplas. Vale ressaltar que essa abordagem também se aplica às listas. No entanto, a alternativa que acabamos de aprender não é desprovida de utilidade, podendo ser vantajosa dependendo do problema a ser resolvido. Por exemplo, imagine que precisamos verificar, caractere por caractere, as palavras de uma lista em busca de um determinado padrão. Nesse cenário, a abordagem com laços duplos pode ser bastante útil.
+
+Agora, vamos imaginar um cenário em que precisamos registrar uma lista de compras em um sistema. Para cada produto comprado, devemos registrar seu nome, quantidade e preço unitário. A solução mais simples que nos vem à mente pode ser criar três listas separadas, uma para cada tipo de dado. No entanto, o Python oferece uma maneira mais eficiente, permitindo que criemos uma única lista em que, em cada índice, armazenamos outra lista contendo os campos de nome, quantidade e preço. Esse é um exemplo de indexação dupla.
+
+A seguir, vamos ver como implementar isso em Python. Começaremos criando uma lista vazia e adicionaremos os produtos um a um. Para fins de simplificação, o exemplo abaixo utiliza um laço de repetição que registra apenas três itens.
+```
+item = []
+mercado = []
+for i in range(3):
+    item.append(input('Digite o nome do item:'))
+    item.append(int(input('Digite a quantidade:')))
+    item.append(float(input('Digite o valor:')))
+    mercado.append(item[:])
+    item.clear()
+print(mercado)
+```
+Saída:
+Digite o nome do item: Cebola
+Digite a quantidade: 2
+Digite o valor: 0.99
+Digite o nome do item: Tomate
+Digite a quantidade: 5
+Digite o valor: 0.89
+Digite o nome do item: Saco de Arroz
+Digite a quantidade: 1
+Digite o valor: 5
+[['Cebola', 2, 0.99], ['Tomate', 5, 0.89], ['Saco de Arroz', 1, 5.0]]
+
+Na primeira e segunda linha, criamos duas listas vazias. A lista item serve como uma variável temporária para armazenar os dados de cada produto, que serão inseridos na lista mercado. Dentro do laço de repetição, preenchemos a lista item com os dados coletados do teclado. Em seguida, na linha 8, inserimos uma cópia da lista item dentro de mercado (não se esqueça do uso de [:]). Na linha 9, limpamos a lista item para garantir que ela não contenha dados da iteração anterior, preparando-a para o próximo produto. O print exibe na tela uma lista externa, contendo várias listas internas, separadas por vírgulas. Cada uma dessas listas internas contém três elementos: uma string (nome do produto), um inteiro (quantidade) e um número flutuante (valor).
+
+Uma abordagem alternativa seria usar apenas a lista principal mercado, criando variáveis simples para cada campo de dados. Veja como ficaria o código:
+```
+mercado = []
+for i in range(3):
+    nome = input('Digite o nome do item:')
+    qtd = int(input('Digite a quantidade:'))
+    valor = float(input('Digite o valor:'))
+    mercado.append([nome, qtd, valor])
+print(mercado)
+```
+A saída será a mesma que a anterior. A diferença é que agora utilizamos três variáveis simples (nome, qtd, valor) para armazenar as informações, que são então agrupadas em uma lista [nome, qtd, valor] e adicionadas à lista mercado.
+---
+### Acessando os Dados
+
+Podemos acessar dados específicos dentro da lista mercado. Aqui estão alguns exemplos de como acessar informações individuais:
+```
+# Qual o nome do primeiro produto?
+print(mercado[0][0])
+
+# Quanto custa um tomate?
+print(mercado[1][2])
+
+# Quantos sacos de arroz foram comprados?
+print(mercado[2][1])
+```
+---
+### Acessando Caractere de uma String Dentro de uma Lista de Listas
+
+Será que é possível acessar um único caractere dentro de uma lista que contém outras listas? Por exemplo, como acessaríamos a letra "C" da palavra "Cebola"?
+
+Dica: Neste caso, temos uma string dentro de uma lista, que por sua vez está dentro de outra lista. Isso exigirá uma indexação tripla!
+
+### Exibindo a Lista de Compras
+
+Por fim, podemos utilizar a lista mercado para gerar um relatório da compra, apresentando os dados organizados em colunas, incluindo o valor total do pedido. Veja como ficaria o código:
+```
+soma = 0
+print('Lista de compras:')
+print('-' * 20)
+print('item | quantidade | valor unitário | total do item')
+for item in mercado:
+    print('{} | {} | {} | {}'.format(item[0], item[1], item[2], item[1] * item[2]))
+    soma += item[1] * item[2]
+print('-' * 20)
+print(f'Total a ser pago: {soma}')
+```
+Saída:
+Lista de compras:
+--------------------
+item | quantidade | valor unitário | total do item
+Cebola | 2 | 0.99 | 1.98
+Tomate | 5 | 0.89 | 4.45
+Saco de Arroz | 1 | 5.0 | 5.0
+--------------------
+Total a ser pago: 11.43
+---
+### Exercícios
+
+Vamos praticar alguns conceitos sobre listas. Lembre-se de que as manipulações que vimos com tuplas também se aplicam às listas.
+
+Exercício 1
+
+Crie um programa em Python que inicialize uma lista vazia e permita ao usuário adicionar notas de um aluno. O programa deve continuar a aceitar notas até que o usuário insira um valor negativo, momento em que ele calculará a média das notas fornecidas.
+
+```
+notas = list()
+x = float(input('Digite uma nota:'))
+while x >= 0:
+    notas.append(x)
+    x = float(input('Digite uma nota:'))
+    
+soma = sum(notas)
+media = soma / len(notas) if notas else 0
+print(notas)
+print(f'Média das notas digitadas: {media}')
+```
+Explicação:
+
+O programa cria uma lista chamada notas.
+Um loop permite que o usuário adicione notas enquanto digitar valores não-negativos.
+A soma das notas é calculada usando sum(), e a média é calculada dividindo a soma pelo número de elementos na lista.
+
+Exercício 2
+
+O algoritmo de busca mais simples é a busca sequencial. Ela percorre a lista do início ao fim, verificando se o valor desejado está presente. A seguir, uma função em Python que recebe uma lista e um valor e retorna o índice onde o valor se encontra, ou -1 se não estiver presente.
+```
+def buscaSequencial(lista, dado):
+    for x in range(len(lista)):
+        if lista[x] == dado:
+            return x
+    return -1
+
+# Programa principal
+teste = [3, 7, 9, 1, 0, 7, 5, 12]
+dado = int(input('Digite um valor inteiro: '))
+res = buscaSequencial(teste, dado)
+
+if res >= 0:
+    print(f'Posição onde o {dado} foi encontrado: {res + 1}')
+else:
+    print('Dado não localizado...')
+```
+Explicação:
+
+A função buscaSequencial percorre a lista e retorna o índice do valor procurado.
+Caso o valor não seja encontrado, a função retorna -1.
+
+### Exercício 3
+
+Crie um programa que leia o nome, altura e peso de várias pessoas e armazene essas informações em uma lista. O programa deve calcular o IMC de cada pessoa e armazená-lo junto com os dados. No final, o programa deve exibir:
+
+- O total de cadastros.
+- A pessoa com o maior IMC.
+- A pessoa com o menor IMC.
+- O cálculo do IMC será feito usando uma função lambda.
+```
+pessoas = []
+imc = lambda peso, altura: peso / (altura ** 2)
+
+while True:
+    nome = input('Nome: ')
+    altura = float(input('Altura (m): '))
+    peso = int(input('Peso (kg): '))
+    imc_calculado = imc(peso, altura)
+    pessoas.append([nome, altura, peso, imc_calculado])
+    
+    res = input('Deseja fazer mais um cadastro? [S/N]: ')
+    if res.lower() == 'n':
+        break
+
+print('Cadastros: ', pessoas)
+print('Total de Cadastros: ', len(pessoas))
+
+maior_imc = max(pessoas, key=lambda x: x[3])
+menor_imc = min(pessoas, key=lambda x: x[3])
+
+print(f'Maior IMC: {maior_imc[3]}')
+print(f'Menor IMC: {menor_imc[3]}')
+```
+Explicação:
+
+O programa solicita o nome, altura e peso das pessoas.
+O IMC é calculado usando uma função lambda e adicionado à lista de pessoas.
+No final, o programa utiliza as funções max() e min() com a chave lambda para determinar a pessoa com o maior e menor IMC.
+
+## 30. Dicionários
+
+Agora vamos explorar os dicionários, uma estrutura de dados que armazena pares de chave e valor. Vale ressaltar que as manipulações aprendidas com tuplas e listas também podem ser aplicadas aos dicionários.
+
+Nos dicionários, a chave é usada para referenciar os valores, ao invés de índices numéricos. Um dicionário pode ser criado utilizando chaves ```{}```.
+
+Exemplo de Dicionário:
+```
+mochila = {'Laptop': 1, 'Smartphone': 2, 'Power Bank': 3, 'Carregadores e Cabos': 4}
+print('Dicionário: ', mochila)
+```
+Saída:
+Dicionário: {'Laptop': 1, 'Smartphone': 2, 'Power Bank': 3, 'Carregadores e Cabos': 4}
+---
+### Métodos de Dicionário
+
+- ```.values()```: Retorna todos os valores presentes no dicionário.
+```
+print(game.values())
+```
+- ```.keys()```: Retorna todas as chaves presentes no dicionário.
+```
+print(game.keys())
+```
+- ```.items()```: Retorna todos os pares chave-valor.
+```
+print(game.items())
+```
+- Laço de repetição para acessar pares chave-valor:
+```
+for chave, valor in game.items():
+    print(f'{chave} = {valor}')
+```
+---
+### Exemplo de Acesso aos Dados:
+```
+game = {'nome': 'Super Mario', 'desenvolvedora': 'Nintendo', 'ano': 1990}
+print(game['nome'])  # Super Mario
+print(game['desenvolvedora'])  # Nintendo
+print(game['ano'])  # 1990
+```
+---
+### Listas com Dicionários
+
+Após aprender a criar um dicionário, podemos querer armazenar várias entradas de itens dentro de uma coleção. Por exemplo, em vez de apenas registrar um único jogo, podemos querer registrar múltiplos jogos. Para isso, podemos combinar listas e dicionários, onde cada elemento da lista contém um dicionário completo com informações detalhadas. Veja o exemplo abaixo:
+```
+games = []
+game1 = {'nome': 'Super Mario', 'videogame': 'Super Nintendo', 'ano': 1990}
+game2 = {'nome': 'Zelda Ocarina of Time', 'videogame': 'Nintendo 64', 'ano': 1998}
+game3 = {'nome': 'Pokemon Yellow', 'videogame': 'Game Boy', 'ano': 1999}
+games = [game1, game2, game3]
+print(games)
+```
+Saída:
+
+[{'nome': 'Super Mario', 'videogame': 'Super Nintendo', 'ano': 1990}, 
+ {'nome': 'Zelda Ocarina of Time', 'videogame': 'Nintendo 64', 'ano': 1998}, 
+ {'nome': 'Pokemon Yellow', 'videogame': 'Game Boy', 'ano': 1999}]
+ 
+Aqui, criamos uma lista chamada games, inicialmente vazia. Em seguida, definimos três dicionários (game1, game2, game3), cada um contendo informações sobre um jogo: nome, videogame e ano de lançamento. Depois, adicionamos esses dicionários à lista games, criando assim uma coleção de jogos.
+
+No entanto, a abordagem apresentada acima não é dinâmica o suficiente, pois só permite adicionar três jogos de forma estática. Podemos tornar isso mais flexível permitindo que o usuário insira os dados diretamente via teclado, usando um laço de repetição. O código abaixo demonstra essa abordagem:
+```
+game = {}
+games = []
+for i in range(3):
+    game['nome'] = input('Qual o nome do jogo?')
+    game['videogame'] = input('Para qual videogame ele foi lançado?')
+    game['ano'] = input('Qual o ano de lançamento?')
+    games.append(game.copy())
+print('-' * 20)
+for jogos in games:
+    for chave, valor in jogos.items():
+        print(f'O campo {chave} tem o valor {valor}.')
+```
+Explicação:
+
+Dentro do laço for, lemos os dados do usuário, atribuindo-os às chaves 'nome', 'videogame' e 'ano'. Após isso, usamos o método copy() para garantir que a referência do dicionário seja preservada ao adicionar o dicionário à lista games (evitando que todas as entradas referenciem o mesmo objeto). O segundo laço for percorre cada jogo na lista e exibe os dados armazenados.
+---
+### Dicionários com Listas
+
+Agora, podemos inverter a lógica e, em vez de armazenar um dicionário dentro de uma lista, armazenamos listas dentro de um dicionário. Nesse caso, cada chave do dicionário terá uma lista associada. Veja o código a seguir:
+```
+games = {
+    'nome': ['Super Mario', 'Zelda Ocarina of Time', 'Pokemon Yellow'],
+    'videogame': ['Super Nintendo', 'Nintendo 64', 'Game Boy'],
+    'ano': [1990, 1998, 1999]
+}
+print(games)
+```
+Saída:
+{'nome': ['Super Mario', 'Zelda Ocarina of Time', 'Pokemon Yellow'], 
+ 'videogame': ['Super Nintendo', 'Nintendo 64', 'Game Boy'], 
+ 'ano': [1990, 1998, 1999]}
+ 
+Aqui, o dicionário games tem três chaves: 'nome', 'videogame' e 'ano', e cada chave está associada a uma lista com os respectivos valores.
+
+Da mesma forma, podemos permitir que o usuário insira dados via teclado, utilizando um laço de repetição, como no exemplo abaixo:
+```
+games = {'nome': [], 'videogame': [], 'ano': []}
+for i in range(3):
+    nome = input('Qual o nome do jogo?')
+    videogame = input('Para qual videogame ele foi lançado?')
+    ano = input('Qual o ano de lançamento?')
+    games['nome'].append(nome)
+    games['videogame'].append(videogame)
+    games['ano'].append(ano)
+print('-' * 20)
+print(games)
+```
+Explicação:
+
+Aqui, inicializamos o dicionário games com listas vazias para cada chave. Em seguida, dentro do laço for, coletamos os dados do usuário e adicionamos os valores às listas apropriadas no dicionário.
+---
+### Exercícios
+
+Agora, vamos aplicar os conceitos de dicionários e listas com alguns exercícios práticos.
+
+Exercício 1
+
+Escreva um programa em Python que leia o nome de um aluno e suas três notas. O programa deve calcular a média das notas e armazenar essa informação junto com o nome do aluno em um dicionário. Além disso, armazene a situação do aluno com base na média:
+
+- Média >= 7: aprovado
+- Média < 7 e >= 5: em exame
+- Média < 5: reprovado
+Por fim, o programa deve exibir todas as informações de forma organizada.
+```
+aluno = {}
+aluno['nome'] = input('Qual o nome do aluno?')
+n1 = float(input('Qual a primeira nota?'))
+n2 = float(input('Qual a segunda nota?'))
+n3 = float(input('Qual a terceira nota?'))
+aluno['media'] = (n1 + n2 + n3) / 3
+if aluno['media'] >= 7:
+    aluno['status'] = 'Aprovado'
+elif aluno['media'] >= 5:
+    aluno['status'] = 'Em exame'
+else:
+    aluno['status'] = 'Reprovado'
+for chave, valor in aluno.items():
+    print(f'{chave}: {valor}')
+```
+Exercício 2
+Crie um programa para controle de estoque de produtos de uma loja de hortifrúti. O estoque deve ser armazenado em um dicionário, onde cada chave é o nome do produto e o valor é uma lista contendo o preço e a quantidade disponível. O programa deve permitir que o usuário compre produtos, fornecendo o nome e a quantidade, até que ele decida encerrar a compra. Após isso, o programa deve exibir o total da compra e atualizar o estoque.
+```
+loja = {'cenoura': [100, 0.99], 'brócolis': [50, 3.99], 'batata': [200, 0.49], 'cebola': [75, 1.10]}
+pedido = []
+while True:
+    item_nome = input('Digite o nome do item que deseja comprar: ')
+    item_qtd = int(input('Deseja comprar quantos? '))
+    pedido.append([item_nome, item_qtd])
+    res = input('Deseja adicionar outro item? [S/N] ')
+    if res in 'Nn':
+        break
+
+total = 0
+print('\nVendas:')
+for item in pedido:
+    produto = item[0]
+    qtd = item[1]
+    preco = loja[produto][1]
+    valor_produto = preco * qtd
+    print(f'{produto}: {qtd} x {preco} = {valor_produto}')
+    loja[produto][0] -= qtd
+    total += valor_produto
+
+print(f'Custo total: {total}\n')
+print('Estoque restante:')
+for chave, valor in loja.items():
+    print(f'Descrição: {chave}')
+    print(f'Quantidade disponível: {valor[0]}')
+    print(f'Preço: {valor[1]}\n')
+```
+---
+## 31. Trabalhando com Métodos e Strings
+
+Em estudos anteriores, aprendemos a manipular strings, como fatiar, concatenar, verificar o tamanho, entre outros. Porém, o conceito de strings é extenso e possui muitas funcionalidades. Agora que entendemos o que são métodos e como utilizá-los, além do conceito de listas, podemos aprofundar nosso conhecimento sobre strings. Vamos concluir nossa aprendizagem, explorando mais algumas funcionalidades essenciais para ter um entendimento sólido sobre o tema.
+
+### Imutabilidade das Strings
+
+Um ponto importante a ser destacado é que, uma vez criada, uma string é imutável, similar a uma tupla. Ou seja, não é possível modificar um valor dentro de uma string diretamente. Vamos ver um exemplo de erro:
+```
+s1 = 'Algoritmos'
+print(s1)
+s1[0] = 'a'
+```
+SAÍDA (ERRO):
+Algoritmos
+TypeError Traceback (most recent call last)
+<ipython-input-31-8c04c5f6db42> in <cell line: 3>()
+ 1 s1 = 'Algoritmos'
+ 2 print(s1)
+----> 3 s1[0] = 'a'
+TypeError: 'str' object does not support item assignment
+
+Entretanto, ao utilizarmos listas, podemos transformar uma string em uma lista utilizando a função ```list()```. Isso permite que cada caractere seja tratado separadamente. Se usarmos o ```join()```, podemos recompor a string sem os caracteres separando-os por vírgulas.
+```
+s1 = list('Algoritmos')
+print(s1)        # Exibe a lista de caracteres
+print(''.join(s1)) # Exibe a string novamente sem separação
+```
+SAÍDA:
+
+['A', 'l', 'g', 'o', 'r', 'i', 't', 'm', 'o', 's']
+Algoritmos
+
+### Verificando Caracteres em uma String
+
+O Python oferece métodos para verificar se uma string começa ou termina com um conjunto específico de caracteres. Para isso, utilizamos os métodos ```startswith()``` e ```endswith()```, respectivamente. Exemplos:
+```
+s1 = 'Lógica de Programação e Algoritmos'
+
+# Verificando se a string começa com 'Lógica'
+print(s1.startswith('Lógica'))  # SAÍDA: True
+
+# Verificando se a string termina com 'Algoritmos'
+print(s1.endswith('Algoritmos'))  # SAÍDA: True
+```
+Lembre-se de que esses métodos são sensíveis a maiúsculas e minúsculas:
+```
+s1 = 'Lógica de Programação e Algoritmos'
+
+# Verificando se a string termina com 'algoritmos'
+print(s1.endswith('algoritmos'))  # SAÍDA: False
+```
+Para ignorar essa distinção, podemos converter toda a string para minúsculas com o método ```lower()```:
+```
+print(s1.lower().endswith('algoritmos'))  # SAÍDA: True
+```
+Da mesma forma, podemos usar o método ```upper()``` para converter toda a string para maiúsculas.
+```
+print(s1.upper())  # SAÍDA: LÓGICA DE PROGRAMAÇÃO E ALGORITMOS
+print(s1.lower())  # SAÍDA: lógica de programação e algoritmos
+```
+---
+### Contando Caracteres
+
+O método ```count()``` permite contar quantas vezes um determinado caractere ou conjunto de caracteres aparece em uma string. Por exemplo:
+```
+s1 = 'Lógica de Programação e Algoritmos'
+print(s1.count('a'))  # SAÍDA: 3
+```
+Se fizermos uma conversão para minúsculas com ```lower()```, todas as ocorrências de 'a' serão contabilizadas, independentemente de estarem em maiúsculas ou minúsculas:
+```
+print(s1.lower().count('a'))  # SAÍDA: 4
+```
+Também podemos contar uma palavra específica, como 'mafagafinho', dentro de uma string maior:
+```
+s1 = 'Um mafagafinho, dois mafagafinhos, três mafagafinhos...'
+print(s1.lower().count('mafagafinho'))  # SAÍDA: 3
+```
+---
+### Quebrando Strings
+
+O método ```split()``` divide uma string em várias substrings com base em um caractere separador. Por exemplo, para separar as palavras de uma frase:
+```
+s1 = 'Um mafagafinho, dois mafagafinhos, três mafagafinhos...'
+print(s1.split(' '))  # SAÍDA: ['Um', 'mafagafinho,', 'dois', 'mafagafinhos,', 'três', 'mafagafinhos...']
+```
+Aqui, cada palavra foi separada por espaços em uma lista.
+---
+### Substituindo Strings
+
+Com o método ```replace()```, podemos substituir uma palavra ou caractere por outro em uma string. Aqui, substituímos 'mafagafinho' por 'gatinho':
+```
+s1 = 'Um mafagafinho, dois mafagafinhos, três mafagafinhos...'
+print(s1.replace('mafagafinho', 'gatinho'))  # SAÍDA: Um gatinho, dois gatinhos, três gatinhos...
+```
+Podemos adicionar um terceiro parâmetro para limitar o número de substituições:
+```
+print(s1.replace('mafagafinho', 'gatinho', 1))  # SAÍDA: Um gatinho, dois mafagafinhos, três mafagafinhos...
+```
+---
+### Validando Tipos de Dados
+
+Python possui vários métodos de validação para checar se uma string contém determinados tipos de caracteres. A seguir, são apresentados alguns desses métodos:
+
+- ```isalnum()```: Retorna True se a string contiver apenas letras e números.
+- ```isalpha()```: Retorna True se a string contiver apenas letras (incluindo acentuação).
+- ```isdigit()```: Verifica se a string contém apenas números.
+- ```isnumeric()```: Verifica se a string contém números ou caracteres numéricos.
+- ```isupper()```: Verifica se a string está completamente em maiúsculas.
+- ```islower()```: Verifica se a string está completamente em minúsculas.
+- ```isspace()```: Retorna True se a string contiver apenas espaços em branco.
+- ```isprintable()```: Retorna True se todos os caracteres da string forem imprimíveis.
+
+Exemplo de uso:
+```
+s1 = 'Lógica de Programação e Algoritmos'
+s2 = '42'
+
+print(s1.isalnum())  # SAÍDA: False
+print(s2.isalnum())  # SAÍDA: True
+
+print(s1.isalpha())  # SAÍDA: False
+print(s2.isalpha())  # SAÍDA: False
+
+s1 = 'LógicadeProgramaçãoeAlgoritmos'
+print(s1.isalpha())  # SAÍDA: True
+```
+---
+### Resumo dos Métodos de Strings
+
+Python oferece uma vasta gama de métodos para manipulação de strings. Aqui está um resumo dos principais métodos que vimos até agora:
+
+### Métodos de Validação
+
+- `isalnum()`: Letras e números.
+- `isalpha()`: Somente letras.
+- `isdigit()`: Somente números.
+- `isnumeric()`: Números ou caracteres matemáticos.
+- `isupper()`: Somente letras maiúsculas.
+- `islower()`: Somente letras minúsculas.
+- `isspace()`: Somente espaços.
+- `isprintable()`: Caracteres imprimíveis.
+
+### Métodos Comuns para Strings
+
+- `startswith()`: Verifica o início da string.
+- `endswith()`: Verifica o final da string.
+- `lower()`: Converte para minúsculas.
+- `upper()`: Converte para maiúsculas.
+- `find()`: Encontra a primeira ocorrência de um padrão.
+- `rfind()`: Encontra a última ocorrência de um padrão.
+- `center()`: Centraliza a string.
+- `ljust(), rjust()`: Alinha a string à esquerda ou à direita.
+- `split()`: Divide a string.
+- `replace()`: Substitui caracteres.
+- `lstrip(), rstrip()`: Remove espaços à esquerda ou à direita.
+- `strip()`: Remove espaços em ambas as extremidades.
 
