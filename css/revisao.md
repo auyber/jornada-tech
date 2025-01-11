@@ -1,5 +1,12 @@
 # CSS
 
+## Introdução
+
+Esta revisão aborda os conceitos fundamentais do CSS, incluindo sua definição e uso, ferramentas como as DevTools, e tópicos essenciais como cores, backgrounds, borders e o Box Model (margins e paddings). Também são explorados os diferentes modos de exibição (none, inline, block e inline-block), seletores básicos e avançados, e o uso de textos e fontes.
+Outros aspectos importantes incluem unidades de medida, herança, especificidade, além do uso de variáveis CSS, permitindo uma estruturação clara e eficiente de estilos.
+
+---
+
 ## Índice  
 1. [O que é CSS e como usá-lo](#01-o-que-é-css-e-como-usá-lo)  
 2. [DevTools para CSS](#02-devtools-para-css)  
