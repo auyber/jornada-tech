@@ -1,5 +1,13 @@
 #  HTML
 
+## Introdução
+
+HTML (HyperText Markup Language) é a linguagem base para criar páginas web. Ele estrutura o conteúdo utilizando elementos de parágrafo e título, além de recursos para formatar texto, inserir imagens e links, e organizar o layout com elementos como ```<div>``` e ```<span>```.
+
+Você aprenderá a criar listas, tabelas e formulários, utilizando diferentes tipos de input, e explorar recursos modernos do HTML5, como elementos semânticos que melhoram a acessibilidade e a experiência do usuário. Técnicas como o uso de URLs relativas e absolutas, otimização de imagens e práticas de acessibilidade (WAI-ARIA) garantem que suas páginas sejam eficientes e inclusivas.
+
+---
+
 ## Índice  
 1. [Elementos de parágrafo e título](#1-elementos-de-parágrafo-e-título)  
 2. [Elementos de formatação](#2-elementos-de-formatação)  
