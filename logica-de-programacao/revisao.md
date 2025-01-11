@@ -2,6 +2,7 @@
 
 ## Introdução
 
+A lógica de programação é a base para resolver problemas de forma estruturada e eficiente. Envolve a criação de algoritmos, a compreensão de sistemas computacionais e a aplicação de linguagens de programação, como Python. Os conceitos fundamentais incluem estruturas de decisão, como condicionais e loops, além de ferramentas para organizar e reutilizar código, como funções e estruturas de dados. Esses elementos permitem construir programas claros, eficientes e adaptáveis, essenciais para qualquer desenvolvedor.
 ---
 
 ## Índice  
