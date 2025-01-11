@@ -1,6 +1,21 @@
-# 2. CSS
+# CSS
 
-## **O que é CSS e como usá-lo**
+## Índice  
+1. [O que é CSS e como usá-lo](#01-o-que-é-css-e-como-usá-lo)  
+2. [DevTools para CSS](#02-devtools-para-css)  
+3. [Cores](#03-cores)  
+4. [Background e Border](#04-background-e-border)  
+5. [Box Model: margin e padding](#05-box-model-margin-e-padding)  
+6. [Display: none, inline, block e inline-block](#06-display-none-inline-block-e-inline-block)  
+7. [Seletores básicos](#07-seletores-básicos)  
+8. [Textos e fontes](#08-textos-e-fontes)  
+9. [Unidades de medida](#09-unidades-de-medida)  
+10. [Herança](#10-herança)  
+11. [Especificidade](#11-especificidade)  
+12. [Seletores avançados](#12-seletores-avançados)  
+13. [Variáveis](#13-variáveis) 
+
+## 01. O que é CSS e como usá-lo
 
 CSS (Cascading Style Sheets) é uma linguagem de estilo usada para definir a apresentação visual de documentos HTML. Ela permite separar o conteúdo da apresentação, tornando o desenvolvimento web mais eficiente e organizado.Para usar CSS, você pode:
 
@@ -20,8 +35,8 @@ Por exemplo:
   color: blue;
   font-size: 16px;
 }`
-
-## **DevTools para CSS**
+---
+## 02. DevTools para CSS
 
 O DevTools é uma ferramenta essencial para desenvolvedores web trabalharem com CSS. Ele permite:
 
@@ -34,8 +49,8 @@ Para acessar o DevTools:
 
 - No Windows/Linux: Pressione F12 ou Ctrl+Shift+I
 - No macOS: Pressione Cmd+Option+I
-
-## **Cores**
+---
+## 03. Cores
 
 CSS oferece várias maneiras de definir cores:
 
@@ -63,10 +78,10 @@ a {
 ```
 
 O CSS3 introduziu uma gama mais ampla de cores, incluindo funções como rgb(), rgba(), hsl(), e hsla(), permitindo maior flexibilidade na definição de cores e transparência
+---
+## 04. Background e Border
 
-## **Background e Border**
-
-## **Background**
+### **Background**
 
 O CSS permite definir várias propriedades de background para elementos HTML:
 
@@ -106,8 +121,8 @@ A propriedade shorthand background permite definir todas essas propriedades em u
 `cssdiv {
   background: #f0f0f0 url("imagem.jpg") no-repeat center top fixed;
 }`
-
-## **Border**
+---
+### **Border**
 
 As propriedades de borda permitem estilizar os contornos dos elementos:
 
@@ -130,7 +145,7 @@ cssdiv {
   border-left: 4px double yellow;
 }
 ```
-## **Box Model: margin e padding**
+## 05. Box Model: margin e padding
 
 O Box Model do CSS define como os elementos são dimensionados e posicionados. Ele consiste em:
 
@@ -139,7 +154,7 @@ O Box Model do CSS define como os elementos são dimensionados e posicionados. 
 3. Border: Uma borda que circunda o padding e o conteúdo
 4. Margin: Espaço transparente fora da borda
 
-## **Padding**
+### **Padding**
 
 O padding adiciona espaço interno entre o conteúdo e a borda:
 ```
@@ -149,7 +164,7 @@ cssdiv {
   padding: 10px 20px 15px 25px; /* Topo, direita, base, esquerda */
 }
 ```
-## **Margin**
+### **Margin**
 
 A margin adiciona espaço externo ao redor do elemento:
 ```
@@ -159,7 +174,7 @@ cssdiv {
   margin: 10px 20px 15px 25px; /* Topo, direita, base, esquerda */
 }
 ```
-## **Display: none, inline, block e inline-block**
+## 06. Display: none, inline, block e inline-block
 
 A propriedade display controla como um elemento é renderizado no layout:
 
@@ -191,8 +206,8 @@ A propriedade display controla como um elemento é renderizado no layout:
     ```
 
 O inline-block permite definir width e height, mas mantém os elementos na mesma linha, sendo útil para criar layouts horizontais como menus de navegação
-
-## **Seletores básicos**
+---
+## 07. Seletores básicos
 
 Os seletores básicos do CSS são fundamentais para estilizar elementos HTML. Aqui estão os principais tipos, listados do mais utilizado para o menos:
 
@@ -227,8 +242,8 @@ Os seletores básicos do CSS são fundamentais para estilizar elementos HTML. Aq
       border: 1px solid #ccc;
     }
     ```
-
-## **Textos e fontes**
+---
+## 08. Textos e fontes
 
 Para estilizar textos e fontes em CSS, usamos várias propriedades:
 
@@ -274,7 +289,7 @@ Para estilizar textos e fontes em CSS, usamos várias propriedades:
       text-decoration: none;
     }
     ```
-
+---
 ## **Usando o Google Fonts**
 
 Para usar fontes do Google Fonts em seu projeto:
@@ -300,12 +315,12 @@ Para melhor performance, considere carregar apenas os pesos e estilos necessári
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 ```
 Lembre-se de que o uso excessivo de fontes externas pode impactar o tempo de carregamento da página, então use com moderação
-
-## **Unidades de medida**
+---
+## 09. Unidades de medida
 
 O CSS oferece uma variedade de unidades de medida para definir tamanhos, espaçamentos e outras propriedades dimensionais. Essas unidades podem ser divididas em dois grupos principais: unidades absolutas e unidades relativas.
 
-## **Unidades absolutas**
+### **Unidades absolutas**
 
 As unidades absolutas têm um tamanho fixo e não mudam com base no contexto. As principais unidades absolutas são:
 
@@ -352,12 +367,12 @@ cssbody {
 }
 ```
 É importante notar que as unidades relativas oferecem maior flexibilidade e são geralmente preferidas para layouts responsivos. Por exemplo, usar 'em' ou 'rem' para tamanhos de fonte permite que o texto se ajuste proporcionalmente quando o usuário altera o tamanho da fonte do navegador.
-
-## **Herança**
+---
+## 10. Herança
 
 A herança em CSS é um mecanismo fundamental que permite que propriedades de estilo sejam passadas de elementos pais para elementos filhos na árvore do documento HTML. Isso ajuda a manter a consistência no design e reduz a quantidade de código CSS necessário.
 
-## **Como funciona a herança**
+### **Como funciona a herança**
 
 Quando uma propriedade é aplicada a um elemento, ela pode ser herdada por seus descendentes, a menos que seja explicitamente sobrescrita. Nem todas as propriedades são herdadas por padrão. Algumas propriedades comumente herdadas incluem:
 
@@ -383,7 +398,7 @@ css.container {
 }
 ```
 Neste exemplo, o texto dentro do ```<p>``` e do ```<span>``` herdará a cor, a família da fonte e a altura da linha definidas no ``` .container```.
-
+---
 ## **Controlando a herança**
 
 O CSS fornece palavras-chave especiais para controlar explicitamente a herança:
@@ -408,12 +423,12 @@ css.no-inherit {
 }
 ```
 A herança é particularmente útil para manter a consistência em elementos como texto, onde você pode definir estilos base em um elemento pai (como ```<body>```) e ter esses estilos aplicados em toda a página, a menos que sejam sobrescritos.
-
-## **Especificidade**
+---
+## 11. Especificidade
 
 A especificidade em CSS é um conjunto de regras que determina qual estilo será aplicado a um elemento quando há múltiplas regras conflitantes. É um conceito crucial para entender como o CSS resolve conflitos e aplica estilos.
 
-## **Como a especificidade é calculada**
+### **Como a especificidade é calculada**
 
 A especificidade é calculada como um valor de quatro partes, geralmente representado como quatro números separados por vírgulas. Da esquerda para a direita, esses números representam:
 
@@ -424,14 +439,14 @@ A especificidade é calculada como um valor de quatro partes, geralmente represe
 
 Quanto maior o número em uma posição mais à esquerda, maior a especificidade.
 
-## **Hierarquia de especificidade (do mais específico para o menos)**
+### **Hierarquia de especificidade (do mais específico para o menos)**
 
 1. Estilos inline: **`style="color: red;"`**
 2. IDs: **`#header`**
 3. Classes, atributos e pseudo-classes: **`.button`**, **`[type="text"]`**, **`:hover`**
 4. Elementos e pseudo-elementos: **`p`**, **`::before`**
 
-## **Exemplos de cálculo de especificidade**
+### **Exemplos de cálculo de especificidade**
 
 1. **`p`** - Especificidade: 0,0,0,1
 2. **`p.classe`** - Especificidade: 0,0,1,1
@@ -441,7 +456,7 @@ Quanto maior o número em uma posição mais à esquerda, maior a especificidade
 6. **`#id .classe`** - Especificidade: 0,1,1,0
 7. **`body #conteudo .titulo`** - Especificidade: 0,1,1,1
 
-## **Regras importantes sobre especificidade**
+### **Regras importantes sobre especificidade**
 
 1. A especificidade supera a ordem de cascata. Um seletor mais específico sempre terá prioridade, mesmo que apareça antes no CSS.
 2. O seletor universal (*) e os combinadores (+, >, ~, ) não afetam a especificidade.
@@ -468,8 +483,8 @@ div p {
 } */* Especificidade: 0,0,0,2 */*
 ```
 Neste exemplo, o texto será azul porque ```#container p``` tem a maior especificidade.
-
-## **Boas práticas**
+---
+### Boas práticas
 
 1. Evite usar **`!important`** sempre que possível.
 2. Use seletores mais específicos em vez de **`!important`**.
@@ -479,7 +494,7 @@ Neste exemplo, o texto será azul porque ```#container p``` tem a maior especifi
 
 Entender a especificidade é crucial para escrever CSS eficiente e previsível, evitando conflitos inesperados e facilitando a manutenção do código.
 
-## **Seletores avançados**
+## 12. Seletores avançados
 
 Os seletores avançados em CSS permitem uma seleção mais precisa e poderosa de elementos HTML. Aqui estão alguns dos seletores avançados mais úteis, listados do mais utilizado para o menos:
 
@@ -531,8 +546,8 @@ Os seletores avançados em CSS permitem uma seleção mais precisa e poderosa de
       border: 1px solid #ccc;
     }
     ```
-
-## **Variáveis**
+---
+## 13. Variáveis
 
 As variáveis CSS, também conhecidas como propriedades personalizadas, permitem armazenar valores específicos para reutilização em todo o documento. Elas são definidas usando dois hífens (--) seguidos pelo nome da variável.Definindo variáveis:
 ```
