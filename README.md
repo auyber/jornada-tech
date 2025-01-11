@@ -12,6 +12,7 @@ O objetivo é compartilhar conhecimento, documentar minha evolução e criar um 
 - 📝 Anotações e dicas
 - 📖 Sugestões de livros
 - 💭 Dicas de Estudo
+- 🎮 Sugestões de jogos de programação e lógica
 
 ## 🔮 Melhorias Futuras
 
