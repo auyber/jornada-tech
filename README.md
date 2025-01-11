@@ -57,6 +57,11 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
 
+## 🎮 Jogos para Aprender Programação e Lógica
+
+Confira nossa [lista de jogos recomendados para programadores](./jogos-programacao.md) e melhore suas habilidades de lógica de uma maneira divertida!
+
+
 ## 💭 Dicas de Estudos
 
 Aprimore sua jornada de aprendizado com estas estratégias eficazes: [Dicas de estudos](./dicas-de-estudos/dicas-de-estudos.md)
