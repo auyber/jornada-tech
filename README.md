@@ -50,6 +50,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ### 🧠💻 Lógica de programação e Algoritmos
 - [Revisão Lógica de Programação](./logica-de-programacao/revisao.md)
 
+### ☁️ Computação em Nuvem
+- [Revisão Computação em Nuvem](./computacao-em-nuvem/revisao.md)
+
 ## 📚 Livros Recomendados
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
