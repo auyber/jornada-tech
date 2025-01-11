@@ -2,9 +2,9 @@
 
 ## Introdução
 
-HTML (HyperText Markup Language) é a linguagem base para criar páginas web. Ele estrutura o conteúdo utilizando elementos de parágrafo e título, além de recursos para formatar texto, inserir imagens e links, e organizar o layout com elementos como ```<div>``` e ```<span>```.
+Esta revisão aborda os principais elementos e conceitos do HTML, incluindo parágrafos, títulos e formatação de texto, além do uso de comentários e imagens com seus atributos. São explorados tópicos como quebras de linha, régua horizontal e a organização do código com div e span.
 
-Você aprenderá a criar listas, tabelas e formulários, utilizando diferentes tipos de input, e explorar recursos modernos do HTML5, como elementos semânticos que melhoram a acessibilidade e a experiência do usuário. Técnicas como o uso de URLs relativas e absolutas, otimização de imagens e práticas de acessibilidade (WAI-ARIA) garantem que suas páginas sejam eficientes e inclusivas.
+Outros temas incluem o trabalho com links (internos, externos e âncoras), diferentes tipos de listas (ordenadas, não ordenadas e de definição) e a criação de tabelas. A revisão também explora formulários, tipos de input, elementos como select e textarea, além de recursos modernos do HTML5, elementos semânticos e a aplicação de WAI-ARIA para acessibilidade.
 
 ---
 
