@@ -6,13 +6,13 @@ Aprender programação pode ser divertido e envolvente com os jogos certos. Aqui
 
 1. **One Dreamer**  
    Um jogo de aventura e quebra-cabeças que ensina conceitos de programação através de uma narrativa envolvente.  
-   [Assista ao gameplay no YouTube](https://www.youtube.com/watch?v=xlXYl4YOkpM)
+   [Assista ao gameplay no YouTube](https://www.youtube.com/watch?v=vYGJ4mXlQPw&pp=ygULb25lIGRyZWFtZXI%3D)
 
 ---
 
 2. **Bots Are Stupid**  
    Um jogo de quebra-cabeça onde você programa robôs para realizar tarefas específicas.  
-   [Assista ao gameplay no YouTube](https://www.youtube.com/watch?v=OZQwFrD6GdM)
+   [Assista ao gameplay no YouTube](https://www.youtube.com/watch?v=EOYJwXfsPG8&pp=ygUPYm90cyBhcmUgc3R1cGlk)
 
 ---
 
