@@ -54,6 +54,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ### ☁️ Computação em Nuvem
 - [Revisão Computação em Nuvem](./computacao-em-nuvem/revisao.md)
 
+### 🧩 Programação Orientada a Objetos (POO)
+- [Programação Orientada a Objetos](./programacao-orientada-a-objetos/revisao.md)
+
 ## 📚 Livros Recomendados
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
