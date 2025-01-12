@@ -12,7 +12,7 @@ O objetivo é compartilhar conhecimento, documentar minha evolução e criar um 
 - 📝 Anotações e dicas
 - 📖 Sugestões de livros
 - 💭 Dicas de Estudo
-- 📱 Revisões para Seu Leitor Digital (Formato MOBI)
+- 📱 Revisões para Seu Leitor Digital (Formato EPUB)
 - 🎮 Sugestões de jogos de programação e lógica
 
 ## 🔮 Melhorias Futuras
@@ -62,11 +62,11 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 
 Confira nossa [lista de livros recomendados](./livros-recomendados.md)!
 
-## 📚 Revisões para Seu Leitor Digital (Formato MOBI)
+## 📚 Revisões para Seu Leitor Digital (Formato EPUB)
 
-Agora você pode acessar as revisões e conteúdos deste repositório no formato MOBI, ideal para seu leitor digital. Aproveite os tópicos e revise seu aprendizado de maneira prática e organizada!
+Agora você pode acessar as revisões e conteúdos deste repositório no formato EPUB, ideal para seu leitor digital. Aproveite os tópicos e revise seu aprendizado de maneira prática e organizada!
 
-- [Revisões em formato MOBI](./revisoes-mobi)
+- [Revisões em formato EPUB](./revisoes-epub)
 
 Essas versões são atualizadas periodicamente, com base nas revisões mais recentes que compartilho aqui. Fique à vontade para fazer o download e utilizar enquanto estuda!
 
