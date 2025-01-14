@@ -37,7 +37,7 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Revisão JavaScript](./javascript/revisao.md)
 - [Dicas e Anotações JavaScript](./javascript/dicas.md)
 - [Exercícios de JavaScript](./javascript/exercicios.md)
-- [Resolução dos Exercícios](./javascript/resolucao.md)
+- [Resolução dos Exercícios](./javascript/resolucao-exercicios.md)
 
 ### ⏱️ Scrum: Planejamento e Desenvolvimento Ágeis
 - [Revisão Scrum](./scrum/revisao.md)
