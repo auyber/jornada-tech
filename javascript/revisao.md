@@ -396,7 +396,7 @@ typeof "Olá"; // "string"
 
 Expressões são combinações de valores, variáveis e operadores que são avaliadas para produzir um resultado. Elas podem ser simples ou complexas.Exemplos de expressões:
 ```
-tlet x = 5;
+let x = 5;
 let y = 3;
 let z = x + y * 2; // 11
 
