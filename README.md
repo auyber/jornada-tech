@@ -14,11 +14,11 @@ O objetivo é compartilhar conhecimento, documentar minha evolução e criar um 
 - 💭 Dicas de Estudo
 - 📱 Revisões para Seu Leitor Digital (Formato EPUB)
 - 🎮 Sugestões de jogos de programação e lógica
+- 🧠 Desafios para exercitar o cérebro
 
 ## 🔮 Melhorias Futuras
 
 - 💻 Snippets de código úteis
-- 🧠 Desafios para exercitar o cérebro
 
 Estarei constantemente atualizando este repositório com novas revisões conforme meus estudos avançam, incluindo revisões de tópicos já estudados para reforçar o aprendizado.
 
@@ -36,6 +36,8 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 ### ☕ JavaScript
 - [Revisão JavaScript](./javascript/revisao.md)
 - [Dicas e Anotações JavaScript](./javascript/dicas.md)
+- [Exercícios de JavaScript](./javascript/exercicios.md)
+- [Resolução dos Exercícios](./javascript/resolucao.md)
 
 ### ⏱️ Scrum: Planejamento e Desenvolvimento Ágeis
 - [Revisão Scrum](./scrum/revisao.md)
