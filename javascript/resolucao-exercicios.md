@@ -34,6 +34,8 @@ Se surgir alguma dúvida ou se você quiser discutir sobre a resolução de algu
 
 ## Índice
 
+## Índice
+
 - [01. Operadores Lógicos Respostas](#01-operadores-lógicos-respostas)
 - [02. Estruturas Condicionais If, Else, Else If Respostas](#02-estruturas-condicionais-if-else-else-if-respostas)
 - [03. Estruturas Condicionais: Switch Respostas](#03-estruturas-condicionais-switch-respostas)
@@ -45,10 +47,18 @@ Se surgir alguma dúvida ou se você quiser discutir sobre a resolução de algu
 - [09. `flat` e `map` em Arrays Bidimensionais Respostas](#09-flat-e-map-em-arrays-bidimensionais-respostas)
 - [10. Arrays Bidimensionais for, reduce e filter Respostas](#10-arrays-bidimensionais-for-reduce-e-filter-respostas)
 - [11. Arrays Bidimensionais every, sort, combinação e busca com indices Respostas](#11-arrays-bidimensionais-every-sort-combinação-e-busca-com-indices-respostas)
-- [12. Objetos manipulação e notação](#12-objetos-manipulação-e-notação)
+- [12. Objetos manipulação e notação Respostas](#12-objetos-manipulação-e-notação-respostas)
 - [13. Objetos, new, this, keys, values, entries, herança e prototipagem Respostas](#13-objetos-new-this-keys-values-entries-herança-e-prototipagem-respostas)
-
-
+- [14. Funções, Parâmetros Padrão, Rest Parameter e Desestruturação de Parâmetros Respostas](#14-funções-parâmetros-padrão-rest-parameter-e-desestruturação-de-parâmetros-respostas)
+- [15. Function, retorno, arrow, multiplos valores e antecipado Respostas](#15-function-retorno-arrow-multiplos-valores-e-antecipado-respostas)
+- [16. Escopo Respostas](#16-escopo-respostas)
+- [17. Métodos de objetos Respostas](#17-métodos-de-objetos-respostas)
+- [18. Funções Recursivas Respostas](#18-funções-recursivas-respostas)
+- [19. Funções Anônimas e Callback Respostas](#19-funções-anônimas-e-callback-respostas)
+- [20. Arrow Functions Respostas](#20-arrow-functions-respostas)
+- [21. IIFE (Immediately Invoked Function Expression) Respostas](#21-iife-immediately-invoked-function-expression-respostas)
+- [22. High-order Functions Respostas](#22-high-order-functions-respostas)
+- [23. Exercícios sobre High-order Functions e Arrays](#23-exercícios-sobre-high-order-functions-e-arrays)
 
 
 ---
@@ -2346,7 +2356,7 @@ console.log(index); // 2
 
 ---
 
-## 12. Objetos manipulação e notação
+## 12. Objetos manipulação e notação Respostas
 
 ## Criação e Manipulação de Objetos Respostas
 
@@ -2933,4 +2943,1911 @@ esportivo.mostrarVelocidade(); // "Velocidade máxima: 300"
 ```
 
 ---
+
+## 14. Funções, Parâmetros Padrão, Rest Parameter e Desestruturação de Parâmetros Respostas
+
+## Funções
+
+### Nível Fácil
+
+1. **Função Simples**
+```
+function cumprimentar(nome = "Seja bem-vindo") {
+  return `Olá, ${nome}!`;
+}
+```
+
+2. **Função com Retorno Condicional**
+```
+function verificarParidade(numero) {
+  return numero % 2 === 0 ? "Par" : "Ímpar";
+}
+```
+
+### Nível Médio
+
+3. **Função com Condição**
+```
+function classificarIdade(idade) {
+  if (idade <= 12) return "Criança";
+  if (idade <= 17) return "Adolescente";
+  return "Adulto";
+}
+```
+
+4. **Função que Retorna uma Lista**
+```
+function gerarSequencia(n) {
+  let sequencia = [];
+  for (let i = 1; i <= n; i++) {
+    sequencia.push(i);
+  }
+  return sequencia;
+}
+```
+
+### Nível Difícil
+
+5. **Função Recursiva**
+```
+function fatorial(n) {
+  if (n <= 1) return 1;
+  return n * fatorial(n - 1);
+}
+```
+
+6. **Função de Combinação**
+```
+function combinacao(n, r) {
+  function fatorial(num) {
+    if (num <= 1) return 1;
+    return num * fatorial(num - 1);
+  }
+  return fatorial(n) / (fatorial(r) * fatorial(n - r));
+}
+```
+
+## Parâmetros Padrão
+
+### Nível Fácil
+
+1. **Função de Saudação**
+```
+function saudar(nome, saudacao = "Olá") {
+  return `${saudacao}, ${nome}!`;
+}
+```
+
+2. **Função de Conversão de Moeda**
+```
+function converterParaDolar(valor, taxa = 5.2) {
+  return valor / taxa;
+}
+```
+
+### Nível Médio
+
+3. **Função de Calculo com Desconto Padrão**
+```
+function calcularPrecoFinal(preco, quantidade, desconto = 5) {
+  const precoComDesconto = preco - (preco * desconto) / 100;
+  return precoComDesconto * quantidade;
+}
+```
+
+4. **Função com Multiplos Parâmetros Padrão**
+```
+function calcularArea(largura, altura, forma = "retângulo") {
+  if (forma !== "retângulo") return "Forma não suportada";
+  return largura * altura;
+}
+```
+
+### Nível Difícil
+
+5. **Função de Validação de Dados**
+```
+function validarFormulario(nome = "Indefinido", idade = "Indefinido", pais = "Indefinido") {
+  return `Nome: ${nome}, Idade: ${idade}, País: ${pais}`;
+}
+```
+
+6. **Função Avançada de Cálculo**
+```
+function calcularInvestimento(valorInicial, taxa = 0.05, anos) {
+  return valorInicial * Math.pow(1 + taxa, anos);
+}
+```
+
+## Rest Parameter
+
+### Nível Fácil
+
+1. **Soma de Números**
+```
+function somar(...numeros) {
+  return numeros.reduce((acc, num) => acc + num, 0);
+}
+```
+
+2. **Concatenar Strings**
+```
+function juntarPalavras(...palavras) {
+  return palavras.join(" ");
+}
+```
+
+### Nível Médio
+
+3. **Maior Número**
+```
+function encontrarMaior(...numeros) {
+  return Math.max(...numeros);
+}
+```
+
+4. **Lista de Nomes**
+```
+function listarNomes(nomePrincipal, ...outrosNomes) {
+  return [nomePrincipal, ...outrosNomes];
+}
+```
+
+### Nível Difícil
+
+5. **Filtrar Valores Válidos**
+```
+function filtrarValores(...valores) {
+  return valores.filter(valor => typeof valor === "number");
+}
+```
+
+6. **Média de Números**
+```
+function calcularMedia(...numeros) {
+  if (numeros.length === 0) return 0;
+  const soma = numeros.reduce((acc, num) => acc + num, 0);
+  return soma / numeros.length;
+}
+```
+
+## Desestruturação de Parâmetros
+
+### Nível Fácil
+
+1. **Função com Objeto**
+```
+function exibirDados({ nome, idade }) {
+  return `${nome} tem ${idade} anos.`;
+}
+```
+
+2. **Função com Array**
+```
+function primeiroEUltimo([primeiro, , ultimo]) {
+  return `Primeiro: ${primeiro}, Último: ${ultimo}`;
+}
+```
+
+### Nível Médio
+
+3. **Desestruturação com Parâmetros Padrão**
+```
+function exibirPerfil({ nome = "Indefinido", idade = "Indefinido", profissao = "Indefinido" }) {
+  return `${nome} tem ${idade} anos e trabalha como ${profissao}.`;
+}
+```
+
+4. **Reorganizar Dados do Array**
+```
+function organizarNotas([nota1 = 0, nota2 = 0, nota3 = 0]) {
+  const notas = [nota1, nota2, nota3].sort((a, b) => b - a);
+  return `Notas ordenadas: ${notas.join(", ")}`;
+}
+```
+
+### Nível Difícil
+
+5. **Desestruturação e Lógica**
+```
+function calcularDistancia({ x1, y1, x2, y2 }) {
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+```
+
+6. **Desestruturação Avançada**
+```
+function processarPedido({ cliente, pedido, detalhes }) {
+  return `Cliente: ${cliente}, Pedido: ${pedido}, Detalhes: ${detalhes}`;
+}
+```
+
+---
+
+## 15. Function, retorno, arrow, multiplos valores e antecipado Respostas
+
+## Retorno Básico
+
+### Nível Fácil
+
+1. **Função de Multiplicação**
+
+```
+function multiplicar(a, b) {
+  return a * b;
+}
+```
+
+2. **Função de Saudações**
+```
+function saudacao(nome) {
+  return `Olá, ${nome}!`;
+}
+```
+
+### Nível Médio
+
+3. **Função de Comparação**
+```
+function compararNumeros(a, b) {
+  if (a > b) return "Maior";
+  if (a < b) return "Menor";
+  return "Igual";
+}
+```
+
+4. **Função de Área do Círculo**
+```
+function areaCirculo(raio) {
+  return Math.PI * raio * raio;
+}
+```
+
+### Nível Difícil
+
+5. **Função de Cálculo de Imposto**
+```
+function calcularImposto(valor) {
+  const imposto = 0.10;
+  return valor + (valor * imposto);
+}
+```
+
+6. **Função de Fatorial**
+```
+function fatorial(n) {
+  if (n === 0) return 1;
+  return n * fatorial(n - 1);
+}
+```
+
+## Arrow Function
+
+### Nível Fácil
+
+1. **Função de Soma com Arrow**
+```
+const somar = (a, b) => a + b;
+```
+
+2. Função de Saudação com Arrow
+```
+const saudacao = nome => `Olá, ${nome}!`;
+```
+
+### Nível Médio
+
+3. **Função de Filtro com Arrow**
+```
+const filtrarPares = array => array.filter(num => num % 2 === 0);
+```
+
+4. **Função de Dobra de Valores**
+```
+const dobrar = num => num * 2;
+```
+
+### Nível Difícil
+
+5. **Função de Cálculo de Potência com Arrow**
+```
+const potencia = (base, expoente) => Math.pow(base, expoente);
+```
+
+6. **Função de Ordenação com Arrow**
+```
+const ordenar = array => array.sort((a, b) => b - a);
+```
+
+## Retorno Implícito em Arrow Function
+
+### Nível Fácil
+
+1. **Função de Multiplicação com Retorno Implícito**
+```
+const multiplicar = (a, b) => a * b;
+```
+
+2. **Função de Divisão com Retorno Implícito**
+```
+const dividir = (a, b) => a / b;
+```
+
+### Nível Médio
+
+3. **Função de Quadrado com Retorno Implícito**
+```
+const quadrado = num => num * num;
+```
+
+4. **Função de Concatenar com Retorno Implícito**
+```
+const concatenar = (str1, str2) => str1 + str2;
+```
+
+### Nível Difícil
+
+5. **Função de Filtro de Números Positivos com Retorno Implícito**
+```
+const filtrarPositivos = array => array.filter(num => num > 0);
+```
+
+6. **Função de Incremento com Retorno Implícito**
+```
+const incrementar = num => num + 1;
+```
+
+## Retornar Múltiplos Valores
+
+### Nível Fácil
+
+1. **Função que Retorna Soma e Diferença**
+```
+function somaEDif(a, b) {
+  return { soma: a + b, diferenca: a - b };
+}
+```
+
+2. **Função que Retorna Nome e Idade**
+```
+function dadosPessoais(nome, idade) {
+  return { nome, idade };
+}
+```
+
+### Nível Médio
+
+3. **Função de Retorno de Dados de Aluno**
+```
+function dadosAluno(nome, idade, nota) {
+  return { nome, idade, nota };
+}
+```
+
+4. **Função de Retorno de Mínimo e Máximo**
+```
+function minMax(array) {
+  return { minimo: Math.min(...array), maximo: Math.max(...array) };
+}
+```
+
+### Nível Difícil
+
+5. **Função de Retorno de Área e Perímetro**
+```
+function areaEPerimetro(largura, altura) {
+  const area = largura * altura;
+  const perimetro = 2 * (largura + altura);
+  return { area, perimetro };
+}
+```
+
+6. **Função de Retorno de Coordenadas**
+```
+function coordenadas(x1, y1, x2, y2) {
+  const distanciaX = Math.abs(x2 - x1);
+  const distanciaY = Math.abs(y2 - y1);
+  return { distanciaX, distanciaY };
+}
+```
+
+## Retorno Antecipado
+
+### Nível Fácil
+
+1. **Função de Verificação de Paridade com Retorno Antecipado**
+```
+function verificarParidade(num) {
+  if (num % 2 === 0) return "Número par";
+  return "Número ímpar";
+}
+```
+
+2. **Função de Verificação de Idade**
+```
+function verificarIdade(idade) {
+  if (idade < 18) return "Menor de idade";
+  return "Maior de idade";
+}
+```
+
+### Nível Médio
+
+3. **Função de Verificação de Maioridade com Retorno Antecipado**
+```
+function verificarMaioridade(idade) {
+  if (idade < 21) return "Acesso negado";
+  return "Acesso permitido";
+}
+```
+4. **Função de Retorno Antecipado em Validação de Dados**
+```
+function validarDados(nome, numero) {
+  if (!nome || numero < 0) return "Dados inválidos";
+  return { nome, numero };
+}
+```
+
+### Nível Difícil
+
+5. **Função de Cálculo com Retorno Antecipado**
+```
+function calcularPrecoComDesconto(preco) {
+  if (preco < 50) return preco;
+  return preco * 0.9;
+}
+```
+
+6. **Função de Verificação de Votação com Retorno Antecipado**
+```
+function verificarVotacao(idade) {
+  if (idade < 16) return "Não apto para votar";
+  return "Apto para votar";
+}
+```
+
+---
+
+## 16. Escopo Respostas
+
+## Nível Fácil
+
+### 1. **Exercício de Variável Global**
+```
+let nome = "João";
+
+function imprimirNome() {
+  console.log(nome);
+}
+
+imprimirNome();  // Saída: João
+```
+- Explicação: A variável nome é declarada no escopo global e pode ser acessada dentro da função imprimirNome.
+
+2. **Escopo de Função Simples**
+```
+function saudar(nome) {
+  console.log(`Olá, ${nome}!`);
+}
+
+saudar("Maria");  // Saída: Olá, Maria!
+
+console.log(nome);  // Erro: nome não está definido
+```
+- Explicação: A variável nome é um parâmetro da função saudar, então não é acessível fora dela, gerando um erro.
+
+3. **Variáveis de Bloco com let e const**
+```
+if (true) {
+  let x = 10;
+  const y = 20;
+  console.log(x);  // Saída: 10
+  console.log(y);  // Saída: 20
+}
+
+console.log(x);  // Erro: x não está definido
+console.log(y);  // Erro: y não está definido
+```
+- Explicação: As variáveis x e y são declaradas dentro de um bloco e, por causa do escopo de bloco, não podem ser acessadas fora dele.
+
+### Nível Médio
+
+1. **Modificando Variável Global Dentro de Função**
+```
+let contador = 0;
+
+function incrementar() {
+  contador++;
+}
+
+incrementar();
+console.log(contador);  // Saída: 1
+```
+- Explicação: A função incrementar altera o valor da variável global contador dentro do seu escopo, refletindo o valor atualizado fora da função.
+
+2. **Escopo de Função com Parâmetros**
+```
+function multiplicar(a, b) {
+  return a * b;
+}
+
+let resultado = multiplicar(3, 4);
+console.log(resultado);  // Saída: 12
+
+console.log(a);  // Erro: a não está definido
+console.log(b);  // Erro: b não está definido
+```
+- Explicação: Os parâmetros a e b são locais à função multiplicar e não podem ser acessados fora dela, gerando erro.
+
+3. Escopo de Bloco com var
+```
+if (true) {
+  var z = 30;
+}
+
+console.log(z);  // Saída: 30
+```
+- Explicação: Quando declarada com var, a variável z tem escopo de função ou global, portanto, pode ser acessada fora do bloco if.
+
+### Nível Difícil
+
+1. **Escopo Global e Função de Cálculo**
+```
+let resultado = 10;
+
+function somarValor(valor) {
+  resultado += valor;
+  return resultado;
+}
+
+console.log(somarValor(5));  // Saída: 15
+console.log(resultado);      // Saída: 15
+```
+- Explicação: A variável resultado é modificada pela função somarValor e o valor atualizado é refletido no escopo global.
+
+2.** Escopo de Função com Variáveis Locais e Globais**
+```
+let numeroGlobal = 5;
+
+function alterarNumero() {
+  let numeroLocal = 10;
+  numeroGlobal += numeroLocal;
+  return { numeroGlobal, numeroLocal };
+}
+
+let resultado = alterarNumero();
+console.log(resultado.numeroGlobal);  // Saída: 15
+console.log(resultado.numeroLocal);   // Saída: 10
+console.log(numeroGlobal);            // Saída: 15
+```
+- Explicação: numeroGlobal é uma variável global, enquanto numeroLocal é local à função. Ao retornar os valores, numeroGlobal é atualizado, mas numeroLocal só existe dentro da função.
+
+3. **Escopo de Bloco com let e Funções Aninhadas**
+```
+function verificarEscopo() {
+  if (true) {
+    let z = 50;
+
+    function acessarZ() {
+      console.log(z);  // Saída: 50
+    }
+
+    acessarZ();
+  }
+
+  console.log(z);  // Erro: z não está definido
+}
+
+verificarEscopo();
+```
+- Explicação: A variável z é declarada com let dentro de um bloco e só pode ser acessada dentro desse bloco. A função acessarZ consegue acessar z, mas fora do bloco a variável não existe.
+
+---
+
+## Respostas - Cadeia de Escopos
+
+### Nível Fácil
+
+1. **Cadeia de Escopos Simples**
+
+```
+let a = 10;
+
+function exemplo() {
+  let b = 20;
+  console.log(a);  // Saída: 10
+  console.log(b);  // Saída: 20
+}
+
+exemplo();
+```
+- Explicação: A variável a é acessível dentro da função, pois está no escopo global. A variável b é declarada dentro da função e só pode ser acessada dentro dela.
+
+### Nível Médio
+
+2. **Acesso a Variáveis de Escopos Externos**
+```
+let x = 30;
+
+function exibir() {
+  let y = 40;
+  console.log(x);  // Saída: 30
+  console.log(y);  // Saída: 40
+}
+
+exibir();
+console.log(x);  // Saída: 30
+console.log(y);  // Erro: y não está definido
+```
+- Explicação: A variável x é acessível tanto dentro da função exibir quanto fora dela, pois está no escopo global. A variável y só existe dentro da função e não pode ser acessada fora dela, gerando erro.
+
+### Nível Difícil
+
+3. **Cadeia de Escopos com Funções Aninhadas**
+```
+let numero = 50;
+
+function alterarNumero() {
+  let alterado = 100;
+
+  function incrementar() {
+    numero += 10;
+    console.log(numero);  // Saída: 60
+  }
+
+  incrementar();
+  console.log(numero);  // Saída: 60
+  console.log(alterado);  // Saída: 100
+}
+
+alterarNumero();
+console.log(numero);  // Saída: 60
+```
+- Explicação: A variável numero é acessada e modificada dentro da função interna incrementar, alterando seu valor. A variável alterado existe dentro da função alterarNumero e pode ser acessada dentro dela. O valor de numero fora da função alterarNumero também foi alterado. Isso mostra como as variáveis de escopos internos e externos interagem.
+
+---
+
+## 17. Métodos de objetos Respostas
+
+## Métodos de Objetos
+
+### Nível Fácil
+
+1. **Método Simples em Objeto**
+ ```
+ const animal = {
+   nome: "Cachorro",
+   falar: function() {
+     console.log(`Eu sou ${this.nome}`);
+   }
+ };
+
+ animal.falar(); // Exibe: Eu sou Cachorro
+```
+
+2. **Método com Parâmetro**
+```
+const livro = {
+  mostrarTitulo: function(titulo) {
+    console.log(`O título do livro é ${titulo}`);
+  }
+};
+
+livro.mostrarTitulo("O Hobbit"); // Exibe: O título do livro é O Hobbit
+```
+
+### Nível Médio
+
+3. **Método que Modifica Propriedade**
+```
+const carro = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  atualizarModelo: function(novoModelo) {
+    this.modelo = novoModelo;
+  }
+};
+
+carro.atualizarModelo("Civic");
+console.log(carro.modelo); // Exibe: Civic
+```
+
+4. **Método que Retorna um Valor**
+```
+const contaBancaria = {
+  saldo: 1000,
+  consultarSaldo: function() {
+    return this.saldo;
+  }
+};
+
+console.log(contaBancaria.consultarSaldo()); // Exibe: 1000
+```
+
+### Nível Difícil
+
+5. **Método de Objeto com Encadeamento**
+```
+const estoque = {
+  produto: "MacBook",
+  quantidade: 10,
+  atualizarEstoque: function(qtd) {
+    this.quantidade = qtd;
+    return this;
+  },
+  mostrarEstoque: function() {
+    console.log(`${this.produto}: ${this.quantidade}`);
+  }
+};
+
+estoque.atualizarEstoque(20).mostrarEstoque(); // Exibe: MacBook: 20
+```
+
+6. **Método com Parâmetros de Entrada**
+```
+const calculadora = {
+  operacao: function(num1, num2, operador) {
+    switch(operador) {
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "*":
+        return num1 * num2;
+      case "/":
+        return num1 / num2;
+      default:
+        return "Operador inválido";
+    }
+  }
+};
+
+console.log(calculadora.operacao(10, 5, "+")); // Exibe: 15
+```
+
+## Métodos em Objetos Aninhados
+
+### Nível Fácil
+
+1. Método em Objeto Aninhado
+```
+const empresa = {
+  nome: "Tech Solutions",
+  endereco: {
+    cidade: "São Paulo",
+    exibirCidade: function() {
+      console.log(this.cidade);
+    }
+  }
+};
+
+empresa.endereco.exibirCidade(); // Exibe: São Paulo
+```
+
+2. **Método para Exibir Dados do Objeto Aninhado**
+```
+const usuario = {
+  nome: "Carlos",
+  contato: {
+    telefone: "123456789",
+    mostrarContato: function() {
+      console.log(this.telefone);
+    }
+  }
+};
+
+usuario.contato.mostrarContato(); // Exibe: 123456789
+```
+
+### Nível Médio
+
+3. **Método Aninhado com Parâmetro**
+```
+const estudante = {
+  nome: "João",
+  cursos: {
+    inscrever: function(curso) {
+      console.log(`Inscrito em ${curso}`);
+    }
+  }
+};
+
+estudante.cursos.inscrever("Matemática"); // Exibe: Inscrito em Matemática
+```
+
+4. **Método Aninhado que Modifica Propriedade**
+```
+const universidade = {
+  nome: "UniTech",
+  departamento: {
+    nomeDepartamento: "Engenharia",
+    alterarNome: function(novoNome) {
+      this.nomeDepartamento = novoNome;
+    }
+  }
+};
+
+universidade.departamento.alterarNome("Computação");
+console.log(universidade.departamento.nomeDepartamento); // Exibe: Computação
+```
+
+### Nível Difícil
+
+5. **Método Aninhado com Encadeamento**
+```
+const veiculo = {
+  modelo: "Fusca",
+  motor: {
+    ligado: false,
+    ligar: function() {
+      this.ligado = true;
+      return this;
+    },
+    mostrarEstado: function() {
+      console.log(`Motor ligado: ${this.ligado}`);
+    }
+  }
+};
+
+veiculo.motor.ligar().mostrarEstado(); // Exibe: Motor ligado: true
+```
+
+6. **Método Aninhado com Argumento**
+```
+const biblioteca = {
+  nome: "Biblioteca Municipal",
+  livros: {
+    emprestar: function(livro) {
+      console.log(`Emprestado ${livro}`);
+    }
+  }
+};
+
+biblioteca.livros.emprestar("Harry Potter"); // Exibe: Emprestado Harry Potter
+```
+
+## Métodos que Retornam Valores
+
+### Nível Fácil
+
+1. **Método que Retorna um Valor Simples**
+```
+const pessoa = {
+  nome: "Maria",
+  obterNome: function() {
+    return this.nome;
+  }
+};
+
+console.log(pessoa.obterNome()); // Exibe: Maria
+```
+
+2. **Método com Retorno de Cálculo**
+```
+const retangulo = {
+  largura: 5,
+  altura: 10,
+  calcularArea: function() {
+    return this.largura * this.altura;
+  }
+};
+
+console.log(retangulo.calcularArea()); // Exibe: 50
+```
+
+### Nível Médio
+
+3. **Método com Retorno Condicional**
+```
+const aluno = {
+  nome: "Lucas",
+  nota: 8,
+  verificarAprovacao: function() {
+    if (this.nota >= 7) {
+      return "Aprovado";
+    } else {
+      return "Reprovado";
+    }
+  }
+};
+
+console.log(aluno.verificarAprovacao()); // Exibe: Aprovado
+```
+
+4. **Método que Retorna uma Lista de Elementos**
+```
+const biblioteca = {
+  livros: ["JavaScript", "Python", "Java"],
+  listarLivros: function() {
+    return this.livros;
+  }
+};
+
+console.log(biblioteca.listarLivros()); // Exibe: ["JavaScript", "Python", "Java"]
+```
+
+### Nível Difícil
+
+5. **Método que Retorna Objeto Modificado**
+```
+const produto = {
+  nome: "Celular",
+  preco: 1000,
+  aplicarDesconto: function(desconto) {
+    this.preco = this.preco - desconto;
+    return this;
+  }
+};
+
+produto.aplicarDesconto(100);
+console.log(produto); // Exibe: { nome: 'Celular', preco: 900 }
+```
+
+6. **Método que Retorna um Valor Calculado com Parâmetros**
+```
+const calculadora = {
+  calcular: function(num1, num2, operador) {
+    switch (operador) {
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "*":
+        return num1 * num2;
+      case "/":
+        return num1 / num2;
+      default:
+        return "Operador inválido";
+    }
+  }
+};
+
+console.log(calculadora.calcular(5, 2, "+")); // Exibe: 7
+```
+
+## Métodos de Objetos em Arrays
+
+### Nível Fácil
+
+1. **Método de Objeto em Array Simples**
+```
+const pessoas = [
+  { nome: "João", saudar: function() { console.log(`Olá, ${this.nome}`); } },
+  { nome: "Maria", saudar: function() { console.log(`Olá, ${this.nome}`); } }
+];
+
+pessoas.forEach(pessoa => pessoa.saudar()); 
+// Exibe: 
+// Olá, João
+// Olá, Maria
+```
+
+2. **Método de Objeto em Array com Parâmetro**
+```
+const funcionarios = [
+  { nome: "Carlos", trabalhar: function(projeto) { console.log(`Trabalhando no ${projeto}`); } },
+  { nome: "Ana", trabalhar: function(projeto) { console.log(`Trabalhando no ${projeto}`); } }
+];
+
+funcionarios.forEach(funcionario => funcionario.trabalhar("Sistema de Gestão"));
+// Exibe:
+// Trabalhando no Sistema de Gestão
+// Trabalhando no Sistema de Gestão
+```
+
+### Nível Médio
+
+3. **Método que Modifica Propriedade em Objetos do Array**
+```
+const produtos = [
+  { nome: "TV", preco: 2000 },
+  { nome: "Celular", preco: 1500 }
+];
+
+produtos.forEach(produto => produto.aplicarDesconto = function(desconto) { 
+  this.preco -= desconto;
+});
+
+produtos.forEach(produto => produto.aplicarDesconto(100));
+console.log(produtos); 
+// Exibe: 
+// [ { nome: 'TV', preco: 1900 }, { nome: 'Celular', preco: 1400 } ]
+```
+
+4. **Método que Retorna Valor com Base no Array**
+```
+const alunos = [
+  { nome: "Juliana", nota: 9 },
+  { nome: "Carlos", nota: 6 }
+];
+
+const aprovado = alunos.filter(aluno => aluno.nota >= 7);
+console.log(aprovado); 
+// Exibe: [ { nome: 'Juliana', nota: 9 } ]
+```
+
+### Nível Difícil
+
+5. **Método em Array para Atualizar Todos os Objetos**
+```
+const livros = [
+  { titulo: "JavaScript", preco: 50 },
+  { titulo: "Python", preco: 45 }
+];
+
+livros.forEach(livro => livro.atualizarPreco = function(desconto) {
+  this.preco -= desconto;
+});
+
+livros.forEach(livro => livro.atualizarPreco(5));
+console.log(livros); 
+// Exibe: 
+// [ { titulo: 'JavaScript', preco: 45 }, { titulo: 'Python', preco: 40 } ]
+```
+
+6. **Método em Array que Modifica e Retorna Novo Valor**
+```
+const estudantes = [
+  { nome: "Ana", nota: 7 },
+  { nome: "João", nota: 8 }
+];
+
+const aumentoNota = estudantes.map(estudante => {
+  estudante.nota += 1;
+  return estudante;
+});
+
+console.log(aumentoNota); 
+// Exibe: 
+// [ { nome: 'Ana', nota: 8 }, { nome: 'João', nota: 9 } ]
+```
+
+---
+
+## 18. Funções Recursivas Respostas
+
+### Nível Fácil
+
+1. **Soma de Números até um Valor**
+ ```
+ function somaAteN(n) {
+   if (n === 1) return 1;
+   return n + somaAteN(n - 1);
+ }
+ console.log(somaAteN(5)); // Exibe: 15
+```
+
+2. **Fatorial de um Número**
+```
+function fatorial(n) {
+  if (n === 1) return 1;
+  return n * fatorial(n - 1);
+}
+console.log(fatorial(5)); // Exibe: 120
+```
+
+3. **Contar até um Número**
+```
+function contarAteN(n) {
+  if (n > 0) {
+    console.log(n);
+    contarAteN(n - 1);
+  }
+}
+contarAteN(3); // Exibe: 3, 2, 1
+```
+
+4. **Contar de Trás para Frente**
+```
+function contarDeTrasParaFrente(n) {
+  if (n >= 1) {
+    console.log(n);
+    contarDeTrasParaFrente(n - 1);
+  }
+}
+contarDeTrasParaFrente(4); // Exibe: 4, 3, 2, 1
+```
+
+5. **Verificar se um Número é Par ou Ímpar**
+```
+function verificarParOuImpar(n) {
+  if (n === 0) return true; // 0 é par
+  if (n === 1) return false; // 1 é ímpar
+  return verificarParOuImpar(n - 2);
+}
+console.log(verificarParOuImpar(4)); // Exibe: true
+console.log(verificarParOuImpar(5)); // Exibe: false
+```
+
+### Nível Médio
+
+6. **Soma dos Elementos de um Array**
+```
+function somaArray(arr, index = 0) {
+  if (index === arr.length) return 0;
+  return arr[index] + somaArray(arr, index + 1);
+}
+console.log(somaArray([1, 2, 3, 4])); // Exibe: 10
+```
+
+7. **Reverter uma String**
+```
+function inverterString(str) {
+  if (str === "") return "";
+  return inverterString(str.substr(1)) + str[0];
+}
+console.log(inverterString("abc")); // Exibe: "cba"
+```
+
+8. **Fibonacci**
+```
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+console.log(fibonacci(5)); // Exibe: 5
+```
+
+9. **Encontrar o Maior Número em um Array
+```
+function maiorNumero(arr, index = 0) {
+  if (index === arr.length - 1) return arr[index];
+  let maiorRestante = maiorNumero(arr, index + 1);
+  return arr[index] > maiorRestante ? arr[index] : maiorRestante;
+}
+console.log(maiorNumero([3, 1, 4, 1, 5, 9])); // Exibe: 9
+```
+
+10. **Fatorial de um Array de Números**
+```
+function fatorialArray(arr, index = 0) {
+  if (index === arr.length) return 1;
+  return fatorial(arr[index]) * fatorialArray(arr, index + 1);
+}
+
+function fatorial(n) {
+  if (n === 1) return 1;
+  return n * fatorial(n - 1);
+}
+
+console.log(fatorialArray([2, 3, 4])); // Exibe: 288
+```
+
+### Nível Difícil
+
+11. **Permutações de uma String**
+```
+function permutar(str) {
+  if (str.length <= 1) return [str];
+  let resultado = [];
+  for (let i = 0; i < str.length; i++) {
+    let letra = str[i];
+    let resto = str.slice(0, i) + str.slice(i + 1);
+    let permutacoesRestantes = permutar(resto);
+    for (let perm of permutacoesRestantes) {
+      resultado.push(letra + perm);
+    }
+  }
+  return resultado;
+}
+console.log(permutar("abc")); 
+// Exibe: [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
+```
+
+12. **Somar os Elementos de um Array 2D**
+```
+function somarArray2D(arr, i = 0, j = 0) {
+  if (i === arr.length) return 0;
+  if (j === arr[i].length) return somarArray2D(arr, i + 1, 0);
+  return arr[i][j] + somarArray2D(arr, i, j + 1);
+}
+console.log(somarArray2D([[1, 2], [3, 4], [5, 6]])); // Exibe: 21
+```
+
+13. **Buscar um Elemento em um Array**
+```
+function buscarElemento(arr, elemento, index = 0) {
+  if (index === arr.length) return -1;
+  if (arr[index] === elemento) return index;
+  return buscarElemento(arr, elemento, index + 1);
+}
+console.log(buscarElemento([1, 2, 3, 4], 3)); // Exibe: 2
+```
+
+14. **Contar o Número de Vezes que um Valor Aparece em um Array**
+```
+function contarValor(arr, valor, index = 0, contador = 0) {
+  if (index === arr.length) return contador;
+  if (arr[index] === valor) contador++;
+  return contarValor(arr, valor, index + 1, contador);
+}
+console.log(contarValor([1, 2, 3, 1, 4, 1], 1)); // Exibe: 3
+```
+
+15. **Somar os Elementos de um Array de Arrays**
+```
+function somarArrayDeArrays(arr, i = 0, j = 0) {
+  if (i === arr.length) return 0;
+  if (j === arr[i].length) return somarArrayDeArrays(arr, i + 1, 0);
+  return arr[i][j] + somarArrayDeArrays(arr, i, j + 1);
+}
+console.log(somarArrayDeArrays([[1, 2], [3, 4], [5, 6]])); // Exibe: 21
+```
+
+---
+
+## 19. Funções Anônimas e Callback Respostas
+
+### Nível Fácil
+
+1. **Somar dois números usando uma função anônima**
+```
+function somar(a, b) {
+  return (function() {
+    return a + b;
+  })();
+}
+
+console.log(somar(5, 3)); // Exibe: 8
+```
+
+2. **Filtrar números pares em um array usando uma função anônima**
+```
+function filtrarPares(arr) {
+  return arr.filter(function(num) {
+    return num % 2 === 0;
+  });
+}
+
+console.log(filtrarPares([1, 2, 3, 4, 5, 6])); // Exibe: [2, 4, 6]
+```
+
+### Nível Médio
+
+3. **Uso de Callback para manipular uma lista**
+```
+function processarLista(lista, callback) {
+  for (let i = 0; i < lista.length; i++) {
+    console.log(callback(lista[i]));
+  }
+}
+
+function dobrar(valor) {
+  return valor * 2;
+}
+
+processarLista([1, 2, 3, 4], dobrar); // Exibe: 2, 4, 6, 8
+```
+
+4. **Ordem crescente com callback**
+```
+function ordenarArray(arr, callback) {
+  arr.sort(callback);
+  console.log(arr);
+}
+
+ordenarArray([4, 1, 3, 2], function(a, b) {
+  return a - b;
+}); // Exibe: [1, 2, 3, 4]
+```
+
+### Nível Difícil
+
+5. **Manipular objetos com callback**
+```
+function aplicarDesconto(produtos, callback) {
+  return produtos.map(function(produto) {
+    produto.preco = callback(produto.preco);
+    return produto;
+  });
+}
+
+function desconto(preco) {
+  return preco * 0.9; // Desconto de 10%
+}
+
+const produtos = [
+  { nome: 'Produto 1', preco: 100 },
+  { nome: 'Produto 2', preco: 150 },
+  { nome: 'Produto 3', preco: 200 }
+];
+
+console.log(aplicarDesconto(produtos, desconto)); 
+// Exibe: [{nome: 'Produto 1', preco: 90}, {nome: 'Produto 2', preco: 135}, {nome: 'Produto 3', preco: 180}]
+```
+
+6. **Execução assíncrona com Callback**
+```
+function buscarDados(callback) {
+  setTimeout(function() {
+    const dados = { nome: 'João', idade: 25, cidade: 'São Paulo' };
+    callback(dados);
+  }, 2000);
+}
+
+buscarDados(function(dados) {
+  console.log(dados); 
+  // Exibe: { nome: 'João', idade: 25, cidade: 'São Paulo' }
+});
+```
+
+---
+
+  ## 20. Arrow Functions Respostas
+
+### Nível Fácil
+
+1. **Somar dois números usando Arrow Function**
+```
+const somar = (a, b) => a + b;
+console.log(somar(5, 3)); // Exibe: 8
+```
+
+2. **Multiplicar dois números usando Arrow Function**
+```
+const multiplicar = (a, b) => a * b;
+console.log(multiplicar(5, 3)); // Exibe: 15
+```
+
+3. **Verificar se um número é par usando Arrow Function**
+```
+const isEven = num => num % 2 === 0;
+console.log(isEven(4)); // Exibe: true
+console.log(isEven(5)); // Exibe: false
+```
+
+4. **Retornar o dobro de um número com Arrow Function**
+```
+const dobro = num => num * 2;
+console.log(dobro(4)); // Exibe: 8
+```
+
+5. **Quadrado de um número usando Arrow Function**
+```
+const quadrado = num => num ** 2;
+console.log(quadrado(4)); // Exibe: 16
+```
+
+### Nível Médio
+
+6. **Converter temperatura de Celsius para Fahrenheit usando Arrow Function**
+```
+const celsiusToFahrenheit = celsius => (celsius * 9/5) + 32;
+console.log(celsiusToFahrenheit(0)); // Exibe: 32
+console.log(celsiusToFahrenheit(100)); // Exibe: 212
+```
+
+7. **Filtrar números positivos em um array usando Arrow Function**
+```
+const filtrarPositivos = arr => arr.filter(num => num > 0);
+console.log(filtrarPositivos([1, -2, 3, -4])); // Exibe: [1, 3]
+```
+
+8. **Adicionar dois números em uma lista de arrays usando Arrow Function**
+```
+const somarLista = arr => arr.map(par => par[0] + par[1]);
+console.log(somarLista([[1, 2], [3, 4], [5, 6]])); // Exibe: [3, 7, 11]
+```
+
+9. **Verificar se um número é maior que 10 usando Arrow Function**
+```
+const isGreaterThanTen = num => num > 10;
+console.log(isGreaterThanTen(15)); // Exibe: true
+console.log(isGreaterThanTen(5)); // Exibe: false
+```
+
+10. **Contar a quantidade de números positivos em um array usando Arrow Function**
+```
+const contarPositivos = arr => arr.filter(num => num > 0).length;
+console.log(contarPositivos([1, -2, 3, -4])); // Exibe: 2
+```
+
+### Nível Difícil
+
+11. **Ordenar um array de objetos com Arrow Function**
+```
+const pessoas = [{ nome: 'João', idade: 30 }, { nome: 'Maria', idade: 25 }, { nome: 'Carlos', idade: 35 }];
+const ordenarPorIdade = arr => arr.sort((a, b) => a.idade - b.idade);
+console.log(ordenarPorIdade(pessoas)); 
+// Exibe: [{ nome: 'Maria', idade: 25 }, { nome: 'João', idade: 30 }, { nome: 'Carlos', idade: 35 }]
+```
+
+12. **Calcular a área de um círculo usando Arrow Function**
+```
+const areaCirculo = raio => Math.PI * raio ** 2;
+console.log(areaCirculo(5)); // Exibe: 78.53981633974483
+```
+
+13. **Transformar um array de strings para maiúsculas usando Arrow Function**
+```
+const maiusculas = arr => arr.map(str => str.toUpperCase());
+console.log(maiusculas(['a', 'b', 'c'])); // Exibe: ['A', 'B', 'C']
+```
+
+14. **Filtrar números ímpares e somá-los usando Arrow Function**
+```
+const somarImpares = arr => arr.filter(num => num % 2 !== 0).reduce((acc, num) => acc + num, 0);
+console.log(somarImpares([1, 2, 3, 4, 5])); // Exibe: 9
+```
+
+15. **Calcular a soma de todos os elementos de um array de números usando Arrow Function**
+```
+const somaArray = arr => arr.reduce((acc, num) => acc + num, 0);
+console.log(somaArray([1, 2, 3, 4, 5])); // Exibe: 15
+```
+
+---
+
+## 21. IIFE (Immediately Invoked Function Expression) Respostas
+
+### Nível Fácil
+
+1. **Executar uma função imediatamente que retorna uma saudação**
+```
+(function() {
+  console.log("Olá, Mundo!");
+})();
+```
+
+2. **Criar uma IIFE que soma dois números**
+```
+(function(a, b) {
+  console.log(a + b);
+})(5, 3); // Exibe: 8
+```
+
+### Nível Médio
+
+3. **Usar IIFE para calcular o fatorial de um número**
+```
+(function(num) {
+  let fatorial = 1;
+  for (let i = 1; i <= num; i++) {
+    fatorial *= i;
+  }
+  console.log(fatorial);
+})(5); // Exibe: 120
+```
+
+4. **Armazenar o resultado de uma IIFE em uma variável**
+```
+const resultado = (function(a, b) {
+  return a + b;
+})(10, 20);
+
+console.log(resultado); // Exibe: 30
+```
+
+### Nível Difícil
+
+5. **Usar IIFE para criar um contador de cliques**
+```
+(function() {
+  let contador = 0;
+
+  document.getElementById("btnClique").addEventListener("click", function() {
+    contador++;
+    console.log("Clique número: " + contador);
+  });
+})();
+```
+- Nota: Este código depende de um botão com o id btnClique em seu HTML. Quando o botão for clicado, o contador será incrementado e exibido no console.
+
+6. **Usar IIFE para simular um módulo com variáveis privadas**
+```
+const modulo = (function() {
+  let valorPrivado = 0;
+
+  return {
+    obterValor: function() {
+      return valorPrivado;
+    },
+    alterarValor: function(novoValor) {
+      valorPrivado = novoValor;
+    }
+  };
+})();
+
+console.log(modulo.obterValor()); // Exibe: 0
+modulo.alterarValor(42);
+console.log(modulo.obterValor()); // Exibe: 42
+```
+
+---
+
+## 22. High-order Functions Respostas
+
+## Nível Fácil
+
+1. **Função que recebe outra função como argumento**
+```
+function executar(func) {
+  func();
+}
+
+executar(function() {
+  console.log("Mensagem do callback");
+});
+```
+
+2. **Função que retorna uma função**
+```
+function multiplicarPor(x) {
+  return function(y) {
+    return x * y;
+  };
+}
+
+const multiplicarPor2 = multiplicarPor(2);
+console.log(multiplicarPor2(5)); // Exibe: 10
+```
+
+3. **Função que aceita um callback e imprime um resultado**
+```
+function processar(a, b, callback) {
+  const resultado = callback(a, b);
+  console.log(resultado);
+}
+
+processar(3, 4, function(a, b) {
+  return a + b;
+});
+```
+
+4. **Função de soma com parâmetro de operação**
+```
+function operar(a, b, operacao) {
+  return operacao(a, b);
+}
+
+const soma = function(a, b) {
+  return a + b;
+};
+
+console.log(operar(2, 3, soma)); // Exibe: 5
+```
+
+5. **Função de mensagem personalizada**
+```
+function criarMensagem(nome) {
+  return function() {
+    console.log(`Olá, ${nome}! Bem-vindo!`);
+  };
+}
+
+const mensagem = criarMensagem("João");
+mensagem(); // Exibe: Olá, João! Bem-vindo!
+```
+
+### Nível Médio
+
+6. **Função que verifica a validade de um número**
+```
+function validarNumero(verificacao, numero) {
+  const resultado = verificacao(numero);
+  console.log(resultado ? "Válido" : "Inválido");
+}
+
+const verificarPositivo = (numero) => numero > 0;
+
+validarNumero(verificarPositivo, 10); // Exibe: Válido
+validarNumero(verificarPositivo, -5); // Exibe: Inválido
+```
+
+7. **Função que retorna uma função de cálculo**
+```
+function calcular(operacao, a, b) {
+  return operacao(a, b);
+}
+
+const soma = function(a, b) { return a + b; };
+const multiplicacao = function(a, b) { return a * b; };
+
+console.log(calcular(soma, 5, 3)); // Exibe: 8
+console.log(calcular(multiplicacao, 5, 3)); // Exibe: 15
+```
+
+8. **Função de saudação personalizada com callback**
+```
+function saudar(nome, saudacao) {
+  saudacao(nome);
+}
+
+function saudacaoPersonalizada(nome) {
+  console.log(`Olá, ${nome}!`);
+}
+
+saudar("Maria", saudacaoPersonalizada); // Exibe: Olá, Maria!
+```
+
+9. **Função de execução com contagem**
+```
+function executarComContagem(func, num) {
+  for (let i = 0; i < num; i++) {
+    func(i + 1);
+  }
+}
+
+executarComContagem(function(contagem) {
+  console.log(`Execução número: ${contagem}`);
+}, 3);
+```
+
+10. **Função que retorna uma operação com base em um parâmetro**
+```
+function operacao(tipo) {
+  if (tipo === "soma") {
+    return (a, b) => a + b;
+  } else if (tipo === "subtracao") {
+    return (a, b) => a - b;
+  }
+}
+
+const soma = operacao("soma");
+console.log(soma(5, 3)); // Exibe: 8
+```
+
+### Nível Difícil
+
+11. **Função de transformação com callbacks**
+```
+function transformar(numero, callback1, callback2) {
+  const resultado1 = callback1(numero);
+  const resultadoFinal = callback2(resultado1);
+  console.log(resultadoFinal);
+}
+
+transformar(5, function(n) { return n * 2; }, function(n) { return n + 10; });
+// Exibe: 20
+```
+
+12. **Função que aplica operação entre múltiplos números**
+```
+function aplicarOperacao(operacao, ...numeros) {
+  return numeros.reduce(operacao);
+}
+
+const soma = (a, b) => a + b;
+console.log(aplicarOperacao(soma, 1, 2, 3, 4)); // Exibe: 10
+```
+
+13. **Função que simula uma calculadora com callbacks**
+```
+function calculadora(operacao, a, b) {
+  if (operacao === "soma") {
+    return a + b;
+  } else if (operacao === "subtracao") {
+    return a - b;
+  } else if (operacao === "multiplicacao") {
+    return a * b;
+  }
+}
+
+console.log(calculadora("soma", 5, 3)); // Exibe: 8
+```
+
+14. **Função de temporizador com callback**
+```
+function tempos(segundos, callback) {
+  setTimeout(function() {
+    callback();
+  }, segundos * 1000);
+}
+
+tempos(2, function() {
+  console.log("Tempo finalizado!");
+});
+```
+
+15. **Função que cria uma sequência numérica com base em uma operação**
+```
+function sequenciaNumerica(operacao, numeroInicial) {
+  let resultado = numeroInicial;
+  return function() {
+    resultado = operacao(resultado);
+    return resultado;
+  };
+}
+
+const soma10 = sequenciaNumerica((num) => num + 10, 5);
+console.log(soma10()); // Exibe: 15
+console.log(soma10()); // Exibe: 25
+```
+
+---
+
+## 23. Exercícios sobre High-order Functions e Arrays
+
+### Nível Fácil
+
+1. **Usando `map()` para dobrar os valores de um array**
+```
+function dobrarValores(array) {
+  return array.map(num => num * 2);
+}
+
+console.log(dobrarValores([1, 2, 3, 4])); // [2, 4, 6, 8]
+```
+
+2. **Usando filter() para filtrar números pares**
+```
+function filtrarPares(array) {
+  return array.filter(num => num % 2 === 0);
+}
+
+console.log(filtrarPares([1, 2, 3, 4])); // [2, 4]
+```
+
+3. **Usando reduce() para somar os valores de um array**
+```
+function somarValores(array) {
+  return array.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(somarValores([1, 2, 3, 4])); // 10
+```
+
+4. **Usando map() para converter todos os nomes para maiúsculas**
+```
+function converterParaMaiusculas(array) {
+  return array.map(nome => nome.toUpperCase());
+}
+
+console.log(converterParaMaiusculas(['ana', 'joao', 'maria'])); // ['ANA', 'JOAO', 'MARIA']
+```
+
+5. **Usando filter() para remover números negativos**
+```
+function filtrarPositivos(array) {
+  return array.filter(num => num >= 0);
+}
+
+console.log(filtrarPositivos([-1, 2, -3, 4])); // [2, 4]
+```
+
+### Nível Médio
+
+6. **Usando map() e filter() para transformar e filtrar dados**
+```
+function dobrarPositivos(array) {
+  return array.filter(num => num > 0).map(num => num * 2);
+}
+
+console.log(dobrarPositivos([-1, 2, -3, 4])); // [4, 8]
+```
+
+7. **Usando reduce() para encontrar o maior número**
+```
+function encontrarMaiorNumero(array) {
+  return array.reduce((max, num) => (num > max ? num : max), array[0]);
+}
+
+console.log(encontrarMaiorNumero([1, 5, 3, 9, 2])); // 9
+```
+
+8. **Usando map() para converter uma lista de preços**
+```
+function aplicarDesconto(array) {
+  return array.map(preco => preco * 1.10);
+}
+
+console.log(aplicarDesconto([100, 200, 300])); // [110, 220, 330]
+```
+
+9. **Usando reduce() para calcular o produto de todos os elementos**
+```
+function calcularProduto(array) {
+  return array.reduce((acc, num) => acc * num, 1);
+}
+
+console.log(calcularProduto([1, 2, 3, 4])); // 24
+```
+
+10. **Usando filter() para selecionar strings com mais de 5 caracteres**
+```
+function filtrarStringsLongas(array) {
+  return array.filter(str => str.length > 5);
+}
+
+console.log(filtrarStringsLongas(['olá', 'mundo', 'javascript', 'programação'])); // ['javascript', 'programação']
+```
+
+### Nível Difícil
+
+11. **Usando reduce() para agrupar valores por categoria**
+```
+function agruparPorCategoria(array) {
+  return array.reduce((acc, obj) => {
+    acc[obj.categoria] = acc[obj.categoria] || 0;
+    acc[obj.categoria] += obj.valor;
+    return acc;
+  }, {});
+}
+
+const dados = [
+  { categoria: 'A', valor: 10 },
+  { categoria: 'B', valor: 20 },
+  { categoria: 'A', valor: 30 }
+];
+
+console.log(agruparPorCategoria(dados)); // { A: 40, B: 20 }
+```
+
+12. **Usando map() e filter() para transformar e remover valores**
+```
+function ajustarIdade(array) {
+  return array.map(pessoa => ({
+    nome: pessoa.nome,
+    idade: pessoa.idade + 10
+  })).filter(pessoa => pessoa.idade <= 50);
+}
+
+const pessoas = [
+  { nome: 'João', idade: 30 },
+  { nome: 'Maria', idade: 45 },
+  { nome: 'Pedro', idade: 55 }
+];
+
+console.log(ajustarIdade(pessoas)); 
+// [{ nome: 'João', idade: 40 }, { nome: 'Maria', idade: 55 }]
+```
+
+13. **Usando reduce() para criar um índice de contagem**
+```
+function contarOcorrencias(array) {
+  return array.reduce((acc, str) => {
+    acc[str] = acc[str] ? acc[str] + 1 : 1;
+    return acc;
+  }, {});
+}
+
+console.log(contarOcorrencias(['apple', 'banana', 'apple', 'orange', 'banana'])); 
+// { apple: 2, banana: 2, orange: 1 }
+```
+
+14. **Usando map() e reduce() para calcular a média de uma lista de objetos**
+```
+function calcularMediaNotas(array) {
+  const notas = array.map(obj => obj.nota);
+  const soma = notas.reduce((acc, nota) => acc + nota, 0);
+  return soma / notas.length;
+}
+
+const alunos = [
+  { nome: 'Ana', nota: 8 },
+  { nome: 'João', nota: 9 },
+  { nome: 'Maria', nota: 7 }
+];
+
+console.log(calcularMediaNotas(alunos)); // 8
+```
+
+15. **Usando filter(), map() e reduce() para gerar um relatório**
+```
+function relatorioVendas(array) {
+  const vendedores = array.filter(vendedor => vendedor.vendas > 50);
+  const nomes = vendedores.map(vendedor => vendedor.nome);
+  const totalVendas = vendedores.reduce((acc, vendedor) => acc + vendedor.vendas, 0);
+  
+  return {
+    nomesVendedores: nomes,
+    totalVendas
+  };
+}
+
+const vendas = [
+  { nome: 'Carlos', vendas: 60 },
+  { nome: 'Mariana', vendas: 40 },
+  { nome: 'Pedro', vendas: 80 }
+];
+
+console.log(relatorioVendas(vendas));
+// { nomesVendedores: ['Carlos', 'Pedro'], totalVendas: 140 }
+```
+
+---
+
+
+
+
 
