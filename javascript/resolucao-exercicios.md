@@ -35,12 +35,19 @@ Se surgir alguma dúvida ou se você quiser discutir sobre a resolução de algu
 ## Índice
 
 - [01. Operadores Lógicos Respostas](#01-operadores-lógicos-respostas)
-- [02. Estruturas Condicionais If, Else, Else If](#02-estruturas-condicionais-if-else-else-if)
-- [03. Estruturas Condicionais: Switch](#03-estruturas-condicionais-switch)
-- [04. Estruturas de Repetição](#04-estruturas-de-repetição)
-- [05. Estruturas de Dados](#05-estruturas-de-dados)
-- [06. Arrays Métodos](#06-arrays-métodos)
-- [07. Arrays Iteração](#07-arrays-iteração)
+- [02. Estruturas Condicionais If, Else, Else If Respostas](#02-estruturas-condicionais-if-else-else-if-respostas)
+- [03. Estruturas Condicionais: Switch Respostas](#03-estruturas-condicionais-switch-respostas)
+- [04. Estruturas de Repetição Respostas](#04-estruturas-de-repetição-respostas)
+- [05. Estruturas de Dados Respostas](#05-estruturas-de-dados-respostas)
+- [06. Arrays Métodos Respostas](#06-arrays-métodos-respostas)
+- [07. Arrays Iteração Respostas](#07-arrays-iteração-respostas)
+- [08. Arrays Bidimensionais Respostas](#08-arrays-bidimensionais-respostas)
+- [09. `flat` e `map` em Arrays Bidimensionais Respostas](#09-flat-e-map-em-arrays-bidimensionais-respostas)
+- [10. Arrays Bidimensionais for, reduce e filter Respostas](#10-arrays-bidimensionais-for-reduce-e-filter-respostas)
+- [11. Arrays Bidimensionais every, sort, combinação e busca com indices Respostas](#11-arrays-bidimensionais-every-sort-combinação-e-busca-com-indices-respostas)
+- [12. Objetos manipulação e notação](#12-objetos-manipulação-e-notação)
+- [13. Objetos, new, this, keys, values, entries, herança e prototipagem Respostas](#13-objetos-new-this-keys-values-entries-herança-e-prototipagem-respostas)
+
 
 
 
@@ -159,7 +166,7 @@ function checkRange(number) {
 
 ---
 
-## 02. Estruturas Condicionais If, Else, Else If
+## 02. Estruturas Condicionais If, Else, Else If Respostas
 
 ### Exercícios Fáceis
 
@@ -353,7 +360,7 @@ function jogoParOuImpar(jogador1, jogador2) {
 
 ---
 
-## 03. Estruturas Condicionais: Switch
+## 03. Estruturas Condicionais: Switch Respostas
 
 ### Exercícios Fáceis
 
@@ -630,7 +637,7 @@ function mesDoAno(mes) {
 
 ---
 
-## 04. Estruturas de Repetição
+## 04. Estruturas de Repetição Respostas
 
 ### **Fáceis:**
 
@@ -814,7 +821,7 @@ function tabelaMultiplicacao(n) {
 
 ---
 
-## 05. Estruturas de Dados
+## 05. Estruturas de Dados Respostas
 
 ### Fáceis
 
@@ -1052,7 +1059,7 @@ console.log(dict.get("idade")); // Saída: undefined
 
 ---
 
-## 06. Arrays Métodos
+## 06. Arrays Métodos Respostas
 
 ## 1. `push()`
 
@@ -1394,7 +1401,7 @@ console.log(produtos); // ["Jaqueta", "Boné", "Tênis"]
 
 ---
 
-## 07. Arrays Iteração
+## 07. Arrays Iteração respostas
 
 ## Respostas dos Exercícios sobre `forEach`
 
@@ -1605,5 +1612,1325 @@ console.log(groupedByCategory);
 
 ---
 
+## 08. Arrays Bidimensionais Respostas
 
+### Nível Fácil
+
+1. **Soma de Elementos**  
+   ```
+   function somaElementos(matriz) {
+       let soma = 0;
+       for (let linha of matriz) {
+           for (let elemento of linha) {
+               soma += elemento;
+           }
+       }
+       return soma;
+   }
+   ```
+2. **Linha com Maior Soma**
+```
+function linhaMaiorSoma(matriz) {
+    let maiorSoma = 0;
+    let indiceLinha = 0;
+    for (let i = 0; i < matriz.length; i++) {
+        let somaLinha = matriz[i].reduce((a, b) => a + b, 0);
+        if (somaLinha > maiorSoma) {
+            maiorSoma = somaLinha;
+            indiceLinha = i;
+        }
+    }
+    return indiceLinha;
+}
+```
+3. **Contar Números Pares**
+```
+function contarNumerosPares(matriz) {
+    let contador = 0;
+    for (let linha of matriz) {
+        for (let elemento of linha) {
+            if (elemento % 2 === 0) {
+                contador++;
+            }
+        }
+    }
+    return contador;
+}
+```
+4. **Transposição Simples**
+```
+function transporMatriz2x2(matriz) {
+    return [
+        [matriz[0][0], matriz[1][0]],
+        [matriz[0][1], matriz[1][1]]
+    ];
+}
+```
+5. **Diagonal Principal**
+```
+function diagonalPrincipal(matriz) {
+    let diagonal = [];
+    for (let i = 0; i < matriz.length; i++) {
+        diagonal.push(matriz[i][i]);
+    }
+    return diagonal;
+}
+```
+
+### Nível Médio
+
+1. **Verificar Simetria**
+```
+function verificarSimetria(matriz) {
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz.length; j++) {
+            if (matriz[i][j] !== matriz[j][i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+```
+2. **Multiplicação por Escalar**
+```
+function multiplicarPorEscalar(matriz, escalar) {
+    return matriz.map(linha => linha.map(elemento => elemento * escalar));
+}
+```
+3. **Busca de Elemento**
+```
+function buscarElemento(matriz, numero) {
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] === numero) {
+                return { linha: i, coluna: j };
+            }
+        }
+    }
+    return null;
+}
+```
+4. **Somar Matrizes**
+```
+function somarMatrizes(matriz1, matriz2) {
+    return matriz1.map((linha, i) => linha.map((elemento, j) => elemento + matriz2[i][j]));
+}
+```
+5. **Menor e Maior Elemento**
+```
+function menorMaiorElemento(matriz) {
+    let menor = Infinity, maior = -Infinity;
+    for (let linha of matriz) {
+        for (let elemento of linha) {
+            if (elemento < menor) menor = elemento;
+            if (elemento > maior) maior = elemento;
+        }
+    }
+    return { menor, maior };
+}
+```
+
+### Nível Difícil
+
+1. **Produto de Matrizes**
+```
+function produtoMatrizes(matriz1, matriz2) {
+    let resultado = Array(matriz1.length).fill(0).map(() => Array(matriz2[0].length).fill(0));
+    for (let i = 0; i < matriz1.length; i++) {
+        for (let j = 0; j < matriz2[0].length; j++) {
+            for (let k = 0; k < matriz2.length; k++) {
+                resultado[i][j] += matriz1[i][k] * matriz2[k][j];
+            }
+        }
+    }
+    return resultado;
+}
+```
+2. **Caminho da Soma Máxima**
+```
+function caminhoSomaMaxima(matriz) {
+    let linhas = matriz.length;
+    let colunas = matriz[0].length;
+    let dp = Array.from({ length: linhas }, () => Array(colunas).fill(0));
+
+    dp[0][0] = matriz[0][0];
+    for (let i = 1; i < linhas; i++) dp[i][0] = dp[i - 1][0] + matriz[i][0];
+    for (let j = 1; j < colunas; j++) dp[0][j] = dp[0][j - 1] + matriz[0][j];
+
+    for (let i = 1; i < linhas; i++) {
+        for (let j = 1; j < colunas; j++) {
+            dp[i][j] = matriz[i][j] + Math.max(dp[i - 1][j], dp[i][j - 1]);
+        }
+    }
+    return dp[linhas - 1][colunas - 1];
+}
+```
+3. **Zig-Zag Bidimensional**
+```
+function zigZagMatriz(matriz) {
+    let resultado = [];
+    for (let i = 0; i < matriz.length; i++) {
+        if (i % 2 === 0) {
+            resultado.push(...matriz[i]);
+        } else {
+            resultado.push(...matriz[i].reverse());
+        }
+    }
+    return resultado;
+}
+```
+4. **Rotação de Matriz**
+```
+function rotacao90Graus(matriz) {
+    let n = matriz.length;
+    let resultado = Array.from({ length: n }, () => Array(n).fill(0));
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            resultado[j][n - i - 1] = matriz[i][j];
+        }
+    }
+    return resultado;
+}
+```
+5. **Verificar Quadrado Mágico**
+```
+function verificarQuadradoMagico(matriz) {
+    let n = matriz.length;
+    let somaEsperada = matriz[0].reduce((a, b) => a + b, 0);
+
+    for (let i = 0; i < n; i++) {
+        if (matriz[i].reduce((a, b) => a + b, 0) !== somaEsperada) return false;
+        if (matriz.map(linha => linha[i]).reduce((a, b) => a + b, 0) !== somaEsperada) return false;
+    }
+
+    let diagonal1 = 0, diagonal2 = 0;
+    for (let i = 0; i < n; i++) {
+        diagonal1 += matriz[i][i];
+        diagonal2 += matriz[i][n - i - 1];
+    }
+
+    return diagonal1 === somaEsperada && diagonal2 === somaEsperada;
+}
+```
+
+---
+
+##  09. `flat` e `map` em Arrays Bidimensionais Respostas
+
+## Focados em `flat`
+
+### Nível Fácil
+
+1. **Flattening Simples**  
+   ```
+   function flattenArray(matriz) {
+       return matriz.flat();
+   }
+   ```
+2. **Soma dos Elementos Flattened**
+```
+function somaFlatten(matriz) {
+    return matriz.flat().reduce((soma, valor) => soma + valor, 0);
+}
+```
+
+### Nível Médio
+
+3. **Flattening com Nível Específico**
+```
+function flattenTo2D(matriz) {
+    return matriz.flat(1);
+}
+```
+4. **Filtrar e Flatten**
+```
+function filtrarFlatten(matriz) {
+    return matriz.flat().filter(valor => valor > 10);
+}
+```
+
+### Nível Difícil
+
+5. **Flatten e Frequência de Valores**
+```
+function frequenciaValores(matriz) {
+    const flattened = matriz.flat();
+    return flattened.reduce((frequencia, valor) => {
+        frequencia[valor] = (frequencia[valor] || 0) + 1;
+        return frequencia;
+    }, {});
+}
+```
+6. **Flatten e Operações Matemáticas**
+```
+function mediaFlatten(matriz) {
+    const flattened = matriz.flat();
+    const soma = flattened.reduce((soma, valor) => soma + valor, 0);
+    return soma / flattened.length;
+}
+```
+## Focados em ```map```
+
+### Nível Fácil
+
+1. **Dobrar Valores**
+```
+function dobrarValores(matriz) {
+    return matriz.map(linha => linha.map(valor => valor * 2));
+}
+```
+2. **Adicionar Índices**
+```
+function adicionarIndices(matriz) {
+    return matriz.map((linha, i) => linha.map(valor => valor + i));
+}
+```
+
+### Nível Médio
+
+3. **Strings com Comprimento**
+```
+function comprimentoStrings(matriz) {
+    return matriz.map(linha => linha.map(str => str.length));
+}
+```
+4. **Matriz Transposta com Map**
+```
+function transporMatriz(matriz) {
+    return matriz[0].map((_, coluna) => matriz.map(linha => linha[coluna]));
+}
+```
+
+### Nível Difícil
+
+5. **Map e Transformação Condicional**
+```
+function transformarNegativos(matriz) {
+    return matriz.map(linha => linha.map(valor => (valor < 0 ? -valor : valor)));
+}
+```
+6. **Map para Criar Objetos**
+```
+function criarObjetos(matriz) {
+    return matriz.map((linha, i) => 
+        linha.map((valor, j) => ({ linha: i, coluna: j, valor }))
+    );
+}
+```
+
+---
+
+## 10. Arrays Bidimensionais for, reduce e filter respostas
+
+## Respostas: `for` e `forEach`
+
+### Nível Fácil
+
+1. **Contar Elementos**
+   ```
+   function contarElementos(matriz) {
+       let contador = 0;
+       for (let i = 0; i < matriz.length; i++) {
+           for (let j = 0; j < matriz[i].length; j++) {
+               contador++;
+           }
+       }
+       return contador;
+   }
+   ```
+2. **Exibir Todos os Valores**
+```
+function exibirValores(matriz) {
+    matriz.forEach(linha => {
+        linha.forEach(valor => console.log(valor));
+    });
+}
+```
+
+### Nível Médio
+
+3. **Somar Elementos de Cada Linha**
+```
+function somaPorLinha(matriz) {
+    const resultado = [];
+    for (let i = 0; i < matriz.length; i++) {
+        let soma = 0;
+        for (let j = 0; j < matriz[i].length; j++) {
+            soma += matriz[i][j];
+        }
+        resultado.push(soma);
+    }
+    return resultado;
+}
+```
+4. **Multiplicar Todos os Valores por 2**
+```
+function multiplicarPorDois(matriz) {
+    matriz.forEach((linha, i) => {
+        linha.forEach((valor, j) => {
+            matriz[i][j] = valor * 2;
+        });
+    });
+    return matriz;
+}
+```
+
+### Nível Difícil
+
+5. **Encontrar o Maior Valor e sua Posição**
+```
+function encontrarMaior(matriz) {
+    let maior = -Infinity;
+    let posicao = { linha: -1, coluna: -1 };
+
+    for (let i = 0; i < matriz.length; i++) {
+        for (let j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] > maior) {
+                maior = matriz[i][j];
+                posicao = { linha: i, coluna: j };
+            }
+        }
+    }
+    return { valor: maior, ...posicao };
+}
+```
+6. **Gerar Transposta Manualmente**
+```
+function transposta(matriz) {
+    const linhas = matriz.length;
+    const colunas = matriz[0].length;
+    const resultado = Array.from({ length: colunas }, () => Array(linhas).fill(0));
+
+    for (let i = 0; i < linhas; i++) {
+        for (let j = 0; j < colunas; j++) {
+            resultado[j][i] = matriz[i][j];
+        }
+    }
+    return resultado;
+}
+```
+
+## Respostas: ```reduce```
+
+### Nível Fácil
+
+1. **Soma Total de Elementos**
+```
+function somaTotal(matriz) {
+    return matriz.reduce((acc, linha) => acc + linha.reduce((subAcc, num) => subAcc + num, 0), 0);
+}
+```
+2. **Concatenar Linhas**
+```
+function concatenarLinhas(matriz) {
+    return matriz.reduce((acc, linha) => acc.concat(linha), []);
+}
+```
+
+### Nível Médio
+
+3. **Calcular Frequência de Elementos**
+```
+function frequenciaElementos(matriz) {
+    return matriz.reduce((acc, linha) => {
+        linha.forEach(valor => {
+            acc[valor] = (acc[valor] || 0) + 1;
+        });
+        return acc;
+    }, {});
+}
+```
+4. **Soma Condicional**
+```
+function somaPares(matriz) {
+    return matriz.reduce((acc, linha) => 
+        acc + linha.reduce((subAcc, num) => (num % 2 === 0 ? subAcc + num : subAcc), 0), 0);
+}
+```
+
+### Nível Difícil
+
+5. **Agrupar Valores por Paridade**
+```
+function agruparPorParidade(matriz) {
+    return matriz.reduce((acc, linha) => {
+        linha.forEach(valor => {
+            if (valor % 2 === 0) acc.pares.push(valor);
+            else acc.impares.push(valor);
+        });
+        return acc;
+    }, { pares: [], impares: [] });
+}
+```
+6. **Calcular a Média de Cada Linha**
+```
+function mediaPorLinha(matriz) {
+    return matriz.map(linha => 
+        linha.reduce((acc, num) => acc + num, 0) / linha.length);
+}
+```
+
+## Respostas: ```filter```
+
+### Nível Fácil
+
+1. **Filtrar Números Maiores que 10**
+```
+function filtrarMaiores(matriz) {
+    return matriz.flat().filter(valor => valor > 10);
+}
+```
+2. **Filtrar Linhas com um Valor Específico**
+```
+function filtrarLinhas(matriz, valor) {
+    return matriz.filter(linha => linha.includes(valor));
+}
+```
+
+### Nível Médio
+
+3. **Remover Valores Negativos**
+```
+function removerNegativos(matriz) {
+    return matriz.map(linha => linha.filter(valor => valor >= 0));
+}
+```
+4. **Filtrar e Flatten**
+```
+function filtrarEFlatten(matriz) {
+    return matriz.flat().filter(valor => valor > 5);
+}
+```
+### Nível Difícil
+
+5. **Filtrar e Ordenar Linhas por Soma**
+```
+function filtrarEOrdenar(matriz, limite) {
+    return matriz
+        .filter(linha => linha.reduce((acc, num) => acc + num, 0) > limite)
+        .sort((a, b) => a.reduce((acc, num) => acc + num, 0) - b.reduce((acc, num) => acc + num, 0));
+}
+```
+6. **Encontrar Linhas com Todos os Valores Pares**
+```
+function filtrarLinhasPares(matriz) {
+    return matriz.filter(linha => linha.every(valor => valor % 2 === 0));
+}
+```
+
+---
+
+## 11. Arrays Bidimensionais every, sort, combinação e busca com indices Respostas
+
+## Respostas sobre `every` ou `some`
+
+### Fáceis
+
+1. **Verifique se todos os números em um array são maiores que 10.**
+   ```
+   const numbers = [12, 15, 18, 20];
+   const result = numbers.every(num => num > 10);
+   console.log(result); // true
+   ```
+2. **Verifique se pelo menos um número é maior que 100.**
+```
+const numbers = [5, 8, 120, 40];
+const result = numbers.some(num => num > 100);
+console.log(result); // true
+```
+
+### Médios
+
+3. **Verifique se todos os elementos de um array de strings possuem mais de 3 caracteres.**
+```
+const fruits = ["banana", "maçã", "laranja", "kiwi"];
+const result = fruits.every(fruit => fruit.length > 3);
+console.log(result); // true
+```
+4. **Verifique se pelo menos um número no array é divisível por 5.**
+```
+const numbers = [2, 8, 15, 30, 4];
+const result = numbers.some(num => num % 5 === 0);
+console.log(result); // true
+```
+
+### Difíceis
+
+5. **Verifique se todos os valores de um array de objetos possuem uma propriedade active como true.**
+```
+const users = [
+  { name: 'Alice', active: true },
+  { name: 'Bob', active: true },
+  { name: 'Charlie', active: true }
+];
+const result = users.every(user => user.active === true);
+console.log(result); // true
+```
+
+6. **Verifique se pelo menos um número em um array de arrays é negativo.**
+```
+const numbers = [[1, 2], [3, -4], [5, 6]];
+const result = numbers.some(subArray => subArray.some(num => num < 0));
+console.log(result); // true
+```
+
+## Respostas sobre ```sort```
+
+### Fáceis
+
+1. **Ordene um array de números em ordem crescente.**
+```
+const numbers = [5, 3, 8, 1, 2];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // [1, 2, 3, 5, 8]
+```
+2. **Ordene um array de números em ordem decrescente.**
+```
+const numbers = [12, 9, 15, 4, 7];
+numbers.sort((a, b) => b - a);
+console.log(numbers); // [15, 12, 9, 7, 4]
+```
+
+### Médios
+
+3. **Ordene um array de strings em ordem alfabética.**
+```
+const fruits = ["banana", "maçã", "laranja", "kiwi"];
+fruits.sort();
+console.log(fruits); // ["banana", "kiwi", "laranja", "maçã"]
+```
+4. **Ordene um array de objetos pelo valor de uma propriedade numérica.**
+```
+const products = [
+  { name: 'Apple', price: 5 },
+  { name: 'Banana', price: 2 },
+  { name: 'Orange', price: 3 }
+];
+products.sort((a, b) => a.price - b.price);
+console.log(products); 
+// [{ name: 'Banana', price: 2 }, { name: 'Orange', price: 3 }, { name: 'Apple', price: 5 }]
+```
+
+### Difíceis
+
+5. **Ordene um array de objetos com base em uma propriedade de data.**
+```
+const events = [
+  { name: 'Event 1', date: '2022-12-25' },
+  { name: 'Event 2', date: '2023-01-15' },
+  { name: 'Event 3', date: '2022-11-01' }
+];
+events.sort((a, b) => new Date(a.date) - new Date(b.date));
+console.log(events);
+// [{ name: 'Event 3', date: '2022-11-01' }, { name: 'Event 1', date: '2022-12-25' }, { name: 'Event 2', date: '2023-01-15' }]
+```
+6. **Ordene um array de objetos de acordo com a diferença entre duas propriedades numéricas.**
+```
+const cars = [
+  { name: 'Car A', speed: 120, weight: 1000 },
+  { name: 'Car B', speed: 150, weight: 1200 },
+  { name: 'Car C', speed: 180, weight: 800 }
+];
+cars.sort((a, b) => (a.speed - a.weight) - (b.speed - b.weight));
+console.log(cars);
+// [{ name: 'Car C', speed: 180, weight: 800 }, { name: 'Car A', speed: 120, weight: 1000 }, { name: 'Car B', speed: 150, weight: 1200 }]
+```
+
+## Respostas sobre Combinação com Estruturas Avançadas
+
+### Fáceis
+
+1. **Use map para dobrar todos os valores de um array.**
+```
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+```
+2. **Use filter para criar um novo array com apenas os números pares.**
+```
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4, 6]
+```
+
+### Médios
+
+3. **Crie um novo array com o quadrado de cada número usando map.**
+```
+const numbers = [2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num ** 2);
+console.log(squaredNumbers); // [4, 9, 16, 25]
+```
+4. **Use reduce para somar todos os valores de um array.**
+```
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+```
+
+### Difíceis
+
+5. **Crie um novo array com o dobro dos números positivos e o quadrado dos negativos, utilizando map e filter.**
+```
+const numbers = [2, -3, 4, -5];
+const transformed = numbers.filter(num => num > 0)
+  .map(num => num * 2)
+  .concat(numbers.filter(num => num < 0).map(num => num ** 2));
+console.log(transformed); // [4, 8, 16, 25]
+```
+6. **Use reduce para concatenar todos os elementos de um array de strings.**
+```
+const words = ["Olá", "mundo", "!"];
+const concatenated = words.reduce((acc, word) => acc + word, "");
+console.log(concatenated); // "Olá mundo!"
+```
+
+## Respostas sobre Busca de Elementos com Índices
+
+### Fáceis
+
+1. **Encontre o índice de um número em um array.**
+```
+const numbers = [10, 20, 30, 40];
+const index = numbers.indexOf(30);
+console.log(index); // 2
+```
+2. **Verifique se um valor existe no array utilizando includes e obtenha o índice.**
+```
+const numbers = [5, 8, 12, 15];
+const exists = numbers.includes(8);
+const index = numbers.indexOf(8);
+console.log(exists); // true
+console.log(index); // 1
+```
+
+### Médios
+
+3. **Encontre o índice de um elemento em um array de objetos.**
+```
+const users = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 35 }
+];
+const index = users.findIndex(user => user.name === 'Bob');
+console.log(index); // 1
+```
+4. **Encontre o índice do primeiro número maior que 100.**
+```
+const numbers = [50, 100, 150, 200];
+const index = numbers.findIndex(num => num > 100);
+console.log(index); // 2
+```
+
+### Difíceis
+
+5. **Encontre o índice do elemento com o maior valor em um array de objetos.**
+```
+const products = [
+  { name: 'Apple', price: 10 },
+  { name: 'Banana', price: 5 },
+  { name: 'Orange', price: 12 }
+];
+const index = products.reduce((maxIndex, product, currentIndex, array) => 
+  array[maxIndex].price > product.price ? maxIndex : currentIndex, 0);
+console.log(index); // 2 (Orange)
+```
+6. **Encontre o índice do primeiro número negativo em um array de números.**
+```
+const numbers = [3, 5, -4, 8, -1];
+const index = numbers.findIndex(num => num < 0);
+console.log(index); // 2
+```
+
+---
+
+## 12. Objetos manipulação e notação
+
+## Criação e Manipulação de Objetos Respostas
+
+### Fáceis
+
+1. **Crie um objeto `carro` com as propriedades `marca`, `modelo` e `ano` e exiba-as no console.**
+
+```
+const carro = {
+  marca: 'Toyota',
+  modelo: 'Corolla',
+  ano: 2020
+};
+
+console.log(carro.marca);
+console.log(carro.modelo);
+console.log(carro.ano);
+```
+2. **Adicione uma nova propriedade cor ao objeto carro e exiba o objeto completo no console.**
+```
+carro.cor = 'preto';
+console.log(carro);
+```
+
+### Médios
+
+3. **Crie um objeto pessoa com as propriedades nome, idade e cidade. Depois, altere a propriedade idade e adicione uma nova propriedade profissão. Exiba o objeto no console.**
+```
+const pessoa = {
+  nome: 'João',
+  idade: 25,
+  cidade: 'São Paulo'
+};
+
+pessoa.idade = 26;
+pessoa.profissao = 'Programador';
+console.log(pessoa);
+```
+4. **Crie um objeto livro com as propriedades titulo, autor, e ano. Em seguida, modifique o valor de ano e remova a propriedade autor. Exiba o objeto no console.**
+```
+const livro = {
+  titulo: 'O Alquimista',
+  autor: 'Paulo Coelho',
+  ano: 1988
+};
+
+livro.ano = 1990;
+delete livro.autor;
+console.log(livro);
+```
+### Difíceis
+
+5. **Crie um objeto produto com as propriedades nome, preco e estoque. Depois, adicione uma propriedade desconto que será 10% do preço, e remova a propriedade estoque. Exiba o objeto completo no console.**
+```
+const produto = {
+  nome: 'Notebook',
+  preco: 2000,
+  estoque: 10
+};
+
+produto.desconto = produto.preco * 0.1;
+delete produto.estoque;
+console.log(produto);
+```
+6. **Crie um objeto cliente com as propriedades nome, email, e telefone. Adicione uma propriedade endereco, que será um objeto com rua, numero, e cidade. Exiba o objeto completo no console.**
+```
+const cliente = {
+  nome: 'Maria',
+  email: 'maria@gmail.com',
+  telefone: '123456789'
+};
+
+cliente.endereco = {
+  rua: 'Rua A',
+  numero: 123,
+  cidade: 'Curitiba'
+};
+
+console.log(cliente);
+```
+
+## Respostas: Notação Literal e Construtor Object
+
+### Fáceis
+
+1. **Crie um objeto carro utilizando a notação literal e exiba suas propriedades.**
+```
+const carro = {
+  marca: 'Honda',
+  modelo: 'Civic',
+  ano: 2022
+};
+
+console.log(carro);
+```
+2. **Crie um objeto pessoa utilizando o construtor Object() e exiba suas propriedades.**
+```
+const pessoa = new Object();
+pessoa.nome = 'Carlos';
+pessoa.idade = 30;
+pessoa.cidade = 'Rio de Janeiro';
+
+console.log(pessoa);
+```
+
+### Médios
+
+3. **Crie um objeto aluno utilizando a notação literal, com as propriedades nome, idade, e curso. Depois, adicione uma nova propriedade notaFinal utilizando o construtor Object(). Exiba o objeto completo no console.**
+```
+const aluno = {
+  nome: 'Ana',
+  idade: 22,
+  curso: 'Engenharia'
+};
+
+const alunoObj = new Object();
+alunoObj.notaFinal = 8.5;
+
+console.log({...aluno, ...alunoObj});
+```
+4. **Crie um objeto livro utilizando o construtor Object(), com as propriedades titulo e autor. Em seguida, adicione uma nova propriedade ano com a notação literal. Exiba o objeto completo no console.**
+```
+const livro = new Object();
+livro.titulo = '1984';
+livro.autor = 'George Orwell';
+livro.ano = 1949;
+
+console.log(livro);
+```
+
+### Difíceis
+
+5. **Crie um objeto produto utilizando o construtor Object() com as propriedades nome, preco, e categoria. Depois, altere o valor de preco usando a notação literal e remova a propriedade categoria. Exiba o objeto completo no console.
+```
+const produto = new Object();
+produto.nome = 'Celular';
+produto.preco = 1000;
+produto.categoria = 'Eletrônicos';
+
+produto.preco = 900;
+delete produto.categoria;
+
+console.log(produto);
+```
+6. **Crie um objeto evento utilizando o construtor Object() e adicione as propriedades nome, data, e local. Em seguida, altere o valor de local com a notação literal e adicione a propriedade descricao. Exiba o objeto completo no console.**
+```
+const evento = new Object();
+evento.nome = 'Conferência de Tecnologia';
+evento.data = '2023-05-15';
+evento.local = 'São Paulo';
+
+evento.local = 'Rio de Janeiro';
+evento.descricao = 'Evento para profissionais de TI';
+
+console.log(evento);
+```
+
+## Respostas: Notação de Pontos e Colchetes
+
+### Fáceis
+
+1. **Acesse a propriedade marca do objeto carro utilizando a notação de pontos e exiba no console.**
+```
+const carro = {
+  marca: 'Ford',
+  modelo: 'Fiesta',
+  ano: 2019
+};
+
+console.log(carro.marca);
+```
+2. **Crie um objeto carro com a propriedade cor. Acesse e altere essa propriedade utilizando a notação de colchetes e exiba no console.**
+```
+const carro = {
+  cor: 'azul'
+};
+
+carro['cor'] = 'vermelho';
+console.log(carro);
+```
+
+### Médios
+
+3. **Crie um objeto pessoa com as propriedades nome, idade e cidade. Acesse e altere a propriedade idade utilizando a notação de pontos. Exiba o objeto no console.**
+```
+const pessoa = {
+  nome: 'Lucas',
+  idade: 28,
+  cidade: 'Fortaleza'
+};
+
+pessoa.idade = 29;
+console.log(pessoa);
+```
+4. **Crie um objeto livro com as propriedades titulo, autor e ano. Utilize a notação de colchetes para acessar e modificar a propriedade ano. Exiba o objeto no console.**
+```
+const livro = {
+  titulo: 'Dom Quixote',
+  autor: 'Miguel de Cervantes',
+  ano: 1605
+};
+
+livro['ano'] = 1615;
+console.log(livro);
+```
+
+### Difíceis
+
+5. **Crie um objeto produto com as propriedades nome, preco e estoque. Utilize a notação de pontos para acessar o preço e a notação de colchetes para acessar o estoque. Exiba os valores no console.**
+```
+const produto = {
+  nome: 'Geladeira',
+  preco: 2000,
+  estoque: 5
+};
+
+console.log(produto.preco);
+console.log(produto['estoque']);
+```
+6. **Crie um objeto cliente com as propriedades nome, email e telefone. Utilize a notação de colchetes para alterar o valor do email. Exiba o objeto no console.**
+```
+const cliente = {
+  nome: 'Maria',
+  email: 'maria@gmail.com',
+  telefone: '123456789'
+};
+
+cliente['email'] = 'maria123@gmail.com';
+console.log(cliente);
+```
+
+## Respostas: Manipulação de Objetos (Adicionando, Modificando e Deletando Propriedades)
+
+### Fáceis
+
+1. **Crie um objeto livro com as propriedades titulo e autor. Adicione a propriedade ano e exiba o objeto no console.**
+```
+const livro = {
+  titulo: 'O Pequeno Príncipe',
+  autor: 'Antoine de Saint-Exupéry'
+};
+
+livro.ano = 1943;
+console.log(livro);
+```
+2. **Crie um objeto carro com as propriedades marca, modelo e ano. Modifique a propriedade modelo e exiba o objeto no console.**
+```
+const carro = {
+  marca: 'Chevrolet',
+  modelo: 'Onix',
+  ano: 2021
+};
+
+carro.modelo = 'Spin';
+console.log(carro);
+```
+
+### Médios
+
+3. **Crie um objeto produto com as propriedades nome, preco e quantidade. Adicione uma propriedade desconto e remova a propriedade quantidade. Exiba o objeto no console.**
+```
+const produto = {
+  nome: 'Tênis',
+  preco: 150,
+  quantidade: 20
+};
+
+produto.desconto = 10;
+delete produto.quantidade;
+console.log(produto);
+```
+4. **Crie um objeto usuario com as propriedades nome e email. Modifique a propriedade nome e adicione a propriedade senha. Exiba o objeto no console.**
+```
+const usuario = {
+  nome: 'Ana',
+  email: 'ana@dominio.com'
+};
+
+usuario.nome = 'Ana Silva';
+usuario.senha = 'senha123';
+console.log(usuario);
+```
+
+### Difíceis
+
+5. **Crie um objeto empresa com as propriedades nome, localizacao e numeroFuncionarios. Adicione a propriedade faturamentoAnual e remova a propriedade localizacao. Exiba o objeto no console.**
+```
+const empresa = {
+  nome: 'Tech Co',
+  localizacao: 'São Paulo',
+  numeroFuncionarios: 150
+};
+
+empresa.faturamentoAnual = 5000000;
+delete empresa.localizacao;
+console.log(empresa);
+```
+6. **Crie um objeto aluno com as propriedades nome, idade, e curso. Alterar o valor da propriedade idade e adicionar a propriedade matricula. Exiba o objeto no console.**
+```
+const aluno = {
+  nome: 'Carlos',
+  idade: 20,
+  curso: 'Medicina'
+};
+
+aluno.idade = 21;
+aluno.matricula = '12345';
+console.log(aluno);
+```
+
+---
+
+## 13. Objetos, new, this, keys, values, entries, herança e prototipagem Respostas
+
+## **new**
+
+### Fácil
+```
+function Carro(marca, modelo) {
+  this.marca = marca;
+  this.modelo = modelo;
+}
+
+const meuCarro = new Carro("Fusca", "1970");
+console.log(meuCarro.marca); // "Fusca"
+console.log(meuCarro.modelo); // "1970"
+```
+
+### Médio
+```
+function Pessoa(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+  this.falar = function() {
+    console.log(`Olá, meu nome é ${this.nome}`);
+  };
+}
+
+const pessoa1 = new Pessoa("João", 25);
+pessoa1.falar(); // "Olá, meu nome é João"
+```
+
+### Difícil
+```
+function Animal(especie) {
+  this.especie = especie;
+  this.falar = function() {
+    console.log(`Eu sou um(a) ${this.especie}`);
+  };
+}
+
+function Cachorro(nome) {
+  Animal.call(this, "Cachorro");
+  this.nome = nome;
+  this.latir = function() {
+    console.log("Au au!");
+  };
+}
+
+const cachorro = new Cachorro("Rex");
+cachorro.falar(); // "Eu sou um(a) Cachorro"
+cachorro.latir(); // "Au au!"
+```
+---
+
+## **this**
+
+### Fácil
+```
+const pessoa = {
+  nome: "Maria",
+  idade: 30,
+  saudacao() {
+    console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+  }
+};
+
+pessoa.saudacao(); // "Meu nome é Maria e tenho 30 anos."
+```
+
+### Médio
+```
+function saudar() {
+  console.log(`Olá, ${this.nome}`);
+}
+
+const pessoa1 = { nome: "Carlos" };
+const pessoa2 = { nome: "Ana" };
+
+saudar.call(pessoa1); // "Olá, Carlos"
+saudar.call(pessoa2); // "Olá, Ana"
+```
+
+### Difícil
+```
+const pessoa1 = { nome: "Carlos" };
+const pessoa2 = { nome: "Ana" };
+
+function mostrarNome() {
+  console.log(this.nome);
+}
+
+mostrarNome.call(pessoa1); // "Carlos"
+mostrarNome.call(pessoa2); // "Ana"
+```
+
+## **object.heys**
+
+### Fácil
+```
+const livro = {
+  titulo: "JavaScript Avançado",
+  autor: "João Silva",
+  ano: 2020
+};
+
+console.log(Object.keys(livro)); // ["titulo", "autor", "ano"]
+```
+
+### Médio
+```
+const produto = {
+  nome: "Camiseta",
+  preço: 50,
+  quantidade: 10
+};
+
+console.log(Object.keys(produto).includes("quantidade")); // true
+```
+
+### Difícil
+```
+const carro = {
+  marca: "Ford",
+  modelo: "Fusca",
+  cor: "azul"
+};
+
+Object.keys(carro).forEach(key => {
+  console.log(`${key}: ${carro[key]}`);
+});
+```
+
+## **object.values**
+
+### Fácil
+
+```
+const livro = {
+  titulo: "JavaScript Avançado",
+  autor: "João Silva",
+  ano: 2020
+};
+
+console.log(Object.values(livro)); // ["JavaScript Avançado", "João Silva", 2020]
+```
+
+### Médio
+```
+const carro = {
+  marca: "Ford",
+  modelo: "Fusca",
+  ano: 2022
+};
+
+console.log(Object.values(carro).includes(2022)); // true
+```
+
+### Difícil
+```
+const pessoa = {
+  nome: "João",
+  idade: 25,
+  profissão: "Desenvolvedor"
+};
+
+const valores = Object.values(pessoa).map(value => value.toString().toUpperCase());
+console.log(valores); // ["JOÃO", "25", "DESENVOLVEDOR"]
+```
+
+## **object.entries**
+```
+Copiar código
+const aluno = {
+  nome: "Pedro",
+  idade: 20,
+  nota: 9.5
+};
+
+console.log(Object.entries(aluno)); // [["nome", "Pedro"], ["idade", 20], ["nota", 9.5]]
+```
+
+### Médio
+```
+const cliente = {
+  nome: "Ana",
+  email: "ana@gmail.com",
+  telefone: "123456789"
+};
+
+console.log(Object.entries(cliente).length); // 3
+```
+
+### Difícil
+```
+const produto = {
+  nome: "Smartphone",
+  preço: 1500
+};
+
+Object.entries(produto).forEach(([key, value]) => {
+  if (key === "preço" && value > 1000) {
+    produto.preço = value * 0.9; // aplicar desconto de 10%
+  }
+});
+
+console.log(produto); // { nome: "Smartphone", preço: 1350 }
+```
+
+## **Prototipagem e Herança**
+
+### Fácil
+```
+function Pessoa(nome) {
+  this.nome = nome;
+}
+
+Pessoa.prototype.falar = function() {
+  console.log(`Olá, meu nome é ${this.nome}`);
+};
+
+function Estudante(nome, curso) {
+  Pessoa.call(this, nome);
+  this.curso = curso;
+}
+
+Estudante.prototype = Object.create(Pessoa.prototype);
+Estudante.prototype.constructor = Estudante;
+
+const estudante = new Estudante("João", "Matemática");
+estudante.falar(); // "Olá, meu nome é João"
+```
+
+### Médio
+```
+function Animal() {
+  this.falar = function() {
+    console.log("Animal fazendo barulho");
+  };
+}
+
+function Gato() {
+  Animal.call(this);
+  this.falar = function() {
+    console.log("Miau");
+  };
+}
+
+const gato = new Gato();
+gato.falar(); // "Miau"
+```
+
+### Difícil
+```
+function Carro(marca) {
+  this.marca = marca;
+}
+
+Carro.prototype.mostrarMarca = function() {
+  console.log(this.marca);
+};
+
+const CarroEsportivo = Object.create(Carro.prototype);
+CarroEsportivo.velocidadeMaxima = 300;
+
+CarroEsportivo.mostrarVelocidade = function() {
+  console.log(`Velocidade máxima: ${this.velocidadeMaxima}`);
+};
+
+const esportivo = Object.create(CarroEsportivo);
+esportivo.marca = "Ferrari";
+esportivo.mostrarMarca(); // "Ferrari"
+esportivo.mostrarVelocidade(); // "Velocidade máxima: 300"
+```
+
+---
 
