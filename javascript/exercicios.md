@@ -49,7 +49,16 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 - [11. Exercícios sobre Arrays Bidimensionais every, sort, combinação e busca com indices](#11-exercícios-sobre-arrays-bidimensionais-every-sort-combinação-e-busca-com-indices)
 - [12. Criação e Manipulação de Objetos](#12-criação-e-manipulação-de-objetos)
 - [13. Exercícios de Objetos: new, this, keys, values, entries, herança e prototipagem](#13-exercícios-de-objetos-new-this-keys-values-entries-herança-e-prototipagem)
-
+- [14. Exercícios de Funções, Parâmetros Padrão, Rest Parameter e Desestruturação de Parâmetros](#14-exercícios-de-funções-parâmetros-padrão-rest-parameter-e-desestruturação-de-parâmetros)
+- [15. Exercícios de Function, retorno, arrow, múltiplos valores e antecipado](#15-exercícios-de-function-retorno-arrow-múltiplos-valores-e-antecipado)
+- [16. Exercícios de Escopo](#16-exercícios-de-escopo)
+- [17. Exercícios de métodos de objetos](#17-exercícios-de-métodos-de-objetos)
+- [18. Exercícios de Funções Recursivas](#18-exercícios-de-funções-recursivas)
+- [19. Exercícios sobre Funções Anônimas e Callback](#19-exercícios-sobre-funções-anônimas-e-callback)
+- [20. Exercícios sobre Arrow Functions](#20-exercícios-sobre-arrow-functions)
+- [21. Exercícios sobre IIFE (Immediately Invoked Function Expression)](#21-exercícios-sobre-iife-immediately-invoked-function-expression)
+- [22. Exercícios sobre High-order Functions](#22-exercícios-sobre-high-order-functions)
+- [23. Exercícios sobre High-order Functions e Arrays](#23-exercícios-sobre-high-order-functions-e-arrays)
 
 ---
 
@@ -1430,8 +1439,795 @@ const users = [
 
 ---
 
+## 14. Exercícios de Funções, Parâmetros Padrão, Rest Parameter e Desestruturação de Parâmetros
+
+## Funções
+
+### Nível Fácil
+
+1. **Função Simples**  
+   Crie uma função chamada `cumprimentar` que receba um nome como argumento e retorne a mensagem:  
+   `"Olá, [nome]! Seja bem-vindo!"`.  
+   Caso nenhum nome seja fornecido, a função deve retornar `"Olá! Seja bem-vindo!"`.
+
+2. **Função com Retorno Condicional**  
+   Crie uma função chamada `verificarParidade` que receba um número e retorne `"Par"` se o número for par, ou `"Ímpar"` caso contrário.
+
+---
+
+### Nível Médio
+
+3. **Função com Condição**  
+   Escreva uma função chamada `classificarIdade` que receba um número representando a idade e retorne:  
+   - `"Criança"` para idades de 0 a 12.  
+   - `"Adolescente"` para idades de 13 a 17.  
+   - `"Adulto"` para idades acima de 18.  
+
+4. **Função que Retorna uma Lista**  
+   Crie uma função chamada `gerarSequencia` que receba um número inteiro `n` e retorne um array contendo os números de 1 até `n`.
+
+---
+
+### Nível Difícil
+
+5. **Função Recursiva**  
+   Crie uma função chamada `fatorial` que calcule o fatorial de um número inteiro positivo utilizando recursão.
+
+6. **Função de Combinação**  
+   Escreva uma função chamada `combinacao` que receba dois números inteiros `n` e `r` e retorne a combinação (`nCr`), definida pela fórmula:  
+   \[
+   nCr = \frac{n!}{r! \times (n - r)!}
+   \]
+
+---
+
+## Parâmetros Padrão
+
+### Nível Fácil
+
+1. **Função de Saudação**  
+Crie uma função chamada `saudar` que receba um nome e uma saudação. Se a saudação não for fornecida, ela deve assumir o valor `"Olá"`.  
+Exemplo:  
+```
+saudar("Maria"); // "Olá, Maria!"
+```   
+2. **Função de Conversão de Moeda**
+Crie uma função chamada  ```converterParaDolar ``` que receba o valor em reais e a taxa de conversão. Caso a taxa não seja fornecida, utilize 5.2 como padrão.
+
+### Nível Médio
+
+3. **Função de Calculo com Desconto Padrão**
+Escreva uma função chamada  ```calcularPrecoFinal ``` que receba o preço de um produto, a quantidade e um desconto (valor padrão: 5%). A função deve calcular o valor total considerando a quantidade e o desconto.
+
+4. **Função com Multiplos Parâmetros Padrão**
+Crie uma função chamada  ```calcularArea ``` que receba os parâmetros  ```largura ```,  ```altura ``` e  ```forma ```. A  ```forma ``` deve ser  ```"retângulo" ``` por padrão. Para formas diferentes, retorne  ```"Forma não suportada" ```.
+
+### Nível Difícil
+
+5. **Função de Validação de Dados**
+Crie uma função chamada  ```validarFormulario ``` que receba um nome, uma idade e um país. Caso algum parâmetro não seja fornecido, ele deve ser preenchido automaticamente com  ```"Indefinido" ```.
+
+6. **Função Avançada de Cálculo**
+Desenvolva uma função chamada  ```calcularInvestimento ``` que receba o valor inicial, a taxa de juros (valor padrão: 0.05), e o tempo em anos. A função deve calcular o valor final utilizando a fórmula de juros compostos:
+```
+VF = VI × (1 + i)^t
+```
+
+ ---
+ 
+## Rest Parameter
+
+### Nível Fácil
+
+1. **Soma de Números**
+Crie uma função chamada ```somar``` que receba um número indeterminado de argumentos e retorne a soma deles.
+
+2. **Concatenar Strings**
+Implemente uma função chamada ```juntarPalavras``` que receba várias strings e retorne todas elas concatenadas em uma única string.
+
+### Nível Médio
+
+3. **Maior Número**
+Escreva uma função chamada ```encontrarMaior``` que receba vários números e retorne o maior valor.
+
+Lista de Nomes
+Crie uma função chamada ```listarNomes``` que receba um nome obrigatório e, em seguida, vários outros nomes. A função deve retornar uma lista que contenha o nome obrigatório seguido dos demais.
+
+### Nível Difícil
+
+5. **Filtrar Valores Válidos**
+Escreva uma função chamada ```filtrarValores``` que receba uma lista de números e strings. A função deve retornar apenas os valores numéricos.
+
+6. **Média de Números**
+Desenvolva uma função chamada ```calcularMedia``` que aceite uma quantidade ilimitada de números e retorne a média deles.
+
+---
+
+## Desestruturação de Parâmetros
+
+### Nível Fácil
+
+1. **Função com Objeto**
+Crie uma função chamada ```exibirDados``` que receba um objeto com as propriedades ```nome``` e ```idad```e. A função deve retornar a mensagem:
+```
+"[nome] tem [idade] anos."
+```
+
+2. **Função com Array**
+Implemente uma função chamada ```primeiroEUltimo``` que receba um array e retorne o primeiro e o último elemento no formato:
+```
+"Primeiro: [primeiro], Último: [último]".
+```
+
+### Nível Médio
+
+3. **Desestruturação com Parâmetros Padrão**
+Crie uma função chamada ```exibirPerfil``` que receba um objeto com as propriedades ```nome```, ```idade``` e ```profissao```. Caso alguma propriedade esteja ausente, utilize os valores padrão ```"Indefinido"```.
+
+4. **Reorganizar Dados do Array**
+Desenvolva uma função chamada ```organizarNotas``` que receba um array com as notas de um aluno e as retorne em ordem decrescente.
+
+### Nível Difícil
+
+5. **Desestruturação e Lógica**
+Escreva uma função chamada ```calcularDistancia``` que receba um objeto representando dois pontos no plano cartesiano (ex.: ```{x1: 0, y1: 0, x2: 3, y2: 4}```) e retorne a distância entre eles.
+
+6. **Desestruturação Avançada**
+Crie uma função chamada ```processarPedido``` que receba um objeto com as propriedades ```cliente```, ```pedido``` e ```detalhes```. A função deve retornar uma mensagem formatada com as informações do pedido.
+
+---
+
+# 15. Exercícios de Function, retorno, arrow, múltiplos valores e antecipado
+
+## Retorno Básico
+
+### Nível Fácil
+
+1. **Função de Multiplicação**
+   Crie uma função chamada `multiplicar` que receba dois números como parâmetros e retorne o resultado da multiplicação.
+
+2. **Função de Saudações**
+   Crie uma função chamada `saudacao` que receba um nome como parâmetro e retorne a mensagem: `"Olá, [nome]!"`.
+
+---
+
+### Nível Médio
+
+3. **Função de Comparação**
+   Crie uma função chamada `compararNumeros` que receba dois números e retorne:
+   - "Maior" se o primeiro número for maior.
+   - "Menor" se o segundo número for maior.
+   - "Igual" se ambos os números forem iguais.
+
+4. **Função de Área do Círculo**
+   Crie uma função chamada `areaCirculo` que receba o raio de um círculo e retorne a área do círculo. (A fórmula da área é: π * raio²)
+
+---
+
+### Nível Difícil
+
+5. **Função de Cálculo de Imposto**
+   Crie uma função chamada `calcularImposto` que receba o valor de uma compra e calcule o imposto sobre o valor. O imposto é de 10%. A função deve retornar o valor total da compra com imposto.
+
+6. **Função de Fatorial**
+   Crie uma função chamada `fatorial` que receba um número e retorne o seu fatorial. (Exemplo: fatorial de 5 é 5 * 4 * 3 * 2 * 1)
+
+---
+
+## Arrow Function
+
+### Nível Fácil
+
+1. **Função de Soma com Arrow**
+   Crie uma arrow function chamada `somar` que receba dois números como parâmetros e retorne a soma deles.
+
+2. **Função de Saudação com Arrow**
+   Crie uma arrow function chamada `saudacao` que receba um nome como parâmetro e retorne a mensagem de saudação: `"Olá, [nome]!"`.
+
+---
+
+### Nível Médio
+
+3. **Função de Filtro com Arrow**
+   Crie uma arrow function chamada `filtrarPares` que receba um array de números e retorne um novo array contendo apenas os números pares.
+
+4. **Função de Dobra de Valores**
+   Crie uma arrow function chamada `dobrar` que receba um número como parâmetro e retorne o valor do número dobrado.
+
+---
+
+### Nível Difícil
+
+5. **Função de Calculo de Potência com Arrow**
+   Crie uma arrow function chamada `potencia` que receba dois números e retorne o primeiro número elevado à potência do segundo número.
+
+6. **Função de Ordenação com Arrow**
+   Crie uma arrow function chamada `ordenar` que receba um array de números e retorne um novo array ordenado em ordem decrescente.
+
+---
+
+## Retorno Implícito em Arrow Function
+
+### Nível Fácil
+
+1. **Função de Multiplicação com Retorno Implícito**
+   Crie uma arrow function chamada `multiplicar` que receba dois números como parâmetros e retorne o resultado da multiplicação de forma implícita.
+
+2. **Função de Divisão com Retorno Implícito**
+   Crie uma arrow function chamada `dividir` que receba dois números como parâmetros e retorne o resultado da divisão de forma implícita.
+
+---
+
+### Nível Médio
+
+3. **Função de Quadrado com Retorno Implícito**
+   Crie uma arrow function chamada `quadrado` que receba um número e retorne o quadrado desse número de forma implícita.
+
+4. **Função de Concatenar com Retorno Implícito**
+   Crie uma arrow function chamada `concatenar` que receba dois strings e retorne a concatenação delas de forma implícita.
+
+---
+
+### Nível Difícil
+
+5. **Função de Filtro de Números Positivos com Retorno Implícito**
+   Crie uma arrow function chamada `filtrarPositivos` que receba um array de números e retorne um novo array contendo apenas os números positivos, utilizando retorno implícito.
+
+6. **Função de Incremento com Retorno Implícito**
+   Crie uma arrow function chamada `incrementar` que receba um número e retorne o número incrementado de forma implícita.
+
+---
+
+## Retornar Múltiplos Valores
+
+### Nível Fácil
+
+1. **Função que Retorna Soma e Diferença**
+   Crie uma função chamada `somaEDif` que receba dois números e retorne a soma e a diferença entre eles.
+
+2. **Função que Retorna Nome e Idade**
+   Crie uma função chamada `dadosPessoais` que receba um nome e uma idade e retorne esses dois valores.
+
+---
+
+### Nível Médio
+
+3. **Função de Retorno de Dados de Aluno**
+   Crie uma função chamada `dadosAluno` que receba o nome, a idade e a nota de um aluno e retorne esses três valores.
+
+4. **Função de Retorno de Mínimo e Máximo**
+   Crie uma função chamada `minMax` que receba um array de números e retorne o valor mínimo e o valor máximo desse array.
+
+---
+
+### Nível Difícil
+
+5. **Função de Retorno de Área e Perímetro**
+   Crie uma função chamada `areaEPerimetro` que receba as medidas de um retângulo e retorne a área e o perímetro desse retângulo.
+
+6. **Função de Retorno de Coordenadas**
+   Crie uma função chamada `coordenadas` que receba dois pontos no formato `(x, y)` e retorne as distâncias entre esses pontos nas direções horizontal e vertical.
+
+---
+
+## Retorno Antecipado
+
+### Nível Fácil
+
+1. **Função de Verificação de Paridade com Retorno Antecipado**
+   Crie uma função chamada `verificarParidade` que receba um número e, se o número for par, retorne a mensagem "Número par". Caso contrário, continue com o processo.
+
+2. **Função de Verificação de Idade**
+   Crie uma função chamada `verificarIdade` que receba a idade de uma pessoa. Se a idade for menor que 18, retorne "Menor de idade" imediatamente. Caso contrário, retorne "Maior de idade".
+
+---
+
+### Nível Médio
+
+3. **Função de Verificação de Maioridade com Retorno Antecipado**
+   Crie uma função chamada `verificarMaioridade` que receba a idade de uma pessoa. Se a idade for menor que 21, retorne "Acesso negado". Caso contrário, retorne "Acesso permitido".
+
+4. **Função de Retorno Antecipado em Validação de Dados**
+   Crie uma função chamada `validarDados` que receba um nome e um número. Se o nome estiver vazio ou o número for negativo, retorne "Dados inválidos" imediatamente. Caso contrário, retorne os dados.
+
+---
+
+### Nível Difícil
+
+5. **Função de Cálculo com Retorno Antecipado**
+   Crie uma função chamada `calcularPrecoComDesconto` que receba um preço. Se o preço for menor que 50, retorne imediatamente o preço sem desconto. Caso contrário, aplique um desconto de 10% e retorne o valor com desconto.
+
+6. **Função de Verificação de Votação com Retorno Antecipado**
+   Crie uma função chamada `verificarVotacao` que receba a idade de uma pessoa. Se a pessoa não tiver a idade mínima de 16 anos, retorne "Não apto para votar" imediatamente. Caso contrário, retorne "Apto para votar".
+
+---
+
+## 16. Exercícios de Escopo
+
+## Escopo Global, de função e de bloco
+
+### Nível Fácil
+
+1. **Exercício de Variável Global**
+
+Crie uma variável global chamada `nome` com o valor `"João"`. Dentro de uma função, imprima o valor da variável global `nome`.
+
+2. **Escopo de Função Simples**
+
+Crie uma função chamada `saudar` que recebe o parâmetro `nome` e imprime uma mensagem de boas-vindas. Fora da função, tente acessar a variável `nome` e explique o comportamento.
+
+3. **Variáveis de Bloco com `let` e `const`**
+
+Crie um bloco de código dentro de um `if` e declare uma variável `x` com `let` dentro desse bloco. Após o bloco, tente acessar a variável `x` fora dele e explique o comportamento.
+
+---
+
+### Nível Médio
+
+1. **Modificando Variável Global Dentro de Função**
+
+Crie uma variável global chamada `contador` com o valor inicial de 0. Dentro de uma função, aumente o valor da variável global `contador` em 1 e imprima o valor atualizado fora da função.
+
+2. **Escopo de Função com Parâmetros**
+
+Crie uma função chamada `multiplicar` que recebe dois parâmetros, `a` e `b`, e retorna o resultado da multiplicação entre eles. Imprima o resultado da multiplicação fora da função. Tente acessar `a` e `b` fora da função e explique o que acontece.
+
+3. **Escopo de Bloco com `var`**
+
+Dentro de um bloco de código, declare uma variável `y` utilizando `var` e imprima seu valor fora do bloco. Explique o comportamento da variável quando declarada com `var`.
+
+---
+
+### Nível Difícil
+
+1. **Escopo Global e Função de Cálculo**
+
+Crie uma variável global chamada `resultado` com o valor 10. Dentro de uma função, modifique a variável `resultado` e retorne a soma dela com um número recebido como parâmetro. Após a execução da função, imprima o valor atualizado da variável `resultado`.
+
+2. **Escopo de Função com Variáveis Locais e Globais**
+
+Crie uma variável global chamada `numeroGlobal` com o valor 5. Dentro de uma função chamada `alterarNumero`, crie uma variável local chamada `numeroLocal` e altere o valor de `numeroGlobal`. No final da função, retorne os valores de `numeroGlobal` e `numeroLocal`. Imprima o valor de `numeroGlobal` fora da função e explique o comportamento.
+
+3. **Escopo de Bloco com `let` e Funções Aninhadas**
+
+Dentro de uma função, crie um bloco de código onde declare uma variável `z` com `let`. Depois, dentro desse bloco, crie uma função que tente acessar e modificar a variável `z`. Imprima o valor de `z` fora do bloco e explique o comportamento.
+
+## Cadeia de Escopos
+
+### Nível Fácil
+
+ 1. **Cadeia de Escopos Simples**
+
+Crie uma variável `a` no escopo global e uma variável `b` dentro de uma função. Na função, acesse e imprima as duas variáveis (`a` e `b`).
+
+---
+
+### Nível Médio
+
+ 2. **Acesso a Variáveis de Escopos Externos**
+
+Crie uma variável `x` no escopo global e uma função `exibir` que declare uma variável `y` dentro dela. Na função, tente acessar as variáveis `x` e `y` e imprima seus valores.
+
+---
+
+### Nível Difícil
+
+ 3. **Cadeia de Escopos com Funções Aninhadas**
+
+Crie uma variável `numero` no escopo global. Dentro de uma função chamada `alterarNumero`, declare uma variável `alterado` e dentro desta função crie outra função chamada `incrementar`, que altera o valor da variável `numero`. Imprima o valor da variável `numero` na função interna e fora dela, explicando o comportamento das variáveis nos diferentes escopos.
+
+---
+
+## 17. Exercícios de métodos de objetos
+
+## Métodos de Objetos
+
+### Nível Fácil
+
+1. **Método Simples em Objeto**
+   Crie um objeto chamado `animal` com uma propriedade `nome` e um método chamado `falar` que exibe a frase `"Eu sou [nome]"`. Chame o método para exibir a frase com o nome do animal.
+
+2. **Método com Parâmetro**
+   Crie um objeto chamado `livro` com uma propriedade `titulo` e um método chamado `mostrarTitulo`, que recebe um parâmetro e exibe a mensagem `"O título do livro é [titulo]"`. Chame o método passando o título do livro como argumento.
+
+### Nível Médio
+
+3. **Método que Modifica Propriedade**
+   Crie um objeto chamado `carro` com propriedades `marca` e `modelo` e um método chamado `atualizarModelo`, que recebe um parâmetro e altera o modelo do carro. Chame o método e imprima o novo modelo.
+
+4. **Método que Retorna um Valor**
+   Crie um objeto chamado `contaBancaria` com uma propriedade `saldo` e um método chamado `consultarSaldo`, que retorna o saldo atual. Chame o método e imprima o valor retornado.
+
+### Nível Difícil
+
+5. **Método de Objeto com Encadeamento**
+   Crie um objeto `estoque` com propriedades `produto` e `quantidade`. Adicione um método `atualizarEstoque` que recebe um número e altera a quantidade de produtos. Esse método deve retornar o próprio objeto, permitindo que você encadeie outro método, `mostrarEstoque`, que exibe o produto e a quantidade. Chame os métodos em sequência e exiba as informações.
+
+6. **Método com Parâmetros de Entrada**
+   Crie um objeto chamado `calculadora` com um método `operacao`, que recebe dois parâmetros (números) e um operador (como `+`, `-`, `*`, `/`). O método deve retornar o resultado da operação. Chame o método passando dois números e um operador.
+
+---
+
+## Métodos em Objetos Aninhados
+
+### Nível Fácil
+
+1. **Método em Objeto Aninhado**
+   Crie um objeto `empresa` com uma propriedade `nome` e um objeto aninhado `endereco`, que tenha uma propriedade `cidade`. Dentro de `endereco`, crie um método `exibirCidade` que imprime o nome da cidade. Chame o método dentro do objeto aninhado.
+
+2. **Método para Exibir Dados do Objeto Aninhado**
+   Crie um objeto `usuario` com uma propriedade `nome` e um objeto aninhado `contato` com uma propriedade `telefone`. Crie um método `mostrarContato` dentro do objeto `contato`, que exibe o telefone do usuário. Chame o método.
+
+### Nível Médio
+
+3. **Método Aninhado com Parâmetro**
+   Crie um objeto `estudante` com uma propriedade `nome` e um objeto aninhado `cursos` com um método `inscrever`, que recebe o nome de um curso e imprime a mensagem `"Inscrito em [curso]"`. Chame o método passando um curso como argumento.
+
+4. **Método Aninhado que Modifica Propriedade**
+   Crie um objeto `universidade` com uma propriedade `nome` e um objeto aninhado `departamento`. Dentro de `departamento`, crie um método chamado `alterarNome`, que altera o nome do departamento. Chame o método para alterar o nome e imprima o novo nome.
+
+### Nível Difícil
+
+5. **Método Aninhado com Encadeamento**
+   Crie um objeto `veiculo` com uma propriedade `modelo` e um objeto aninhado `motor`. Dentro de `motor`, crie um método `ligar`, que altera uma propriedade `ligado` para `true`. O método `ligar` deve retornar o objeto `motor`, e o método `mostrarEstado` deve exibir o estado do motor. Chame ambos os métodos em sequência, utilizando encadeamento.
+
+6. **Método Aninhado com Argumento**
+   Crie um objeto `biblioteca` com uma propriedade `nome` e um objeto aninhado `livros`. Dentro de `livros`, crie um método `emprestar`, que recebe o nome do livro e imprime `"Emprestado [livro]"`. Chame o método passando o nome de um livro.
+
+---
+
+## Métodos que Retornam Valores
+
+### Nível Fácil
+
+1. **Método que Retorna um Valor Simples**
+   Crie um objeto `pessoa` com uma propriedade `nome` e um método `obterNome` que retorna o nome da pessoa. Chame o método e imprima o valor retornado.
+
+2. **Método com Retorno de Cálculo**
+   Crie um objeto `retangulo` com propriedades `largura` e `altura` e um método `calcularArea` que retorna o valor da área (largura * altura). Chame o método e imprima o valor retornado.
+
+### Nível Médio
+
+3. **Método com Retorno Condicional**
+   Crie um objeto `aluno` com uma propriedade `nota` e um método `verificarAprovacao` que retorna `"Aprovado"` se a nota for maior ou igual a 7, e `"Reprovado"` caso contrário. Chame o método e imprima o valor retornado.
+
+4. **Método que Retorna uma Lista de Elementos**
+   Crie um objeto `biblioteca` com uma propriedade `livros` (um array de strings) e um método `listarLivros`, que retorna a lista de livros. Chame o método e imprima o valor retornado.
+
+### Nível Difícil
+
+5. **Método que Retorna Objeto Modificado**
+   Crie um objeto `produto` com propriedades `nome` e `preco`, e um método `aplicarDesconto` que recebe um valor de desconto e retorna o objeto com o preço modificado. Chame o método e imprima o objeto atualizado.
+
+6. **Método que Retorna um Valor Calculado com Parâmetros**
+   Crie um objeto `calculadora` com um método `calcular`, que recebe dois parâmetros e um operador (`+`, `-`, `*`, `/`) e retorna o resultado da operação. Chame o método com diferentes parâmetros e imprima os valores retornados.
+
+---
+
+## Métodos de Objetos em Arrays
+
+### Nível Fácil
+
+1. **Método de Objeto em Array Simples**
+   Crie um array de objetos chamado `pessoas`, onde cada objeto tem uma propriedade `nome`. Crie um método `saudar` dentro do objeto que imprime `"Olá, [nome]"`. Itere sobre o array e chame o método `saudar` para cada objeto.
+
+2. **Método de Objeto em Array com Parâmetro**
+   Crie um array de objetos chamado `funcionarios`, onde cada objeto tem uma propriedade `nome` e um método `trabalhar`, que recebe um parâmetro (como o nome do projeto) e imprime `"Trabalhando no [projeto]"`. Itere sobre o array e chame o método passando o nome de um projeto.
+
+### Nível Médio
+
+3. **Método que Modifica Propriedade em Objetos do Array**
+   Crie um array de objetos chamado `produtos`, onde cada objeto tem uma propriedade `preco`. Crie um método `aplicarDesconto`, que recebe um valor de desconto e modifica o preço de cada produto. Itere sobre o array e aplique o desconto.
+
+4. **Método que Retorna um Valor em Objetos do Array**
+   Crie um array de objetos chamado `clientes`, onde cada objeto tem uma propriedade `nome` e `compras`. O método `totalCompras` deve retornar o total de compras de cada cliente. Itere sobre o array e imprima o total de compras de cada cliente.
+
+### Nível Difícil
+
+5. **Método Encadeado em Objetos do Array**
+   Crie um array de objetos `veiculos`, onde cada objeto tem uma propriedade `modelo` e um método `modificarModelo`. O método deve alterar o modelo do veículo e retornar o próprio objeto, permitindo encadear outro método, `exibirModelo`. Itere sobre o array e aplique ambos os métodos em encadeamento.
+
+6. **Método de Filtro em Objetos do Array**
+   Crie um array de objetos chamado `clientes`, onde cada objeto tem uma propriedade `idade`. Crie um método `filtrarIdades` que recebe uma idade mínima e retorna um novo array contendo apenas os clientes com idade maior ou igual à idade mínima. Imprima o novo array de clientes filtrados.
 
 
+---
+
+## 18. Exercícios de Funções Recursivas
+
+### Nível Fácil
+
+1. **Soma de Números até um Valor**
+   - Crie uma função recursiva que receba um número `n` e retorne a soma de todos os números de 1 até `n`. Exemplo: Se `n = 5`, a função deve retornar `1 + 2 + 3 + 4 + 5 = 15`.
+
+2. **Fatorial de um Número**
+   - Crie uma função recursiva que calcule o fatorial de um número `n`. O fatorial de `n` é a multiplicação de todos os números de 1 até `n`. Exemplo: Fatorial de 5 é `5 * 4 * 3 * 2 * 1 = 120`.
+
+3. **Contar até um Número**
+   - Crie uma função recursiva que imprima todos os números de 1 até `n` no console. Exemplo: Se `n = 3`, a função deve imprimir `1, 2, 3`.
+
+4. **Contar de Trás para Frente**
+   - Crie uma função recursiva que imprima os números de `n` até 1, em ordem decrescente. Exemplo: Se `n = 4`, a função deve imprimir `4, 3, 2, 1`.
+
+5. **Verificar se um Número é Par ou Ímpar**
+   - Crie uma função recursiva que verifique se um número `n` é par ou ímpar, retornando `true` ou `false`. A função deve considerar que 0 é par.
+
+### Nível Médio
+
+6. **Soma dos Elementos de um Array**
+   - Crie uma função recursiva que receba um array de números e retorne a soma de seus elementos. Exemplo: Se o array for `[1, 2, 3, 4]`, a função deve retornar `10`.
+
+7. **Reverter uma String**
+   - Crie uma função recursiva que inverta uma string. Exemplo: Se a string for `"abc"`, a função deve retornar `"cba"`.
+
+8. **Fibonacci**
+   - Crie uma função recursiva que calcule o número de Fibonacci na posição `n`. O número de Fibonacci é a sequência onde cada número é a soma dos dois anteriores. Exemplo: Se `n = 5`, a função deve retornar `5`.
+
+9. **Encontrar o Maior Número em um Array**
+   - Crie uma função recursiva que encontre o maior número em um array de números. Exemplo: Se o array for `[3, 1, 4, 1, 5, 9]`, a função deve retornar `9`.
+
+10. **Fatorial de um Array de Números**
+    - Crie uma função recursiva que receba um array de números e retorne a multiplicação do fatorial de cada número. Exemplo: Se o array for `[2, 3, 4]`, a função deve retornar `2! * 3! * 4! = 2 * 6 * 24 = 288`.
+
+### Nível Difícil
+
+11. **Permutações de uma String**
+   - Crie uma função recursiva que gere todas as permutações possíveis de uma string. Exemplo: Se a string for `"abc"`, as permutações são `"abc", "acb", "bac", "bca", "cab", "cba"`.
+
+12. **Somar os Elementos de um Array 2D**
+   - Crie uma função recursiva que some todos os elementos de um array bidimensional (matriz). Exemplo: Se o array for `[[1, 2], [3, 4], [5, 6]]`, a função deve retornar `21`.
+
+13. **Buscar um Elemento em um Array**
+   - Crie uma função recursiva que busque um valor específico em um array e retorne seu índice ou `-1` se não encontrado. Exemplo: Se o array for `[1, 2, 3, 4]` e o valor for `3`, a função deve retornar `2`.
+
+14. **Contar o Número de Vezes que um Valor Aparece em um Array**
+   - Crie uma função recursiva que conte quantas vezes um valor aparece em um array. Exemplo: Se o array for `[1, 2, 3, 1, 4, 1]` e o valor for `1`, a função deve retornar `3`.
+
+15. **Somar os Elementos de um Array de Arrays**
+   - Crie uma função recursiva que some todos os elementos de um array que contém sub-arrays. Exemplo: Se o array for `[[1, 2], [3, 4], [5, 6]]`, a função deve retornar `21`.
+
+---
+
+## 19. Exercícios sobre Funções Anônimas e Callback
+
+### Nível Fácil
+
+1. **Somar dois números usando uma função anônima**
+Escreva uma função chamada `somar` que recebe dois números e retorna a soma deles utilizando uma função anônima dentro de seu corpo. O resultado deve ser exibido no console.
+
+2. **Filtrar números pares em um array usando uma função anônima**
+Dado um array de números, escreva uma função chamada `filtrarPares` que utilize uma função anônima dentro de `filter` para retornar apenas os números pares do array.
+
+---
+
+### Nível Médio
+
+3. **Uso de Callback para manipular uma lista**
+Escreva uma função chamada `processarLista` que recebe uma lista de números e um callback. O callback deve ser responsável por processar cada item da lista e imprimir o resultado. Exemplo de callback: `dobrar` que multiplica o valor por 2.
+
+4. **Ordem crescente com callback**
+Escreva uma função chamada `ordenarArray` que recebe um array de números e um callback. O callback deve ser responsável por ordenar os números em ordem crescente. A função deve exibir o array ordenado.
+
+---
+
+### Nível Difícil
+
+5. **Manipular objetos com callback**
+Dado um array de objetos representando produtos com as propriedades `nome` e `preco`, escreva uma função chamada `aplicarDesconto` que recebe o array e um callback. O callback deve calcular um desconto em cada preço e retornar um novo array com os preços com desconto.
+
+6. **Execução assíncrona com Callback**
+Crie uma função chamada `buscarDados` que simula uma busca de dados (utilizando `setTimeout` para simular uma operação assíncrona). Ela deve receber um callback que será executado após 2 segundos, e o callback deve exibir os dados recebidos (exemplo: nome, idade, cidade).
+
+---
+
+## 20. Exercícios sobre Arrow Functions
+
+### Nível Fácil
+
+1. **Somar dois números usando Arrow Function**
+Escreva uma função usando arrow function que recebe dois parâmetros e retorna a soma dos mesmos.
+
+2. **Multiplicar dois números usando Arrow Function**
+Crie uma arrow function chamada `multiplicar` que recebe dois números como parâmetros e retorna o produto entre eles.
+
+3. **Verificar se um número é par usando Arrow Function**
+Escreva uma arrow function chamada `isEven` que recebe um número e retorna `true` se o número for par, e `false` se for ímpar.
+
+4. **Retornar o dobro de um número com Arrow Function**
+Crie uma arrow function chamada `dobro` que recebe um número e retorna o seu dobro.
+
+5. **Quadrado de um número usando Arrow Function**
+Escreva uma arrow function chamada `quadrado` que recebe um número e retorna o seu quadrado.
+
+---
+
+### Nível Médio
+
+6. **Converter temperatura de Celsius para Fahrenheit usando Arrow Function**
+Escreva uma arrow function chamada `celsiusToFahrenheit` que recebe um valor em Celsius e converte para Fahrenheit.
+
+7. **Filtrar números positivos em um array usando Arrow Function**
+Dado um array de números, escreva uma função chamada `filtrarPositivos` que utiliza uma arrow function dentro de `filter` para retornar apenas os números positivos.
+
+8. **Adicionar dois números em uma lista de arrays usando Arrow Function**
+Crie uma função chamada `somarLista` que recebe um array de pares de números e retorna um novo array com a soma de cada par, utilizando uma arrow function dentro de `map`.
+
+9. **Verificar se um número é maior que 10 usando Arrow Function**
+Escreva uma arrow function chamada `isGreaterThanTen` que recebe um número e retorna `true` se for maior que 10 e `false` caso contrário.
+
+10. **Contar a quantidade de números positivos em um array usando Arrow Function**
+Crie uma função chamada `contarPositivos` que recebe um array de números e retorna a quantidade de números positivos utilizando uma arrow function com `filter`.
+
+---
+
+### Nível Difícil
+
+11. **Ordenar um array de objetos com Arrow Function**
+Dado um array de objetos com a propriedade `idade`, escreva uma arrow function para ordenar os objetos em ordem crescente de idade.
+
+12. **Calcular a área de um círculo usando Arrow Function**
+Crie uma arrow function chamada `areaCirculo` que recebe o raio de um círculo e calcula sua área (usando a fórmula `π * r^2`).
+
+13. **Transformar um array de strings para maiúsculas usando Arrow Function**
+Dado um array de strings, escreva uma função chamada `maiusculas` que utiliza uma arrow function dentro de `map` para transformar todas as strings em maiúsculas.
+
+14. **Filtrar números ímpares e somá-los usando Arrow Function**
+Dado um array de números, escreva uma função chamada `somarImpares` que filtra os números ímpares e retorna a soma deles usando uma arrow function.
+
+15. **Calcular a soma de todos os elementos de um array de números usando Arrow Function**
+Escreva uma função chamada `somaArray` que recebe um array de números e retorna a soma de todos os elementos usando uma arrow function com `reduce`.
+
+---
+
+## 21. Exercícios sobre IIFE (Immediately Invoked Function Expression)
+
+### Nível Fácil
+
+1. **Executar uma função imediatamente que retorna uma saudação**
+Escreva uma IIFE que imprime "Olá, Mundo!" no console assim que o código for executado.
+
+2. **Criar uma IIFE que soma dois números**
+Crie uma IIFE que recebe dois números como parâmetros e retorna a soma deles. Exiba o resultado no console.
+
+---
+
+### Nível Médio
+
+3. **Usar IIFE para calcular o fatorial de um número**
+Crie uma IIFE que recebe um número como parâmetro e calcula seu fatorial. Exiba o resultado no console.
+
+4. **Armazenar o resultado de uma IIFE em uma variável**
+Crie uma IIFE que retorna o valor da soma de dois números e armazene o resultado dessa operação em uma variável. Exiba o valor da variável no console.
+
+---
+
+### Nível Difícil
+
+5. **Usar IIFE para criar um contador de cliques**
+Implemente uma IIFE que cria um contador de cliques em um botão. Cada vez que o botão for clicado, o valor do contador deve ser incrementado. Exiba o valor no console.
+
+6. **Usar IIFE para simular um módulo com variáveis privadas**
+Crie uma IIFE que simula um módulo com uma variável privada e uma função que altera o valor dessa variável. A função pública deve ser usada para acessar e modificar a variável privada. Exiba o valor da variável privada no console após chamá-la.
+
+---
+
+## 22. Exercícios sobre High-order Functions
+
+### Nível Fácil
+
+1. **Função que recebe outra função como argumento**
+Crie uma função chamada `executar` que recebe uma função como argumento e a executa. Teste chamando a função `executar` com uma função simples que apenas imprime uma mensagem no console.
+
+2. **Função que retorna uma função**
+Crie uma função chamada `multiplicarPor` que recebe um número e retorna uma função. A função retornada deve multiplicar o valor passado como argumento pela função inicial. Teste com um número, como 2.
+
+3. **Função que aceita um callback e imprime um resultado**
+Crie uma função chamada `processar` que recebe dois números e um callback. O callback deve ser usado para realizar uma operação entre os números e o resultado da operação deve ser impresso no console.
+
+4. **Função de soma com parâmetro de operação**
+Crie uma função chamada `operar` que recebe dois números e uma função como parâmetros. A função passada deve realizar a operação entre os números. Teste com uma função de soma.
+
+5. **Função de mensagem personalizada**
+Crie uma função chamada `criarMensagem` que recebe um nome e retorna uma função. A função retornada deve exibir uma mensagem personalizada com o nome fornecido.
+
+---
+
+### Nível Médio
+
+6. **Função que verifica a validade de um número**
+Crie uma função chamada `validarNumero` que recebe uma função de verificação (callback) e um número. Se o número for válido, a função de verificação deve retornar "válido", caso contrário, "inválido".
+
+7. **Função que retorna uma função de cálculo**
+Crie uma função chamada `calcular` que recebe uma operação como argumento (uma função) e dois números. A função de operação deve ser executada entre os dois números e o resultado retornado.
+
+8. **Função de saudação personalizada com callback**
+Crie uma função chamada `saudar` que recebe um nome e um callback. O callback deve ser responsável por exibir uma saudação personalizada para o nome fornecido.
+
+9. **Função de execução com contagem**
+Crie uma função chamada `executarComContagem` que recebe uma função e um número. A função deve ser executada várias vezes (a quantidade de vezes especificada pelo número) e o número de execuções deve ser exibido no console.
+
+10. **Função que retorna uma operação com base em um parâmetro**
+Crie uma função chamada `operacao` que recebe uma operação (como uma string: 'soma', 'subtracao') e retorna uma função que realiza essa operação entre dois números.
+
+---
+
+### Nível Difícil
+
+11. **Função de transformação com callbacks**
+Crie uma função chamada `transformar` que recebe um número e dois callbacks. O primeiro callback deve multiplicar o número por 2 e o segundo deve somar 10 ao resultado do primeiro callback. A função `transformar` deve retornar o resultado final da operação.
+
+12. **Função que aplica operação entre múltiplos números**
+Crie uma função chamada `aplicarOperacao` que recebe uma função de operação e um número variável de parâmetros. A função de operação deve ser aplicada a todos os números passados e o resultado final deve ser retornado.
+
+13. **Função que simula uma calculadora com callbacks**
+Crie uma função chamada `calculadora` que recebe uma operação ('soma', 'subtracao', etc.) e dois números. A função deve executar a operação passada usando um callback e retornar o resultado.
+
+14. **Função de temporizador com callback**
+Crie uma função chamada `tempos` que recebe um número (em segundos) e um callback. O callback será executado após o tempo especificado. Exiba uma mensagem no console quando o tempo for concluído.
+
+15. **Função que cria uma sequência numérica com base em uma operação**
+Crie uma função chamada `sequenciaNumerica` que recebe uma operação (soma, subtração, multiplicação) e um número inicial. A função deve retornar uma sequência numérica, onde cada número na sequência é o resultado da operação aplicada ao número anterior.
+
+---
+
+## 23. Exercícios sobre High-order Functions e Arrays
+
+### Nível Fácil
+
+1. **Usando `map()` para dobrar os valores de um array**
+Crie uma função que recebe um array de números e retorna um novo array onde cada valor é o dobro do valor original. Use a função `map()` para fazer isso.
+
+2. **Usando `filter()` para filtrar números pares**
+Crie uma função que recebe um array de números e retorna um novo array contendo apenas os números pares. Utilize o `filter()` para realizar essa tarefa.
+
+3. **Usando `reduce()` para somar os valores de um array**
+Crie uma função que recebe um array de números e retorna a soma de todos os números presentes no array. Utilize o `reduce()` para realizar essa operação.
+
+4. **Usando `map()` para converter todos os nomes para maiúsculas**
+Crie uma função que recebe um array de nomes e retorna um novo array onde todos os nomes estão em letras maiúsculas. Utilize o `map()` para essa transformação.
+
+5. **Usando `filter()` para remover números negativos**
+Crie uma função que recebe um array de números e retorna um novo array contendo apenas os números positivos, utilizando o `filter()` para filtrar os números negativos.
+
+---
+
+### Nível Médio
+
+6. **Usando `map()` e `filter()` para transformar e filtrar dados**
+Crie uma função que recebe um array de números e retorna um novo array contendo o dobro dos números positivos. Utilize `map()` para dobrar os números e `filter()` para remover os números negativos.
+
+7. **Usando `reduce()` para encontrar o maior número**
+Crie uma função que recebe um array de números e retorna o maior número presente nesse array. Utilize o `reduce()` para encontrar esse valor.
+
+8. **Usando `map()` para converter uma lista de preços**
+Crie uma função que recebe um array de preços e retorna um novo array onde cada preço é acrescido de 10%. Utilize o `map()` para realizar essa operação.
+
+9. **Usando `reduce()` para calcular o produto de todos os elementos**
+Crie uma função que recebe um array de números e retorna o produto de todos os números presentes no array. Utilize o `reduce()` para realizar essa operação.
+
+10. **Usando `filter()` para selecionar strings com mais de 5 caracteres**
+Crie uma função que recebe um array de strings e retorna um novo array contendo apenas as strings que têm mais de 5 caracteres, utilizando o `filter()`.
+
+---
+
+### Nível Difícil
+
+11. **Usando `reduce()` para agrupar valores por categoria**
+Crie uma função que recebe um array de objetos, onde cada objeto contém uma categoria e um valor. A função deve retornar um objeto onde as chaves são as categorias e os valores são a soma de todos os valores daquela categoria. Use o `reduce()` para agrupar e somar os valores.
+
+12. **Usando `map()` e `filter()` para transformar e remover valores**
+Crie uma função que recebe um array de objetos, onde cada objeto tem um campo `idade`. A função deve retornar um novo array com a idade aumentada em 10 anos, mas removendo qualquer pessoa que tenha mais de 50 anos após o aumento da idade. Utilize `map()` e `filter()` para essa tarefa.
+
+13. **Usando `reduce()` para criar um índice de contagem**
+Crie uma função que recebe um array de strings e retorna um objeto onde as chaves são as strings e os valores são a quantidade de vezes que cada string aparece no array. Utilize o `reduce()` para gerar esse índice de contagem.
+
+14. **Usando `map()` e `reduce()` para calcular a média de uma lista de objetos**
+Crie uma função que recebe um array de objetos, onde cada objeto contém um campo `nota`. A função deve calcular a média das notas utilizando `map()` para extrair as notas e `reduce()` para calcular a soma das notas e depois dividir pelo número total de objetos.
+
+15. **Usando `filter()`, `map()` e `reduce()` para gerar um relatório**
+Crie uma função que recebe um array de objetos, onde cada objeto contém os campos `nome` e `vendas`. A função deve filtrar os vendedores que realizaram mais de 50 vendas, mapear para obter apenas os nomes e, em seguida, calcular o total de vendas desses vendedores. Utilize `filter()`, `map()` e `reduce()` para resolver essa tarefa.
+
+---
 
 
 
