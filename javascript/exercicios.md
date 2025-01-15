@@ -43,9 +43,12 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 - [05. Exercícios sobre Estruturas de Dados](#05-exercícios-sobre-estruturas-de-dados)
 - [06. Exercícios sobre Arrays Métodos](#06-exercícios-sobre-arrays-métodos)
 - [07. Exercícios de Arrays Iteração](#07-exercícios-de-arrays-iteração)
-
-
-
+- [08. Exercícios sobre Arrays Bidimensionais](#08-exercícios-sobre-arrays-bidimensionais)
+- [09. Exercícios Focados em `flat` e `map` para Arrays Bidimensionais](#09-exercícios-focados-em-flat-e-map-para-arrays-bidimensionais)
+- [10. Exercícios sobre Arrays Bidimensionais for, reduce e filter](#10-exercícios-sobre-arrays-bidimensionais-for-reduce-e-filter)
+- [11. Exercícios sobre Arrays Bidimensionais every, sort, combinação e busca com indices](#11-exercícios-sobre-arrays-bidimensionais-every-sort-combinação-e-busca-com-indices)
+- [12. Criação e Manipulação de Objetos](#12-criação-e-manipulação-de-objetos)
+- [13. Exercícios de Objetos: new, this, keys, values, entries, herança e prototipagem](#13-exercícios-de-objetos-new-this-keys-values-entries-herança-e-prototipagem)
 
 
 ---
@@ -861,5 +864,577 @@ Implemente uma estrutura de dados de dicionário (map) que possa armazenar pares
    **Objetivo:** Agrupar elementos de um array em um objeto com base em uma propriedade.
 
 ---
+
+## 08. Exercícios sobre Arrays Bidimensionais
+
+### Nível Fácil
+
+1. **Soma de Elementos**  
+   Crie uma função que receba um array bidimensional de números e retorne a soma de todos os elementos presentes nele.
+
+2. **Linha com Maior Soma**  
+   Escreva um programa que identifique a linha de um array bidimensional que possui a maior soma dos seus elementos.
+
+3. **Contar Números Pares**  
+   Implemente uma função que receba um array bidimensional e conte quantos números pares existem nele.
+
+4. **Transposição Simples**  
+   Crie uma função que receba um array bidimensional 2x2 e retorne sua matriz transposta.
+
+5. **Diagonal Principal**  
+   Escreva uma função que receba um array bidimensional quadrado e retorne os elementos da diagonal principal como um array unidimensional.
+
+---
+
+### Nível Médio
+
+6. **Verificar Simetria**  
+   Implemente uma função que verifique se um array bidimensional quadrado é simétrico. Um array é simétrico se ele for igual à sua transposta.
+
+7. **Multiplicação por Escalar**  
+   Crie uma função que receba um array bidimensional e um número. A função deve retornar um novo array onde cada elemento foi multiplicado pelo número recebido.
+
+8. **Busca de Elemento**  
+   Escreva uma função que receba um array bidimensional e um número. A função deve verificar se o número está presente no array e, se sim, retornar suas coordenadas (linha e coluna).
+
+9. **Somar Matrizes**  
+   Crie uma função que receba dois arrays bidimensionais de mesmo tamanho e retorne uma nova matriz que seja a soma dos dois arrays.
+
+10. **Menor e Maior Elemento**  
+    Escreva uma função que receba um array bidimensional e retorne um objeto contendo o menor e o maior elemento do array.
+
+---
+
+### Nível Difícil
+
+11. **Produto de Matrizes**  
+    Implemente uma função que receba dois arrays bidimensionais e retorne o produto matricial entre eles.
+
+12. **Caminho da Soma Máxima**  
+    Crie uma função que receba um array bidimensional onde cada célula representa um "custo". A função deve encontrar o caminho da soma máxima, movendo-se apenas para a direita ou para baixo, e retornar o valor total desse caminho.
+
+13. **Zig-Zag Bidimensional**  
+    Escreva uma função que receba um array bidimensional e retorne os elementos em ordem de "zig-zag" (alternando a direção em cada linha).
+
+14. **Rotação de Matriz**  
+    Implemente uma função que receba um array bidimensional quadrado e o rotacione 90 graus no sentido horário.
+
+15. **Verificar Quadrado Mágico**  
+    Escreva uma função que receba um array bidimensional quadrado e verifique se ele é um quadrado mágico. Um quadrado mágico é uma matriz onde a soma de cada linha, coluna e diagonal é a mesma.
+
+---
+
+## 09. Exercícios Focados em `flat` e `map` para Arrays Bidimensionais
+
+## Focados em `flat`
+
+### Nível Fácil
+
+1. **Flattening Simples**  
+   Crie uma função que receba um array bidimensional e utilize `flat` para transformar o array em um array unidimensional.
+
+2. **Soma dos Elementos Flattened**  
+   Escreva uma função que receba um array bidimensional, utilize `flat` para transformá-lo em um array unidimensional e retorne a soma de todos os elementos.
+
+---
+
+### Nível Médio
+
+3. **Flattening com Nível Específico**  
+   Crie uma função que receba um array tridimensional (ou superior) e utilize `flat` com o nível adequado para transformá-lo em um array bidimensional.
+
+4. **Filtrar e Flatten**  
+   Escreva uma função que receba um array bidimensional, filtre os elementos maiores que 10 e utilize `flat` para retornar os elementos filtrados em um array unidimensional.
+
+---
+
+### Nível Difícil
+
+5. **Flatten e Frequência de Valores**  
+   Implemente uma função que receba um array bidimensional, use `flat` para transformá-lo em um array unidimensional e retorne um objeto que conta a frequência de cada número no array.
+
+6. **Flatten e Operações Matemáticas**  
+   Crie uma função que receba um array tridimensional, utilize `flat` para reduzir sua profundidade, some todos os elementos e calcule a média.
+
+---
+
+## Focados em `map`
+
+### Nível Fácil
+
+1. **Dobrar Valores**  
+   Crie uma função que receba um array bidimensional e utilize `map` para dobrar o valor de cada elemento.
+
+2. **Adicionar Índices**  
+   Escreva uma função que receba um array bidimensional e utilize `map` para criar um novo array onde cada elemento seja a soma do valor original e do índice da linha.
+
+---
+
+### Nível Médio
+
+3. **Strings com Comprimento**  
+   Crie uma função que receba um array bidimensional de strings e utilize `map` para criar um novo array que contenha o comprimento de cada string.
+
+4. **Matriz Transposta com Map**  
+    Escreva uma função que receba um array bidimensional e utilize `map` para criar sua transposta.
+
+---
+
+### Nível Difícil
+
+5. **Map e Transformação Condicional**  
+    Implemente uma função que receba um array bidimensional e utilize `map` para transformar os elementos negativos em positivos, mantendo os positivos inalterados.
+
+6. **Map para Criar Objetos**  
+    Crie uma função que receba um array bidimensional e utilize `map` para retornar um novo array onde cada elemento é um objeto com as propriedades `linha`, `coluna` e `valor`.
+
+---
+
+## 10. Exercícios sobre Arrays Bidimensionais for, reduce e filter
+
+## Focados em `for` e `forEach`
+
+### Nível Fácil
+
+1. **Contar Elementos**  
+   Crie uma função `contarElementos(matriz)` que, usando um loop `for`, conte e retorne o número total de elementos em uma matriz bidimensional.
+
+2. **Exibir Todos os Valores**  
+   Escreva uma função `exibirValores(matriz)` que use `forEach` para imprimir cada elemento da matriz no console.
+
+---
+
+### Nível Médio
+
+3. **Somar Elementos de Cada Linha**  
+   Crie uma função `somaPorLinha(matriz)` que use um loop `for` para retornar um array onde cada elemento é a soma dos valores da respectiva linha da matriz.
+
+4. **Multiplicar Todos os Valores por 2**  
+   Desenvolva uma função `multiplicarPorDois(matriz)` que, utilizando `forEach`, modifique a matriz original multiplicando todos os valores por 2.
+
+---
+
+### Nível Difícil
+
+5. **Encontrar o Maior Valor e sua Posição**  
+   Crie uma função `encontrarMaior(matriz)` que, usando um loop `for`, encontre o maior valor na matriz e retorne um objeto com o valor e sua posição (`{ valor: maiorValor, linha: x, coluna: y }`).
+
+6. **Gerar Transposta Manualmente**  
+   Escreva uma função `transposta(matriz)` que, utilizando loops `for`, gere e retorne a matriz transposta (colunas viram linhas e vice-versa).
+
+---
+
+## Focados em `reduce`
+
+### Nível Fácil
+
+1. **Soma Total de Elementos**  
+   Crie uma função `somaTotal(matriz)` que use `reduce` para calcular a soma de todos os elementos da matriz.
+
+2. **Concatenar Linhas**  
+   Escreva uma função `concatenarLinhas(matriz)` que utilize `reduce` para unir todas as linhas da matriz em um único array.
+
+---
+
+### Nível Médio
+
+3. **Calcular Frequência de Elementos**  
+   Desenvolva uma função `frequenciaElementos(matriz)` que use `reduce` para retornar um objeto representando a frequência de cada elemento na matriz.
+
+4. **Soma Condicional**  
+    Crie uma função `somaPares(matriz)` que utilize `reduce` para somar apenas os números pares da matriz.
+
+---
+
+### Nível Difícil
+
+5. **Agrupar Valores por Paridade**  
+    Escreva uma função `agruparPorParidade(matriz)` que, usando `reduce`, retorne um objeto com dois arrays: `{ pares: [], impares: [] }`.
+
+6. **Calcular a Média de Cada Linha**  
+    Desenvolva uma função `mediaPorLinha(matriz)` que utilize `reduce` para retornar um array onde cada elemento é a média dos valores da respectiva linha.
+
+---
+
+## Focados em `filter`
+
+### Nível Fácil
+
+1. **Filtrar Números Maiores que 10**  
+    Crie uma função `filtrarMaiores(matriz)` que utilize `filter` para retornar um array com todos os valores maiores que 10.
+
+2. **Filtrar Linhas com um Valor Específico**  
+    Escreva uma função `filtrarLinhas(matriz, valor)` que use `filter` para retornar apenas as linhas que contenham o `valor` fornecido.
+
+---
+
+### Nível Médio
+
+3. **Remover Valores Negativos**  
+    Desenvolva uma função `removerNegativos(matriz)` que utilize `filter` para retornar uma nova matriz sem valores negativos.
+
+4. **Filtrar e Flatten**  
+    Crie uma função `filtrarEFlatten(matriz)` que use `filter` para manter apenas os valores maiores que 5 e retorne a matriz "flattened".
+
+---
+
+### Nível Difícil
+
+5. **Filtrar e Ordenar Linhas por Soma**  
+    Escreva uma função `filtrarEOrdenar(matriz, limite)` que use `filter` para manter apenas as linhas cuja soma seja maior que `limite` e, em seguida, ordene essas linhas em ordem crescente com base em suas somas.
+
+6. **Encontrar Linhas com Todos os Valores Pares**  
+    Desenvolva uma função `filtrarLinhasPares(matriz)` que use `filter` para retornar apenas as linhas onde todos os valores são pares.
+
+---
+
+## 11. Exercícios sobre Arrays Bidimensionais every, sort, combinação e busca com indices
+
+## Focados em `every` ou `some`
+
+### Fáceis
+
+1. **Verifique se todos os números em um array são maiores que 10.**
+   - Dado o array: `[12, 15, 18, 20]`
+   - Use o método `every` para verificar se todos os números são maiores que 10.
+
+2. **Verifique se pelo menos um número é maior que 100.**
+   - Dado o array: `[5, 8, 120, 40]`
+   - Use o método `some` para verificar se existe pelo menos um número maior que 100.
+
+### Médios
+
+3. **Verifique se todos os elementos de um array de strings possuem mais de 3 caracteres.**
+   - Dado o array: `["banana", "maçã", "laranja", "kiwi"]`
+   - Use o método `every` para verificar se todos os elementos possuem mais de 3 caracteres.
+
+4. **Verifique se pelo menos um número no array é divisível por 5.**
+   - Dado o array: `[2, 8, 15, 30, 4]`
+   - Use o método `some` para verificar se pelo menos um número é divisível por 5.
+
+### Difíceis
+
+5. **Verifique se todos os valores de um array de objetos possuem uma propriedade `active` como `true`.**
+   - Dado o array: 
+   ```
+   const users = [
+     { name: 'Alice', active: true },
+     { name: 'Bob', active: true },
+     { name: 'Charlie', active: true }
+   ];
+   ```
+- Use o método ```every``` para verificar se todos os valores possuem a propriedade ```active``` como ```true```.
+
+6. **Verifique se pelo menos um número em um array de arrays é negativo.**
+- Dado o array: ```[ [1, 2], [3, -4], [5, 6] ]```
+- Use o método ```some``` para verificar se pelo menos um número em qualquer subarray é negativo.
+
+## Focados em ```sort```
+
+### Fáceis
+
+1. **Ordene um array de números em ordem crescente.**
+- Dado o array: ```[5, 3, 8, 1, 2]```
+- Use o método sort para ordenar o array em ordem crescente.
+
+2. **Ordene um array de números em ordem decrescente.**
+
+- Dado o array: ```[12, 9, 15, 4, 7]```
+- Use o método sort para ordenar o array em ordem decrescente.
+
+### Médios
+
+3. **Ordene um array de strings em ordem alfabética.**
+- Dado o array: ```["banana", "maçã", "laranja", "kiwi"]```
+- Use o método ```sort``` para ordenar as strings em ordem alfabética.
+
+4. **Ordene um array de objetos pelo valor de uma propriedade numérica.**
+- Dado o array:
+```
+const products = [
+  { name: 'Apple', price: 5 },
+  { name: 'Banana', price: 2 },
+  { name: 'Orange', price: 3 }
+];
+```
+- Use o método ```sort``` para ordenar os produtos pelo preço em ordem crescente.
+
+### Difíceis
+
+5. **Ordene um array de objetos com base em uma propriedade de data.**
+- Dado o array:
+```
+const events = [
+  { name: 'Event 1', date: '2022-12-25' },
+  { name: 'Event 2', date: '2023-01-15' },
+  { name: 'Event 3', date: '2022-11-01' }
+];
+```
+- Use o método ```sort``` para ordenar os eventos pela data em ordem crescente.
+
+6. **Ordene um array de objetos de acordo com a diferença entre duas propriedades numéricas.**
+- Dado o array:
+```
+const cars = [
+  { name: 'Car A', speed: 120, weight: 1000 },
+  { name: 'Car B', speed: 150, weight: 1200 },
+  { name: 'Car C', speed: 180, weight: 800 }
+];
+```
+- Use o método ```sort``` para ordenar os carros com base na diferença entre ```speed``` e ```weight```.
+
+## Focado em Combinação com Estruturas Avançadas
+
+### Fáceis
+
+1. **Use ```map``` para dobrar todos os valores de um array.**
+- Dado o array: ```[1, 2, 3, 4]```
+- Use ```map``` para dobrar cada valor do array.
+
+2. **Use ```filter``` para criar um novo array com apenas os números pares.**
+- Dado o array: ```[1, 2, 3, 4, 5, 6]```
+- Use ```filter``` para selecionar os números pares.
+  
+### Médios
+
+3. **Crie um novo array com o quadrado de cada número usando ```map```.**
+- Dado o array: ```[2, 3, 4, 5]```
+- Use ```map``` para criar um array com o quadrado de cada número.
+
+4. **Use ```reduce``` para somar todos os valores de um array.**
+- Dado o array: ```[1, 2, 3, 4]```
+- Use ```reduce``` para somar todos os valores do array.
+  
+### Difíceis
+
+5. **Crie um novo array com o dobro dos números positivos e o quadrado dos negativos, utilizando ```map``` e ```filter```.**
+- Dado o array: ```[2, -3, 4, -5]```
+- Use``` map para dobrar os positivos e elevar ao quadrado os negativos, com ```filter``` para filtrar os valores.
+
+6. **Use ```reduce``` para concatenar todos os elementos de um array de strings.**
+- Dado o array: ```["Olá", "mundo", "!"]```
+- Use ```reduce``` para concatenar todas as strings em uma única.
+  
+## Focados em Busca de Elementos com Índices
+
+### Fáceis
+
+1. **Encontre o índice de um número em um array.**
+- Dado o array: ```[10, 20, 30, 40]```
+- Use ```indexOf``` para encontrar o índice do número ```30```.
+  
+2. **Verifique se um valor existe no array utilizando ```includes``` e obtenha o índice.
+- Dado o array: ```[5, 8, 12, 15]```
+- Use ```includes``` para verificar se o número 8 existe no array e ```indexOf``` para encontrar o índice.
+
+### Médios
+
+3. **Encontre o índice de um elemento em um array de objetos.**
+- Dado o array:
+```
+const users = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 35 }
+];
+```
+- Use ```findIndex``` para encontrar o índice do objeto com o nome ```Bob```.
+
+4. **Verifique se um número existe no array e, se existir, retorne o índice utilizando ```findIndex```.**
+- Dado o array: ```[2, 4, 6, 8]```
+- Use ```findIndex``` para encontrar o índice do número 6.
+
+### Difíceis
+
+5. **Encontre o índice do primeiro número negativo em um array de números utilizando ```findIndex```.**
+- Dado o array: ```[2, 3, -4, 5, 6]```
+- Use ```findIndex``` para encontrar o índice do primeiro número negativo.
+
+6. **Encontre o índice do último elemento que é maior que 10 em um array de números utilizando ```findLastIndex```.
+- Dado o array: ```[5, 7, 12, 8, 15]```
+- Use ```findLastIndex``` para encontrar o índice do último número maior que 10.
+
+---
+
+## 12. Criação e Manipulação de Objetos
+
+### Fáceis
+
+1. **Crie um objeto `carro` com as propriedades `marca`, `modelo` e `ano` e exiba-as no console.**
+2. **Adicione uma nova propriedade `cor` ao objeto `carro` e exiba o objeto completo no console.**
+
+### Médios
+
+3. **Crie um objeto `pessoa` com as propriedades `nome`, `idade` e `cidade`. Depois, altere a propriedade `idade` e adicione uma nova propriedade `profissão`. Exiba o objeto no console.**
+4. **Crie um objeto `livro` com as propriedades `titulo`, `autor`, e `ano`. Em seguida, modifique o valor de `ano` e remova a propriedade `autor`. Exiba o objeto no console.**
+
+### Difíceis
+
+5. **Crie um objeto `produto` com as propriedades `nome`, `preco` e `estoque`. Depois, adicione uma propriedade `desconto` que será 10% do preço, e remova a propriedade `estoque`. Exiba o objeto completo no console.**
+6. **Crie um objeto `cliente` com as propriedades `nome`, `email`, e `telefone`. Adicione uma propriedade `endereco`, que será um objeto com `rua`, `numero`, e `cidade`. Exiba o objeto completo no console.**
+
+---
+
+## Notação Literal e Construtor Object
+
+### Fáceis
+
+1. **Crie um objeto `carro` utilizando a notação literal e exiba suas propriedades.**
+2. **Crie um objeto `pessoa` utilizando o construtor `Object()` e exiba suas propriedades.**
+
+### Médios
+
+3. **Crie um objeto `aluno` utilizando a notação literal, com as propriedades `nome`, `idade`, e `curso`. Depois, adicione uma nova propriedade `notaFinal` utilizando o construtor `Object()`. Exiba o objeto completo no console.**
+4. **Crie um objeto `livro` utilizando o construtor `Object()`, com as propriedades `titulo` e `autor`. Em seguida, adicione uma nova propriedade `ano` com a notação literal. Exiba o objeto completo no console.**
+
+### Difíceis
+
+5. **Crie um objeto `produto` utilizando o construtor `Object()` com as propriedades `nome`, `preco`, e `categoria`. Depois, altere o valor de `preco` usando a notação literal e remova a propriedade `categoria`. Exiba o objeto completo no console.**
+6. **Crie um objeto `evento` utilizando o construtor `Object()` e adicione as propriedades `nome`, `data`, e `local`. Em seguida, altere o valor de `local` com a notação literal e adicione a propriedade `descricao`. Exiba o objeto completo no console.**
+
+---
+
+## Notação de Pontos e Colchetes
+
+### Fáceis
+
+1. **Acesse a propriedade `marca` do objeto `carro` utilizando a notação de pontos e exiba no console.**
+2. **Crie um objeto `carro` com a propriedade `cor`. Acesse e altere essa propriedade utilizando a notação de colchetes e exiba no console.**
+
+### Médios
+
+3. **Crie um objeto `pessoa` com as propriedades `nome`, `idade` e `cidade`. Acesse e altere a propriedade `idade` utilizando a notação de pontos. Exiba o objeto no console.**
+4. **Crie um objeto `livro` com as propriedades `titulo`, `autor` e `ano`. Utilize a notação de colchetes para acessar e modificar a propriedade `ano`. Exiba o objeto no console.**
+
+### Difíceis
+
+5. **Crie um objeto `produto` com as propriedades `nome`, `preco` e `estoque`. Utilize a notação de pontos para acessar o preço e a notação de colchetes para acessar o estoque. Exiba os valores no console.**
+6. **Crie um objeto `cliente` com as propriedades `nome`, `email` e `telefone`. Utilize a notação de colchetes para alterar o valor do email. Exiba o objeto no console.**
+
+---
+
+## Manipulação de Objetos (Adicionando, Modificando e Deletando Propriedades)
+
+### Fáceis
+
+1. **Crie um objeto `livro` com as propriedades `titulo` e `autor`. Adicione a propriedade `ano` e exiba o objeto no console.**
+2. **Crie um objeto `carro` com as propriedades `marca`, `modelo` e `ano`. Modifique a propriedade `modelo` e exiba o objeto no console.**
+
+### Médios
+
+3. **Crie um objeto `produto` com as propriedades `nome`, `preco` e `quantidade`. Adicione uma propriedade `desconto` e remova a propriedade `quantidade`. Exiba o objeto no console.**
+4. **Crie um objeto `pessoa` com as propriedades `nome`, `idade` e `cidade`. Modifique a propriedade `cidade` e remova a propriedade `idade`. Exiba o objeto no console.**
+
+### Difíceis
+
+5. **Crie um objeto `evento` com as propriedades `nome`, `data` e `local`. Modifique a propriedade `local` e adicione uma nova propriedade `descricao`. Em seguida, remova a propriedade `data` e exiba o objeto completo no console.**
+6. **Crie um objeto `funcionario` com as propriedades `nome`, `cargo`, `salario`. Adicione uma nova propriedade `departamento` e remova a propriedade `cargo`. Exiba o objeto no console.**
+
+---
+
+## 13. Exercícios de Objetos, new, this, keys, values, entries, herança e prototipagem
+
+## new
+
+### Fácil
+1. **Criar uma instância de um objeto**
+   - Crie uma função `Carro` que receba dois parâmetros, `marca` e `modelo`, e dentro da função, defina duas propriedades no objeto: `marca` e `modelo`. Use o operador `new` para criar uma instância dessa função e exiba as propriedades da instância no console.
+
+### Médio
+2. **Simular a criação de um objeto com `new`**
+   - Crie uma função construtora chamada `Pessoa` que tenha as propriedades `nome` e `idade`. Use `new` para criar uma instância e adicione um método `falar()` que imprima a mensagem "Olá, meu nome é {nome}" no console.
+
+### Difícil
+3. **Usando `new` com herança**
+   - Crie uma função construtora `Animal` com a propriedade `especie` e um método `falar()`. Depois, crie uma função construtora `Cachorro`, que herda de `Animal` e tem um método adicional `latir()`. Crie instâncias de ambas usando `new` e faça as instâncias chamarem seus respectivos métodos.
+
+---
+
+## this
+
+### Fácil
+1. **Usando `this` em função simples**
+   - Crie um objeto `pessoa` com as propriedades `nome` e `idade`. Crie um método dentro desse objeto que use `this` para acessar e exibir o nome e a idade no console.
+
+### Médio
+2. **Alterando contexto com `this`**
+   - Crie uma função `saudar()` que exiba no console a saudação "Olá, {nome}". Teste como `this` se comporta ao chamar `saudar()` tanto dentro de um objeto quanto fora dele.
+
+### Difícil
+3. **Mudando o valor de `this` com `call`**
+   - Crie dois objetos: `pessoa1` com a propriedade `nome` e `pessoa2` com a propriedade `nome`. Crie uma função `mostrarNome()` que use `this` para mostrar o nome da pessoa. Use `call` para chamar `mostrarNome()` com `pessoa1` e `pessoa2` como contexto.
+
+---
+
+## object.heys
+
+### Fácil
+1. **Acessando propriedades com `Object.heys()`**
+   - Crie um objeto com pelo menos três propriedades e use `Object.keys()` para obter um array com as chaves do objeto. Exiba esse array no console.
+
+### Médio
+2. **Verificando se uma propriedade existe no objeto**
+   - Crie um objeto `produto` com as propriedades `nome`, `preço` e `quantidade`. Use `Object.keys()` para verificar se a chave `quantidade` está presente no objeto e imprima a resposta no console.
+
+### Difícil
+3. **Iterando sobre as chaves de um objeto**
+   - Crie um objeto com pelo menos cinco propriedades. Use `Object.keys()` para obter as chaves e, em seguida, use `forEach()` para iterar e exibir cada chave junto com seu valor correspondente.
+
+---
+
+## object.values
+
+### Fácil
+1. **Obtendo valores com `Object.values()`**
+   - Crie um objeto `livro` com as propriedades `titulo`, `autor` e `ano`. Use `Object.values()` para obter um array com os valores do objeto e imprima no console.
+
+### Médio
+2. **Verificando valores em um objeto**
+   - Crie um objeto `carro` com as propriedades `marca`, `modelo` e `ano`. Use `Object.values()` para verificar se o valor "2022" está presente no objeto e imprima o resultado.
+
+### Difícil
+3. **Transformando valores do objeto**
+   - Crie um objeto com propriedades `nome`, `idade` e `profissão`. Use `Object.values()` para obter os valores, e depois aplique um `map()` para criar um novo array contendo esses valores em maiúsculas.
+
+---
+
+## object.entries
+
+### Fácil
+1. **Obtendo pares chave-valor**
+   - Crie um objeto `aluno` com as propriedades `nome`, `idade` e `nota`. Use `Object.entries()` para obter um array de pares chave-valor e imprima no console.
+
+### Médio
+2. **Contando as propriedades do objeto**
+   - Crie um objeto `cliente` com as propriedades `nome`, `email` e `telefone`. Use `Object.entries()` e `length` para contar o número de propriedades do objeto.
+
+### Difícil
+3. **Modificando pares chave-valor**
+   - Crie um objeto `produto` com as propriedades `nome` e `preço`. Use `Object.entries()` para iterar sobre o objeto e aplique um desconto de 10% no valor de `preço` caso seja maior que 100. Imprima o novo objeto no console.
+
+---
+
+## Prototipagem e Herança
+
+### Fácil
+1. **Criando um objeto com herança simples**
+   - Crie um objeto `Pessoa` com a propriedade `nome` e um método `falar()`. Crie um objeto `Estudante` que herde de `Pessoa` e adicione a propriedade `curso`. Mostre como `Estudante` herda o método `falar()`.
+
+### Médio
+2. **Modificando um método herdado**
+   - Crie uma função construtora `Animal` com um método `falar()`. Em seguida, crie uma função construtora `Gato` que herde de `Animal`, mas sobrescreva o método `falar()` para exibir "Miau". Crie instâncias de `Animal` e `Gato` e chame o método `falar()` de ambas.
+
+### Difícil
+3. **Herança com `Object.create()`**
+   - Crie um objeto `Carro` com uma propriedade `marca` e um método `mostrarMarca()`. Use `Object.create()` para criar um objeto `CarroEsportivo` que herde de `Carro` e adicione uma nova propriedade `velocidadeMaxima`. Mostre como o objeto `CarroEsportivo` herda o método `mostrarMarca()` e como a nova propriedade funciona.
+
+---
+
+
+
+
+
+
+
 
 
