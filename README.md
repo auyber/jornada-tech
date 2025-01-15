@@ -125,4 +125,4 @@ Se você quer se aprofundar nos tópicos abordados, recomendo explorar essas fon
 
 ⭐ Se este repositório te ajudou, considere dar uma estrela!
 
-Última atualização: [14/01/2025]
+Última atualização: [15/01/2025]
