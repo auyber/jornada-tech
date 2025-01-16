@@ -1,4 +1,3 @@
-/*
 // OPERADORES LÓGICOS
 //1. Verificação de maioridade
 
@@ -96,7 +95,7 @@ if (usuario !== "" && senha.length > 7 && /\d/.test(senha) && /\W/.test(senha)) 
 };
 
 console.log();
-*/
+
 /*
 Essas expressões regulares são usadas para testar padrões em uma string (como a variável senha). Aqui está uma breve explicação de cada uma:
 
@@ -117,7 +116,7 @@ Exemplo:
 /\W/.test("senha@123") // Retorna true (tem o caractere especial '@')
 /\W/.test("senha123")  // Retorna false (não tem caracteres especiais)
 Essas expressões são úteis para validar senhas, garantindo que atendam a certos requisitos de segurança, como a inclusão de números ou caracteres especiais.*/
-/*
+
 //10. Verificação de entrada para um evento
 let idade = 18;
 let acompanhada = "não"; // "sim" ou "não"
@@ -177,9 +176,8 @@ if (idade > 18 && usuario === "admin" && conta !== "Banido" && compraRealizada >
 };
 
 console.log();
-*/
-//ESTRUTURAS CONDICIONAIS: IF, ELSE e ESLE IF
-//1. Maior de dois números
+
+
 
 
 
