@@ -14,6 +14,29 @@ O objetivo principal desses exercícios é solidificar o aprendizado por meio da
 ### 📝 **Observações:**
 Em alguns exercícios, como os de **validação de dados**, **algoritmos**, ou **estruturas de controle**, podem existir diversas maneiras de implementar a solução. O importante é garantir que o **resultado final** seja o correto.
 
+❗ Como veremos funções somente no tópico 17 da revisão, alguns exercícios entre os tópicos 1.Operadores Lógicos e 13.Objetos podem solicitar para criar uma função. Porém, caso você ainda não saiba como utilizá-las, não tem problema! Resolva os exercícios diretamente com código.
+
+EX:
+
+#### Sem usar função:
+```
+const idade = 65;
+
+if (idade > 60) {
+    console.log("Você é idoso.");
+}
+```
+#### Utilizando função:
+```
+function verificarIdoso(idade) {
+    if (idade > 60) {
+        console.log("Você é idoso.");
+    }
+}
+
+verificarIdoso(65);
+```
+
 ---
 
 ### ⚠️ **Dica Importante:**
@@ -62,6 +85,10 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 
 ---
 
+
+
+---
+
 ## 01. Exercícios sobre Operadores Lógicos
 
 ### Exercícios Fáceis
@@ -93,9 +120,10 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
    - Caso contrário, a pessoa não pode participar.
 
 8. **Verificação de acesso com múltiplos critérios**  
-   Descrição: Crie uma função que verifica se um usuário tem permissão para acessar uma página, com base em dois critérios:
-   - O usuário deve ser maior de idade.
-   - O usuário deve estar logado.
+   Crie uma função que verifica se um usuário tem permissão para acessar uma página com base nos seguintes critérios:
+    - O usuário deve ser maior de idade **e** estar logado.
+    - Além disso, o usuário deve ter uma conta ativa **ou** permissão adequada (como "admin" ou "editor").
+
 
 9. **Checagem de dados do formulário**  
    Descrição: Escreva uma função que valida um formulário de registro. As condições de validação são:
@@ -122,7 +150,7 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 
 13. **Validação de dados complexos**  
     Descrição: Escreva uma função que valide se um usuário pode se registrar, considerando que:
-    - A idade deve ser maior que 18.
+    - A idade deve estar entre 18 e 30.
     - O nome não pode ser vazio.
     - A senha deve ter no mínimo 8 caracteres, um número e um caractere especial.
 

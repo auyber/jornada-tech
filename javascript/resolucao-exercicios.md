@@ -122,9 +122,29 @@ function checkGameCategory(age) {
 ```
 8. Verificação de acesso com múltiplos critérios
 ```
-function hasAccess(age, isLoggedIn) {
-  return age >= 18 && isLoggedIn;
+function verificarAcesso(usuario) {
+  // Verificando os critérios
+  const maiorDeIdadeELogado = usuario.idade >= 18 && usuario.estaLogado;
+  const contaAtivaOuPermissao = usuario.contaAtiva || usuario.permissoes.includes("admin") || usuario.permissoes.includes("editor");
+
+  // Combinação dos critérios
+  if (maiorDeIdadeELogado && contaAtivaOuPermissao) {
+    return "Acesso concedido!";
+  } else {
+    return "Acesso negado!";
+  }
 }
+
+// Exemplo de uso
+const usuario = {
+  idade: 20,
+  estaLogado: true,
+  contaAtiva: false,
+  permissoes: ["editor"] // Pode incluir "admin", "editor" ou outros valores
+};
+
+console.log(verificarAcesso(usuario)); // Saída: "Acesso concedido!"
+
 ```
 9. Checagem de dados do formulário
 ```
@@ -156,10 +176,33 @@ function isEligibleForPromotion(purchases, isVIP, isFraudulent) {
 ```
 13. Validação de dados complexos
 ```
-function validateRegistration(age, username, password) {
-  const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
-  return age > 18 && username !== '' && passwordRegex.test(password);
+function validarRegistro(usuario) {
+  // Validando a idade
+  const idadeValida = usuario.idade >= 18 && usuario.idade <= 30;
+
+  // Validando o nome
+  const nomeValido = usuario.nome.trim() !== "";
+
+  // Validando a senha
+  const senhaValida = usuario.senha.length >= 8 && /\d/.test(usuario.senha) && /\W/.test(usuario.senha);
+
+  // Verificando se todas as validações passaram
+  if (idadeValida && nomeValido && senhaValida) {
+    return "Registro válido!";
+  } else {
+    return "Falha no registro!";
+  }
 }
+
+// Exemplo de uso
+const usuario = {
+  idade: 25,
+  nome: "João",
+  senha: "senha@123"
+};
+
+console.log(validarRegistro(usuario)); // Saída: "Registro válido!"
+
 ```
 14. Checagem de permissões avançadas
 ```
