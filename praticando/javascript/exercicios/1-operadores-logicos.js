@@ -1,3 +1,4 @@
+//TOTAL = 15 exercícios
 // OPERADORES LÓGICOS
 //1. Verificação de maioridade
 
@@ -174,9 +175,15 @@ if (idade > 18 && usuario === "admin" && conta !== "Banido" && compraRealizada >
 } else {
     console.log("Acesso Negado")
 };
-
+*/
 console.log();
 
+//15. Multiplos Intervalos
+function intervalo(n) {
+    return (n >= 10 && n <= 20) || (n >= 30 && n <= 40);
+};
+
+console.log(intervalo(20));
 
 
 

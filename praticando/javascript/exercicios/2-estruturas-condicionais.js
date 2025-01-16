@@ -1,4 +1,5 @@
 /*
+//TOTAL = 14 exercícios
 //ESTRUTURAS CONDICIONAIS: IF, ELSE e ESLE IF
 //1. Maior de dois números
 function maior(a,b) {
@@ -143,7 +144,7 @@ function velocidade(n){
 
 console.log(velocidade(121));
 
-//Número Primo
+//3. Número Primo
 function numeroPrimo(n){
     if (n <= 1) return "Não é primo";
     for (let i = 2; i < n; i++) {
@@ -181,7 +182,7 @@ function faixaEtaria(n){
 
 console.log(faixaEtaria(80));
 
-// Jogo Par ou ímpar
+// 5. Jogo Par ou ímpar
 function parOuImpar(a,b){
     if ((a + b) % 2 === 0 ){
         return "Primeiro jogador venceu (Par)"
