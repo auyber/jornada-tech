@@ -122,9 +122,29 @@ function checkGameCategory(age) {
 ```
 8. Verificação de acesso com múltiplos critérios
 ```
-function hasAccess(age, isLoggedIn) {
-  return age >= 18 && isLoggedIn;
+function verificarAcesso(usuario) {
+  // Verificando os critérios
+  const maiorDeIdadeELogado = usuario.idade >= 18 && usuario.estaLogado;
+  const contaAtivaOuPermissao = usuario.contaAtiva || usuario.permissoes.includes("admin") || usuario.permissoes.includes("editor");
+
+  // Combinação dos critérios
+  if (maiorDeIdadeELogado && contaAtivaOuPermissao) {
+    return "Acesso concedido!";
+  } else {
+    return "Acesso negado!";
+  }
 }
+
+// Exemplo de uso
+const usuario = {
+  idade: 20,
+  estaLogado: true,
+  contaAtiva: false,
+  permissoes: ["editor"] // Pode incluir "admin", "editor" ou outros valores
+};
+
+console.log(verificarAcesso(usuario)); // Saída: "Acesso concedido!"
+
 ```
 9. Checagem de dados do formulário
 ```
