@@ -336,16 +336,6 @@ function verificarTriangulo(a, b, c) {
     }
 }
 ```
-5. Par ou Ímpar?
-```
-function parOuImpar(numero) {
-    if (numero % 2 === 0) {
-        return "Par";
-    } else {
-        return "Ímpar";
-    }
-}
-```
 
 ### Exercícios Difíceis
 
