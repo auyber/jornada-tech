@@ -14,6 +14,29 @@ O objetivo principal desses exercícios é solidificar o aprendizado por meio da
 ### 📝 **Observações:**
 Em alguns exercícios, como os de **validação de dados**, **algoritmos**, ou **estruturas de controle**, podem existir diversas maneiras de implementar a solução. O importante é garantir que o **resultado final** seja o correto.
 
+❗ Como veremos funções somente no tópico 17 da revisão, alguns exercícios entre os tópicos 1.Operadores Lógicos e 13.Objetos podem solicitar para criar uma função. Porém, caso você ainda não saiba como utilizá-las, não tem problema! Resolva os exercícios diretamente com código.
+
+EX:
+
+#### Sem usar função:
+```
+const idade = 65;
+
+if (idade > 60) {
+    console.log("Você é idoso.");
+}
+```
+#### Utilizando função:
+```
+function verificarIdoso(idade) {
+    if (idade > 60) {
+        console.log("Você é idoso.");
+    }
+}
+
+verificarIdoso(65);
+```
+
 ---
 
 ### ⚠️ **Dica Importante:**
@@ -59,6 +82,10 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 - [21. Exercícios sobre IIFE (Immediately Invoked Function Expression)](#21-exercícios-sobre-iife-immediately-invoked-function-expression)
 - [22. Exercícios sobre High-order Functions](#22-exercícios-sobre-high-order-functions)
 - [23. Exercícios sobre High-order Functions e Arrays](#23-exercícios-sobre-high-order-functions-e-arrays)
+
+---
+
+
 
 ---
 
