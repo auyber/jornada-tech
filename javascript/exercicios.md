@@ -228,11 +228,6 @@ Esses exercícios têm o objetivo de ajudar você a entender e praticar o uso de
 **Exemplo de entrada:** 3, 4, 5  
 **Exemplo de saída:** "Triângulo válido"  
 
-#### 5. Par ou Ímpar?
-**Descrição:** Crie uma função que recebe um número e verifica se ele é par ou ímpar. Caso o número seja par, deve-se imprimir "Par", e caso seja ímpar, deve-se imprimir "Ímpar". Use else if para resolver o problema.  
-**Exemplo de entrada:** 7  
-**Exemplo de saída:** "Ímpar"  
-
 ---
 
 ### Exercícios Difíceis
