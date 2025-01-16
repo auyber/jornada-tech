@@ -1,4 +1,4 @@
-//TOTAL = 
+//TOTAL = 15 Exercícios
 //ESTRUTURAS CONDICIONAIS SWITCH
 //1. Dia da semana
 function diaDaSemana(number){
