@@ -150,7 +150,7 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 
 13. **Validação de dados complexos**  
     Descrição: Escreva uma função que valide se um usuário pode se registrar, considerando que:
-    - A idade deve ser maior que 18.
+    - A idade deve estar entre 18 e 30.
     - O nome não pode ser vazio.
     - A senha deve ter no mínimo 8 caracteres, um número e um caractere especial.
 
