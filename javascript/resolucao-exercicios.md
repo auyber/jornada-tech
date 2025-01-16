@@ -176,10 +176,33 @@ function isEligibleForPromotion(purchases, isVIP, isFraudulent) {
 ```
 13. Validação de dados complexos
 ```
-function validateRegistration(age, username, password) {
-  const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
-  return age > 18 && username !== '' && passwordRegex.test(password);
+function validarRegistro(usuario) {
+  // Validando a idade
+  const idadeValida = usuario.idade >= 18 && usuario.idade <= 30;
+
+  // Validando o nome
+  const nomeValido = usuario.nome.trim() !== "";
+
+  // Validando a senha
+  const senhaValida = usuario.senha.length >= 8 && /\d/.test(usuario.senha) && /\W/.test(usuario.senha);
+
+  // Verificando se todas as validações passaram
+  if (idadeValida && nomeValido && senhaValida) {
+    return "Registro válido!";
+  } else {
+    return "Falha no registro!";
+  }
 }
+
+// Exemplo de uso
+const usuario = {
+  idade: 25,
+  nome: "João",
+  senha: "senha@123"
+};
+
+console.log(validarRegistro(usuario)); // Saída: "Registro válido!"
+
 ```
 14. Checagem de permissões avançadas
 ```
