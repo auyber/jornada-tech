@@ -120,9 +120,10 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
    - Caso contrário, a pessoa não pode participar.
 
 8. **Verificação de acesso com múltiplos critérios**  
-   Descrição: Crie uma função que verifica se um usuário tem permissão para acessar uma página, com base em dois critérios:
-   - O usuário deve ser maior de idade.
-   - O usuário deve estar logado.
+   Crie uma função que verifica se um usuário tem permissão para acessar uma página com base nos seguintes critérios:
+    - O usuário deve ser maior de idade **e** estar logado.
+    - Além disso, o usuário deve ter uma conta ativa **ou** permissão adequada (como "admin" ou "editor").
+
 
 9. **Checagem de dados do formulário**  
    Descrição: Escreva uma função que valida um formulário de registro. As condições de validação são:
