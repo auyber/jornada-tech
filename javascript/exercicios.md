@@ -495,19 +495,16 @@ Crie uma função que remova os elementos duplicados de um array de números.
 
 ### Difíceis
 
-01. **Criando e Manipulando uma Lista Ligada (Linked List)**
-Crie uma lista ligada onde cada nó armazena um valor e o próximo nó. Implemente funções para adicionar um nó no final e imprimir todos os valores da lista.
-
-02. **Implementando uma Pilha (Stack)**
+01. **Implementando uma Pilha (Stack)**
 Implemente uma pilha que tenha os métodos `push`, `pop` e `top`. Depois, crie uma instância da pilha e adicione e remova alguns elementos.
 
-03. **Implementando uma Fila (Queue)**
+02. **Implementando uma Fila (Queue)**
 Implemente uma fila com os métodos `enqueue` (adicionar elemento) e `dequeue` (remover elemento). Depois, crie uma fila e faça algumas operações.
 
-04. **Buscando um Elemento em uma Lista**
+03. **Buscando um Elemento em uma Lista**
 Dado um array de objetos representando pessoas, implemente uma função que busque uma pessoa pelo nome e retorne o objeto completo da pessoa.
 
-05. **Implementando um Dicionário (Mapa)**
+04. **Implementando um Dicionário (Mapa)**
 Implemente uma estrutura de dados de dicionário (map) que possa armazenar pares chave-valor. Implemente os métodos para adicionar, remover e acessar um valor pelo nome da chave.
 
 ---
