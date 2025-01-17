@@ -962,49 +962,7 @@ console.log(removerDuplicatas(numeros)); // Saída: [1, 2, 3, 4]
 
 ### Difíceis
 
-01. **Criando e Manipulando uma Lista Ligada (Linked List)**
-```
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-}
-
-class LinkedList {
-    constructor() {
-        this.head = null;
-    }
-
-    add(value) {
-        const newNode = new Node(value);
-        if (!this.head) {
-            this.head = newNode;
-        } else {
-            let current = this.head;
-            while (current.next) {
-                current = current.next;
-            }
-            current.next = newNode;
-        }
-    }
-
-    print() {
-        let current = this.head;
-        while (current) {
-            console.log(current.value);
-            current = current.next;
-        }
-    }
-}
-
-const lista = new LinkedList();
-lista.add(1);
-lista.add(2);
-lista.add(3);
-lista.print(); // Saída: 1, 2, 3
-```
-02. **Implementando uma Pilha (Stack)**
+01. **Implementando uma Pilha (Stack)**
 ```
 class Stack {
     constructor() {
@@ -1031,7 +989,7 @@ console.log(stack.top()); // Saída: 20
 stack.pop();
 console.log(stack.top()); // Saída: 10
 ```
-03. **Implementando uma Fila (Queue)**
+02. **Implementando uma Fila (Queue)**
 ```
 class Queue {
     constructor() {
@@ -1058,7 +1016,7 @@ console.log(queue.front()); // Saída: 5
 queue.dequeue();
 console.log(queue.front()); // Saída: 10
 ```
-04. **Buscando um Elemento em uma Lista**
+03. **Buscando um Elemento em uma Lista**
 ```
 const pessoas = [
     { nome: "João", idade: 25 },
@@ -1072,7 +1030,7 @@ function buscarPessoa(nome) {
 
 console.log(buscarPessoa("Maria")); // Saída: { nome: 'Maria', idade: 30 }
 ```
-05. **Implementando um Dicionário (Mapa)**
+04. **Implementando um Dicionário (Mapa)**
 ```
 class Dictionary {
     constructor() {
