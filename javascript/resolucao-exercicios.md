@@ -1280,30 +1280,59 @@ console.log(indice); // 2
 
 **Exercício 3**:
 ```
-let alunos = ["Ana", "Carlos", "Beatriz"];
-let indice = alunos.indexOf("Carlos");
-console.log(indice); // 1
+let animais = ["gato", "cachorro", "pássaro", "hamster"];
+
+// Encontrar o índice do animal "pássaro"
+let indice = animais.indexOf("pássaro");
+
+console.log(indice); // Saída: 2
+
 ```
 **Exercício 4**:
 ```
-let carros = ["Gol", "Fusca", "Civic"];
-let indice = carros.indexOf("Fusca");
-console.log(indice); // 1
+let cores = ["azul", "verde", "amarelo", "vermelho"];
+
+// Encontrar o índice da cor "vermelho"
+let indice = cores.indexOf("vermelho");
+
+console.log(indice); // Saída: 3
+console.log(cores[indice]); // Saída: vermelho
 ```
 
 ### Exercícios Difíceis:
 
 **Exercício 5**:
 ```
-let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte"];
-let indice = cidades.indexOf("Belo Horizonte");
-console.log(indice); // 2
+let pessoas = ["João", "Maria", "Pedro", "Ana"];
+
+// Encontrar o índice de "Maria"
+let indice = pessoas.indexOf("Maria");
+
+// Substituir "Maria" por "Paula"
+if (indice !== -1) {
+    pessoas[indice] = "Paula";
+}
+
+console.log(pessoas); // Saída: ["João", "Paula", "Pedro", "Ana"]
 ```
 **Exercício 6**:
 ```
-let produtos = ["Camiseta", "Calça", "Tênis"];
-let indice = produtos.indexOf("Tênis");
-console.log(indice); // 2
+let produtos = [
+    {nome: "Camiseta", preco: 29.90},
+    {nome: "Calça", preco: 79.90}
+];
+
+// Encontrar o índice do produto "Calça"
+let indice = produtos.findIndex(function(produto) {
+    return produto.nome === "Calça";
+});
+
+if (indice !== -1) {
+    console.log("Índice: " + indice); // Saída: 1
+    console.log("Produto: ", produtos[indice]); // Saída: {nome: "Calça", preco: 79.90}
+} else {
+    console.log("Produto não encontrado.");
+}
 ```
 
 ## 6. ```slice()```
