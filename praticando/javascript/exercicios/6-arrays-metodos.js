@@ -1,5 +1,4 @@
-/*
-//TOTAL = 
+//TOTAL = 48 Exercícios
 //PUSH()
 //FÁCIL
 //1. Exercício 1
@@ -270,7 +269,7 @@ console.log(pessoas.indexOf("Maria"));
 pessoas[1] = "Paula";
 
 console.log(pessoas);
-*/
+
 //6. Exercício 6
 let produtos = [
     {nome: "Camiseta", preco: 29.90},
@@ -289,6 +288,129 @@ if (indice !== -1) {
     console.log("Produto não encontrado.");
 }
 
+//SLICE()
+//FÁCIL
+//1. exercício 1
+let frutas = ["maçã", "banana", "laranja", "manga"];
 
+let newFrutas = frutas.slice(0, 2); //não pega o índice 2, só o 0 e 1.
+
+console.log(newFrutas);
+
+//2. Exercício 2
+let numeros = [1, 2, 3, 4, 5, 6];
+
+let newNumeros = numeros.slice(2,4); // entre 3 e 4.
+
+console.log(newNumeros);
+
+//MÉDIO
+//3. Exercício 3
+let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+
+let newCidades = cidades.slice(-2); //caso utilize um valor só, ele inicia a busca no valor e vai até o final
+
+console.log(newCidades);
+
+//4. Exercício 4
+let produtos = ["Camiseta", "Calça", "Tênis", "Jaqueta"];
+
+let newProdutos = produtos.slice(1,3);
+
+console.log(newProdutos);
+
+//DIFÍCIL
+//5. Exercício 5
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi", "Eduardo", "Felipe"];
+
+let newAlunos = alunos.slice(2,4);
+
+console.log(newAlunos);
+
+//6. Exercício 6
+let livros = ["O Hobbit", "1984", "Dom Quixote", "A Guerra dos Tronos", "Moby Dick"];
+
+let newLivros = livros.slice(1,3);
+
+console.log(newLivros);
+
+//SPLICE()
+//FÁCIL
+//1. Exercício 1
+let frutas = ["maçã", "banana", "laranja"];
+
+frutas.splice(1,1); //1°argumento o índice, 2° argumento, quantia de itens que será removido
+
+console.log(frutas);
+
+//2. Exercício
+let numeros = [10, 20, 30, 40];
+
+numeros.splice(1,1);
+
+console.log(numeros);
+
+//3. Exercício 3
+let cores = ["vermelho", "azul", "verde", "amarelo"];
+
+cores.splice(2,1, "preto"); //remove 1 item no indice 2 e coloca a cor preto no lugar
+
+console.log(cores);
+
+//4. Exercício 4
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
+
+alunos.splice(1,1, "José");
+
+console.log(alunos);
+
+//5. Exercício 5
+let times = ["Flamengo", "São Paulo", "Palmeiras", "Grêmio"];
+
+times.splice(0,2, "Atlético", "Vasco");
+
+console.log(times);
+
+//6.Exercicio 6
+let produtos = [{nome: "Camiseta", preco: 29.90}, {nome: "Calça", preco: 79.90}, {nome: "Tênis", preco: 99.90}];
+
+produtos.splice(1,1, {nome:"Jaqueta", preco:149.90});
+
+console.log(produtos);
+
+//INCLUDE()
+//FÁCIL
+//1. Exercício 1
+let frutas = ["maçã", "banana", "laranja"];
+
+console.log(frutas.includes("banana"));
+
+//2. Exercício 2
+let numeros = [1, 2, 3, 4];
+
+console.log(numeros.includes(3));
+
+//MÉDIO
+//3. Exercício 3
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
+
+console.log(alunos.includes("Carlos"));
+
+//4. Exercício 4
+let paises = ["Brasil", "Argentina", "Chile"];
+
+console.log(paises.includes("Peru"));
+
+//DIFÍCIL
+//5. Exercício 5
+let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+
+console.log(cidades.includes("Manaus"));
+
+//6.Exercício 6
+let carros = ["Fusca", "Gol", "Civic", "Opala"];
+
+console.log(carros.includes("Civic"))
+console.log(carros.includes("Uno"))
 
 
