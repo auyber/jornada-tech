@@ -650,7 +650,7 @@ Implemente uma estrutura de dados de dicionário (map) que possa armazenar pares
 
 6. **Exercício 6**:  
    Crie um array de objetos representando produtos:  
-   `let produtos = [{nome: "Camiseta", preco: 29.90}, {nome: "Calça", preco: 79.90}];`. Encontre o índice do produto `"Calça"` e exiba o índice e o produto correspondente.
+   `let produtos = [{nome: "Camiseta", preco: 29.90}, {nome: "Calça", preco: 79.90}];`. Encontre o índice do produto `"Calça"` e exiba o índice e o produto correspondente. Utilize o findIndex
 
 ---
 
