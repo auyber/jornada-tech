@@ -1341,45 +1341,45 @@ if (indice !== -1) {
 
 **Exercício 1**:
 ```
-let numeros = [1, 2, 3, 4, 5];
-let resultado = numeros.slice(1, 3);
-console.log(resultado); // [2, 3]
+let frutas = ["maçã", "banana", "laranja", "manga"];
+let primeirasFrutas = frutas.slice(0, 2); // Pega os dois primeiros itens (índices 0 e 1)
+console.log(primeirasFrutas); // Saída: ["maçã", "banana"]
 ```
 **Exercício 2**:
 ```
-let frutas = ["maçã", "banana", "laranja", "kiwi"];
-let resultado = frutas.slice(2);
-console.log(resultado); // ["laranja", "kiwi"]
+let numeros = [1, 2, 3, 4, 5, 6];
+let numerosSelecionados = numeros.slice(2, 5); // Pega os itens dos índices 2 a 4
+console.log(numerosSelecionados); // Saída: [3, 4, 5]
 ```
 
 ### Exercícios Médios:
 
 **Exercício 3**:
 ```
-let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
-let resultado = alunos.slice(1, 3);
-console.log(resultado); // ["Carlos", "Beatriz"]
+let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+let ultimasCidades = cidades.slice(-2); // Pega os dois últimos itens
+console.log(ultimasCidades); // Saída: ["Belo Horizonte", "Porto Alegre"]
 ```
 **Exercício 4**:
 ```
-let carros = ["Gol", "Fusca", "Civic", "Opala"];
-let resultado = carros.slice(2);
-console.log(resultado); // ["Civic", "Opala"]
+let produtos = ["Camiseta", "Calça", "Tênis", "Jaqueta"];
+let produtosSelecionados = produtos.slice(1, 4); // Pega os itens dos índices 1, 2 e 3
+console.log(produtosSelecionados); // Saída: ["Calça", "Tênis", "Jaqueta"]
 ```
 
 ### Exercícios Difíceis:
 
 **Exercício 5**:
 ```
-let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
-let resultado = cidades.slice(1, 3);
-console.log(resultado); // ["Rio de Janeiro", "Belo Horizonte"]
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi", "Eduardo", "Felipe"];
+let alunosSelecionados = alunos.slice(2, 5); // Pega os itens dos índices 2 a 4
+console.log(alunosSelecionados); // Saída: ["Beatriz", "Davi", "Eduardo"]
 ```
 **Exercício 6**:
 ```
-let produtos = ["Camiseta", "Calça", "Tênis", "Jaqueta"];
-let resultado = produtos.slice(0, 2);
-console.log(resultado); // ["Camiseta", "Calça"]
+let livros = ["O Hobbit", "1984", "Dom Quixote", "A Guerra dos Tronos", "Moby Dick"];
+let livrosSelecionados = livros.slice(1, 4); // Pega os itens dos índices 1 a 3
+console.log(livrosSelecionados); // Saída: ["1984", "Dom Quixote", "A Guerra dos Tronos"]
 ```
 
 ## 7. ```splice()```
@@ -1388,45 +1388,105 @@ console.log(resultado); // ["Camiseta", "Calça"]
 
 **Exercício 1**:
 ```
-let numeros = [1, 2, 3, 4];
-numeros.splice(2, 1, 5);
-console.log(numeros); // [1, 2, 5, 4]
+let frutas = ["maçã", "banana", "laranja"];
+frutas.splice(1, 1); // Remove 1 elemento a partir do índice 1 ("banana")
+console.log(frutas); // Saída: ["maçã", "laranja"]
 ```
 **Exercício 2**:
 ```
-let frutas = ["maçã", "banana", "laranja"];
-frutas.splice(1, 1, "kiwi");
-console.log(frutas); // ["maçã", "kiwi", "laranja"]
+let numeros = [10, 20, 30, 40];
+numeros.splice(1, 1); // Remove 1 elemento a partir do índice 1 (20)
+console.log(numeros); // Saída: [10, 30, 40]
 ```
 
 ### Exercícios Médios:
 
 **Exercício 3**:
 ```
-let alunos = ["Ana", "Carlos", "Beatriz"];
-alunos.splice(1, 1, "Davi");
-console.log(alunos); // ["Ana", "Davi", "Beatriz"]
+let cores = ["vermelho", "azul", "verde", "amarelo"];
+cores.splice(2, 1, "preto"); // Remove 1 elemento no índice 2 ("verde") e adiciona "preto"
+console.log(cores); // Saída: ["vermelho", "azul", "preto", "amarelo"]
 ```
 **Exercício 4**:
 ```
-let carros = ["Gol", "Fusca", "Civic"];
-carros.splice(1, 2, "Opala", "Chevette");
-console.log(carros); // ["Gol", "Opala", "Chevette"]
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
+alunos.splice(1, 1, "José"); // Remove "Carlos" no índice 1 e adiciona "José"
+console.log(alunos); // Saída: ["Ana", "José", "Beatriz", "Davi"]
 ```
 
 ### Exercícios Difíceis:
 
 **Exercício 5**:
 ```
-let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte"];
-cidades.splice(1, 1, "Curitiba");
-console.log(cidades); // ["São Paulo", "Curitiba", "Belo Horizonte"]
+let times = ["Flamengo", "São Paulo", "Palmeiras", "Grêmio"];
+times.splice(0, 2, "Atlético", "Vasco"); // Remove os dois primeiros e adiciona "Atlético" e "Vasco"
+console.log(times); // Saída: ["Atlético", "Vasco", "Palmeiras", "Grêmio"]
 ```
 **Exercício 6**:
 ```
-let produtos = ["Camiseta", "Calça", "Tênis"];
-produtos.splice(0, 2, "Jaqueta", "Boné");
-console.log(produtos); // ["Jaqueta", "Boné", "Tênis"]
+let produtos = [
+    {nome: "Camiseta", preco: 29.90}, 
+    {nome: "Calça", preco: 79.90}, 
+    {nome: "Tênis", preco: 99.90}
+];
+produtos.splice(1, 1, {nome: "Jaqueta", preco: 149.90}); // Substitui o item no índice 1 ("Calça")
+console.log(produtos); 
+// Saída: [
+//   {nome: "Camiseta", preco: 29.90}, 
+//   {nome: "Jaqueta", preco: 149.90}, 
+//   {nome: "Tênis", preco: 99.90}
+// ]
+```
+---
+
+## 7. ```includes()```
+
+### Exercícios Fáceis:
+
+**Exercício 1**:
+```
+let frutas = ["maçã", "banana", "laranja"];
+let contemBanana = frutas.includes("banana");
+console.log(contemBanana); // Saída: true
+```
+**Exercício 2**:
+```
+let numeros = [1, 2, 3, 4];
+let contemTres = numeros.includes(3);
+console.log(contemTres); // Saída: true
+```
+
+### Exercícios Médios:
+
+**Exercício 3**:
+```
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
+let contemCarlos = alunos.includes("Carlos");
+console.log(contemCarlos); // Saída: true
+```
+**Exercício 4**:
+```
+let paises = ["Brasil", "Argentina", "Chile"];
+let contemPeru = paises.includes("Peru");
+console.log(contemPeru); // Saída: false
+```
+
+### Exercícios Difíceis:
+
+**Exercício 5**:
+```
+let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+let contemManaus = cidades.includes("Manaus");
+console.log(contemManaus); // Saída: false
+```
+**Exercício 6**:
+```
+let carros = ["Fusca", "Gol", "Civic", "Opala"];
+let contemCivic = carros.includes("Civic");
+let contemUno = carros.includes("Uno");
+
+console.log("Civic está no array? " + contemCivic); // Saída: true
+console.log("Uno está no array? " + contemUno);     // Saída: false
 ```
 
 ---
