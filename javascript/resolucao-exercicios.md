@@ -1437,6 +1437,57 @@ console.log(produtos);
 //   {nome: "Tênis", preco: 99.90}
 // ]
 ```
+---
+
+## 7. ```includes()```
+
+### Exercícios Fáceis:
+
+**Exercício 1**:
+```
+let frutas = ["maçã", "banana", "laranja"];
+let contemBanana = frutas.includes("banana");
+console.log(contemBanana); // Saída: true
+```
+**Exercício 2**:
+```
+let numeros = [1, 2, 3, 4];
+let contemTres = numeros.includes(3);
+console.log(contemTres); // Saída: true
+```
+
+### Exercícios Médios:
+
+**Exercício 3**:
+```
+let alunos = ["Ana", "Carlos", "Beatriz", "Davi"];
+let contemCarlos = alunos.includes("Carlos");
+console.log(contemCarlos); // Saída: true
+```
+**Exercício 4**:
+```
+let paises = ["Brasil", "Argentina", "Chile"];
+let contemPeru = paises.includes("Peru");
+console.log(contemPeru); // Saída: false
+```
+
+### Exercícios Difíceis:
+
+**Exercício 5**:
+```
+let cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre"];
+let contemManaus = cidades.includes("Manaus");
+console.log(contemManaus); // Saída: false
+```
+**Exercício 6**:
+```
+let carros = ["Fusca", "Gol", "Civic", "Opala"];
+let contemCivic = carros.includes("Civic");
+let contemUno = carros.includes("Uno");
+
+console.log("Civic está no array? " + contemCivic); // Saída: true
+console.log("Uno está no array? " + contemUno);     // Saída: false
+```
 
 ---
 
