@@ -1395,10 +1395,10 @@ const users = [
 
 ---
 
-## object.heys
+## object.keys
 
 ### Fácil
-1. **Acessando propriedades com `Object.heys()`**
+1. **Acessando propriedades com `Object.keys()`**
    - Crie um objeto com pelo menos três propriedades e use `Object.keys()` para obter um array com as chaves do objeto. Exiba esse array no console.
 
 ### Médio
