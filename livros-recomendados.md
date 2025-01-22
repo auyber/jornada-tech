@@ -6,8 +6,10 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 - [HTML](#html)
 - [CSS](#css)
 - [JavaScript](#javascript)
+- -[Outros](#outros)
 - [Sistemas de Informações](#sistemas-de-informações)
 - [Algoritmos e Estruturas de Dados](#algoritmos-e-estruturas-de-dados)
+- [Banco de Dados](#banco-de-dados)
 
 ## Como usar esta lista
 
@@ -18,7 +20,8 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 
 ---
 
-## HTML
+## Linguagens de Programação
+### HTML
 
 #### <img src="https://m.media-amazon.com/images/I/510eqtTnl7L._SY342_.jpg" width="100" align="right"> [Html 5: Entendendo e Executando]
 
@@ -30,7 +33,7 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 
 ---
 
-## CSS
+### CSS
 
 #### <img src="https://m.media-amazon.com/images/I/61nbxIjEPvS._SY342_.jpg" width="100" align="right"> [CSS: The Definitive Guide]
 
@@ -62,7 +65,8 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 
 ---
 
-## JavaScript
+
+### JavaScript
 
 
 #### <img src="https://m.media-amazon.com/images/I/71X7hMhMEUL._SY342_.jpg" width="100" align="right"> [Lógica de Programação e Algoritmos com JavaScript]
@@ -82,6 +86,19 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 **Nível:** Iniciante a Intermediário
 
 **Por que ler:** Este livro é uma excelente fonte para desenvolvedores que desejam aprofundar seus conhecimentos em JavaScript, focando em estruturas de dados e algoritmos. Loiane Groner, uma renomada desenvolvedora e instrutora, apresenta conceitos complexos de forma clara e prática, tornando o aprendizado acessível e aplicável.
+
+### Outros
+
+
+#### <img src="https://m.media-amazon.com/images/I/61qxP-mwRgL._SY342_.jpg" width="100" align="right"> [Expressões Regulares: Uma Abordagem Divertida]
+
+**Autor:** Aurelio Marinho Jargas  
+
+**Nível:** Iniciante a Intermediário
+
+**Por que ler:** O livro "Expressões Regulares: Uma Abordagem Divertida", de Aurelio Marinho Jargas, é uma introdução acessível e prática ao uso de expressões regulares. Ele apresenta os conceitos de forma clara e com exemplos aplicáveis a diversas linguagens de programação, como JavaScript, Python, e até ferramentas como editores de texto e shells. A abordagem descontraída e didática torna o aprendizado mais envolvente, mesmo para quem nunca utilizou expressões regulares. Ideal para desenvolvedores e profissionais que desejam aprimorar suas habilidades em manipulação de texto e dados de forma eficiente e poderosa.
+
+---
 
 ---
 
@@ -111,8 +128,20 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 
 ---
 
+## Banco de Dados
+
+
+#### <img src="https://m.media-amazon.com/images/I/711siL1zU1L._SY342_.jpg" width="100" align="right"> [Introdução à Linguagem SQL: Abordagem Prática Para Iniciantes]
+
+**Autor:**  Thomas Nield
+
+**Nível:** Iniciante
+
+**Por que ler:** O livro "Introdução à Linguagem SQL: Abordagem Prática para Iniciantes" de Thomas Nield é ideal para quem deseja aprender SQL de forma prática e acessível. Ele aborda desde fundamentos básicos até consultas e manipulação de dados, sem exigir experiência prévia. Com foco em exemplos reais, é uma ótima escolha para iniciantes que buscam dominar SQL para análise de dados e desenvolvimento de sistemas.
+
+---
+
 ## Contribua!
 
 Conhece um livro incrível que deveria estar nesta lista? [Sugira uma adição](../../issues/new?assignees=&labels=livro%2Crecomenda%C3%A7%C3%A3o&template=indicar-livro.md&title=%5BLIVRO%5D+) através de nossa issue de recomendação de livros!
 
-Última atualização: [07/01/2025]
