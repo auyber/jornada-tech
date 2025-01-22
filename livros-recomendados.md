@@ -6,7 +6,7 @@ Bem-vindo à nossa coleção curada de livros recomendados por mim e pela comuni
 - [HTML](#html)
 - [CSS](#css)
 - [JavaScript](#javascript)
-- -[Outros](#outros)
+- [Outros](#outros)
 - [Sistemas de Informações](#sistemas-de-informações)
 - [Algoritmos e Estruturas de Dados](#algoritmos-e-estruturas-de-dados)
 - [Banco de Dados](#banco-de-dados)
