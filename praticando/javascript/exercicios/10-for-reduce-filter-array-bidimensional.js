@@ -113,26 +113,3 @@ console.log(filtrarLinhas(matriz, 3))
 
 // FALTA EX 3.,4.,5. e 6.
 
-//FOCADOS EM EVERY OU SOME
-//1.numeros maiores que 10
-let array = [12, 15, 18, 20];
-
-let maiorQue = array.every(function(n){
-    return n > 10;
-})
-
-console.log(maiorQue)
-
-//2.pelo menos 1 numero é maior que 100
-let array = [5, 8, 120, 40];
-
-let peloMenos = array.some(function(n){
-    return n > 100;
-})
-
-console.log(peloMenos)
-*/
-
-//FALTA OS EX 3.,4.,5. e 6.
-
-//FOCADOS EM SORT
