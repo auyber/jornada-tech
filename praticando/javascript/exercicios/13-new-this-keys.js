@@ -68,8 +68,24 @@ let aluno = {
 }
 
 console.log(Object.entries(aluno))
-*/
+
 //FALTA EX 2. e 3.
 
 //PROTOTIPAGEM E HERANÇA
 //1.herança simples
+let pessoa = {
+    nome: "Auyber",
+    falar() {
+        console.log("Me chamo " + this.nome)
+    }
+}
+
+pessoa.falar()
+
+let estudante = Object.create(pessoa);
+estudante.curso = "Análise e Desenvolvimento de Sistemas";
+estudante.nome = "Emilly";
+
+estudante.falar()
+*/
+//FALTA EX 2. e 3.
