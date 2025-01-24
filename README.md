@@ -39,6 +39,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Exercícios de JavaScript (+- 410)](./javascript/exercicios.md)
 - [Resolução dos Exercícios](./javascript/resolucao-exercicios.md)
 
+- ### 🐍 Python
+- [Exercícios de Python (83)](./python/exercicios.py)
+
 ### ⏱️ Scrum: Planejamento e Desenvolvimento Ágeis
 - [Revisão Scrum](./scrum/revisao.md)
 
