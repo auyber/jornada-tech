@@ -1524,16 +1524,106 @@ Explicação:
 
 **Desestruturação de Parâmetros (ES6+)**
 
-A desestruturação permite extrair valores de objetos ou arrays e usá-los como parâmetros diretamente na função. Isso facilita o acesso a dados em objetos complexos.
+A **desestruturação de parâmetros** em JavaScript é uma funcionalidade introduzida no ES6 que permite "desempacotar" valores de objetos ou arrays diretamente como variáveis, tornando o código mais limpo e conciso.
+
+
+**Como funciona a Desestruturação em Parâmetros**
+
+Normalmente, ao passar um objeto como argumento para uma função, precisaríamos acessar suas propriedades manualmente. Com a **desestruturação**, podemos extrair diretamente as propriedades ou elementos que desejamos usar, dentro da assinatura da função.
+
+
+**Exemplo básico com um objeto**
+
 ```
-function imprimirPessoa({nome, idade}) {
+function imprimirPessoa({ nome, idade }) {
   console.log(`${nome} tem ${idade} anos.`);
 }
 
-imprimirPessoa({nome: "Carlos", idade: 25}); // "Carlos tem 25 anos."
+imprimirPessoa({ nome: "Carlos", idade: 25 }); // "Carlos tem 25 anos."
 ```
-Explicação: 
-- A função ```imprimirPessoa``` usa a desestruturação para pegar diretamente as propriedades ```nome``` e ```idade``` do objeto passado como argumento, sem a necessidade de acessar ```pessoa.nome``` ou ```pessoa.idade```.
+Explicação:
+A função `imprimirPessoa` aceita um objeto como parâmetro.
+Na assinatura da função, usamos `{ nome, idade }` para desestruturar as propriedades `nome` e `idade` do objeto passado.
+Isso elimina a necessidade de acessar manualmente objeto.nome ou `objeto.idade` dentro da função.
+
+Vantagens:
+- Reduz a repetição de código.
+- Torna o código mais legível e claro.
+- Facilita o uso de objetos com muitas propriedades, já que podemos extrair apenas as que nos interessam.
+- Funciona muito bem com objetos complexos ou dados retornados de APIs.
+
+Exemplo avançado com valores padrão
+Se a propriedade esperada não for fornecida, você pode definir valores padrão durante a desestruturação:
+```
+function imprimirPessoa({ nome = "Desconhecido", idade = 0 }) {
+  console.log(`${nome} tem ${idade} anos.`);
+}
+
+imprimirPessoa({ nome: "Ana" }); // "Ana tem 0 anos."
+imprimirPessoa({});             // "Desconhecido tem 0 anos."
+```
+Explicação:
+Quando `nome` ou `idade` não são fornecidos, os valores padrão `nome = "Desconhecido"` e `idade = 0` são utilizados.
+
+---
+
+**Desestruturação com Arrays**
+A desestruturação também funciona com arrays, permitindo acessar seus elementos diretamente:
+```
+function imprimirNumeros([primeiro, segundo, terceiro]) {
+  console.log(`Os números são: ${primeiro}, ${segundo}, e ${terceiro}.`);
+}
+
+imprimirNumeros([1, 2, 3]); // "Os números são: 1, 2, e 3."
+```
+Explicação:
+A função `imprimirNumeros` recebe um array como argumento.
+Na assinatura da função, `[primeiro, segundo, terceiro]` extrai os valores dos primeiros três elementos do array.
+
+---
+
+**Desestruturação com Objetos e Arrays Aninhados**
+A desestruturação também suporta estruturas aninhadas, permitindo acessar dados em profundidade:
+
+Exemplo com Objetos Aninhados
+```
+function imprimirEndereco({ endereco: { cidade, estado } }) {
+  console.log(`Cidade: ${cidade}, Estado: ${estado}`);
+}
+
+imprimirEndereco({
+  endereco: { cidade: "São Paulo", estado: "SP" },
+});
+// "Cidade: São Paulo, Estado: SP"
+```
+
+Exemplo com Arrays Aninhados
+```
+function imprimirMatriz([[a, b], [c, d]]) {
+  console.log(`Os valores são: ${a}, ${b}, ${c}, e ${d}.`);
+}
+
+imprimirMatriz([
+  [1, 2],
+  [3, 4],
+]);
+// "Os valores são: 1, 2, 3, e 4."
+```
+---
+
+**Combinação de Objetos e Arrays**
+Você pode combinar objetos e arrays para acessar estruturas complexas:
+```
+function imprimirDados({ nome, notas: [primeira, segunda] }) {
+  console.log(`${nome} tirou ${primeira} na primeira prova e ${segunda} na segunda.`);
+}
+
+imprimirDados({
+  nome: "João",
+  notas: [8, 9],
+});
+// "João tirou 8 na primeira prova e 9 na segunda."
+```
 
 ---
 
