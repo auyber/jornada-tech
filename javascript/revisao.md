@@ -1393,6 +1393,10 @@ As funções em JavaScript podem ser definidas de várias maneiras:
 
 1. **Declaração de função:**
    A declaração de função é a forma tradicional de definir uma função. Quando você usa a palavra-chave `function`, está criando uma função nomeada, que pode ser chamada por seu nome em qualquer lugar do código após sua declaração.
+   Caracteristicas:
+   - São **hoisted** (elevadas), ou seja, você pode chamar a função antes de sua declaração no código.
+   - Não há limitações quanto ao número de parâmetros que a função pode ter.
+   
    ```
    function saudacao(nome) {
      console.log("Olá, " + nome + "!");
@@ -1400,18 +1404,63 @@ As funções em JavaScript podem ser definidas de várias maneiras:
     ```
 2. **Expressão de função:**
     Em uma expressão de função, você cria uma função anônima (sem nome) e a atribui a uma variável. Essas funções podem ser passadas como argumentos ou retornadas por outras funções.
+   Caracteristicas:
+   - Não podem ser chamadas antes de sua definição no código.
+   - São comumente usadas em callbacks ou em funções que são passadas como argumentos.
    ```
     let saudacao = function(nome) {
       console.log("Olá, " + nome + "!");
     };
    ```
 3. **Arrow function (ES6+):**
-   As arrow functions são uma forma mais compacta e moderna de escrever funções, introduzida no ES6. Elas são especialmente úteis para funções curtas e quando você precisa de uma sintaxe mais concisa. Uma das principais vantagens das arrow functions é que elas mantêm o valor de this do contexto em que foram definidas, o que pode evitar certos problemas com o escopo.
-    ```
-    let saudacao = (nome) => {
-      console.log("Olá, " + nome + "!");
-    };
-    ```
+   As arrow functions são uma forma mais compacta e moderna de escrever funções, introduzida no ES6. Elas são especialmente úteis para funções curtas e quando você precisa de uma sintaxe mais concisa. Uma das principais vantagens das arrow functions é que elas mantêm o valor de `this` do contexto em que foram definidas, o que pode evitar certos problemas com o escopo.
+   Caracteristicas:
+   - Sintaxe mais curta: As arrow functions têm uma forma mais compacta, sem a necessidade da palavra-chave `function`.
+   - Não possuem `this` próprio: Elas herdam o valor de `this` do contexto em que foram criadas, o que as torna mais seguras quando se trata de manipulação de this dentro de funções anônimas.
+   - Imutabilidade do `this`: Isso é especialmente útil em situações como em callbacks dentro de objetos ou métodos.
+```
+let saudacao = (nome) => {
+  console.log("Olá, " + nome + "!");
+};
+saudacao("Auyber");  // Olá, Auyber!
+```
+A sintaxe da arrow function elimina a palavra-chave `function` e o uso das chaves (`{}`) pode ser omitido quando a função tem apenas uma linha de código:
+```
+let saudacao = nome => console.log("Olá, " + nome + "!");
+saudacao("Auyber");  // Olá, Auyber!
+```
+
+**Por que `this` é importante nas arrow functions?**
+- Uma das principais vantagens das arrow functions é que elas não têm seu próprio valor de `this`. Em vez disso, elas herdam o valor de `this` do contexto em que foram criadas.
+- Isso resolve o problema comum de que o valor de `this` pode ser alterado em funções anônimas dentro de objetos, especialmente quando você trabalha com métodos de objetos ou dentro de eventos.
+Exemplo com `this`:
+```
+const obj = {
+  nome: "Auyber",
+  saudacao: function() {
+    setTimeout(function() {
+      console.log("Olá, " + this.nome);  // Aqui 'this' refere-se ao contexto global ou undefined em modo estrito.
+    }, 1000);
+  }
+};
+
+obj.saudacao();  // Olá, undefined
+```
+Usando a arrow function o problema de escopo é resolvido
+```
+const obj = {
+  nome: "Auyber",
+  saudacao: function() {
+    setTimeout(() => {
+      console.log("Olá, " + this.nome);  // 'this' refere-se ao obj.
+    }, 1000);
+  }
+};
+
+obj.saudacao();  // Olá, Auyber
+```
+Nesse exemplo, a arrow function mantém o valor de `this` do objeto `obj`, enquanto a função tradicional de `setTimeout `mudaria o valor de `this` para o escopo global (ou `undefined` no modo estrito).
+
 ---
 
 ### ***Chamando Funções***
@@ -1475,16 +1524,132 @@ Explicação:
 
 **Desestruturação de Parâmetros (ES6+)**
 
-A desestruturação permite extrair valores de objetos ou arrays e usá-los como parâmetros diretamente na função. Isso facilita o acesso a dados em objetos complexos.
+A **desestruturação de parâmetros** em JavaScript é uma funcionalidade introduzida no ES6 que permite "desempacotar" valores de objetos ou arrays diretamente como variáveis, tornando o código mais limpo e conciso.
+
+
+**Como funciona a Desestruturação em Parâmetros**
+
+Normalmente, ao passar um objeto como argumento para uma função, precisaríamos acessar suas propriedades manualmente. Com a **desestruturação**, podemos extrair diretamente as propriedades ou elementos que desejamos usar, dentro da assinatura da função.
+
+
+**Exemplo básico com um objeto**
+
 ```
-function imprimirPessoa({nome, idade}) {
+function imprimirPessoa({ nome, idade }) {
   console.log(`${nome} tem ${idade} anos.`);
 }
 
-imprimirPessoa({nome: "Carlos", idade: 25}); // "Carlos tem 25 anos."
+imprimirPessoa({ nome: "Carlos", idade: 25 }); // "Carlos tem 25 anos."
 ```
-Explicação: 
-- A função ```imprimirPessoa``` usa a desestruturação para pegar diretamente as propriedades ```nome``` e ```idade``` do objeto passado como argumento, sem a necessidade de acessar ```pessoa.nome``` ou ```pessoa.idade```.
+Explicação:
+A função `imprimirPessoa` aceita um objeto como parâmetro.
+Na assinatura da função, usamos `{ nome, idade }` para desestruturar as propriedades `nome` e `idade` do objeto passado.
+Isso elimina a necessidade de acessar manualmente objeto.nome ou `objeto.idade` dentro da função.
+
+Vantagens:
+- Reduz a repetição de código.
+- Torna o código mais legível e claro.
+- Facilita o uso de objetos com muitas propriedades, já que podemos extrair apenas as que nos interessam.
+- Funciona muito bem com objetos complexos ou dados retornados de APIs.
+
+
+ANTES DE PROSSEGUIR COM MAIS EXEMPLOS, VAMOS FALAR SOBRE:
+
+**Uso de `$` e de crases (Template Literals)**
+
+Em JavaScript, **template literals** (ou literais de template) são uma funcionalidade introduzida no ES6 que permite criar strings mais dinâmicas e legíveis. Eles utilizam **crases (` `)** em vez de aspas (`'` ou `"`), e permitem a inserção de expressões dentro da string com o uso do **`${}`**.
+
+**Template Literals com `${}`**
+
+O `${}` é usado para **interpolar** expressões dentro de strings. Isso significa que você pode incluir variáveis ou qualquer expressão válida de JavaScript diretamente na string, sem precisar concatenar.
+
+**Exemplo básico:**
+```
+const nome = "Carlos";
+const idade = 25;
+
+console.log(`${nome} tem ${idade} anos.`);
+// Saída: "Carlos tem 25 anos."
+```
+Explicação:
+As crases definem uma template string.
+O `${}` permite que expressões JavaScript sejam avaliadas e substituídas pelo valor resultante.
+No exemplo, `${nome}` será substituído pelo valor da variável `nome`, e `${idade}` pelo valor de `idade`.
+
+VOLTANDO A FALAR SOBRE DESTRUTURAÇÃO:
+
+Exemplo avançado com valores padrão
+Se a propriedade esperada não for fornecida, você pode definir valores padrão durante a desestruturação:
+```
+function imprimirPessoa({ nome = "Desconhecido", idade = 0 }) {
+  console.log(`${nome} tem ${idade} anos.`);
+}
+
+imprimirPessoa({ nome: "Ana" }); // "Ana tem 0 anos."
+imprimirPessoa({});             // "Desconhecido tem 0 anos."
+```
+Explicação:
+Quando `nome` ou `idade` não são fornecidos, os valores padrão `nome = "Desconhecido"` e `idade = 0` são utilizados.
+
+---
+
+**Desestruturação com Arrays**
+A desestruturação também funciona com arrays, permitindo acessar seus elementos diretamente:
+```
+function imprimirNumeros([primeiro, segundo, terceiro]) {
+  console.log(`Os números são: ${primeiro}, ${segundo}, e ${terceiro}.`);
+}
+
+imprimirNumeros([1, 2, 3]); // "Os números são: 1, 2, e 3."
+```
+Explicação:
+A função `imprimirNumeros` recebe um array como argumento.
+Na assinatura da função, `[primeiro, segundo, terceiro]` extrai os valores dos primeiros três elementos do array.
+
+---
+
+**Desestruturação com Objetos e Arrays Aninhados**
+A desestruturação também suporta estruturas aninhadas, permitindo acessar dados em profundidade:
+
+Exemplo com Objetos Aninhados
+```
+function imprimirEndereco({ endereco: { cidade, estado } }) {
+  console.log(`Cidade: ${cidade}, Estado: ${estado}`);
+}
+
+imprimirEndereco({
+  endereco: { cidade: "São Paulo", estado: "SP" },
+});
+// "Cidade: São Paulo, Estado: SP"
+```
+
+Exemplo com Arrays Aninhados
+```
+function imprimirMatriz([[a, b], [c, d]]) {
+  console.log(`Os valores são: ${a}, ${b}, ${c}, e ${d}.`);
+}
+
+imprimirMatriz([
+  [1, 2],
+  [3, 4],
+]);
+// "Os valores são: 1, 2, 3, e 4."
+```
+---
+
+**Combinação de Objetos e Arrays**
+Você pode combinar objetos e arrays para acessar estruturas complexas:
+```
+function imprimirDados({ nome, notas: [primeira, segunda] }) {
+  console.log(`${nome} tirou ${primeira} na primeira prova e ${segunda} na segunda.`);
+}
+
+imprimirDados({
+  nome: "João",
+  notas: [8, 9],
+});
+// "João tirou 8 na primeira prova e 9 na segunda."
+```
 
 ---
 
