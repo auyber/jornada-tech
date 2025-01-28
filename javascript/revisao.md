@@ -1552,6 +1552,32 @@ Vantagens:
 - Facilita o uso de objetos com muitas propriedades, já que podemos extrair apenas as que nos interessam.
 - Funciona muito bem com objetos complexos ou dados retornados de APIs.
 
+
+ANTES DE PROSSEGUIR COM MAIS EXEMPLOS, VAMOS FALAR SOBRE:
+
+**Uso de `$` e de crases (Template Literals)**
+
+Em JavaScript, **template literals** (ou literais de template) são uma funcionalidade introduzida no ES6 que permite criar strings mais dinâmicas e legíveis. Eles utilizam **crases (` `)** em vez de aspas (`'` ou `"`), e permitem a inserção de expressões dentro da string com o uso do **`${}`**.
+
+**Template Literals com `${}`**
+
+O `${}` é usado para **interpolar** expressões dentro de strings. Isso significa que você pode incluir variáveis ou qualquer expressão válida de JavaScript diretamente na string, sem precisar concatenar.
+
+**Exemplo básico:**
+```
+const nome = "Carlos";
+const idade = 25;
+
+console.log(`${nome} tem ${idade} anos.`);
+// Saída: "Carlos tem 25 anos."
+```
+Explicação:
+As crases definem uma template string.
+O `${}` permite que expressões JavaScript sejam avaliadas e substituídas pelo valor resultante.
+No exemplo, `${nome}` será substituído pelo valor da variável `nome`, e `${idade}` pelo valor de `idade`.
+
+VOLTANDO A FALAR SOBRE DESTRUTURAÇÃO:
+
 Exemplo avançado com valores padrão
 Se a propriedade esperada não for fornecida, você pode definir valores padrão durante a desestruturação:
 ```
