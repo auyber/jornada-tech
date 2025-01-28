@@ -5,6 +5,7 @@
 //TOTAL =
 
 //Funções, Parâmetros Padrão, Rest Parameter e Desestruturação de Parâmetros
+//FUNÇÔES
 //1. função simples
 function cumprimentar(nome = "Seja bem-vindo"){
    return "Olá, " + nome + "! Seja bem-vindo"
@@ -32,6 +33,7 @@ function saudar(nome = "estranho!", saudacao = "Olá!"){
 console.log(saudar())
 
 //FALTA EX: 3., 4., 5. e 6.
+
 //REST PARAMETER
 //1. soma de n
 function somar(...n){
@@ -52,26 +54,18 @@ function juntarPalavras(...string){
 console.log(juntarPalavras("A","U","Y","B","E","R"))
 
 //FALTA EX 3., 4., 5. e 6.
+
 //DESTRUTURAÇÃO DE PARAMETROS
 //1. função com objeto
-function exibirDados(object){
-    return object.nome + " tem " + object.idade + " anos."
+function exibirDados({nome, idade}) {
+    console.log(`${nome} tem ${idade} anos`)
 }
 
-let pessoa = {
-    nome: "Auyber",
-    idade: 33
-}
-
-console.log(exibirDados(pessoa))
+exibirDados({nome: "Auyber", idade: 33})
 
 //2.função com array
-function primeiroEUltimo(array){
-    return "Primeiro: " + array[0] + ", Último: " + array[array.length - 1]
-}
-
-itens = ["Sucesso","Falha","Alegria","Programador"]
-
-console.log(primeiroEUltimo(itens))
+function primeiroEUltimo([primeiro, , ultimo]) {
+    return `Primeiro: ${primeiro}, Último: ${ultimo}`;
+  }
 */
 //FALTA EX: 3., 4., 5. e 6.
