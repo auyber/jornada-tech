@@ -1393,6 +1393,10 @@ As funções em JavaScript podem ser definidas de várias maneiras:
 
 1. **Declaração de função:**
    A declaração de função é a forma tradicional de definir uma função. Quando você usa a palavra-chave `function`, está criando uma função nomeada, que pode ser chamada por seu nome em qualquer lugar do código após sua declaração.
+   Caracteristicas:
+   - São **hoisted** (elevadas), ou seja, você pode chamar a função antes de sua declaração no código.
+   - Não há limitações quanto ao número de parâmetros que a função pode ter.
+   
    ```
    function saudacao(nome) {
      console.log("Olá, " + nome + "!");
@@ -1400,18 +1404,63 @@ As funções em JavaScript podem ser definidas de várias maneiras:
     ```
 2. **Expressão de função:**
     Em uma expressão de função, você cria uma função anônima (sem nome) e a atribui a uma variável. Essas funções podem ser passadas como argumentos ou retornadas por outras funções.
+   Caracteristicas:
+   - Não podem ser chamadas antes de sua definição no código.
+   - São comumente usadas em callbacks ou em funções que são passadas como argumentos.
    ```
     let saudacao = function(nome) {
       console.log("Olá, " + nome + "!");
     };
    ```
 3. **Arrow function (ES6+):**
-   As arrow functions são uma forma mais compacta e moderna de escrever funções, introduzida no ES6. Elas são especialmente úteis para funções curtas e quando você precisa de uma sintaxe mais concisa. Uma das principais vantagens das arrow functions é que elas mantêm o valor de this do contexto em que foram definidas, o que pode evitar certos problemas com o escopo.
-    ```
-    let saudacao = (nome) => {
-      console.log("Olá, " + nome + "!");
-    };
-    ```
+   As arrow functions são uma forma mais compacta e moderna de escrever funções, introduzida no ES6. Elas são especialmente úteis para funções curtas e quando você precisa de uma sintaxe mais concisa. Uma das principais vantagens das arrow functions é que elas mantêm o valor de `this` do contexto em que foram definidas, o que pode evitar certos problemas com o escopo.
+   Caracteristicas:
+   - Sintaxe mais curta: As arrow functions têm uma forma mais compacta, sem a necessidade da palavra-chave `function`.
+   - Não possuem `this` próprio: Elas herdam o valor de `this` do contexto em que foram criadas, o que as torna mais seguras quando se trata de manipulação de this dentro de funções anônimas.
+   - Imutabilidade do `this`: Isso é especialmente útil em situações como em callbacks dentro de objetos ou métodos.
+```
+let saudacao = (nome) => {
+  console.log("Olá, " + nome + "!");
+};
+saudacao("Auyber");  // Olá, Auyber!
+```
+A sintaxe da arrow function elimina a palavra-chave `function` e o uso das chaves (`{}`) pode ser omitido quando a função tem apenas uma linha de código:
+```
+let saudacao = nome => console.log("Olá, " + nome + "!");
+saudacao("Auyber");  // Olá, Auyber!
+```
+
+**Por que `this` é importante nas arrow functions?**
+- Uma das principais vantagens das arrow functions é que elas não têm seu próprio valor de `this`. Em vez disso, elas herdam o valor de `this` do contexto em que foram criadas.
+- Isso resolve o problema comum de que o valor de `this` pode ser alterado em funções anônimas dentro de objetos, especialmente quando você trabalha com métodos de objetos ou dentro de eventos.
+Exemplo com `this`:
+```
+const obj = {
+  nome: "Auyber",
+  saudacao: function() {
+    setTimeout(function() {
+      console.log("Olá, " + this.nome);  // Aqui 'this' refere-se ao contexto global ou undefined em modo estrito.
+    }, 1000);
+  }
+};
+
+obj.saudacao();  // Olá, undefined
+```
+Usando a arrow function o problema de escopo é resolvido
+```
+const obj = {
+  nome: "Auyber",
+  saudacao: function() {
+    setTimeout(() => {
+      console.log("Olá, " + this.nome);  // 'this' refere-se ao obj.
+    }, 1000);
+  }
+};
+
+obj.saudacao();  // Olá, Auyber
+```
+Nesse exemplo, a arrow function mantém o valor de `this` do objeto `obj`, enquanto a função tradicional de `setTimeout `mudaria o valor de `this` para o escopo global (ou `undefined` no modo estrito).
+
 ---
 
 ### ***Chamando Funções***
