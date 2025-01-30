@@ -42,56 +42,216 @@ def imc(altura, peso):
     return f"Seu IMC é {peso / (altura * 2):.2f}"
 
 print(imc(altura, peso))
-"""
+
 
 #2. Crie um script que peça ao usuário para inserir o raio de um círculo. Calcule e exiba a área do círculo com três
 #casas decimais. (Use pi = 3.14159)
 
+raio = float(input("Digite o raio de um círculo: "))
+pi = 3.14159
+
+def areaCirculo(raio):
+    return f"A área do círculo é {(pi * raio**2):.3f}"
+
+print(areaCirculo(raio))
 
 
-"""
+
 ## **Divisão Inteira**
 
-1. Faça um programa que solicite ao usuário um número de minutos e converta para horas e minutos. Por exemplo,
-145 minutos deve ser exibido como 2 horas e 25 minutos.
-2. Crie um script que peça ao usuário um número de dias e converta para semanas e dias. Por exemplo, 17 dias deve ser
-exibido como 2 semanas e 3 dias.
+#1. Faça um programa que solicite ao usuário um número de minutos e converta para horas e minutos. Por exemplo,
+#145 minutos deve ser exibido como 2 horas e 25 minutos.
+
+minutos = int(input("Digite o número de minutos: "))
+
+def minutosEmHoras(minutos):
+    horas = minutos // 60
+    minutosRestantes = minutos % 60
+    return f"{minutos} minutos é igual a {horas} horas e {minutosRestantes} minutos."
+
+print(minutosEmHoras(minutos))
+
+
+#2. Crie um script que peça ao usuário um número de dias e converta para semanas e dias. Por exemplo, 17 dias deve ser
+#exibido como 2 semanas e 3 dias.
+
+dias = int(input("Digite um número de dias: "))
+
+def semanas(dias):
+    semanasInteiras = dias // 7
+    semanasIncompletas = dias % 7
+    return f"{semanasInteiras} semana(s) e {semanasIncompletas} dia(s)"
+
+print(semanas(dias))
+
 
 ## **and (E lógico)**
 
-1. Desenvolva um programa que peça ao usuário sua idade e se possui carteira de motorista (responda com "sim" ou
-"não"). O programa deve determinar se a pessoa pode dirigir (idade maior ou igual a 18 e possui carteira).
-2. Crie um script que solicite ao usuário um número e verifique se ele está entre 0 e 100 (inclusive). Use o
-operador **`and`** na sua condição.
+#1. Desenvolva um programa que peça ao usuário sua idade e se possui carteira de motorista (responda com "sim" ou
+#"não"). O programa deve determinar se a pessoa pode dirigir (idade maior ou igual a 18 e possui carteira).
+
+idade = int(input("Digite sua idade: "))
+
+carteira = input("Possui carteira de motorista? (sim ou não)\n")
+
+def permissao(idade, carteira):
+    if idade > 18 and carteira == "sim":
+        return "Você pode dirigir"
+    if idade < 18 and carteira == "sim":
+        return "Você não pode dirigir, sua habilitação é falsa"
+    else:
+        return "Você não pode dirigir"
+
+print(permissao(idade, carteira))
+
+
+
+#2. Crie um script que solicite ao usuário um número e verifique se ele está entre 0 e 100 (inclusive). O inclusive
+# quer dizer que o 0 e o 100 também fazem parte da verificaçãoUse o operador**`and`**na sua condição.
+
+numero = int(input("Digite um número: "))
+
+def pertence(numero):
+    if numero >= 0 and numero <= 100:
+        return "Pertence"
+    else:
+        return "Não pertence"
+
+print(pertence(numero))
+
 
 ## **or (OU lógico)**
 
-1. Escreva um programa que peça ao usuário para inserir um caractere e determine se é uma vogal (a, e, i, o, u,
-considerando maiúsculas e minúsculas).
-2. Faça um script que solicite ao usuário um número e verifique se ele é menor que 0 ou maior que 100. Use o
-operador **`or`** na sua condição.
+#1. Escreva um programa que peça ao usuário para inserir um caractere e determine se é uma vogal (a, e, i, o, u,
+#considerando maiúsculas e minúsculas).
+
+caractere = input("Digite um caractere: ")
+vogalMin = ["a","e", "i", "o", "u"]
+vogamMai = ["A","E","I","O", "U"]
+
+def vogal(caractere):
+    if caractere in vogalMin or caractere in vogamMai:
+        return f"A letra {caractere} é uma Vogal"
+    else:
+        return f"A letra {caractere} não é uma vogal"
+
+print(vogal(caractere))
+
+
+#2. Faça um script que solicite ao usuário um número e verifique se ele é menor que 0 ou maior que 100. Use o
+#operador**`or`**na sua condição.
+
+numero = int(input("Digite um número: "))
+
+def verificar(numero):
+    if numero < 0 or numero > 100:
+        return "Número não está entre 0 e 100"
+    else:
+        return "Número está entre 0 e 100"
+
+print(verificar(numero))
+
 
 ## **if, elif, else**
 
-1. Crie um programa que peça ao usuário para inserir sua nota (de 0 a 100) e exiba o conceito correspondente:
-    - A: 90-100
-    - B: 80-89
-    - C: 70-79
-    - D: 60-69
-    - F: abaixo de 60
-2. Desenvolva um script que solicite ao usuário um número de 1 a 7 e exiba o dia da semana correspondente (1 para
-Domingo, 2 para Segunda, etc.). Se o número for inválido, exiba uma mensagem de erro.
+#1. Crie um programa que peça ao usuário para inserir sua nota (de 0 a 100) e exiba o conceito correspondente:
+   # - A: 90-100
+   # - B: 80-89
+   # - C: 70-79
+   # - D: 60-69
+   # - F: abaixo de 60
+
+nota = int(input("Insira sua nota: (de 0 a 100)\n"))
+
+def result(nota):
+    if nota < 0 or nota > 100:
+        resp = "Digite uma Nota válida"
+    elif nota < 60:
+        resp = "Você tirou F"
+    elif nota < 70:
+        resp = "Você tirou D"
+    elif nota < 80:
+        resp = "Você tirou C"
+    elif nota < 90:
+        resp = "Você tirou B"
+    elif nota >= 90:
+        resp = "Você tirou A"
+    else:
+        resp = "Isso não é uma Nota"
+
+    return resp
+
+print(result(nota))
+
+
+#2. Desenvolva um script que solicite ao usuário um número de 1 a 7 e exiba o dia da semana correspondente (1 para
+#Domingo, 2 para Segunda, etc.). Se o número for inválido, exiba uma mensagem de erro.
+
+
+numero = int(input("Digite um número de 1 a 7: "))
+
+def diaDaSemana(numero):
+    if numero == 1:
+        resp = "Domingo"
+    elif numero == 1:
+        resp = "Segunda"
+    elif numero == 1:
+        resp = "Terça"
+    elif numero == 1:
+        resp = "Quarta"
+    elif numero == 1:
+        resp = "Quinta"
+    elif numero == 1:
+        resp = "Sexta"
+    elif numero == 1:
+        resp = "Sabádo"
+    else:
+        resp = "Dia da semana inválido"
+
+    return  resp
+
+print(diaDaSemana(numero))
+
 
 ## **cont += (Incremento)**
 
-1. Escreva um programa que conte de 1 a 10, exibindo cada número. Use um loop **`while`** e a operação **`cont += 1`**.
-2. Faça um script que solicite ao usuário um número e, em seguida, some todos os números de 1 até esse número (
-inclusive). Use um loop **`while`** e a operação **`cont += 1`**.
+#1. Escreva um programa que conte de 1 a 10, exibindo cada número. Use um loop**`while`**e a operação**`cont += 1`**.
 
+def contagem():
+    n = 1
+    while n <= 10:
+        print(n)
+        n += 1
+
+contagem()
+
+
+
+
+
+#2. Faça um script que solicite ao usuário um número e, em seguida, some todos os números de 1 até esse número (
+#inclusive). Use um loop**`while`**e a operação**`cont += 1`**.
+
+numero = int(input("Digite um número: "))
+
+def soma(numero):
+    resultado = 0
+    contagem = 0
+    while contagem < numero:
+        contagem += 1
+        resultado += contagem
+        print (resultado)
+
+soma(numero)
+
+"""
 ## **while (Loop While)**
 
-1. Crie um programa que gere um número aleatório entre 1 e 100 e peça ao usuário para adivinhar. O programa deve
-informar se o palpite está alto ou baixo, até que o usuário acerte. Conte o número de tentativas.
+#1. Crie um programa que gere um número aleatório entre 1 e 100 e peça ao usuário para adivinhar. O programa deve
+#informar se o palpite está alto ou baixo, até que o usuário acerte. Conte o número de tentativas.
+
+
+"""
 2. Desenvolva um script que solicite ao usuário para inserir números positivos. O programa deve continuar pedindo
 números até que o usuário insira um número negativo. No final, exiba a soma de todos os números positivos inseridos.
 
@@ -345,4 +505,335 @@ Crie uma função chamada `validar_nota` que recebe uma nota como argumento (flo
 - Caso a nota seja menor que 0 ou maior que 10, lance uma exceção com a mensagem: `"Nota inválida. Deve estar entre 0
 e 10."`
 - Caso contrário, retorne a nota formatada com uma casa decimal.
+
+
+### **1️⃣ Tuplas**
+
+📌 **Conceito**: Tuplas são **estruturas imutáveis** em Python que armazenam múltiplos valores em uma sequência ordenada.
+
+### 🔹 **Exercícios**
+
+1️⃣ **Crie uma tupla chamada `dados_pessoais` contendo seu nome, idade e cidade natal. Em seguida, imprima cada valor individualmente.**
+
+2️⃣ **Dada a tupla `numeros = (10, 20, 30, 40, 50)`, acesse e imprima o terceiro elemento da tupla.**
+
+3️⃣ **Crie uma tupla com os dias da semana e peça ao usuário para digitar um número de 1 a 7. Exiba o nome do dia correspondente.**
+
+4️⃣ **Crie uma tupla contendo cinco números e tente modificar um dos elementos. O que acontece?**
+
+---
+
+### **2️⃣ Operações com Tuplas**
+
+📌 **Conceito**: Podemos realizar operações como **concatenação, repetição, verificação de elementos e obtenção de índices** em tuplas.
+
+### 🔹 **Exercícios**
+
+5️⃣ **Crie duas tuplas (`tupla1 = (1, 2, 3)`, `tupla2 = (4, 5, 6)`) e una ambas em uma terceira tupla.**
+
+6️⃣ **Dada a tupla `valores = (10, 20, 30, 40, 50)`, verifique se o número 30 está presente nela.**
+
+7️⃣ **Crie uma tupla com cinco elementos e utilize o método `.count()` para contar quantas vezes um determinado número aparece.**
+
+8️⃣ **Dada a tupla `letras = ('a', 'b', 'c', 'd', 'e')`, encontre o índice do elemento `'c'`.**
+
+---
+
+### **3️⃣ `for in` com Tuplas**
+
+📌 **Conceito**: Podemos percorrer os elementos de uma tupla usando o loop `for in`.
+
+### 🔹 **Exercícios**
+
+9️⃣ **Crie uma tupla com os meses do ano e use um `for` para imprimir cada um deles.**
+
+🔟 **Dada a tupla `valores = (2, 4, 6, 8, 10)`, utilize um `for` para calcular a soma dos números.**
+
+1️⃣1️⃣ **Crie uma tupla com nomes de frutas e use um `for` para exibir cada uma em maiúsculas.**
+
+1️⃣2️⃣ **Dada a tupla `pares = (2, 4, 6, 8, 10)`, utilize um `for` para calcular o quadrado de cada número e imprima os resultados.**
+
+---
+
+### **4️⃣ `for in range(len())` com Tuplas**
+
+📌 **Conceito**: `for in range(len(tupla))` permite percorrer uma tupla usando índices.
+
+### 🔹 **Exercícios**
+
+1️⃣3️⃣ **Dada a tupla `numeros = (5, 10, 15, 20)`, use `for in range(len(numeros))` para imprimir os valores com seus índices.**
+
+1️⃣4️⃣ **Crie uma tupla com cinco nomes e utilize `for in range(len())` para exibir os nomes ao contrário.**
+
+1️⃣5️⃣ **Dada a tupla `valores = (100, 200, 300, 400)`, utilize `for in range(len())` para dobrar os valores e exibi-los.**
+
+1️⃣6️⃣ **Dada a tupla `('Python', 'JavaScript', 'C++', 'Java')`, use `for in range(len())` para exibir cada linguagem precedida pelo número de índice.**
+
+---
+
+### **5️⃣ Convertendo Tupla para Lista**
+
+📌 **Conceito**: Podemos converter uma tupla em lista para modificar seus elementos.
+
+### 🔹 **Exercícios**
+
+1️⃣7️⃣ **Crie uma tupla com três cores. Converta-a em uma lista, adicione uma nova cor e imprima o resultado.**
+
+1️⃣8️⃣ **Dada a tupla `numeros = (5, 10, 15)`, transforme-a em lista, multiplique cada elemento por 2 e transforme de volta em tupla.**
+
+1️⃣9️⃣ **Dada a tupla `nomes = ('Ana', 'Bruno', 'Carlos')`, converta-a em lista e substitua o nome "Bruno" por "Beatriz".**
+
+2️⃣0️⃣ **Crie uma tupla com os números de 1 a 5. Converta-a em lista, remova o último elemento e transforme-a novamente em tupla.**
+
+---
+
+### **6️⃣ Tupla Retornando Múltiplos Valores**
+
+📌 **Conceito**: Uma função pode retornar múltiplos valores usando tuplas.
+
+### 🔹 **Exercícios**
+
+2️⃣1️⃣ **Crie uma função que recebe dois números e retorna a soma e o produto deles como uma tupla.**
+
+2️⃣2️⃣ **Escreva uma função que recebe uma lista de números e retorna o maior e o menor número como uma tupla.**
+
+2️⃣3️⃣ **Crie uma função que recebe um nome completo e retorna o primeiro e o último nome em uma tupla.**
+
+2️⃣4️⃣ **Faça uma função que recebe uma string e retorna a quantidade de vogais e consoantes como uma tupla.**
+
+### **1️⃣ Dicionários**
+
+📌 **Conceito**: Dicionários (`dict`) são coleções **chave-valor**, onde cada chave é única.
+
+### 🔹 **Exercícios**
+
+1️⃣ **Crie um dicionário chamado `pessoa` com as chaves `nome`, `idade` e `cidade`. Preencha com seus dados e imprima o dicionário.**
+
+2️⃣ **Dado o dicionário `aluno = {"nome": "João", "nota": 8.5, "curso": "Matemática"}`, acesse e imprima apenas o valor da nota.**
+
+3️⃣ **Crie um dicionário de preços de três produtos e permita que o usuário digite o nome de um produto para ver o preço.**
+
+4️⃣ **Crie um dicionário representando um livro (título, autor, ano). Em seguida, adicione um novo campo chamado `gênero` e imprima o dicionário atualizado.**
+
+---
+
+### **2️⃣ `pop()` em Dicionários**
+
+📌 **Conceito**: O método `.pop(chave)` remove e retorna o valor de uma chave específica.
+
+### 🔹 **Exercícios**
+
+5️⃣ **Dado `carro = {"marca": "Ford", "modelo": "Mustang", "ano": 2022}`, remova a chave `"ano"` usando `.pop()` e exiba o valor removido.**
+
+6️⃣ **Crie um dicionário de contatos (nome → telefone). Peça ao usuário para digitar um nome e remova esse contato usando `.pop()`.**
+
+7️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, remova `"banana"` usando `.pop()` e mostre o dicionário atualizado.**
+
+8️⃣ **Crie um dicionário com informações de um jogador (nome, posição, gols). Use `.pop()` para remover a chave `"gols"` e exiba o dicionário atualizado.**
+
+---
+
+### **3️⃣ `del` em Dicionários**
+
+📌 **Conceito**: A instrução `del dict[chave]` remove um item do dicionário permanentemente.
+
+### 🔹 **Exercícios**
+
+9️⃣ **Dado `usuario = {"nome": "Carlos", "email": "carlos@email.com", "idade": 28}`, remova a chave `"email"` usando `del` e exiba o dicionário.**
+
+🔟 **Crie um dicionário representando um filme (título, diretor, ano). Remova a chave `"diretor"` usando `del`.**
+
+1️⃣1️⃣ **Dado `produtos = {"arroz": 15, "feijão": 10, "macarrão": 8}`, remova `"macarrão"` usando `del` e imprima o resultado.**
+
+1️⃣2️⃣ **Crie um dicionário com três países e suas capitais. Use `del` para remover um país e exiba o dicionário atualizado.**
+
+---
+
+### **4️⃣ `append` (Adicionar elementos em Dicionários)**
+
+📌 **Conceito**: Para adicionar elementos, usamos `dict[chave] = valor`.
+
+### 🔹 **Exercícios**
+
+1️⃣3️⃣ **Crie um dicionário de alunos (`nome → nota`). Adicione um novo aluno usando `dict[chave] = valor`.**
+
+1️⃣4️⃣ **Dado `agenda = {"Ana": "9999-1111", "Bruno": "8888-2222"}`, adicione um novo contato ao dicionário e imprima o resultado.**
+
+1️⃣5️⃣ **Crie um dicionário representando um carro (`marca`, `modelo`). Adicione a chave `"ano"` e atribua um valor.**
+
+1️⃣6️⃣ **Crie um dicionário com nomes de cidades e seus estados. Adicione uma nova cidade com seu estado correspondente.**
+
+---
+
+### **5️⃣ `for in` em Dicionários**
+
+📌 **Conceito**: Podemos iterar sobre chaves e valores de um dicionário.
+
+### 🔹 **Exercícios**
+
+1️⃣7️⃣ **Dado `cores = {"vermelho": "#FF0000", "verde": "#00FF00", "azul": "#0000FF"}`, use `for` para imprimir todas as cores e seus códigos hexadecimais.**
+
+1️⃣8️⃣ **Crie um dicionário com três países e suas capitais e use `for` para imprimir `"A capital de {país} é {capital}"`.**
+
+1️⃣9️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, use `for` para exibir o nome das frutas e a quantidade em estoque.**
+
+2️⃣0️⃣ **Crie um dicionário de estudantes (`nome → nota`). Use `for` para exibir apenas os nomes.**
+
+---
+
+### **6️⃣ `values()` em Dicionários**
+
+📌 **Conceito**: O método `.values()` retorna todos os valores do dicionário.
+
+### 🔹 **Exercícios**
+
+2️⃣1️⃣ **Dado `idades = {"Alice": 25, "Bruno": 30, "Carlos": 22}`, use `.values()` para imprimir todas as idades.**
+
+2️⃣2️⃣ **Crie um dicionário de preços de produtos e utilize `.values()` para calcular a soma total dos preços.**
+
+2️⃣3️⃣ **Dado `pontuacao = {"Ana": 50, "Beatriz": 70, "Carlos": 85}`, use `.values()` para encontrar a maior pontuação.**
+
+2️⃣4️⃣ **Crie um dicionário de notas de alunos e exiba a média das notas usando `.values()`.**
+
+---
+
+### **7️⃣ `keys()` em Dicionários**
+
+📌 **Conceito**: O método `.keys()` retorna todas as chaves do dicionário.
+
+### 🔹 **Exercícios**
+
+2️⃣5️⃣ **Dado `cadastro = {"nome": "Lucas", "idade": 29, "cidade": "São Paulo"}`, use `.keys()` para exibir todas as chaves.**
+
+2️⃣6️⃣ **Crie um dicionário representando um carro (marca, modelo, ano). Utilize `.keys()` para exibir os atributos disponíveis.**
+
+2️⃣7️⃣ **Dado `contatos = {"Ana": "9999-1111", "Bruno": "8888-2222", "Carlos": "7777-3333"}`, utilize `.keys()` para listar os nomes dos contatos.**
+
+2️⃣8️⃣ **Crie um dicionário com países e capitais. Use `.keys()` para verificar se um país específico está no dicionário.**
+
+---
+
+### **8️⃣ Convertendo Dicionário para Lista (`list()`)**
+
+📌 **Conceito**: Podemos converter as chaves ou valores de um dicionário em uma lista usando `list(dict)`, `list(dict.keys())` ou `list(dict.values())`.
+
+### 🔹 **Exercícios**
+
+2️⃣9️⃣ **Dado `dados = {"nome": "Maria", "idade": 32, "cidade": "Recife"}`, converta suas chaves em uma lista e imprima.**
+
+3️⃣0️⃣ **Dado `precos = {"pão": 2.5, "leite": 4.0, "café": 8.5}`, transforme os valores em uma lista e imprima.**
+
+3️⃣1️⃣ **Crie um dicionário representando notas de alunos (`aluno → nota`). Converta os nomes dos alunos em uma lista.**
+
+3️⃣2️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, transforme o dicionário inteiro em uma lista de tuplas (`list(estoque.items())`) e imprima.**
+
+### **1️⃣ Conjuntos (`set`)**
+
+📌 **Conceito**: Conjuntos em Python são **coleções não ordenadas** de elementos **únicos**, sem valores duplicados.
+
+### 🔹 **Exercícios**
+
+1️⃣ **Crie um conjunto chamado `numeros` com os valores `{1, 2, 3, 4, 5}` e imprima-o.**
+
+2️⃣ **Tente criar um conjunto com valores duplicados e veja o que acontece.**
+
+3️⃣ **Crie um conjunto com letras do seu nome e exiba os elementos.**
+
+4️⃣ **Crie um conjunto vazio e adicione três números diferentes a ele.**
+
+---
+
+### **2️⃣ `for in` com Conjuntos**
+
+📌 **Conceito**: Podemos percorrer os elementos de um conjunto usando `for in`.
+
+### 🔹 **Exercícios**
+
+5️⃣ **Crie um conjunto com os números `{10, 20, 30, 40, 50}` e use `for` para exibir cada número.**
+
+6️⃣ **Crie um conjunto com três nomes e use um `for` para imprimir cada um deles.**
+
+7️⃣ **Dado `valores = {2, 4, 6, 8, 10}`, use um `for` para calcular a soma dos números.**
+
+8️⃣ **Crie um conjunto de vogais e use um `for` para imprimir as vogais em maiúsculas.**
+
+---
+
+### **3️⃣ `remove()` com Conjuntos**
+
+📌 **Conceito**: O método `.remove(valor)` remove um elemento específico do conjunto.
+
+### 🔹 **Exercícios**
+
+9️⃣ **Dado `frutas = {"maçã", "banana", "uva", "laranja"}`, remova `"banana"` e exiba o conjunto atualizado.**
+
+🔟 **Crie um conjunto de números `{1, 2, 3, 4, 5}` e remova o número 3.**
+
+1️⃣1️⃣ **Dado `cores = {"vermelho", "azul", "verde"}`, peça ao usuário para digitar uma cor e remova-a do conjunto.**
+
+1️⃣2️⃣ **Crie um conjunto de linguagens de programação e remova `"Java"` se existir.**
+
+---
+
+### **4️⃣ Criando Conjuntos com `set()`**
+
+📌 **Conceito**: Podemos criar conjuntos a partir de listas ou outras coleções usando `set()`.
+
+### 🔹 **Exercícios**
+
+1️⃣3️⃣ **Converta a lista `numeros = [1, 2, 3, 3, 4, 4, 5]` em um conjunto para remover duplicatas.**
+
+1️⃣4️⃣ **Crie um conjunto a partir da string `"banana"` e veja os caracteres únicos.**
+
+1️⃣5️⃣ **Dada a tupla `dados = ("a", "b", "a", "c", "b")`, transforme-a em um conjunto.**
+
+1️⃣6️⃣ **Crie um conjunto a partir de uma lista de palavras e imprima apenas as palavras únicas.**
+
+---
+
+### **5️⃣ `.intersection()` (Interseção de Conjuntos)**
+
+📌 **Conceito**: `.intersection()` retorna os elementos comuns entre dois conjuntos.
+
+### 🔹 **Exercícios**
+
+1️⃣7️⃣ **Dado `pares = {2, 4, 6, 8, 10}` e `multiplos_de_tres = {3, 6, 9, 12}`, encontre os números em comum.**
+
+1️⃣8️⃣ **Crie dois conjuntos representando alunos que gostam de futebol e basquete e encontre os que gostam de ambos.**
+
+1️⃣9️⃣ **Dado `vogais = {"a", "e", "i", "o", "u"}` e `letras_nome = set("Carlos")`, encontre as vogais no nome.**
+
+2️⃣0️⃣ **Crie dois conjuntos com números aleatórios e descubra quais números aparecem em ambos.**
+
+---
+
+### **6️⃣ `.union()` (União de Conjuntos)**
+
+📌 **Conceito**: `.union()` combina todos os elementos de dois conjuntos.
+
+### 🔹 **Exercícios**
+
+2️⃣1️⃣ **Dado `pares = {2, 4, 6, 8}` e `impares = {1, 3, 5, 7}`, una os dois conjuntos.**
+
+2️⃣2️⃣ **Crie dois conjuntos com nomes de alunos de duas turmas e una todos os alunos.**
+
+2️⃣3️⃣ **Dado `vogais = {"a", "e", "i", "o", "u"}` e `consoantes = {"b", "c", "d", "f"}`, una os dois conjuntos.**
+
+2️⃣4️⃣ **Crie dois conjuntos de cores e una ambos em um terceiro conjunto.**
+
+---
+
+### **7️⃣ `.difference()` (Diferença entre Conjuntos)**
+
+📌 **Conceito**: `.difference()` retorna os elementos que estão em um conjunto, mas não no outro.
+
+### 🔹 **Exercícios**
+
+2️⃣5️⃣ **Dado `numeros1 = {1, 2, 3, 4, 5}` e `numeros2 = {4, 5, 6, 7}`, encontre os elementos exclusivos de `numeros1`.**
+
+2️⃣6️⃣ **Crie um conjunto com nomes de funcionários de um setor e outro conjunto com funcionários promovidos. Encontre os que ainda estão no setor.**
+
+2️⃣7️⃣ **Dado `vogais = {"a", "e", "i", "o", "u"}` e `letras_nome = set("Felipe")`, descubra as vogais que não aparecem no nome.**
+
+2️⃣8️⃣ **Crie dois conjuntos com números e descubra quais números estão apenas no primeiro conjunto.**
 """
