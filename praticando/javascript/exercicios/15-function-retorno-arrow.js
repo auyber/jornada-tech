@@ -3,7 +3,7 @@
 
 /*
 //TOTAL =
-/*
+
 //Exercícios de Function, retorno, arrow, múltiplos valores e antecipado
 //Retorno Básico
 //1.função de multiplicação
