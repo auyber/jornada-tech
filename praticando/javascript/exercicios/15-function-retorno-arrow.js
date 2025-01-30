@@ -76,6 +76,24 @@ function somaEDif(a, b) {
 function dadosPessoais(nome, idade) {
     return { nome, idade };
   }
-*/
+
 
 //RETORNO ANTECIPADO
+//1.verificação de paridade
+function verificarParidade (n){
+    if (n % 2 === 0) return "Número par"
+    return "Número impar"
+    }
+
+console.log(verificarParidade(7))
+
+//2. verificação de idade
+function verificarIdade (idade) {
+    if (idade < 18) return "Menor de idade"
+    return "Maior de idade"
+}
+
+console.log(verificarIdade(17))
+*/
+
+//FALTA EX 3., 4., 5. e 6.
