@@ -244,91 +244,327 @@ def soma(numero):
 
 soma(numero)
 
-"""
+
 ## **while (Loop While)**
 
 #1. Crie um programa que gere um número aleatório entre 1 e 100 e peça ao usuário para adivinhar. O programa deve
 #informar se o palpite está alto ou baixo, até que o usuário acerte. Conte o número de tentativas.
 
+#importe a biblioteca random. Para isso abra o terminal (esotu usando pycharm) e digite o código:
+# pip install numpy
 
-"""
-2. Desenvolva um script que solicite ao usuário para inserir números positivos. O programa deve continuar pedindo
-números até que o usuário insira um número negativo. No final, exiba a soma de todos os números positivos inseridos.
+import random
+
+#usando a biblioteca random
+numeroAleatorio = random.randint(1, 100)
+
+def jogo ():
+    tentativas = 0
+
+    while True:
+        numeroUser = int(input("Digite um número: "))
+        tentativas += 1
+
+        if numeroUser < numeroAleatorio:
+            print("Seu palpite está baixo")
+        elif numeroUser > numeroAleatorio:
+            print("palpite está alto")
+        elif numeroUser == numeroAleatorio and tentativas == 1:
+            print("Você é muito sortudo, acertou de primeira. Parabéns")
+            break
+        else:
+            print(f"Parabéns, você acertou em {tentativas} tentativas")
+            break
+
+jogo()
+
+
+#2. Desenvolva um script que solicite ao usuário para inserir números positivos. O programa deve continuar pedindo
+#números até que o usuário insira um número negativo. No final, exiba a soma de todos os números positivos inseridos.
+
+
+
+def game ():
+    result = []
+
+    while True:
+        numeroUser = int(input("Digite um número positivo: "))
+
+        if numeroUser < 0:
+            break
+
+        result.append(numeroUser)
+
+    soma = sum(result)
+    print(f"A soma dos números positivos é: {soma}")
+
+game()
+
 
 ## **Lista (a partir, entre)**
 
-1. Crie uma lista com os números de 1 a 20. Em seguida, exiba os números que estão entre o índice 5 e o índice 10 (
-inclusive).
-2. Peça ao usuário para inserir uma lista de números separados por vírgula. Depois, exiba apenas os números a partir
-do terceiro elemento até o final da lista.
+#1. Crie uma lista com os números de 1 a 20. Em seguida, exiba os números que estão entre o índice 5 e o índice 10 (
+#inclusive).
+
+numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+print(numeros[5:10])
+
+
+#2. Peça ao usuário para inserir uma lista de números separados por vírgula. Depois, exiba apenas os números a partir
+#do terceiro elemento até o final da lista.
+
+
+
+user = input("Digite uma lista de números separados por virgula: ")
+
+print(user[2:])
+
 
 ## **list**
 
-1. Crie uma lista vazia e peça ao usuário para inserir 5 nomes. Depois, exiba todos os nomes inseridos.
-2. Faça um programa que crie uma lista com os números pares entre 1 e 50 e exiba essa lista.
+#1. Crie uma lista vazia e peça ao usuário para inserir 5 nomes. Depois, exiba todos os nomes inseridos.
+
+nomes = []
+
+nomes = input("Digite 5 nomes separado por vírgula: ")
+
+print(nomes)
+
+
+#2. Faça um programa que crie uma lista com os números pares entre 1 e 50 e exiba essa lista.
+
+lista =[]
+
+def listaPar():
+    for i in range(1, 51):
+        if i % 2 == 0:
+            lista.append(i)
+    print(lista)
+
+listaPar()
 
 ## **.remove()**
 
-1. Crie uma lista com os seguintes itens: **`["maçã", "banana", "laranja", "uva"]`**. Peça ao usuário para informar
-uma fruta que deseja remover da lista e remova-a usando **`.remove()`**. Se a fruta não estiver na lista,
-exiba uma mensagem de erro.
-2. Peça ao usuário para inserir uma lista de números separados por vírgula. Depois, solicite um número para ser
-removido da lista e remova-o usando **`.remove()`**.
+#1. Crie uma lista com os seguintes itens:**`["maçã", "banana", "laranja", "uva"]`**. Peça ao usuário para informar
+#uma fruta que deseja remover da lista e remova-a usando**`.remove()`**. Se a fruta não estiver na lista,
+#exiba uma mensagem de erro.
+
+frutas = ["maçã", "banana", "laranja", "uva"]
+
+print(frutas)
+
+user = input("Qual fruta da lista acima deseja remover? ")
+
+def remover():
+    if user in frutas:
+        frutas.remove(user)
+    else:
+        print("Esse item não está na lista")
+    print(frutas)
+
+remover()
+
+
+#2. Peça ao usuário para inserir uma lista de números separados por vírgula. Depois, solicite um número para ser
+#removido da lista e remova-o usando**`.remove()`**.
+
+lista = []
+
+def remover():
+    lista = input("Digite uma lista de números separado por vírgula: ")
+
+    lista = [int(num) for num in lista.split(",")]
+
+    print(lista)
+
+    numeroARemover = int(input("Digite um número para ser removido da lista: "))
+
+    if numeroARemover in lista:
+        lista.remove(numeroARemover)
+
+    print(lista)
+
+remover()
+
 
 ## **.pop()**
 
-1. Crie uma lista com os seguintes números: **`[10, 20, 30, 40, 50]`**. Use **`.pop()`** para remover o último número
-da lista e exiba o número removido e a lista atualizada.
-2. Peça ao usuário para inserir uma lista de palavras separadas por vírgula. Depois, remova a última palavra da lista
-usando **`.pop()`** e exiba a palavra removida.
+#1. Crie uma lista com os seguintes números**`[10, 20, 30, 40, 50]`**. Use**`.pop()`**para remover o último número
+#da lista e exiba o número removido e a lista atualizada.
+
+lista = [10, 20, 30, 40, 50]
+
+print(lista)
+
+print(lista.pop())
+
+print(lista)
+
+
+
+#2. Peça ao usuário para inserir uma lista de palavras separadas por vírgula. Depois, remova a última palavra da lista
+#usando**`.pop()`**e exiba a palavra removida.
+lista = input("Digite uma lista de palvras separadas por vírgula: ")
+lista = lista.split(",")
+print(lista)
+print(lista.pop())
+
 
 ## **.sort()**
 
-1. Crie uma lista com os seguintes números: **`[5, 3, 8, 1, 9]`**. Use **`.sort()`** para ordenar a lista em ordem
-crescente e exiba o resultado.
-2. Peça ao usuário para inserir uma lista de nomes separados por vírgula. Ordene a lista em ordem alfabética
-usando **`.sort()`** e exiba o resultado.
+#1. Crie uma lista com os seguintes números:**`[5, 3, 8, 1, 9]`**. Use**`.sort()`**para ordenar a lista em ordem
+#crescente e exiba o resultado.
+
+lista = [5, 3, 8, 1, 9]
+
+lista.sort()
+
+print(lista)
+
+
+#2. Peça ao usuário para inserir uma lista de nomes separados por vírgula. Ordene a lista em ordem alfabética
+#usando**`.sort()`**e exiba o resultado.
+
+# Solicitar a entrada do usuário (uma lista de nomes separados por vírgula)
+lista = input("Digite uma lista de nomes separados por vírgula: ")
+
+# Converter a string em uma lista de nomes
+lista = [nome.strip() for nome in lista.split(",")]  # Divide a string em uma lista de substrings, e remove espaços
+# vazios antes e depois com o strip
+
+# Exibir a lista original
+print("Lista original:", lista)
+
+# Ordenar a lista em ordem alfabética
+lista.sort()
+
+# Exibir a lista ordenada
+print("Lista ordenada:", lista)
+
+
+
 
 ## **Inverter itens da lista**
 
-1. Crie uma lista com os seguintes números: **`[1, 2, 3, 4, 5]`**. Inverta a ordem dos itens na lista (usando **`[
-::-1]`** ou **`.reverse()`**) e exiba o resultado.
-2. Peça ao usuário para inserir uma frase e transforme-a em uma lista de palavras (usando **`.split()`**). Inverta a
-ordem das palavras na frase e exiba o resultado.
+#1. Crie uma lista com os seguintes números:**`[1, 2, 3, 4, 5]`**. Inverta a ordem dos itens na lista (usando**`[
+#::-1]`**ou**`.reverse()`**) e exiba o resultado.
+
+lista = [1, 2, 3, 4, 5]
+
+listaInversa = lista[::-1] #inverte a lista, mas não modifica a original, e trás a mudança
+
+print(lista)
+print(listaInversa)
+
+print(lista)
+lista.reverse() #inverte a lista modificando a original, mas não traz a mudança
+print(lista)
+
+
+#2. Peça ao usuário para inserir uma frase e transforme-a em uma lista de palavras (usando**`.split()`**). Inverta a
+#ordem das palavras na frase e exiba o resultado.
+
+frase = input("Insira uma frase: ")
+frase = [nome.strip() for nome in frase.split()] #tiramos os espaços com strip, e as "," com split
+
+print(frase)
+frase.reverse()
+print(frase)
 
 ## **max**
 
-1. Crie uma lista com os seguintes números: **`[10, 20, 30, 40, 50]`**. Use **`max()`** para encontrar o maior número
-na lista e exiba-o.
-2. Peça ao usuário para inserir uma lista de números separados por vírgula. Encontre e exiba o maior número da lista
-usando **`max()`**.
+#1. Crie uma lista com os seguintes números:**`[10, 20, 30, 40, 50]`**. Use**`max()`**para encontrar o maior número
+#na lista e exiba-o.
+
+lista = [10, 20, 30, 40, 50]
+
+print(max(lista))
+
+print(lista)
+
+
+#2. Peça ao usuário para inserir uma lista de números separados por vírgula. Encontre e exiba o maior número da lista
+#usando**`max()`**.
+
+
+lista = input("Insira uma lista de números separados por vírgula: ")
+print(max(lista))
 
 ## **min**
 
-1. Crie uma lista com os seguintes números: **`[15, 7, 22, 3, 9]`**. Use **`min()`** para encontrar o menor número na
-lista e exiba-o.
-2. Peça ao usuário para inserir uma série de números separados por vírgula. Encontre e exiba o menor número da lista
-usando **`min()`**.
+#1. Crie uma lista com os seguintes números:**`[15, 7, 22, 3, 9]`**. Use**`min()`**para encontrar o menor número na
+#lista e exiba-o.
+
+lista = [15, 7, 22, 3, 9]
+
+print(min(lista))
+
+
+#2. Peça ao usuário para inserir uma série de números separados por vírgula. Encontre e exiba o menor número da lista
+#usando**`min()`**.
+
+lista = input("Digite uma série de núemros separados por vírgula: ")
+lista = lista.split(",")
+print(min(lista))
+
 
 ## **index**
 
-1. Crie uma lista com os seguintes itens: **`["gato", "cachorro", "pássaro", "peixe"]`**. Use **`.index()`** para
-encontrar a posição do item **`"pássaro"`** na lista e exiba-a.
-2. Peça ao usuário para inserir uma palavra e verifique se ela está presente na seguinte lista: **`["maçã", "banana",
-"laranja", "uva"]`**. Caso esteja presente, exiba sua posição usando **`.index()`**; caso contrário, informe que a
-palavra não está na lista.
+#1. Crie uma lista com os seguintes itens:**`["gato", "cachorro", "pássaro", "peixe"]`**. Use**`.index()`**para
+#encontrar a posição do item**`"pássaro"`**na lista e exiba-a.
+
+animais = ["gato", "cachorro", "pássaro", "peixe"]
+
+print(animais.index("pássaro"))
+
+
+#2. Peça ao usuário para inserir uma palavra e verifique se ela está presente na seguinte lista:**`["maçã", "banana",
+#"laranja", "uva"]`**. Caso esteja presente, exiba sua posição usando**`.index()`**; caso contrário, informe que a
+#palavra não está na lista.
+
+frutas = ["maçã", "banana","laranja", "uva"]
+
+palavra = input("Digite uma fruta: ")
+
+def existe():
+    if palavra in frutas:
+        print(f"A posição da {palavra} é Index {frutas.index(palavra)}")
+    else:
+        print("Essa palavra não pertence a lista de Frutas")
+
+existe()
+
 
 ## **len**
 
-1. Crie uma lista com os seguintes itens: **`[10, 20, 30, 40]`**. Use **`len()`** para contar quantos itens existem
-na lista e exiba esse valor.
-2. Peça ao usuário para inserir um texto qualquer e conte quantas palavras existem no texto (usando **`.split(
-)`** e **`len()`**).
+#1. Crie uma lista com os seguintes itens:**`[10, 20, 30, 40]`**. Use**`len()`**para contar quantos itens existem
+#na lista e exiba esse valor.
 
+lista = [10, 20, 30, 40]
+
+print(len(lista))
+
+
+#2. Peça ao usuário para inserir um texto qualquer e conte quantas palavras existem no texto (usando`.split()` e
+# `len()`**).
+
+lista = input("Digite um texto: ")
+
+palavras = lista.split()
+print(palavras)
+print(len(palavras))
+
+
+"""
 ## **sum**
 
-1. Crie uma lista com os seguintes números: **`[5, 10, 15, 20]`**. Use **`sum()`** para calcular a soma de todos os
+1. Crie uma lista com os seguintes números:**`[5, 10, 15, 20]`**. Use**`sum()`**para calcular a soma de todos os
 números na lista e exiba o resultado.
+
+
+
+"""
 2. Peça ao usuário para inserir uma série de números separados por vírgula. Converta-os em uma lista de inteiros ou
 floats e calcule a soma total usando **`sum()`**.
 
@@ -509,15 +745,18 @@ e 10."`
 
 ### **1️⃣ Tuplas**
 
-📌 **Conceito**: Tuplas são **estruturas imutáveis** em Python que armazenam múltiplos valores em uma sequência ordenada.
+📌 **Conceito**: Tuplas são **estruturas imutáveis** em Python que armazenam múltiplos valores em uma sequência 
+ordenada.
 
 ### 🔹 **Exercícios**
 
-1️⃣ **Crie uma tupla chamada `dados_pessoais` contendo seu nome, idade e cidade natal. Em seguida, imprima cada valor individualmente.**
+1️⃣ **Crie uma tupla chamada `dados_pessoais` contendo seu nome, idade e cidade natal. Em seguida, imprima cada valor 
+individualmente.**
 
 2️⃣ **Dada a tupla `numeros = (10, 20, 30, 40, 50)`, acesse e imprima o terceiro elemento da tupla.**
 
-3️⃣ **Crie uma tupla com os dias da semana e peça ao usuário para digitar um número de 1 a 7. Exiba o nome do dia correspondente.**
+3️⃣ **Crie uma tupla com os dias da semana e peça ao usuário para digitar um número de 1 a 7. Exiba o nome do dia 
+correspondente.**
 
 4️⃣ **Crie uma tupla contendo cinco números e tente modificar um dos elementos. O que acontece?**
 
@@ -525,7 +764,8 @@ e 10."`
 
 ### **2️⃣ Operações com Tuplas**
 
-📌 **Conceito**: Podemos realizar operações como **concatenação, repetição, verificação de elementos e obtenção de índices** em tuplas.
+📌 **Conceito**: Podemos realizar operações como **concatenação, repetição, verificação de elementos e obtenção de 
+índices** em tuplas.
 
 ### 🔹 **Exercícios**
 
@@ -533,7 +773,8 @@ e 10."`
 
 6️⃣ **Dada a tupla `valores = (10, 20, 30, 40, 50)`, verifique se o número 30 está presente nela.**
 
-7️⃣ **Crie uma tupla com cinco elementos e utilize o método `.count()` para contar quantas vezes um determinado número aparece.**
+7️⃣ **Crie uma tupla com cinco elementos e utilize o método `.count()` para contar quantas vezes um determinado 
+número aparece.**
 
 8️⃣ **Dada a tupla `letras = ('a', 'b', 'c', 'd', 'e')`, encontre o índice do elemento `'c'`.**
 
@@ -551,7 +792,8 @@ e 10."`
 
 1️⃣1️⃣ **Crie uma tupla com nomes de frutas e use um `for` para exibir cada uma em maiúsculas.**
 
-1️⃣2️⃣ **Dada a tupla `pares = (2, 4, 6, 8, 10)`, utilize um `for` para calcular o quadrado de cada número e imprima os resultados.**
+1️⃣2️⃣ **Dada a tupla `pares = (2, 4, 6, 8, 10)`, utilize um `for` para calcular o quadrado de cada número e imprima 
+os resultados.**
 
 ---
 
@@ -561,13 +803,16 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-1️⃣3️⃣ **Dada a tupla `numeros = (5, 10, 15, 20)`, use `for in range(len(numeros))` para imprimir os valores com seus índices.**
+1️⃣3️⃣ **Dada a tupla `numeros = (5, 10, 15, 20)`, use `for in range(len(numeros))` para imprimir os valores com seus 
+índices.**
 
 1️⃣4️⃣ **Crie uma tupla com cinco nomes e utilize `for in range(len())` para exibir os nomes ao contrário.**
 
-1️⃣5️⃣ **Dada a tupla `valores = (100, 200, 300, 400)`, utilize `for in range(len())` para dobrar os valores e exibi-los.**
+1️⃣5️⃣ **Dada a tupla `valores = (100, 200, 300, 400)`, utilize `for in range(len())` para dobrar os valores e 
+exibi-los.**
 
-1️⃣6️⃣ **Dada a tupla `('Python', 'JavaScript', 'C++', 'Java')`, use `for in range(len())` para exibir cada linguagem precedida pelo número de índice.**
+1️⃣6️⃣ **Dada a tupla `('Python', 'JavaScript', 'C++', 'Java')`, use `for in range(len())` para exibir cada linguagem 
+precedida pelo número de índice.**
 
 ---
 
@@ -579,11 +824,14 @@ e 10."`
 
 1️⃣7️⃣ **Crie uma tupla com três cores. Converta-a em uma lista, adicione uma nova cor e imprima o resultado.**
 
-1️⃣8️⃣ **Dada a tupla `numeros = (5, 10, 15)`, transforme-a em lista, multiplique cada elemento por 2 e transforme de volta em tupla.**
+1️⃣8️⃣ **Dada a tupla `numeros = (5, 10, 15)`, transforme-a em lista, multiplique cada elemento por 2 e transforme de 
+volta em tupla.**
 
-1️⃣9️⃣ **Dada a tupla `nomes = ('Ana', 'Bruno', 'Carlos')`, converta-a em lista e substitua o nome "Bruno" por "Beatriz".**
+1️⃣9️⃣ **Dada a tupla `nomes = ('Ana', 'Bruno', 'Carlos')`, converta-a em lista e substitua o nome "Bruno" por 
+"Beatriz".**
 
-2️⃣0️⃣ **Crie uma tupla com os números de 1 a 5. Converta-a em lista, remova o último elemento e transforme-a novamente em tupla.**
+2️⃣0️⃣ **Crie uma tupla com os números de 1 a 5. Converta-a em lista, remova o último elemento e transforme-a 
+novamente em tupla.**
 
 ---
 
@@ -607,13 +855,17 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-1️⃣ **Crie um dicionário chamado `pessoa` com as chaves `nome`, `idade` e `cidade`. Preencha com seus dados e imprima o dicionário.**
+1️⃣ **Crie um dicionário chamado `pessoa` com as chaves `nome`, `idade` e `cidade`. Preencha com seus dados e imprima 
+o dicionário.**
 
-2️⃣ **Dado o dicionário `aluno = {"nome": "João", "nota": 8.5, "curso": "Matemática"}`, acesse e imprima apenas o valor da nota.**
+2️⃣ **Dado o dicionário `aluno = {"nome": "João", "nota": 8.5, "curso": "Matemática"}`, acesse e imprima apenas o 
+valor da nota.**
 
-3️⃣ **Crie um dicionário de preços de três produtos e permita que o usuário digite o nome de um produto para ver o preço.**
+3️⃣ **Crie um dicionário de preços de três produtos e permita que o usuário digite o nome de um produto para ver o 
+preço.**
 
-4️⃣ **Crie um dicionário representando um livro (título, autor, ano). Em seguida, adicione um novo campo chamado `gênero` e imprima o dicionário atualizado.**
+4️⃣ **Crie um dicionário representando um livro (título, autor, ano). Em seguida, adicione um novo campo chamado 
+`gênero` e imprima o dicionário atualizado.**
 
 ---
 
@@ -623,13 +875,17 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-5️⃣ **Dado `carro = {"marca": "Ford", "modelo": "Mustang", "ano": 2022}`, remova a chave `"ano"` usando `.pop()` e exiba o valor removido.**
+5️⃣ **Dado `carro = {"marca": "Ford", "modelo": "Mustang", "ano": 2022}`, remova a chave `"ano"` usando `.pop()` e 
+exiba o valor removido.**
 
-6️⃣ **Crie um dicionário de contatos (nome → telefone). Peça ao usuário para digitar um nome e remova esse contato usando `.pop()`.**
+6️⃣ **Crie um dicionário de contatos (nome → telefone). Peça ao usuário para digitar um nome e remova esse contato 
+usando `.pop()`.**
 
-7️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, remova `"banana"` usando `.pop()` e mostre o dicionário atualizado.**
+7️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, remova `"banana"` usando `.pop()` e mostre o 
+dicionário atualizado.**
 
-8️⃣ **Crie um dicionário com informações de um jogador (nome, posição, gols). Use `.pop()` para remover a chave `"gols"` e exiba o dicionário atualizado.**
+8️⃣ **Crie um dicionário com informações de um jogador (nome, posição, gols). Use `.pop()` para remover a chave 
+`"gols"` e exiba o dicionário atualizado.**
 
 ---
 
@@ -639,13 +895,16 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-9️⃣ **Dado `usuario = {"nome": "Carlos", "email": "carlos@email.com", "idade": 28}`, remova a chave `"email"` usando `del` e exiba o dicionário.**
+9️⃣ **Dado `usuario = {"nome": "Carlos", "email": "carlos@email.com", "idade": 28}`, remova a chave `"email"` usando 
+`del` e exiba o dicionário.**
 
 🔟 **Crie um dicionário representando um filme (título, diretor, ano). Remova a chave `"diretor"` usando `del`.**
 
-1️⃣1️⃣ **Dado `produtos = {"arroz": 15, "feijão": 10, "macarrão": 8}`, remova `"macarrão"` usando `del` e imprima o resultado.**
+1️⃣1️⃣ **Dado `produtos = {"arroz": 15, "feijão": 10, "macarrão": 8}`, remova `"macarrão"` usando `del` e imprima o 
+resultado.**
 
-1️⃣2️⃣ **Crie um dicionário com três países e suas capitais. Use `del` para remover um país e exiba o dicionário atualizado.**
+1️⃣2️⃣ **Crie um dicionário com três países e suas capitais. Use `del` para remover um país e exiba o dicionário 
+atualizado.**
 
 ---
 
@@ -657,11 +916,13 @@ e 10."`
 
 1️⃣3️⃣ **Crie um dicionário de alunos (`nome → nota`). Adicione um novo aluno usando `dict[chave] = valor`.**
 
-1️⃣4️⃣ **Dado `agenda = {"Ana": "9999-1111", "Bruno": "8888-2222"}`, adicione um novo contato ao dicionário e imprima o resultado.**
+1️⃣4️⃣ **Dado `agenda = {"Ana": "9999-1111", "Bruno": "8888-2222"}`, adicione um novo contato ao dicionário e imprima 
+o resultado.**
 
 1️⃣5️⃣ **Crie um dicionário representando um carro (`marca`, `modelo`). Adicione a chave `"ano"` e atribua um valor.**
 
-1️⃣6️⃣ **Crie um dicionário com nomes de cidades e seus estados. Adicione uma nova cidade com seu estado correspondente.**
+1️⃣6️⃣ **Crie um dicionário com nomes de cidades e seus estados. Adicione uma nova cidade com seu estado 
+correspondente.**
 
 ---
 
@@ -671,11 +932,14 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-1️⃣7️⃣ **Dado `cores = {"vermelho": "#FF0000", "verde": "#00FF00", "azul": "#0000FF"}`, use `for` para imprimir todas as cores e seus códigos hexadecimais.**
+1️⃣7️⃣ **Dado `cores = {"vermelho": "#FF0000", "verde": "#00FF00", "azul": "#0000FF"}`, use `for` para imprimir todas 
+as cores e seus códigos hexadecimais.**
 
-1️⃣8️⃣ **Crie um dicionário com três países e suas capitais e use `for` para imprimir `"A capital de {país} é {capital}"`.**
+1️⃣8️⃣ **Crie um dicionário com três países e suas capitais e use `for` para imprimir `"A capital de {país} é {
+capital}"`.**
 
-1️⃣9️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, use `for` para exibir o nome das frutas e a quantidade em estoque.**
+1️⃣9️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, use `for` para exibir o nome das frutas e a 
+quantidade em estoque.**
 
 2️⃣0️⃣ **Crie um dicionário de estudantes (`nome → nota`). Use `for` para exibir apenas os nomes.**
 
@@ -691,7 +955,8 @@ e 10."`
 
 2️⃣2️⃣ **Crie um dicionário de preços de produtos e utilize `.values()` para calcular a soma total dos preços.**
 
-2️⃣3️⃣ **Dado `pontuacao = {"Ana": 50, "Beatriz": 70, "Carlos": 85}`, use `.values()` para encontrar a maior pontuação.**
+2️⃣3️⃣ **Dado `pontuacao = {"Ana": 50, "Beatriz": 70, "Carlos": 85}`, use `.values()` para encontrar a maior 
+pontuação.**
 
 2️⃣4️⃣ **Crie um dicionário de notas de alunos e exiba a média das notas usando `.values()`.**
 
@@ -703,29 +968,36 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-2️⃣5️⃣ **Dado `cadastro = {"nome": "Lucas", "idade": 29, "cidade": "São Paulo"}`, use `.keys()` para exibir todas as chaves.**
+2️⃣5️⃣ **Dado `cadastro = {"nome": "Lucas", "idade": 29, "cidade": "São Paulo"}`, use `.keys()` para exibir todas as 
+chaves.**
 
-2️⃣6️⃣ **Crie um dicionário representando um carro (marca, modelo, ano). Utilize `.keys()` para exibir os atributos disponíveis.**
+2️⃣6️⃣ **Crie um dicionário representando um carro (marca, modelo, ano). Utilize `.keys()` para exibir os atributos 
+disponíveis.**
 
-2️⃣7️⃣ **Dado `contatos = {"Ana": "9999-1111", "Bruno": "8888-2222", "Carlos": "7777-3333"}`, utilize `.keys()` para listar os nomes dos contatos.**
+2️⃣7️⃣ **Dado `contatos = {"Ana": "9999-1111", "Bruno": "8888-2222", "Carlos": "7777-3333"}`, utilize `.keys()` para 
+listar os nomes dos contatos.**
 
-2️⃣8️⃣ **Crie um dicionário com países e capitais. Use `.keys()` para verificar se um país específico está no dicionário.**
+2️⃣8️⃣ **Crie um dicionário com países e capitais. Use `.keys()` para verificar se um país específico está no 
+dicionário.**
 
 ---
 
 ### **8️⃣ Convertendo Dicionário para Lista (`list()`)**
 
-📌 **Conceito**: Podemos converter as chaves ou valores de um dicionário em uma lista usando `list(dict)`, `list(dict.keys())` ou `list(dict.values())`.
+📌 **Conceito**: Podemos converter as chaves ou valores de um dicionário em uma lista usando `list(dict)`, 
+`list(dict.keys())` ou `list(dict.values())`.
 
 ### 🔹 **Exercícios**
 
-2️⃣9️⃣ **Dado `dados = {"nome": "Maria", "idade": 32, "cidade": "Recife"}`, converta suas chaves em uma lista e imprima.**
+2️⃣9️⃣ **Dado `dados = {"nome": "Maria", "idade": 32, "cidade": "Recife"}`, converta suas chaves em uma lista e 
+imprima.**
 
 3️⃣0️⃣ **Dado `precos = {"pão": 2.5, "leite": 4.0, "café": 8.5}`, transforme os valores em uma lista e imprima.**
 
 3️⃣1️⃣ **Crie um dicionário representando notas de alunos (`aluno → nota`). Converta os nomes dos alunos em uma lista.**
 
-3️⃣2️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, transforme o dicionário inteiro em uma lista de tuplas (`list(estoque.items())`) e imprima.**
+3️⃣2️⃣ **Dado `estoque = {"maçã": 10, "banana": 5, "laranja": 8}`, transforme o dicionário inteiro em uma lista de 
+tuplas (`list(estoque.items())`) e imprima.**
 
 ### **1️⃣ Conjuntos (`set`)**
 
@@ -829,11 +1101,14 @@ e 10."`
 
 ### 🔹 **Exercícios**
 
-2️⃣5️⃣ **Dado `numeros1 = {1, 2, 3, 4, 5}` e `numeros2 = {4, 5, 6, 7}`, encontre os elementos exclusivos de `numeros1`.**
+2️⃣5️⃣ **Dado `numeros1 = {1, 2, 3, 4, 5}` e `numeros2 = {4, 5, 6, 7}`, encontre os elementos exclusivos de 
+`numeros1`.**
 
-2️⃣6️⃣ **Crie um conjunto com nomes de funcionários de um setor e outro conjunto com funcionários promovidos. Encontre os que ainda estão no setor.**
+2️⃣6️⃣ **Crie um conjunto com nomes de funcionários de um setor e outro conjunto com funcionários promovidos. 
+Encontre os que ainda estão no setor.**
 
-2️⃣7️⃣ **Dado `vogais = {"a", "e", "i", "o", "u"}` e `letras_nome = set("Felipe")`, descubra as vogais que não aparecem no nome.**
+2️⃣7️⃣ **Dado `vogais = {"a", "e", "i", "o", "u"}` e `letras_nome = set("Felipe")`, descubra as vogais que não 
+aparecem no nome.**
 
 2️⃣8️⃣ **Crie dois conjuntos com números e descubra quais números estão apenas no primeiro conjunto.**
 """
