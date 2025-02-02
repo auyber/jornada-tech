@@ -31,6 +31,7 @@ Nesta revisão, abordaremos os principais conceitos de JavaScript, incluindo tip
 21. [Funções Anônimas](#21-funções-anônimas)
 22. [High-order Functions](#22-high-order-functions)
 23. [Objetos Globais](#23-objetos-globais)
+24. [Eventos, DOM e Manipulação em JavaScript](#24-eventos-dom-e-manipulação-em-javascript) 
 
 
 ## 1. O que é uma linguagem de programação
@@ -2373,7 +2374,417 @@ Embora o objeto global seja útil, o uso excessivo de variáveis globais pode ca
 
 ---
 
+## 24. Eventos, DOM e Manipulação em JavaScript
 
+### Eventos em JavaScript
+
+Eventos em JavaScript permitem que ações específicas sejam executadas dentro de uma página HTML de forma dinâmica, sem travar o carregamento da página. São interações do usuário ou do sistema que disparam a execução de código JavaScript.
+(ex: clique, scroll, envio de formulário).
+
+**Como Funcionam?**
+- **Código Inline (Evitar!):**
+  ```
+  <!-- Não recomendado: mistura HTML com JS -->
+  <button onclick="alert('Cliquei!')">Clique aqui</button>
+  ```
+
+**Método Recomendado (addEventListener):**
+ ```
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+  alert('Cliquei!');
+});
+ ```
+
+**Melhor Prática para Inclusão de Código JavaScript**
+O correto é incluir o código JavaScript em um arquivo separado (`.js`) e referenciá-lo dentro do HTML usando a tag `<script src="script.js"></script>`.
+
+---
+
+### **DOM - Document Object Model**
+O DOM é uma representação da estrutura do HTML na forma de uma árvore de objetos. Através do JavaScript, podemos acessar e manipular esses elementos.
+
+**Exemplo de Hierarquia do DOM:**
+```
+HTML > BODY > H1, P, TABLE > TR (tabela possui linhas <tr>)
+```
+
+**Outro exemplo:**
+**Estrutura do DOM**
+```
+<!-- Exemplo: -->
+<html>
+  <body>
+    <h1>Título</h1>
+    <div id="container">
+      <p class="texto">Parágrafo</p>
+    </div>
+  </body>
+</html>
+```
+**Árvore DOM do exemplo acima:**
+
+document
+└── html
+    └── body
+        ├── h1
+        └── div#container
+            └── p.texto
+
+
+**Para acessar o DOM no console do navegador:**
+```
+document // Retorna a estrutura da página
+```
+
+---
+
+### **Métodos para Selecionar Elementos no DOM**
+
+**Selecionar múltiplos elementos:**
+- `document.getElementsByTagName("tag")` → Retorna uma `HTMLCollection`.
+- `document.getElementsByClassName("classe")` → Retorna uma `HTMLCollection`.
+- `document.getElementsByName("nome")` → Retorna uma `NodeList`.
+- `document.querySelectorAll("seletor")` → Retorna uma `NodeList`.
+
+**Selecionar um único elemento:**
+- `document.getElementById("id")`
+- `document.querySelector("seletor")`
+
+---
+
+**Adicionando Novos Elementos ao DOM**
+1. Criamos o elemento.
+2. Manipulamos ele.
+3. Adicionamos a um nó existente na página.
+
+Exemplo:
+```
+const novoElemento = document.createElement("p");
+novoElemento.innerText = "Este é um novo parágrafo.";
+document.body.appendChild(novoElemento);
+```
+
+**Passo a Passo:**
+
+**Criar Elemento:**
+```
+const novoElemento = document.createElement('div');
+```
+**Manipular o Elemento:**
+```
+novoElemento.textContent = 'Novo conteúdo';
+novoElemento.classList.add('destaque');
+```
+**Adicionar ao DOM:**
+```
+document.body.append(novoElemento); // Adiciona no final do body
+```
+
+**Métodos de Inserção**
+
+| Método        | Descrição                          |
+|--------------|----------------------------------|
+| `append()`   | Adiciona vários elementos/texto  |
+| `appendChild()` | Adiciona um único elemento     |
+| `prepend()`  | Insere no início do elemento pai |
+
+
+**Atenção:** O uso de `innerHTML` pode abrir brechas de segurança ao permitir injeção de scripts maliciosos. É preferível usar `textContent` ou `createElement()`.
+```
+⚠️ **Perigo do innerHTML:**
+Permite injetar HTML dinâmico, mas é vulnerável a XSS (Cross-Site Scripting):
+
+// Exemplo perigoso:
+elemento.innerHTML = '<img src=x onerror="alert(\'Hackeado!\')">';
+
+// Alternativa segura:
+elemento.textContent = 'Texto seguro';
+```
+
+---
+
+### **Manipulação de Eventos**
+Podemos adicionar eventos diretamente no HTML:
+```
+<button onclick="minhaFuncao()">Clique Aqui</button>
+```
+Ou utilizar `addEventListener()` no JavaScript:
+```
+const button = document.querySelector("button");
+button.addEventListener("click", minhaFuncao);
+```
+
+**Exemplo de envio de valores do DOM para o JavaScript:**
+```html
+<h2>Registre-se!</h2>
+<section>
+  <label for="username">Nome de Usuário:</label>
+  <input type="text" id="username">
+  <br>
+  <label for="password">Senha:</label>
+  <input type="password" id="password">
+  <br>
+  <button onclick="register(this.parentNode)">Registrar</button>
+</section>
+```
+
+```js
+function register(element) {
+  const username = element.children.username.value;
+  const password = element.children.password.value;
+  
+  alert("Usuário " + username + " registrado!");
+}
+```
+
+### **Removendo Eventos**
+```js
+button.removeEventListener("click", minhaFuncao);
+```
+
+### **Evitando o Recarregamento da Página**
+No `submit` de um formulário, usamos:
+```js
+event.preventDefault();
+```
+Isso evita que o navegador recarregue a página ao enviar o formulário.
+
+---
+
+**Manipulação de Formulários**
+Exemplo de Validação:
+``` html
+<form id="formRegistro">
+  <input type="text" id="username">
+  <input type="password" id="password">
+  <button type="submit">Registrar</button>
+</form>
+```
+``` js
+document.getElementById('formRegistro').addEventListener('submit', function(ev) {
+  ev.preventDefault(); // Impede o recarregamento
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (password.length < 6) {
+    alert('Senha deve ter pelo menos 6 caracteres!');
+    return;
+  }
+
+  // Enviar dados para o servidor...
+});
+```
+
+
+---
+
+## **Manipulando Estilos com JavaScript**
+Podemos alterar estilos diretamente pelo JavaScript via Propriedade `style`:
+```js
+document.body.style.color = "#212529";
+```
+**Outro exemplo:**
+```
+const titulo = document.querySelector('h1');
+titulo.style.color = '#ff0000'; // CamelCase (não usa hífens)
+titulo.style.fontSize = '24px';
+```
+
+**Importante:**
+- No CSS, as propriedades são escritas em `kebab-case` (`background-color`).
+- No JS, usamos `camelCase` (`backgroundColor`).
+
+### **O que é toggle() em JavaScript?**
+
+O método `toggle()` é usado para adicionar ou remover uma classe de um elemento HTML de forma dinâmica. Se a classe já estiver presente, ela será removida; se não estiver, será adicionada.
+
+**Uso principal: Alternar classes no DOM**
+
+O `toggle()` é geralmente aplicado no `classList` de um elemento para criar efeitos visuais como ativar/desativar um tema escuro ou mostrar/ocultar um menu.
+
+Sintaxe:
+```
+element.classList.toggle("classe");
+```
+
+**Exemplos de uso**
+
+**1. Alternando Tema Claro/Escuro**
+``` js
+const button = document.getElementById("theme-toggle");
+
+button.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
+```
+```css
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+```
+**O que acontece?**
+- Se ```dark-mode``` já estiver no ```<body>```, ele será removido.
+- Se não estiver, ele será adicionado.
+
+**2. Criando um Menu Expansível**
+```js
+const menu = document.getElementById("menu");
+const toggleButton = document.getElementById("menu-button");
+
+toggleButton.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+```
+```css
+
+.show {
+  display: block;
+}
+```
+**Funcionamento:**
+- Cada clique no botão alterna a visibilidade do menu.
+
+### Toggle com um segundo argumento
+
+O `toggle()` pode receber um segundo argumento booleano (`true` para adicionar a classe, `false` para removê-la):
+
+```js
+element.classList.toggle("classe", true); // Garante que a classe será adicionada  
+element.classList.toggle("classe", false); // Garante que a classe será removida  
+```
+
+---
+
+## **Manipulação de Atributos**
+Para obter e definir valores de atributos:
+```js
+const input = document.getElementById("input");
+console.log(input.value); // Pega o valor atual
+console.log(input.getAttribute("value")); // Pega o valor inicial do HTML
+
+input.setAttribute("value", "Novo valor"); // Altera o valor do atributo
+```
+
+### **Atributos `data-*` no HTML**
+Podemos armazenar valores personalizados nos elementos usando `data-*`:
+```html
+<div data-user-id="123">Usuário</div>
+```
+```js
+const userId = document.querySelector("div").dataset.userId;
+console.log(userId); // 123
+```
+**Outro exemplo:**
+```html
+<div data-id="123" data-usuario-role="admin"></div>
+```
+```js
+const div = document.querySelector('div');
+console.log(div.dataset.id); // "123"
+console.log(div.dataset.usuarioRole); // "admin" (kebab-case vira camelCase)
+```
+
+---
+
+### **Funções Úteis no DOM**
+
+**`focus()`**
+O método `focus()` é usado para definir o foco em um elemento da página, geralmente um campo de entrada (`<input>`, `<textarea>`). Isso é útil para melhorar a experiência do usuário, como ao carregar uma página de login ou um formulário.
+
+**Exemplo: Focar automaticamente em um campo de entrada**
+```js
+document.getElementById("username").focus();
+```
+- Quando a página carregar, o cursor será posicionado automaticamente no campo de entrada com `id="username"`.
+
+**Uso comum do `focus()`**
+- Destacar automaticamente o primeiro campo de um formulário.
+- Auxiliar na acessibilidade, garantindo que usuários de teclado ou leitores de tela naveguem corretamente.
+- Melhorar a usabilidade em modais, onde o primeiro campo recebe foco automaticamente ao abrir.
+
+**`eval()`**
+
+O método `eval()` permite executar código JavaScript armazenado dentro de uma string. No entanto, seu uso deve ser evitado sempre que possível, pois pode representar um risco de segurança ao permitir a execução de código arbitrário.
+
+**Exemplo: Executando expressões matemáticas com `eval()`**
+```js
+console.log(eval("2 + 2")); // 4
+```
+**Exemplo: Executando código dinâmico (não recomendado!)**
+```js
+let x = 5;
+let y = 10;
+console.log(eval("x * y")); // 50
+```
+**Por que `eval()` é perigoso?**
+
+Se um usuário mal-intencionado conseguir inserir código arbitrário que será executado com `eval()`, isso pode levar a ataques como injeção de código.
+
+**Exemplo de um risco de segurança**
+```js
+let userInput = "alert('Hackeado!')";
+eval(userInput); // Executa um alerta no navegador
+```
+- Se `userInput` for controlado por um usuário externo, ele pode injetar comandos perigosos.
+
+**Alternativa segura ao `eval()`**
+
+Se precisar interpretar operações matemáticas de strings, prefira o Function ou `JSON.parse()` em alguns casos:
+```js
+const safeEval = new Function("return " + "2 + 2");
+console.log(safeEval()); // 4
+```
+Ou, para cálculos simples:
+```js
+const expression = "2 + 2";
+console.log(Function(`"use strict"; return (${expression})`)()); // 4
+```
+
+- Use `focus()` para melhorar a usabilidade e acessibilidade de formulários.
+- Evite `eval()`, pois ele pode representar um risco à segurança da aplicação. Prefira alternativas mais seguras para interpretar e executar código dinâmico.
+
+---
+
+### **Armazenamento no Navegador**
+
+Existem três principais formas de armazenamento no navegador:
+1. **Session Storage** - Armazena dados temporariamente (enquanto a aba está aberta).
+2. **Local Storage** - Armazena dados permanentemente (mesmo após fechar o navegador).
+3. **Cookies** - Permitem armazenar informações tanto no navegador quanto no servidor.
+
+**Exemplo de uso do Local Storage:**
+```js
+localStorage.setItem("chave", "valor");
+console.log(localStorage.getItem("chave"));
+```
+
+---
+
+### Boas Práticas
+
+**Posicionamento do Script:**
+
+Use defer para carregar scripts após o DOM:
+```html
+<script src="script.js" defer></script>
+```
+
+Ou coloque scripts antes do fechamento do </body>:
+```html
+<body>
+  <!-- Conteúdo -->
+  <script src="script.js"></script>
+</body>
+```
+
+**Depuração no Console:**
+Inspecione elementos:
+```
+console.dir(document.getElementById('elemento')); // Mostra propriedades detalhadas
+```
 
 
 
