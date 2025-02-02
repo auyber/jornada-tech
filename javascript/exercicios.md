@@ -82,6 +82,7 @@ Se precisar de mais alguma coisa ou se surgir alguma dúvida durante a resoluç�
 - [21. Exercícios sobre IIFE (Immediately Invoked Function Expression)](#21-exercícios-sobre-iife-immediately-invoked-function-expression)
 - [22. Exercícios sobre High-order Functions](#22-exercícios-sobre-high-order-functions)
 - [23. Exercícios sobre High-order Functions e Arrays](#23-exercícios-sobre-high-order-functions-e-arrays)
+- [24. Exercícios Eventos, DOM e Manipulação em JavaScript](#24-exercícios-eventos-dom-e-manipulação-em-javascript)
 
 ---
 
@@ -2248,6 +2249,189 @@ Crie uma função que recebe um array de objetos, onde cada objeto contém um ca
 Crie uma função que recebe um array de objetos, onde cada objeto contém os campos `nome` e `vendas`. A função deve filtrar os vendedores que realizaram mais de 50 vendas, mapear para obter apenas os nomes e, em seguida, calcular o total de vendas desses vendedores. Utilize `filter()`, `map()` e `reduce()` para resolver essa tarefa.
 
 ---
+
+## 24. Exercícios Eventos, DOM e Manipulação em JavaScript
+
+**1. Eventos em JavaScript**
+1. Crie um botão que exibe um alerta com a mensagem "Botão clicado!" quando pressionado.
+
+2. Ao passar o mouse sobre um parágrafo, mude a cor do texto para azul.
+
+3. Crie um evento que dispara uma função ao pressionar uma tecla no campo de entrada e exibe a tecla pressionada no console.
+
+4. Adicione um evento de `dblclick` (clique duplo) em um botão que oculta um elemento.
+
+5. Crie um formulário com um botão de envio e previna o comportamento padrão do formulário.
+
+---
+
+**2. DOM - Document Object Model**
+1. Acesse um elemento `<h1>` no HTML e altere seu conteúdo para "Olá, Mundo!" usando JavaScript.
+
+2. Selecione um `<p>` com uma classe específica e troque seu texto.
+
+3. Crie um novo elemento `<div>`, adicione um texto e insira-o dentro do `<body>`.
+
+4. Remova um elemento específico do DOM ao clicar em um botão.
+
+5. Acesse o primeiro `<li>` de uma lista e altere seu texto para "Item modificado".
+
+---
+
+**3. Métodos de Seleção no DOM**
+1. Use `getElementById` para alterar o texto de um elemento com um ID específico.
+
+2. Use `querySelector` para selecionar e alterar o conteúdo de um elemento `<p>`.
+
+3. Recupere todos os elementos `<li>` dentro de uma `<ul>` e altere suas cores.
+
+4. Utilize `getElementsByClassName` para selecionar múltiplos elementos e adicionar uma borda a eles.
+
+5. Use `querySelectorAll` para selecionar todos os parágrafos e mudar sua fonte.
+
+---
+
+**4. Manipulação do DOM**
+1. Crie um botão que, ao ser clicado, adiciona um novo item a uma lista.
+
+2. Altere dinamicamente o atributo `src` de uma imagem ao passar o mouse sobre ela.
+
+3. Crie um botão que remove um elemento específico do DOM.
+
+4. Use `prepend()` para adicionar um parágrafo antes do conteúdo principal de uma página.
+
+5. Crie um elemento `<p>`, defina um texto e adicione-o dentro de um `<div>`.
+
+---
+
+**5. Métodos de Inserção**
+1. Utilize `append()` para adicionar um novo parágrafo ao final de um `<div>`.
+
+2. Use `appendChild()` para adicionar um novo `<li>` dentro de uma `<ul>`.
+
+3. Use `prepend()` para adicionar um título no início de um `<section>`.
+
+4. Crie um botão que, ao ser clicado, insira um texto dentro de um `<p>` vazio.
+
+5. Adicione um novo `<div>` com a classe "box" dentro do `<body>`.
+
+---
+
+**6. Perigos do `innerHTML`**
+1. Crie um botão que altera o conteúdo de um `<p>` usando `innerHTML`.
+
+2. Mostre como `innerHTML` pode permitir injeção de código malicioso.
+
+3. Use `textContent` para modificar um texto com segurança.
+
+4. Crie um campo de entrada e um botão que exiba seu valor em um `<p>`.
+
+5. Demonstre como `createElement` e `appendChild` podem ser mais seguros do que `innerHTML`.
+
+---
+
+**7. Manipulação de Eventos**
+1. Crie um botão que muda sua própria cor ao ser clicado.
+
+2. Adicione um evento `mouseover` em um `<h1>` que aumenta seu tamanho.
+
+3. Use `addEventListener` para exibir um alerta ao clicar em um botão.
+
+4. Remova um evento após ser disparado uma vez.
+
+5. Crie um botão que dispara diferentes eventos para diferentes ações do mouse.
+
+---
+
+**8. Removendo Eventos**
+1. Crie um botão que, ao ser clicado, desativa outro botão.
+
+2. Adicione um evento de clique e remova-o após 3 execuções.
+
+3. Crie um evento que remove a si mesmo após ser acionado.
+
+4. Crie um formulário que só pode ser enviado uma vez.
+
+5. Adicione um evento que muda a cor do fundo e o remove após 5 segundos.
+
+---
+
+**9. Prevenindo Recarregamento de Página**
+1. Crie um formulário que não recarrega a página ao ser enviado.
+
+2. Crie um link `<a>` que não navega para outra página ao ser clicado.
+
+3. Use `preventDefault()` para impedir o envio de um formulário vazio.
+
+4. Crie um evento de clique que previne o comportamento padrão do botão de envio.
+
+5. Crie um botão de reset que limpa um formulário sem recarregar a página.
+
+---
+
+**10. Manipulando Estilos**
+1. Altere a cor de fundo do `<body>` ao clicar em um botão.
+
+2. Aumente o tamanho da fonte de um parágrafo ao passar o mouse sobre ele.
+
+3. Adicione uma classe CSS a um elemento ao clicar nele.
+
+4. Crie um botão que alterna entre dois temas (claro e escuro).
+
+5. Use `style.display` para esconder um elemento ao clicar em um botão.
+
+---
+
+**11. O que é `toggle()`**
+1. Crie um botão que adiciona e remove a classe "ativo" de um `<div>`.
+
+2. Implemente um menu que expande e retrai ao clicar em um botão.
+
+3. Crie um botão que alterna a visibilidade de um elemento.
+
+4. Adicione uma classe "destaque" a um parágrafo quando o mouse passar sobre ele.
+
+5. Use `toggle()` para alternar um ícone de "favorito" em um elemento.
+
+---
+
+**12. Manipulação de Atributos**
+1. Altere dinamicamente o atributo `src` de uma imagem ao clicar em um botão.
+
+2. Use `getAttribute` e `setAttribute` para mudar o `href` de um link.
+
+3. Crie um botão que desabilita um campo de entrada.
+
+4. Adicione um atributo `title` a um parágrafo usando JavaScript.
+
+5. Crie um botão que adiciona e remove o atributo `readonly` de um input.
+
+---
+
+**13. `focus()`**
+1. Foque automaticamente em um campo de entrada ao carregar a página.
+
+2. Crie um botão que foca em um campo de senha.
+
+3. Crie um evento que destaca um campo quando ele recebe foco.
+
+4. Remova o foco de um campo ao pressionar Enter.
+
+5. Crie um formulário que impede envio se um campo não estiver focado.
+
+---
+
+**14. `eval()`**
+1. Use `eval()` para calcular a soma de dois números digitados pelo usuário.
+
+2. Demonstre o perigo de `eval()` executando um comando malicioso.
+
+3. Crie uma calculadora simples usando `eval()`.
+
+4. Use `Function()` como alternativa segura a `eval()`.
+
+5. Explique por que `eval()` pode representar um risco de segurança.
+
 
 
 
