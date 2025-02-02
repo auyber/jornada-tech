@@ -58,8 +58,8 @@ Se surgir alguma dúvida ou se você quiser discutir sobre a resolução de algu
 - [20. Arrow Functions Respostas](#20-arrow-functions-respostas)
 - [21. IIFE (Immediately Invoked Function Expression) Respostas](#21-iife-immediately-invoked-function-expression-respostas)
 - [22. High-order Functions Respostas](#22-high-order-functions-respostas)
-- [23. Exercícios sobre High-order Functions e Arrays](#23-exercícios-sobre-high-order-functions-e-arrays)
-
+- [23. High-order Functions e Arrays Respostas](#23-high-order-functions-e-arrays-respostas)
+- [24. Eventos, DOM e Manipulação em JavaScript Respostas](#24-eventos-dom-e-manipulação-em-javascript-respostas)
 
 ---
 
@@ -4736,7 +4736,7 @@ console.log(soma10()); // Exibe: 25
 
 ---
 
-## 23. Exercícios sobre High-order Functions e Arrays
+## 23. High-order Functions e Arrays Respostas
 
 ### Nível Fácil
 
@@ -4926,6 +4926,214 @@ console.log(relatorioVendas(vendas));
 ```
 
 ---
+
+## 24. Eventos, DOM e Manipulação em JavaScript Respostas
+
+// 1. Eventos em JavaScript
+
+```
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", () => alert("Botão clicado!"));
+```
+Exercício 2
+```
+document.getElementById("meuParagrafo").addEventListener("mouseover", function() {
+    this.style.color = "blue";
+});
+```
+Exercício 3
+```
+document.getElementById("meuInput").addEventListener("keydown", function(event) {
+    console.log("Tecla pressionada: ", event.key);
+});
+```
+Exercício 4
+```
+document.getElementById("btn").addEventListener("dblclick", function() {
+    document.getElementById("elemento").style.display = "none";
+});
+```
+Exercício 5
+```
+document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Formulário enviado sem recarregar a página.");
+});
+```
+
+2. DOM - Document Object Model
+
+Exercício 1
+```
+document.querySelector("h1").textContent = "Olá, Mundo!";
+```
+
+Exercício 2
+```
+document.querySelector(".meuParagrafo").textContent = "Texto alterado!";
+```
+Exercício 3
+```
+const novoDiv = document.createElement("div");
+novoDiv.textContent = "Novo elemento criado";
+document.body.appendChild(novoDiv);
+```
+Exercício 4
+```
+document.getElementById("remover").addEventListener("click", function() {
+    document.getElementById("paraRemover").remove();
+});
+```
+Exercício 5
+```
+document.querySelector("ul li").textContent = "Item modificado";
+```
+3. Métodos de Seleção no DOM
+
+Exercício 1
+```
+document.getElementById("meuElemento").textContent = "Novo Texto!";
+```
+Exercício 2
+```
+document.querySelector("p").textContent = "Texto alterado";
+```
+Exercício 3
+```
+document.querySelectorAll("li").forEach(li => li.style.color = "red");
+```
+Exercício 4
+```
+document.getElementsByClassName("itens")[0].style.border = "1px solid black";
+```
+Exercício 5
+```
+document.querySelectorAll("p").forEach(p => p.style.fontFamily = "Arial");
+```
+4. Manipulação do DOM
+
+Exercício 1
+```
+document.getElementById("addItem").addEventListener("click", function() {
+    const novoItem = document.createElement("li");
+    novoItem.textContent = "Novo item";
+    document.querySelector("ul").appendChild(novoItem);
+});
+```
+Exercício 2
+```
+document.getElementById("img").addEventListener("mouseover", function() {
+    this.src = "nova-imagem.jpg";
+});
+```
+Exercício 3
+```
+document.getElementById("removerBtn").addEventListener("click", function() {
+    document.getElementById("elementoParaRemover").remove();
+});
+```
+Exercício 4
+```
+document.getElementById("container").prepend("Texto antes do conteúdo principal");
+```
+Exercício 5
+```
+const novoP = document.createElement("p");
+novoP.textContent = "Parágrafo adicionado";
+document.getElementById("meuDiv").appendChild(novoP);
+```
+5. Métodos de Inserção
+
+Exercício 1
+```
+document.getElementById("meuDiv").append("Novo parágrafo adicionado");
+```
+Exercício 2
+```
+const novoLi = document.createElement("li");
+novoLi.textContent = "Novo item";
+document.querySelector("ul").appendChild(novoLi);
+```
+Exercício 3
+```
+document.getElementById("minhaSection").prepend("Título Adicionado");
+```
+Exercício 4
+```
+document.getElementById("btnInserir").addEventListener("click", function() {
+    document.getElementById("meuParagrafo").textContent = "Texto inserido!";
+});
+```
+Exercício 5
+```
+const novoDiv2 = document.createElement("div");
+novoDiv2.classList.add("box");
+document.body.appendChild(novoDiv2);
+```
+6. Perigos do `innerHTML`
+
+Exercício 1
+```
+document.getElementById("alterarTexto").addEventListener("click", function() {
+    document.getElementById("meuParagrafo").innerHTML = "Texto alterado!";
+});
+```
+Exercício 2
+```
+document.getElementById("inseguro").innerHTML = "<script>alert('Hackeado!')</script>";
+```
+Exercício 3
+```
+document.getElementById("seguro").textContent = "Texto seguro!";
+```
+Exercício 4
+```
+document.getElementById("mostrarValor").addEventListener("click", function() {
+    document.getElementById("output").textContent = document.getElementById("campo").value;
+});
+```
+Exercício 5
+```
+const seguroElement = document.createElement("p");
+seguroElement.textContent = "Texto seguro";
+document.getElementById("container").appendChild(seguroElement);
+```
+7. Manipulação de Eventos
+
+Exercício 1
+```
+document.getElementById("meuBotao").addEventListener("click", function() {
+    this.style.backgroundColor = "red";
+});
+```
+Exercício 2
+```
+document.getElementById("meuTitulo").addEventListener("mouseover", function() {
+    this.style.fontSize = "2em";
+});
+```
+Exercício 3
+```
+document.getElementById("alertaBtn").addEventListener("click", function() {
+    alert("Alerta! Evento ativado.");
+});
+```
+Exercício 4
+```
+document.getElementById("removerEvento").addEventListener("click", function() {
+    this.removeEventListener("click", arguments.callee);
+    alert("Evento removido!");
+});
+```
+Exercício 5
+```
+document.getElementById("multiEventos").addEventListener("click", function() {
+    alert("Clique detectado!");
+});
+document.getElementById("multiEventos").addEventListener("mouseover", function() {
+    this.style.backgroundColor = "green";
+});
+```
 
 
 
