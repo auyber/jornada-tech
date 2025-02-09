@@ -20,7 +20,9 @@ Outros aspectos importantes incluem unidades de medida, herança, especificidade
 10. [Herança](#10-herança)  
 11. [Especificidade](#11-especificidade)  
 12. [Seletores avançados](#12-seletores-avançados)  
-13. [Variáveis](#13-variáveis) 
+13. [Variáveis](#13-variáveis)
+14. [CSS Moderno com Flexbox, Grid e SASS](#14-css-moderno-com-flexbox-grid-e-sass)
+
 
 ## 01. O que é CSS e como usá-lo
 
@@ -603,3 +605,202 @@ As variáveis CSS também podem ser manipuladas com JavaScript:
 javascriptdocument.documentElement.style.setProperty('--cor-primaria', '#ff0000');
 ```
 Isso permite criar temas dinâmicos ou ajustar estilos com base em interações do usuário
+
+---
+
+## 14. CSS Moderno com Flexbox, Grid e SASS
+
+#### Flexbox: Um Valor da Propriedade Display
+
+O Flexbox (“Flexible Box Layout”) é um modelo de layout do CSS projetado para facilitar o posicionamento, alinhamento e distribuição de espaço entre elementos em uma página de forma eficiente, mesmo quando o tamanho dos elementos é dinâmico ou desconhecido. Ele permite criar layouts mais flexíveis e responsivos.
+
+---
+
+### Conceitos Básicos
+
+#### 1. Flex Container
+- O elemento que usa `display: flex` se torna um **Flex Container**.
+- Ele engloba os itens que serão organizados dentro dele.
+
+#### 2. Flex Items
+- Os elementos dentro do container flex são chamados de **Flex Items**.
+- Esses itens são organizados pelo Flexbox conforme as regras definidas pelo container.
+
+#### 3. Eixos do Flexbox
+**Eixo Principal (Main Axis)**
+- Direção na qual os itens flex são distribuídos.
+- Usado para **justificar os itens**.
+- **Padrão:** horizontal (da esquerda para a direita).
+
+**Eixo Perpendicular (Cross Axis)**
+- Direção perpendicular ao eixo principal (90º).
+- Usado para **alinhar os itens**.
+- **Padrão:** vertical (de cima para baixo).
+
+---
+
+### Propriedades do Flexbox
+
+#### 1. `flex-direction`
+Define a direção dos itens no container.
+
+- `row` (padrão): Alinha os itens horizontalmente, da esquerda para a direita.
+- `row-reverse`: Alinha os itens horizontalmente, da direita para a esquerda.
+- `column`: Alinha os itens verticalmente, de cima para baixo.
+- `column-reverse`: Alinha os itens verticalmente, de baixo para cima.
+
+#### 2. `justify-content`
+Define o alinhamento dos itens ao longo do **eixo principal**.
+
+- `flex-start` (padrão): Alinha os itens no início do container.
+- `flex-end`: Alinha os itens no final do container.
+- `center`: Centraliza os itens no container.
+- `space-between`: Distribui espaço uniformemente entre os itens (o primeiro e o último ficam encostados nas extremidades).
+- `space-around`: Distribui espaço ao redor dos itens (cada item recebe espaço igual antes e depois).
+- `space-evenly`: Distribui espaço uniformemente entre os itens e nas extremidades.
+
+#### 3. `align-items`
+Define o alinhamento dos itens ao longo do **eixo perpendicular**.
+
+- `stretch` (padrão): Os itens se esticam para ocupar toda a altura do container.
+- `flex-start`: Alinha os itens no início do eixo perpendicular.
+- `flex-end`: Alinha os itens no final do eixo perpendicular.
+- `center`: Centraliza os itens no eixo perpendicular.
+- `baseline`: Alinha os itens de acordo com a linha base do texto.
+
+#### 4. `align-content`
+Define o espaçamento entre as linhas quando **há múltiplas linhas** (quando `flex-wrap: wrap` está ativado).
+
+- `flex-start`: Agrupa as linhas no início do container.
+- `flex-end`: Agrupa as linhas no final do container.
+- `center`: Centraliza as linhas no container.
+- `space-between`: Distribui as linhas com espaço igual entre elas.
+- `space-around`: Distribui espaço ao redor das linhas.
+- `stretch` (padrão): As linhas se expandem para ocupar todo o espaço disponível.
+
+---
+
+### Outras Propriedades Importantes
+
+#### 1. `flex-wrap`
+Controla se os itens devem ser forçados a permanecer em uma única linha ou podem quebrar para uma nova linha.
+
+- `nowrap` (padrão): Todos os itens ficam em uma única linha.
+- `wrap`: Os itens quebram para uma nova linha se necessário.
+- `wrap-reverse`: Os itens quebram para uma nova linha, mas na direção reversa.
+
+#### 2. `flex-grow`
+Define a capacidade de um item **crescer** dentro do container.
+
+- **Atenção:** `flex-grow: 2` **não significa que o item cresce exatamente o dobro de um item com `flex-grow: 1`**. O crescimento é proporcional ao tamanho base de cada item.
+
+#### 3. `flex-shrink`
+Define a capacidade de um item **encolher** dentro do container.
+
+- `flex-shrink: 1` (padrão): O item pode encolher se necessário.
+- `flex-shrink: 0`: O item **não encolhe**.
+
+#### 4. `flex-basis`
+Define o **tamanho base inicial** de um item antes de qualquer redimensionamento pelo `flex-grow` ou `flex-shrink`.
+
+- Pode ser definido em `px`, `%`, `em`, etc.
+
+#### 5. Atalho `flex`
+A propriedade `flex` é uma **abreviação** para `flex-grow`, `flex-shrink` e `flex-basis`.
+
+```css
+flex: 1 1 1;
+/* Primeiro: grow, Segundo: shrink, Terceiro: basis */
+```
+
+### Observações Importantes
+
+**Interação entre `align-items`, `justify-content` e `align-content`**
+
+- `align-items` e `justify-content` afetam todos os itens individualmente.
+- `align-content` afeta o grupo de itens como um todo.
+- Se `align-content` não for definido e align-items: center estiver ativado com flex-wrap: wrap, os itens serão alinhados linha a linha. Se `align-content` for definido, ele alinhará todo o conjunto de itens dentro do container.
+
+
+### WebKit e Seus Efeitos no CSS  
+
+#### **O que é WebKit?**  
+
+WebKit é um motor de renderização usado por navegadores como Safari e versões mais antigas do Chrome e Edge. Para garantir compatibilidade com esses navegadores, algumas propriedades do CSS precisam ser prefixadas com `-webkit-`.  
+
+---
+
+#### **Principais Propriedades `-webkit-` no CSS**  
+
+**1. `-webkit-transform`**  
+Permite aplicar transformações como rotação, escala, inclinação e translação.  
+
+```css
+.elemento {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+```
+**2. -webkit-transition**
+Usado para criar animações suaves ao mudar valores de propriedades CSS.
+```
+.elemento {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+```
+**3. -webkit-box-shadow**
+Aplica sombras a elementos, útil para efeitos visuais modernos.
+```
+.elemento {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+```
+**4. -webkit-border-radius**
+Define cantos arredondados em elementos.
+```
+.elemento {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+```
+**5. -webkit-background-clip**
+Controla como a imagem ou cor de fundo é aplicada ao elemento.
+
+- text: Aplica o background apenas ao texto.
+- border-box: Aplica o background dentro da borda.
+- padding-box: Aplica o background até a borda do padding.
+```
+.elemento {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, blue, red);
+}
+```
+**6. -webkit-user-select**
+Define se o texto pode ser selecionado pelo usuário.
+```
+.elemento {
+  -webkit-user-select: none;
+  user-select: none;
+}
+```
+**7. -webkit-text-stroke**
+Adiciona um contorno ao texto.
+```
+.elemento {
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+}
+```
+
+Devo Sempre Usar -webkit-?
+
+A maioria dos navegadores modernos não exige mais o prefixo -webkit-, mas ele ainda pode ser útil para garantir compatibilidade com versões antigas do Safari e outros navegadores baseados em WebKit. O ideal é sempre testar o comportamento do CSS nos navegadores-alvo.
+
+---
+
+
+
