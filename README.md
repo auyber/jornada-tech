@@ -39,6 +39,9 @@ Estarei constantemente atualizando este repositório com novas revisões conform
 - [Exercícios de JavaScript (+- 410)](./javascript/exercicios.md)
 - [Resolução dos Exercícios](./javascript/resolucao-exercicios.md)
 
+### 👁️ UX / UI
+- [Revisão UX / UI](./ux-ui/revisao.md)
+
 - ### 🐍 Python
 - [Exercícios de Python (167)](./python/exercicios.py)
 
