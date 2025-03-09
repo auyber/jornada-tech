@@ -1,6 +1,26 @@
 # UI e Design de UI - Interface de Usuário
 
-## O que é UI?
+## Introdução
+
+No desenvolvimento de interfaces digitais, a experiência do usuário (UX) e a interface do usuário (UI) desempenham papéis fundamentais na criação de plataformas intuitivas, eficientes e agradáveis. Embora frequentemente confundidas, essas disciplinas têm objetivos distintos que, quando combinados, resultam em soluções impactantes.
+
+- **UX (User Experience)**: Refere-se à experiência global que o usuário tem ao interagir com um produto ou serviço, abrangendo aspectos como usabilidade, acessibilidade e satisfação.
+- **UI (User Interface)**: Envolve o design visual e os elementos com os quais o usuário interage diretamente, como botões, menus e tipografia. O UI foca na estética e na criação de interfaces atraentes e funcionais.
+
+Neste documento, exploraremos os principais conceitos e práticas de UX e UI, com ênfase em como ambas as disciplinas se complementam no processo de criação de produtos digitais excepcionais.
+
+---
+
+## Índice
+
+1. [O que é UI?](#1-o-que-é-ui)
+2. [O que é UX?](#2-o-que-é-ux)
+3. [FIGMA](#3-figma)
+4. [Atalhos Úteis do FIGMA](#4-atalhos-úteis-do-figma)
+
+---
+
+## 1. O que é UI?
 
 - De forma genérica, UI (Interface de Usuário) é a forma com que interagimos com a máquina.
 - Na programação, UI geralmente se refere às telas das nossas aplicações.
@@ -47,7 +67,7 @@ As ferramentas mais populares para design de UI incluem:
 
 ---
 
-## O que é UX (Experiência de Usuário)?
+## 2. O que é UX?
 
 **UX** refere-se ao conjunto de elementos e fatores relacionados à interação do usuário com um produto, sistema ou serviço, que geram uma percepção positiva ou negativa dessa experiência.
 
@@ -100,7 +120,7 @@ Alguns fatores que impactam diretamente na experiência de usuário de um site:
 
 ---
 
-## Figma
+## 3. Figma
 
 O **Figma** é uma ferramenta de design colaborativo para criar interfaces, protótipos e produtos digitais. Sua interface intuitiva facilita o uso, mas o segredo para se destacar é dominar os conceitos de UX/UI, entender os princípios de design e desenvolver um senso crítico.
 
@@ -134,7 +154,7 @@ O **Figma** é uma ferramenta de design colaborativo para criar interfaces, prot
 - **Design Modular**: Use componentes para garantir consistência e facilitar o código.
 - **Auto Layout**: Permite criar layouts dinâmicos que se ajustam automaticamente, semelhante ao Flexbox no CSS.
 
-### Atalhos Úteis
+## 4. Atalhos Úteis do FIGMA
 
 - **Duplicar**: `Alt + Drag`
 - **Desfazer**: `Ctrl + Z`
@@ -229,3 +249,4 @@ O **Figma** é uma ferramenta de design colaborativo para criar interfaces, prot
 | **Deslocar a tela (zoom)** | `Ctrl + +` / `Cmd + +`    |
 | **Zoom Out**              | `Ctrl + -` / `Cmd + -`    |
 | **Panorâmica (arrastar)** | `Espaço + arrastar`       |
+
