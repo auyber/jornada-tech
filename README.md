@@ -127,11 +127,11 @@ Se você quer se aprofundar nos tópicos abordados, recomendo explorar essas fon
 
 ## 📬 Vamos Conectar!
 
-<a href="https://www.linkedin.com/in/auyber-genesini-moura-58b258144/" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/auybergenesini/" target="_blank">LinkedIn</a>
 
 
 ---
 
 ⭐ Se este repositório te ajudou, considere dar uma estrela!
 
-Última atualização: [09/03/2025]
+Última atualização: [12/03/2025]
