@@ -1,6 +1,7 @@
 # TypeScript
 
 ## Introdução
+TypeScript é uma linguagem que adiciona tipagem estática ao JavaScript, melhorando a segurança e organização do código. Neste material, vamos explorar tópicos como inferência de tipos, configuração do compilador, criação de tipos e interfaces, e recursos como módulos, generics e decorators.
 
 ---
 
